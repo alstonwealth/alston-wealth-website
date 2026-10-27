@@ -1,0 +1,63 @@
+<div class="aw-ft" role="contentinfo">
+  <div class="aw-in">
+    <div class="aw-ft-top">
+      <div class="aw-ft-firm">
+        <img class="aw-ft-logo" src="{{P}}assets/logo/footer-logo.svg" alt="Alston Wealth" width="209" height="40">
+        <p>An independent, family-run wealth management firm. We meet with households across the country by video.</p>
+        <p class="aw-ft-contact"><span data-needs="EMAIL"><a href="mailto:{{EMAIL}}">{{EMAIL}}</a><br></span><!--/needs--><span data-needs="PHONE"><a href="tel:{{PHONE_TEL}}">{{PHONE}}</a></span><!--/needs--></p>
+        <a class="aw-btn aw-btn-gold book-link" href="{{BOOK_LINK}}" data-track="footer-book">Book a free call</a>
+      </div>
+      <div class="aw-ft-col">
+        <h4>Services</h4>
+        <a href="{{P}}services/distribution-planning.html">Distribution planning</a>
+        <a href="{{P}}services/investment-management.html">Investment management</a>
+        <a href="{{P}}services/tax-planning.html">Tax planning</a>
+        <a href="{{P}}services/estate-legacy.html">Estate and legacy</a>
+        <a href="{{P}}services/social-security.html">Social Security and pensions</a>
+      </div>
+      <div class="aw-ft-col">
+        <h4>Learn</h4>
+        <a href="{{P}}insights/">Insights</a>
+        <a href="{{P}}learn.html">The Decision Calendar</a>
+        <a href="{{P}}toolbox.html">Planning tools</a>
+        <a href="{{P}}library.html">Library</a>
+        <a href="{{P}}learn.html#call">Monthly call</a>
+      </div>
+      <div class="aw-ft-col">
+        <h4>Firm</h4>
+        <a href="{{P}}about.html">About us</a>
+        <a href="{{P}}who-we-help.html">Who we help</a>
+        <a href="{{P}}how-we-work.html">How we work</a>
+        <a href="{{P}}how-we-work.html#fees">How we're paid</a>
+        <a href="{{P}}contact.html">Contact</a>
+      </div>
+      <div class="aw-ft-col">
+        <h4>Disclosures</h4>
+        <a href="{{P}}privacy.html">Privacy notice</a>
+        <a href="{{P}}disclosures.html">Disclosures</a>
+      </div>
+    </div>
+    <p class="aw-legal">{{DISCLOSURE}}</p>
+    <p class="aw-legal">Alston Financial Services was a separate company; its history is shared here as family background and is not a representation of this firm's tenure or experience.</p>
+    <p class="aw-legal">© {{YEAR}} Alston Wealth</p>
+  </div>
+</div>
+<script>
+(function(){
+  var KEYS=['utm_source','utm_medium','utm_campaign','utm_content','utm_term'],q=new URLSearchParams(location.search),st={};
+  try{st=JSON.parse(sessionStorage.getItem('aw_utm')||'{}');}catch(e){}
+  KEYS.forEach(function(k){if(q.get(k))st[k]=q.get(k);});
+  try{sessionStorage.setItem('aw_utm',JSON.stringify(st));}catch(e){}
+  if(Object.keys(st).length){document.querySelectorAll('.book-link,#call-link').forEach(function(a){try{var u=new URL(a.href);Object.keys(st).forEach(function(k){u.searchParams.set(k,st[k]);});a.href=u.toString();}catch(e){}});}
+  if(!window.awTrackOwn)document.addEventListener('click',function(ev){var el=ev.target.closest('[data-track]');if(!el||typeof gtag!=='function')return;
+    gtag('event','engagement',{item:el.getAttribute('data-track'),source:st.utm_source||'direct',campaign:st.utm_campaign||'none'});});
+})();
+/* Lead events: one clean event per booking or monthly-call click, on every page, for marking as key events in Analytics. */
+document.addEventListener('click',function(ev){
+  var a=ev.target.closest('a[href]'); if(!a||typeof gtag!=='function')return;
+  var h=a.href, name=h.indexOf('calendly.com')>-1?'book_call_click':(h.indexOf('zoom.us/meeting/register')>-1?'monthly_call_click':null);
+  if(!name)return;
+  var st={};try{st=JSON.parse(sessionStorage.getItem('aw_utm')||'{}');}catch(e){}
+  gtag('event',name,{link_location:a.getAttribute('data-track')||'',page_path:location.pathname,campaign:st.utm_campaign||'none',transport_type:'beacon'});
+});
+</script>

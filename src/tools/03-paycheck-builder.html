@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Paycheck Builder — Alston Wealth</title>
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Alston Wealth">
+<meta property="og:title" content="The Paycheck Builder — Alston Wealth">
+<meta property="og:description" content="Twelve retirement decisions, twelve months. Free tools, briefings, and a live monthly call.">
+<meta property="og:image" content="{{SITE_URL}}/og-image.png">
+<meta property="og:url" content="{{SITE_URL}}/tools/03-paycheck-builder.html">
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-YJFKJ8MCV3"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}
+gtag('js',new Date());gtag('config','G-YJFKJ8MCV3');</script>
+<meta name="twitter:card" content="summary_large_image">
+
+<style>
+:root{
+  --ink:#16233A; --ink2:#46505F; --ink3:#5E6878;
+  --paper:#FBFAF7; --card:#FFFFFF; --rule:#E6E2D9; --rule2:#EDEAE3;
+  --brass:#8A5F24; --brass-tint:#F5EEE1;
+  --good:#2F6B4F; --good-tint:#E9F2ED;
+  --warn:#9A4A22; --warn-tint:#FBEDE5;
+  --u:"Archivo","Helvetica Neue",Helvetica,sans-serif;
+  --s:"Source Serif 4",Charter,"Bitstream Charter",Georgia,serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--paper);color:var(--ink);font-family:var(--s);
+  font-size:16px;line-height:1.5;-webkit-font-smoothing:antialiased;padding:0 0 80px}
+.wrap{max-width:940px;margin:0 auto;padding:0 20px}
+header{border-bottom:2px solid var(--ink);padding:34px 0 14px;margin-bottom:26px}
+.eyebrow{font-family:var(--u);font-weight:700;font-size:10px;letter-spacing:.19em;
+  text-transform:uppercase;color:var(--brass);margin-bottom:7px}
+h1{font-family:var(--u);font-weight:700;font-size:31px;letter-spacing:-.02em;line-height:1.05}
+.sub{color:var(--ink2);margin-top:9px;max-width:64ch;font-size:15.5px}
+.hdr-row{display:flex;justify-content:space-between;align-items:flex-end;gap:20px;flex-wrap:wrap}
+.firm{font-family:var(--u);font-weight:700;font-size:11px;letter-spacing:.15em;
+  text-transform:uppercase;color:var(--ink2);white-space:nowrap}
+
+section{background:var(--card);border:1px solid var(--rule);margin-bottom:20px}
+.shead{display:flex;align-items:baseline;gap:12px;padding:15px 20px;
+  border-bottom:1px solid var(--rule2);background:#FCFBF8;flex-wrap:wrap}
+.snum{font-family:var(--u);font-weight:700;font-size:10px;letter-spacing:.14em;color:var(--brass);
+  border:1px solid var(--brass);padding:3px 7px;flex:none}
+.stitle{font-family:var(--u);font-weight:700;font-size:16px;letter-spacing:-.01em}
+.shint{font-size:14px;color:var(--ink3);margin-left:auto;font-family:var(--u);font-weight:500}
+.sbody{padding:20px}
+.lede{color:var(--ink2);font-size:15px;margin-bottom:16px;max-width:68ch}
+
+.grid{display:grid;gap:12px}
+.g2{grid-template-columns:repeat(2,1fr)}
+.g3{grid-template-columns:repeat(3,1fr)}
+label.f{display:block}
+label.f span{display:block;font-family:var(--u);font-weight:600;font-size:11.5px;
+  letter-spacing:.05em;text-transform:uppercase;color:var(--ink2);margin-bottom:5px}
+label.f em{font-style:normal;color:var(--ink3);text-transform:none;letter-spacing:0;
+  font-weight:500;font-size:11px;display:block;margin-top:2px}
+input[type=text],select{width:100%;padding:10px 11px;border:1px solid var(--rule);
+  background:#fff;font-family:var(--u);font-size:15.5px;color:var(--ink);border-radius:0}
+input[type=text]:focus,select:focus{outline:2px solid var(--brass);outline-offset:-1px}
+
+/* floor visual */
+.floor{border:1px solid var(--rule);background:#fff;padding:22px}
+.floor-h{font-family:var(--u);font-weight:600;font-size:10.5px;letter-spacing:.13em;
+  text-transform:uppercase;color:var(--ink3);margin-bottom:14px}
+.stack{display:flex;height:44px;border:1px solid var(--rule);overflow:hidden;margin-bottom:8px}
+.seg{display:flex;align-items:center;justify-content:center;font-family:var(--u);
+  font-weight:700;font-size:11px;letter-spacing:.05em;color:#fff;white-space:nowrap;overflow:hidden}
+.seg.cov{background:var(--good)}
+.seg.gap{background:var(--warn)}
+.stack-l{display:flex;justify-content:space-between;font-family:var(--u);
+  font-size:11.5px;font-weight:600;color:var(--ink3);margin-bottom:20px}
+.gapnum{font-family:var(--u);font-weight:700;font-size:40px;line-height:.95;
+  letter-spacing:-.03em;color:var(--warn)}
+.gapnum.zero{color:var(--good)}
+.gaplab{font-family:var(--u);font-weight:600;font-size:10.5px;letter-spacing:.13em;
+  text-transform:uppercase;color:var(--ink3);margin-bottom:6px}
+.gapnote{font-size:14.5px;color:var(--ink2);margin-top:11px;line-height:1.45;max-width:70ch}
+
+/* route comparison */
+.routes{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--rule);
+  border:1px solid var(--rule);margin-top:18px}
+.rt{background:#fff;padding:17px 18px;display:flex;flex-direction:column}
+.rt-n{font-family:var(--u);font-weight:600;font-size:9.5px;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--brass);margin-bottom:7px}
+.rt-t{font-family:var(--u);font-weight:700;font-size:15px;margin-bottom:3px;line-height:1.2}
+.rt-s{font-size:12.5px;color:var(--ink3);margin-bottom:13px}
+.rt-v{font-family:var(--u);font-weight:700;font-size:26px;letter-spacing:-.02em;line-height:1}
+.rt-u{font-family:var(--u);font-weight:600;font-size:10px;letter-spacing:.11em;
+  text-transform:uppercase;color:var(--ink3);margin-top:5px}
+.rt-b{margin-top:13px;padding-top:11px;border-top:1px solid var(--rule2);font-size:13px;
+  line-height:1.42;color:var(--ink2);flex:1}
+.rt-b b{color:var(--ink);font-family:var(--u);font-size:11px;letter-spacing:.05em;
+  text-transform:uppercase;display:block;margin-bottom:3px;margin-top:8px}
+.rt-b b:first-child{margin-top:0}
+.rt.best{background:var(--brass-tint)} .rt.best .rt-v{color:var(--brass)}
+.rt.na .rt-v{color:var(--ink3);font-size:19px}
+
+/* buckets */
+.bkts{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--rule);
+  border:1px solid var(--rule)}
+.bkt{background:#fff;padding:15px 16px}
+.bkt-l{font-family:var(--u);font-weight:600;font-size:10.5px;letter-spacing:.1em;
+  text-transform:uppercase;color:var(--ink3);margin-bottom:5px}
+.bkt-v{font-family:var(--u);font-weight:700;font-size:21px}
+.bkt-p{font-size:13px;color:var(--ink2);margin-top:5px;line-height:1.4}
+
+.flags{margin-top:18px}
+.flag{border-left:3px solid;padding:12px 15px;margin-bottom:9px;font-size:14.5px;line-height:1.45}
+.flag b{font-family:var(--u);font-weight:700;font-size:12px;letter-spacing:.06em;
+  text-transform:uppercase;display:block;margin-bottom:4px}
+.flag.w{border-color:var(--warn);background:var(--warn-tint)} .flag.w b{color:var(--warn)}
+.flag.g{border-color:var(--good);background:var(--good-tint)} .flag.g b{color:var(--good)}
+.flag.n{border-color:var(--brass);background:var(--brass-tint)} .flag.n b{color:var(--brass)}
+
+.carry{background:var(--ink);color:#fff;padding:20px}
+.carry h3{font-family:var(--u);font-weight:700;font-size:13px;letter-spacing:.13em;
+  text-transform:uppercase;color:#C9A26B;margin-bottom:12px}
+.carry table{width:100%;border-collapse:collapse;font-size:14.5px}
+.carry td{padding:7px 0;border-bottom:1px solid rgba(255,255,255,.13)}
+.carry td:last-child{text-align:right;font-family:var(--u);font-weight:700}
+.carry tr:last-child td{border-bottom:none}
+.carry p{font-size:13.5px;color:#B9C2D0;margin-top:13px;line-height:1.5}
+
+.bar{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px}
+button.act{font-family:var(--u);font-weight:600;font-size:13.5px;letter-spacing:.03em;
+  padding:11px 18px;border:1px solid var(--ink);background:#fff;color:var(--ink);cursor:pointer;border-radius:0}
+button.act:hover{background:var(--ink);color:#fff}
+button.act.p{background:var(--ink);color:#fff}
+button.act.p:hover{background:var(--brass);border-color:var(--brass)}
+.foot{margin-top:26px;padding-top:16px;border-top:1px solid var(--rule);
+  font-size:13.5px;color:var(--ink3);line-height:1.5}
+.empty{color:var(--ink3);font-style:italic;font-size:15px}
+
+@media (max-width:720px){
+  .g2,.g3,.routes,.bkts{grid-template-columns:1fr}
+  h1{font-size:25px} .shint{margin-left:0;flex-basis:100%}
+  .gapnum{font-size:32px}
+}
+@media print{
+  body{background:#fff;padding:0;font-size:11pt}
+  .bar,.shint{display:none}
+  section{break-inside:avoid;border-color:#bbb}
+  .carry{background:#fff;color:#000;border:2px solid #000}
+  .carry h3{color:#000} .carry p{color:#444} .carry td{border-bottom:1px solid #ccc}
+  .seg,.rt.best{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+}
+
+/* nav */
+nav{border-bottom:1px solid var(--rule);background:var(--paper);position:sticky;top:0;z-index:10;
+  margin:0 0 4px}
+nav .navwrap{max-width:940px;margin:0 auto;padding:0 20px;display:flex;align-items:center;
+  justify-content:space-between;height:58px;gap:20px}
+nav .brand{font-family:var(--u);font-weight:700;font-size:15px;color:var(--ink);
+  text-decoration:none;letter-spacing:-.01em}
+nav .brand:hover{color:var(--brass)}
+nav ul{list-style:none;display:flex;gap:22px;font-family:var(--u);font-size:13.5px;font-weight:600;
+  margin:0;padding:0}
+nav a{text-decoration:none;color:var(--ink2)}
+nav a:hover{color:var(--brass)}
+@media(max-width:620px){nav .hide-sm{display:none} nav ul{gap:16px}}
+@media print{nav{display:none}}
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap">
+<link rel="stylesheet" href="../assets/alston.css">
+</head>
+<body>
+<!--AW:HEADER-->
+
+<div class="wrap">
+
+<header>
+  <div class="hdr-row">
+    <div>
+      <div class="eyebrow">March · The Decision Calendar</div>
+      <h1>The Paycheck Builder</h1>
+    </div>
+    <div class="firm">Alex&nbsp;Alston</div>
+  </div>
+  <p class="sub">Find the gap between what you must pay and what is guaranteed for life — then
+  see what closing it costs three different ways. Work the cheapest option first.</p>
+</header>
+
+<!-- 1 -->
+<section>
+  <div class="shead"><span class="snum">01</span><span class="stitle">Your floor today</span>
+    <span class="shint">From January's baseline</span></div>
+  <div class="sbody">
+    <div class="grid g3">
+      <label class="f"><span>Essential expenses</span><em>Annual — what you'd still pay in a bad year</em>
+        <input type="text" id="ess" inputmode="decimal" value="62,000"></label>
+      <label class="f"><span>Discretionary expenses</span><em>Annual</em>
+        <input type="text" id="disc" inputmode="decimal" value="40,000"></label>
+      <label class="f"><span>Investable assets</span><em>Not counting home equity</em>
+        <input type="text" id="pv" inputmode="decimal" value="880,000"></label>
+    </div>
+    <div class="grid g3" style="margin-top:12px">
+      <label class="f"><span>Social Security — you</span><em>Annual, at the age you plan to claim</em>
+        <input type="text" id="ss1" inputmode="decimal" value="34,000"></label>
+      <label class="f"><span>Social Security — spouse</span>
+        <input type="text" id="ss2" inputmode="decimal" value="18,000"></label>
+      <label class="f"><span>Pension + lifetime annuity</span><em>Annual, combined</em>
+        <input type="text" id="pen" inputmode="decimal" value="0"></label>
+    </div>
+  </div>
+</section>
+
+<!-- 2 -->
+<section>
+  <div class="shead"><span class="snum">02</span><span class="stitle">The gap</span></div>
+  <div class="sbody"><div id="floor"></div></div>
+</section>
+
+<!-- 3 -->
+<section>
+  <div class="shead"><span class="snum">03</span><span class="stitle">Three ways to close it</span>
+    <span class="shint">Cheapest first</span></div>
+  <div class="sbody">
+    <div class="grid g3" style="margin-bottom:18px">
+      <label class="f"><span>Higher earner's benefit if claimed at FRA</span><em>The "full retirement age" figure on your statement</em>
+        <input type="text" id="pia" inputmode="decimal" value="34,000"></label>
+      <label class="f"><span>Age you currently plan to claim</span>
+        <select id="claimNow"></select></label>
+      <label class="f"><span>Age you'd delay to</span>
+        <select id="claimLate"></select></label>
+    </div>
+    <div class="grid g2" style="margin-bottom:18px">
+      <label class="f"><span>Safe withdrawal rate to assume</span><em>From February</em>
+        <select id="swr"><option value="3.5">3.5%</option><option value="4" selected>4.0%</option>
+        <option value="4.5">4.5%</option><option value="5">5.0%</option></select></label>
+      <label class="f"><span>Annual income per $100,000 from a lifetime income quote</span>
+        <em>Get an actual quote — rates move. Leave blank to skip this route.</em>
+        <input type="text" id="payout" inputmode="decimal" value="6,200"></label>
+    </div>
+    <div class="routes" id="routes"></div>
+  </div>
+</section>
+
+<!-- 4 -->
+<section>
+  <div class="shead"><span class="snum">04</span><span class="stitle">The upside layer</span>
+    <span class="shint">What's left, by timeline</span></div>
+  <div class="sbody">
+    <p class="lede">Whatever the portfolio still has to produce gets split by when you will
+    need it. This is February's lesson made concrete — the buffer is what keeps a bad market
+    from forcing a sale.</p>
+    <div class="bkts" id="bkts"></div>
+  </div>
+</section>
+
+<!-- 5 -->
+<section>
+  <div class="shead"><span class="snum">05</span><span class="stitle">What this tells you</span></div>
+  <div class="sbody"><div class="flags" id="flags"></div></div>
+</section>
+
+<section style="border:none;background:none">
+  <div class="carry">
+    <h3>Carry forward</h3>
+    <div id="carrybody"></div>
+  </div>
+</section>
+
+<div class="bar">
+  <button class="act p" onclick="window.print()">Print / Save as PDF</button>
+  <button class="act" onclick="dlCSV()">Download CSV</button>
+  <button class="act" onclick="resetAll()">Reset</button>
+</div>
+
+<div id="assistant-slot"></div>
+<script src="../assistant.js" data-mode="month" data-month="03" data-title="March — The Paycheck Builder"></script>
+
+<p class="foot">
+  Social Security figures use the standard adjustment schedule for a full retirement age of 67.
+  The lifetime income route uses whatever quote you enter — rates move with interest rates, so
+  use a current one. This compares the capital each route requires; it does not tell you which
+  to choose. Bring it to the March call.
+</p>
+
+
+
+</div>
+
+<script>
+const $=id=>document.getElementById(id);
+const money=n=>(n<0?'-$':'$')+Math.abs(Math.round(n)).toLocaleString('en-US');
+const num=id=>{const v=($(id).value||'').replace(/[^0-9.\-]/g,'');const n=parseFloat(v);return isFinite(n)?n:0;};
+
+/* Standard benefit as a share of the full-retirement-age amount, FRA 67 */
+const SS_FACTOR={62:.70,63:.75,64:.80,65:.8667,66:.9333,67:1,68:1.08,69:1.16,70:1.24};
+const ages=Object.keys(SS_FACTOR).map(Number);
+$('claimNow').innerHTML=ages.map(a=>`<option value="${a}" ${a===67?'selected':''}>${a}</option>`).join('');
+$('claimLate').innerHTML=ages.map(a=>`<option value="${a}" ${a===70?'selected':''}>${a}</option>`).join('');
+
+function render(){
+  const ess=num('ess'), disc=num('disc'), pv=num('pv');
+  const guaranteed=num('ss1')+num('ss2')+num('pen');
+  const total=ess+disc;
+
+  const covered=Math.min(guaranteed,ess);
+  const gap=Math.max(0,ess-guaranteed);
+  const ratio=ess>0?guaranteed/ess:0;
+  const surplus=Math.max(0,guaranteed-ess);
+
+  /* ---- floor visual ---- */
+  const covPct=ess>0?Math.min(100,(covered/ess)*100):0;
+  $('floor').innerHTML=`
+    <div class="floor">
+      <div class="floor-h">Essential expenses — ${money(ess)} a year</div>
+      <div class="stack">
+        ${covPct>0?`<div class="seg cov" style="width:${covPct}%">${covPct>18?'Guaranteed for life · '+money(covered):''}</div>`:''}
+        ${covPct<100?`<div class="seg gap" style="width:${100-covPct}%">${(100-covPct)>18?'Gap · '+money(gap):''}</div>`:''}
+      </div>
+      <div class="stack-l"><span>0%</span><span>Coverage ratio ${Math.round(ratio*100)}%</span><span>100%</span></div>
+      <div class="gaplab">Your floor gap</div>
+      <div class="gapnum ${gap===0?'zero':''}">${money(gap)}</div>
+      <div class="gapnote">${gap>0
+        ? `${money(gap/12)} a month of must-pay expenses has to come out of the portfolio, in every market, for as long as you live. That is the number the rest of this page is about.`
+        : `Your essential expenses are fully covered by income that arrives regardless of markets${surplus>0?`, with ${money(surplus)} a year left over`:''}. There is nothing to buy here. The useful question for you is whether you are spending <em>enough</em> — a covered floor is permission to enjoy the upside.`}</div>
+    </div>`;
+
+  /* ---- routes ---- */
+  const swr=parseFloat($('swr').value)/100;
+  const pia=num('pia');
+  const aNow=parseInt($('claimNow').value,10), aLate=parseInt($('claimLate').value,10);
+  const benNow=pia*SS_FACTOR[aNow], benLate=pia*SS_FACTOR[aLate];
+  const ssGain=Math.max(0,benLate-benNow);
+  const bridgeYears=Math.max(0,aLate-aNow);
+  const bridgeCost=benNow*bridgeYears;      /* income forgone while waiting */
+
+  const payoutPer100=num('payout');
+  const annRate=payoutPer100>0?payoutPer100/100000:0;
+
+  const capPortfolio=swr>0?gap/swr:0;
+  const capAnnuity=annRate>0?gap/annRate:0;
+  const ssCovers=Math.min(gap,ssGain);
+  const ssRemaining=Math.max(0,gap-ssGain);
+
+  let routes=[];
+  if(gap<=0){
+    $('routes').innerHTML='<div class="rt" style="grid-column:1/-1"><p class="empty">No gap to close — nothing to price here.</p></div>';
+  } else {
+    routes=[
+      {n:'Route 1', t:'Delay Social Security', s:`Claim at ${aLate} instead of ${aNow}`,
+       v:ssGain>0?money(ssGain):'—', u:'more guaranteed income, per year',
+       best:ssGain>0,
+       b:`<b>What it costs</b>About ${money(bridgeCost)} drawn from the portfolio to live on for the ${bridgeYears} year${bridgeYears===1?'':'s'} you wait.
+          <b>What you get</b>${ssGain>0?`${money(ssGain)} a year more, for life — inflation-adjusted, government-backed, and the survivor keeps the larger benefit.`:'No increase at these ages.'}
+          <b>Closes</b>${ssGain>0?(ssRemaining<=0?'The entire gap.':money(ssCovers)+' of the '+money(gap)+' gap, leaving '+money(ssRemaining)+'.'):'Nothing.'}`},
+      {n:'Route 2', t:'Draw it from the portfolio', s:`At a ${(swr*100).toFixed(1)}% withdrawal rate`,
+       v:money(capPortfolio), u:'of capital dedicated',
+       b:`<b>What it costs</b>${capPortfolio>pv?`More than you have — ${money(capPortfolio)} against ${money(pv)} invested.`:`${money(capPortfolio)} of your ${money(pv)}, or ${((capPortfolio/pv)*100).toFixed(0)}% of the portfolio, committed to producing essentials.`}
+          <b>What you keep</b>Full control, full liquidity, and whatever is left goes to your heirs.
+          <b>What you carry</b>Market risk, sequence risk, and the risk of living longer than the money.`},
+      {n:'Route 3', t:'Transfer it to an insurer', s:'Lifetime income, using your quote',
+       v:annRate>0?money(capAnnuity):'Enter a quote', u:annRate>0?'of capital, gone permanently':'',
+       na:annRate<=0,
+       b:annRate>0
+         ?`<b>What it costs</b>${money(capAnnuity)} — ${money(capPortfolio-capAnnuity)} less capital than the portfolio route, because the insurer pools longevity risk across thousands of people.
+           <b>What you give up</b>The lump sum permanently. It does not grow, it is usually not inflation-adjusted, and it generally does not pass to your heirs.
+           <b>What you get</b>You cannot outlive it, and you stop having to be right about markets.`
+         :`<b>To price this</b>Enter the annual income per $100,000 from a current quote. Rates move with interest rates — a figure from last year will be wrong.`}
+    ];
+    $('routes').innerHTML=routes.map(r=>
+      `<div class="rt ${r.best?'best':''} ${r.na?'na':''}">
+        <div class="rt-n">${r.n}</div><div class="rt-t">${r.t}</div><div class="rt-s">${r.s}</div>
+        <div class="rt-v">${r.v}</div><div class="rt-u">${r.u}</div>
+        <div class="rt-b">${r.b}</div></div>`).join('');
+  }
+
+  /* ---- buckets ---- */
+  const annualDraw=Math.max(0,total-guaranteed);
+  const buffer=annualDraw*2;
+  const middle=annualDraw*8;
+  const growth=Math.max(0,pv-buffer-middle);
+  $('bkts').innerHTML=`
+    <div class="bkt"><div class="bkt-l">Buffer — years 1–2</div><div class="bkt-v">${money(Math.min(buffer,pv))}</div>
+      <div class="bkt-p">Cash and short-term bonds. Two years of withdrawals, so a decline never forces a sale.</div></div>
+    <div class="bkt"><div class="bkt-l">Middle — years 3–10</div><div class="bkt-v">${money(Math.min(middle,Math.max(0,pv-buffer)))}</div>
+      <div class="bkt-p">Bonds and conservative holdings. Stability for the decade you can see.</div></div>
+    <div class="bkt"><div class="bkt-l">Growth — year 10 onward</div><div class="bkt-v">${money(growth)}</div>
+      <div class="bkt-p">${growth>0?'Long enough to ride out cycles. This is the part that should be invested for growth.':'Nothing left over — the portfolio is fully committed to the next decade. That is a signal to look hard at the floor.'}</div></div>`;
+
+  /* ---- flags ---- */
+  const F=[];
+  if(gap<=0){
+    F.push({t:'g',h:'Your floor is covered — buy nothing',
+      b:'Guaranteed income already covers your essentials. Anyone selling you lifetime income right now is solving a problem you do not have. The genuine risk in your situation is underspending: sitting on money you earned because a pile does not feel like permission.'});
+  }
+  if(gap>0 && ssGain>=gap){
+    F.push({t:'g',h:'Delaying Social Security closes the whole gap',
+      b:`Waiting from ${aNow} to ${aLate} adds ${money(ssGain)} a year — more than the ${money(gap)} you need. It is inflation-adjusted, government-backed, and protects the survivor. You would need roughly ${money(capPortfolio)} of portfolio, or ${annRate>0?money(capAnnuity):'a large lump sum'}, to buy the same thing. Look here before anything else.`});
+  } else if(gap>0 && ssGain>0){
+    F.push({t:'n',h:'Delaying covers part of the gap',
+      b:`Waiting from ${aNow} to ${aLate} adds ${money(ssGain)} a year and leaves ${money(ssRemaining)} still uncovered. Work this lever first, then decide about the remainder — and remember covering part of a gap is a legitimate answer.`});
+  }
+  if(gap>0 && capPortfolio>pv){
+    F.push({t:'w',h:'The portfolio route needs more capital than you have',
+      b:`Producing ${money(gap)} a year at ${(swr*100).toFixed(1)}% would take ${money(capPortfolio)}, against ${money(pv)} invested. That is the clearest signal on this page: the gap has to close through guaranteed income, lower essential spending, or working longer — not through a withdrawal strategy.`});
+  } else if(gap>0 && capPortfolio>pv*.6){
+    F.push({t:'n',h:'Most of the portfolio would be committed to essentials',
+      b:`${((capPortfolio/pv)*100).toFixed(0)}% of your investable assets would be dedicated to producing must-pay expenses, leaving little for anything else. Worth asking whether some of that job belongs somewhere it cannot be affected by markets.`});
+  }
+  if(gap>0 && annRate>0 && capAnnuity<capPortfolio){
+    F.push({t:'n',h:`The insurer route needs ${money(capPortfolio-capAnnuity)} less capital`,
+      b:'That difference is mortality pooling — the insurer plans across thousands of lives while you have to plan as if you will be the one who reaches ninety-eight. It is a real advantage. It is paid for with the lump sum, the growth, the inflation adjustment, and what your heirs receive.'});
+  }
+  if(ratio>0 && ratio<.5 && gap>0){
+    F.push({t:'w',h:'Under half your essentials are covered',
+      b:'This is the situation where a bad early market does real damage, because you are selling into declines to pay for necessities. February measured what that costs in years. Raising the floor is the structural fix.'});
+  }
+  if(growth<=0 && pv>0){
+    F.push({t:'n',h:'No growth bucket left',
+      b:'Once the buffer and the next decade are funded, nothing remains for long-term growth — which means inflation over a twenty-five year retirement has nothing working against it. Another argument for lowering what the portfolio has to produce.'});
+  }
+  F.push({t:'n',h:'Work the order, not the product',
+    b:'Social Security timing first, pension elections second, and only then a decision about transferring or drawing. Any conversation that starts at step three is skipping the two cheapest options you have.'});
+  $('flags').innerHTML=F.map(f=>`<div class="flag ${f.t}"><b>${f.h}</b>${f.b}</div>`).join('');
+
+  /* ---- carry ---- */
+  const rows=[
+    ['Essential expenses',money(ess)],
+    ['Guaranteed lifetime income',money(guaranteed)],
+    ['Coverage ratio',Math.round(ratio*100)+'%'],
+    ['Floor gap',money(gap)],
+    ['Gain from delaying Social Security',money(ssGain)],
+    ['Capital needed — portfolio route',gap>0?money(capPortfolio):'—'],
+    ['Capital needed — insurer route',gap>0&&annRate>0?money(capAnnuity):'—'],
+    ['Annual portfolio draw, all spending',money(annualDraw)],
+    ['Suggested cash buffer',money(Math.min(buffer,pv))]
+  ];
+  $('carrybody').innerHTML='<table>'+rows.map(r=>`<tr><td>${r[0]}</td><td>${r[1]}</td></tr>`).join('')+'</table>'
+    +'<p>April works the Social Security decision properly — the number above is a first approximation using the standard adjustment schedule. June re-runs the coverage ratio as a survivor, which is where a fixed pension or a single-life election shows its real cost.</p>';
+}
+
+function dlCSV(){
+  const rows=[['Field','Value']];
+  document.querySelectorAll('#carrybody tr').forEach(tr=>rows.push([tr.cells[0].textContent,tr.cells[1].textContent]));
+  document.querySelectorAll('.flag b').forEach(b=>rows.push(['Note',b.textContent]));
+  const csv=rows.map(r=>r.map(c=>'"'+String(c).replace(/"/g,'""')+'"').join(',')).join('\n');
+  const a=document.createElement('a');
+  a.href=URL.createObjectURL(new Blob([csv],{type:'text/csv'}));
+  a.download='paycheck-builder.csv'; a.click();
+}
+function resetAll(){
+  $('ess').value='62,000'; $('disc').value='40,000'; $('pv').value='880,000';
+  $('ss1').value='34,000'; $('ss2').value='18,000'; $('pen').value='0';
+  $('pia').value='34,000'; $('claimNow').value='67'; $('claimLate').value='70';
+  $('swr').value='4'; $('payout').value='6,200'; render();
+}
+document.addEventListener('input',render);
+document.addEventListener('change',render);
+render();
+</script>
+<!--AW:FOOTER-->
+</body>
+</html>

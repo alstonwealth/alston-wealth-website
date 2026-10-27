@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>%TITLE% — Alston Wealth</title>
+<meta name="description" content="%DESC%">
+<meta property="og:type" content="article">
+<meta property="og:title" content="%TITLE%">
+<meta property="og:description" content="%DESC%">
+<meta property="og:url" content="{{SITE_URL}}/insights/%SLUG%.html">
+<meta property="article:published_time" content="%DATE%">
+<meta property="og:image" content="%IMAGE%">
+<meta name="twitter:image" content="%IMAGE%">
+<link rel="alternate" type="application/rss+xml" title="Alston Wealth — Insights" href="{{SITE_URL}}/insights/feed.xml">
+<script type="application/ld+json">%SCHEMA%</script>
+<!--AW:HEAD-->
+</head>
+<body class="aw">
+<!--AW:HEADER-->
+<main>
+<section class="aw-pagehead">
+  <div class="aw-in">
+    <p class="aw-crumb"><a href="./">Insights</a> / %TOPIC%</p>
+    <h1 class="aw-h1" style="max-width:20em">%TITLE%</h1>
+    <p class="aw-lede">%DESC%</p>
+    <p class="aw-post-meta">By %AUTHOR%, Lead Advisor · <time datetime="%DATE%">%NICEDATE%</time></p>
+  </div>
+</section>
+
+<section class="aw-sec">
+  <div class="aw-in aw-twocol">
+    <article class="aw-body aw-post">
+%BODY%
+    </article>
+    <aside class="aw-aside">
+      <h3>Run your own numbers</h3>
+      <p>Free tools built for this exact decision. Nothing to sign up for.</p>
+      %TOOLS%
+      <h3 style="margin-top:28px">Want a second set of eyes?</h3>
+      <p>30 to 45 minutes by video, all about your situation.</p>
+      <a class="aw-btn aw-btn-ink book-link" href="{{BOOK_LINK}}" data-track="post-%SLUG%-book">Book a free call</a>
+    </aside>
+  </div>
+</section>
+
+<section class="aw-sec aw-cream">
+  <div class="aw-in">
+    <h2 class="aw-h2">More plain-English answers.</h2>
+    <p class="aw-lede">Every month we publish what households are deciding right now, and the tools to work it out.</p>
+    <div class="aw-acts"><a class="aw-btn aw-btn-line" href="./">All insights</a><a class="aw-btn aw-btn-line" href="../learn.html">The Decision Calendar</a></div>
+  </div>
+</section>
+</main>
+<!--AW:FOOTER-->
+</body>
+</html>

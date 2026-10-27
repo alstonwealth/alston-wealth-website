@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Coverage Bridge — Alston Wealth</title>
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Alston Wealth">
+<meta property="og:title" content="The Coverage Bridge — Alston Wealth">
+<meta property="og:description" content="Twelve retirement decisions, twelve months. Free tools, briefings, and a live monthly call.">
+<meta property="og:image" content="{{SITE_URL}}/og-image.png">
+<meta property="og:url" content="{{SITE_URL}}/tools/05-coverage-bridge.html">
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-YJFKJ8MCV3"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}
+gtag('js',new Date());gtag('config','G-YJFKJ8MCV3');</script>
+<meta name="twitter:card" content="summary_large_image">
+
+<style>
+:root{
+  --ink:#16233A; --ink2:#46505F; --ink3:#5E6878;
+  --paper:#FBFAF7; --card:#FFFFFF; --rule:#E6E2D9; --rule2:#EDEAE3;
+  --brass:#8A5F24; --brass-tint:#F5EEE1;
+  --good:#2F6B4F; --good-tint:#E9F2ED;
+  --warn:#9A4A22; --warn-tint:#FBEDE5;
+  --u:"Archivo","Helvetica Neue",Helvetica,sans-serif;
+  --s:"Source Serif 4",Charter,"Bitstream Charter",Georgia,serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--paper);color:var(--ink);font-family:var(--s);
+  font-size:16px;line-height:1.5;-webkit-font-smoothing:antialiased;padding:0 0 80px}
+.wrap{max-width:940px;margin:0 auto;padding:0 20px}
+header{border-bottom:2px solid var(--ink);padding:34px 0 14px;margin-bottom:26px}
+.eyebrow{font-family:var(--u);font-weight:700;font-size:10px;letter-spacing:.19em;
+  text-transform:uppercase;color:var(--brass);margin-bottom:7px}
+h1{font-family:var(--u);font-weight:700;font-size:31px;letter-spacing:-.02em;line-height:1.05}
+.sub{color:var(--ink2);margin-top:9px;max-width:64ch;font-size:15.5px}
+.hdr-row{display:flex;justify-content:space-between;align-items:flex-end;gap:20px;flex-wrap:wrap}
+.firm{font-family:var(--u);font-weight:700;font-size:11px;letter-spacing:.15em;
+  text-transform:uppercase;color:var(--ink2);white-space:nowrap}
+
+.modes{display:flex;border:1px solid var(--rule);margin-bottom:20px}
+.modes button{flex:1;border:none;border-right:1px solid var(--rule);background:#fff;
+  padding:14px;font-family:var(--u);font-weight:600;font-size:14px;color:var(--ink2);cursor:pointer}
+.modes button:last-child{border-right:none}
+.modes button.on{background:var(--ink);color:#fff}
+.modes button:hover:not(.on){background:#F3F1EB}
+
+section{background:var(--card);border:1px solid var(--rule);margin-bottom:20px}
+.shead{display:flex;align-items:baseline;gap:12px;padding:15px 20px;
+  border-bottom:1px solid var(--rule2);background:#FCFBF8;flex-wrap:wrap}
+.snum{font-family:var(--u);font-weight:700;font-size:10px;letter-spacing:.14em;color:var(--brass);
+  border:1px solid var(--brass);padding:3px 7px;flex:none}
+.stitle{font-family:var(--u);font-weight:700;font-size:16px;letter-spacing:-.01em}
+.shint{font-size:14px;color:var(--ink3);margin-left:auto;font-family:var(--u);font-weight:500}
+.sbody{padding:20px}
+.lede{color:var(--ink2);font-size:15px;margin-bottom:16px;max-width:68ch}
+
+.grid{display:grid;gap:12px}
+.g2{grid-template-columns:repeat(2,1fr)}
+.g3{grid-template-columns:repeat(3,1fr)}
+label.f{display:block}
+label.f span{display:block;font-family:var(--u);font-weight:600;font-size:11.5px;
+  letter-spacing:.05em;text-transform:uppercase;color:var(--ink2);margin-bottom:5px}
+label.f em{font-style:normal;color:var(--ink3);text-transform:none;letter-spacing:0;
+  font-weight:500;font-size:11px;display:block;margin-top:2px}
+input[type=text],select{width:100%;padding:10px 11px;border:1px solid var(--rule);
+  background:#fff;font-family:var(--u);font-size:15.5px;color:var(--ink);border-radius:0}
+input[type=text]:focus,select:focus{outline:2px solid var(--brass);outline-offset:-1px}
+
+.line{display:grid;grid-template-columns:1fr 140px;gap:10px 16px;align-items:center;
+  padding:9px 0;border-bottom:1px solid var(--rule2)}
+.line:last-of-type{border-bottom:none}
+.line label b{color:var(--ink);font-weight:600;display:block;font-family:var(--u);font-size:14px}
+.line label i{font-style:normal;font-size:12.5px;color:var(--ink3);display:block;margin-top:1px}
+.line input{text-align:right}
+.line.no label b{color:var(--good)}
+.tot{display:flex;justify-content:space-between;align-items:baseline;
+  margin-top:14px;padding-top:13px;border-top:2px solid var(--ink);
+  font-family:var(--u);font-weight:700;font-size:16px}
+
+/* cliff gauge */
+.cliff{border:1px solid var(--rule);background:#fff;padding:22px}
+.cliff-h{font-family:var(--u);font-weight:600;font-size:10.5px;letter-spacing:.13em;
+  text-transform:uppercase;color:var(--ink3);margin-bottom:14px}
+.gauge{position:relative;height:34px;background:#EFEDE6;border:1px solid var(--rule);
+  overflow:hidden;margin-bottom:6px}
+.gfill{height:100%;position:absolute;left:0;top:0}
+.gfill.safe{background:var(--good);opacity:.8}
+.gfill.over{background:var(--warn);opacity:.85}
+.gline{position:absolute;top:-3px;bottom:-3px;width:2px;background:var(--ink)}
+.glabs{display:flex;justify-content:space-between;font-family:var(--u);
+  font-size:11px;font-weight:600;color:var(--ink3);margin-bottom:20px}
+.big{font-family:var(--u);font-weight:700;font-size:42px;line-height:.95;letter-spacing:-.03em}
+.big.safe{color:var(--good)} .big.over{color:var(--warn)}
+.biglab{font-family:var(--u);font-weight:600;font-size:10.5px;letter-spacing:.13em;
+  text-transform:uppercase;color:var(--ink3);margin-bottom:6px}
+.bignote{font-size:14.5px;color:var(--ink2);margin-top:11px;line-height:1.45;max-width:70ch}
+
+.rgrid{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--rule);
+  border:1px solid var(--rule);margin-top:1px}
+.r{background:#fff;padding:15px 16px}
+.r-l{font-family:var(--u);font-weight:600;font-size:10.5px;letter-spacing:.13em;
+  text-transform:uppercase;color:var(--ink3);margin-bottom:6px}
+.r-v{font-family:var(--u);font-weight:700;font-size:24px;letter-spacing:-.02em;line-height:1}
+.r-n{font-size:13.5px;color:var(--ink2);margin-top:7px;line-height:1.42}
+.r.hero{background:var(--brass-tint)} .r.hero .r-v{color:var(--brass)}
+.r.warn{background:var(--warn-tint)} .r.warn .r-v{color:var(--warn)}
+.r.good{background:var(--good-tint)} .r.good .r-v{color:var(--good)}
+
+.flags{margin-top:18px}
+.flag{border-left:3px solid;padding:12px 15px;margin-bottom:9px;font-size:14.5px;line-height:1.45}
+.flag b{font-family:var(--u);font-weight:700;font-size:12px;letter-spacing:.06em;
+  text-transform:uppercase;display:block;margin-bottom:4px}
+.flag.w{border-color:var(--warn);background:var(--warn-tint)} .flag.w b{color:var(--warn)}
+.flag.g{border-color:var(--good);background:var(--good-tint)} .flag.g b{color:var(--good)}
+.flag.n{border-color:var(--brass);background:var(--brass-tint)} .flag.n b{color:var(--brass)}
+
+.carry{background:var(--ink);color:#fff;padding:20px}
+.carry h3{font-family:var(--u);font-weight:700;font-size:13px;letter-spacing:.13em;
+  text-transform:uppercase;color:#C9A26B;margin-bottom:12px}
+.carry table{width:100%;border-collapse:collapse;font-size:14.5px}
+.carry td{padding:7px 0;border-bottom:1px solid rgba(255,255,255,.13)}
+.carry td:last-child{text-align:right;font-family:var(--u);font-weight:700}
+.carry tr:last-child td{border-bottom:none}
+.carry p{font-size:13.5px;color:#B9C2D0;margin-top:13px;line-height:1.5}
+
+.bar{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px}
+button.act{font-family:var(--u);font-weight:600;font-size:13.5px;letter-spacing:.03em;
+  padding:11px 18px;border:1px solid var(--ink);background:#fff;color:var(--ink);cursor:pointer;border-radius:0}
+button.act:hover{background:var(--ink);color:#fff}
+button.act.p{background:var(--ink);color:#fff}
+button.act.p:hover{background:var(--brass);border-color:var(--brass)}
+.foot{margin-top:26px;padding-top:16px;border-top:1px solid var(--rule);
+  font-size:13.5px;color:var(--ink3);line-height:1.5}
+.empty{color:var(--ink3);font-style:italic;font-size:15px}
+.hide{display:none}
+
+@media (max-width:720px){
+  .g2,.g3,.rgrid{grid-template-columns:1fr}
+  h1{font-size:25px} .shint{margin-left:0;flex-basis:100%}
+  .line{grid-template-columns:1fr} .line input{text-align:left}
+  .big{font-size:32px} .modes{flex-direction:column}
+  .modes button{border-right:none;border-bottom:1px solid var(--rule)}
+}
+@media print{
+  body{background:#fff;padding:0;font-size:11pt}
+  .bar,.shint,.modes{display:none}
+  section{break-inside:avoid;border-color:#bbb}
+  .carry{background:#fff;color:#000;border:2px solid #000}
+  .carry h3{color:#000} .carry p{color:#444} .carry td{border-bottom:1px solid #ccc}
+  .gfill,.r.hero,.r.warn,.r.good{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+}
+
+/* nav */
+nav{border-bottom:1px solid var(--rule);background:var(--paper);position:sticky;top:0;z-index:10;
+  margin:0 0 4px}
+nav .navwrap{max-width:940px;margin:0 auto;padding:0 20px;display:flex;align-items:center;
+  justify-content:space-between;height:58px;gap:20px}
+nav .brand{font-family:var(--u);font-weight:700;font-size:15px;color:var(--ink);
+  text-decoration:none;letter-spacing:-.01em}
+nav .brand:hover{color:var(--brass)}
+nav ul{list-style:none;display:flex;gap:22px;font-family:var(--u);font-size:13.5px;font-weight:600;
+  margin:0;padding:0}
+nav a{text-decoration:none;color:var(--ink2)}
+nav a:hover{color:var(--brass)}
+@media(max-width:620px){nav .hide-sm{display:none} nav ul{gap:16px}}
+@media print{nav{display:none}}
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap">
+<link rel="stylesheet" href="../assets/alston.css">
+</head>
+<body>
+<!--AW:HEADER-->
+
+<div class="wrap">
+
+<header>
+  <div class="hdr-row">
+    <div>
+      <div class="eyebrow">May · The Decision Calendar</div>
+      <h1>The Coverage Bridge</h1>
+    </div>
+    <div class="firm">Alex&nbsp;Alston</div>
+  </div>
+  <p class="sub">Before 65, one income threshold decides whether health coverage costs you
+  $200 a month or $1,400. After 65, one enrollment window decides what you can buy later.
+  Find out where you stand on whichever applies.</p>
+</header>
+
+<div class="modes">
+  <button id="mUnder" class="on" onclick="setMode('under')">I'm under 65</button>
+  <button id="mOver" onclick="setMode('over')">I'm 65 or over</button>
+</div>
+
+<!-- ============ UNDER 65 ============ -->
+<div id="under">
+
+<section>
+  <div class="shead"><span class="snum">01</span><span class="stitle">Your household</span></div>
+  <div class="sbody">
+    <div class="grid g3">
+      <label class="f"><span>People in your household</span><em>Everyone on your tax return</em>
+        <select id="size"></select></label>
+      <label class="f"><span>Your age</span>
+        <input type="text" id="age" inputmode="numeric" value="62"></label>
+      <label class="f"><span>Full-price premium you'd pay</span><em>Monthly, before any credit — from healthcare.gov</em>
+        <input type="text" id="premium" inputmode="decimal" value="1,650"></label>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="shead"><span class="snum">02</span><span class="stitle">Income that counts this year</span>
+    <span class="shint">Project the full year, not year-to-date</span></div>
+  <div class="sbody">
+    <p class="lede">This is a full-year projection. The threshold is measured on the whole year,
+    so December is too late to discover you crossed it.</p>
+    <div class="line"><label><b>IRA and 401(k) withdrawals</b><i>Every dollar counts</i></label><input type="text" id="i1" inputmode="decimal" value="45,000"></div>
+    <div class="line"><label><b>Roth conversions</b><i>Counts fully — this is the one that catches people</i></label><input type="text" id="i2" inputmode="decimal" value="0"></div>
+    <div class="line"><label><b>Pension and annuity income</b></label><input type="text" id="i3" inputmode="decimal" value="0"></div>
+    <div class="line"><label><b>Interest, dividends, capital gains</b><i>Only the gain on a sale, not your principal</i></label><input type="text" id="i4" inputmode="decimal" value="9,000"></div>
+    <div class="line"><label><b>Wages or self-employment</b></label><input type="text" id="i5" inputmode="decimal" value="0"></div>
+    <div class="line"><label><b>Social Security</b><i>The full benefit, including the untaxed portion</i></label><input type="text" id="i6" inputmode="decimal" value="0"></div>
+    <div class="line"><label><b>Tax-exempt interest</b><i>Municipal bonds count here even though they're tax-free</i></label><input type="text" id="i7" inputmode="decimal" value="0"></div>
+    <div class="tot"><span>Income that counts</span><span id="magiTot">$0</span></div>
+
+    <p class="lede" style="margin-top:22px"><b>What doesn't count.</b> Enter these to see what
+    you could live on without touching the threshold.</p>
+    <div class="line no"><label><b>Roth withdrawals</b><i>Contributions and earnings alike — not income for this</i></label><input type="text" id="n1" inputmode="decimal" value="0"></div>
+    <div class="line no"><label><b>Principal from selling in a brokerage account</b><i>Your own money coming back</i></label><input type="text" id="n2" inputmode="decimal" value="0"></div>
+    <div class="line no"><label><b>Cash and savings you spend</b></label><input type="text" id="n3" inputmode="decimal" value="0"></div>
+  </div>
+</section>
+
+<section>
+  <div class="shead"><span class="snum">03</span><span class="stitle">Where you land</span>
+    <span class="shint" id="thNote"></span></div>
+  <div class="sbody">
+    <div id="cliffOut"></div>
+    <div id="cliffCards"></div>
+  </div>
+</section>
+
+</div>
+
+<!-- ============ 65+ ============ -->
+<div id="over" class="hide">
+
+<section>
+  <div class="shead"><span class="snum">01</span><span class="stitle">Enrollment timing</span>
+    <span class="shint">The Part B penalty is permanent</span></div>
+  <div class="sbody">
+    <div class="grid g3">
+      <label class="f"><span>Did you enroll in Part B within your initial window?</span>
+        <em>Three months before through three months after the month you turned 65</em>
+        <select id="onTime"><option value="yes" selected>Yes</option>
+        <option value="employer">No — I had employer coverage from a current employer</option>
+        <option value="no">No</option></select></label>
+      <label class="f"><span>If not, how many full years late?</span>
+        <select id="lateYrs"><option value="0" selected>0</option><option value="1">1</option>
+        <option value="2">2</option><option value="3">3</option><option value="4">4</option>
+        <option value="5">5 or more</option></select></label>
+      <label class="f"><span>Was that employer plan at a company with 20+ employees?</span>
+        <em>Retiree coverage and COBRA do not count</em>
+        <select id="empSize"><option value="na" selected>Not applicable</option>
+        <option value="yes">Yes — 20 or more</option><option value="no">No — under 20</option></select></label>
+    </div>
+    <div id="penaltyOut" style="margin-top:18px"></div>
+  </div>
+</section>
+
+<section>
+  <div class="shead"><span class="snum">02</span><span class="stitle">The supplement window</span>
+    <span class="shint">Six months from when Part B starts</span></div>
+  <div class="sbody">
+    <div class="grid g3">
+      <label class="f"><span>Months since your Part B started</span>
+        <select id="pbMonths"><option value="0" selected>Not started yet</option>
+        <option value="3">1–6 months</option><option value="12">More than 6 months</option></select></label>
+      <label class="f"><span>What do you have now?</span>
+        <select id="planType"><option value="none" selected>Haven't chosen yet</option>
+        <option value="adv">Medicare Advantage</option>
+        <option value="sup">Original Medicare + Supplement</option>
+        <option value="orig">Original Medicare, no supplement</option></select></label>
+      <label class="f"><span>Does your state require ongoing guaranteed issue?</span>
+        <em>A few do. Most don't. Check before you decide.</em>
+        <select id="gi"><option value="unknown" selected>I don't know</option>
+        <option value="yes">Yes</option><option value="no">No</option></select></label>
+    </div>
+    <div id="gapOut" style="margin-top:18px"></div>
+  </div>
+</section>
+
+<section>
+  <div class="shead"><span class="snum">03</span><span class="stitle">Income and your premium</span>
+    <span class="shint">Set two years in advance</span></div>
+  <div class="sbody">
+    <div class="grid g2">
+      <label class="f"><span>Filing status</span>
+        <select id="mStatus"><option value="mfj" selected>Married filing jointly</option>
+        <option value="single">Single</option></select></label>
+      <label class="f"><span>Your income two years ago</span><em>Adjusted gross income plus tax-exempt interest</em>
+        <input type="text" id="mMagi" inputmode="decimal" value="95,000"></label>
+    </div>
+    <div id="irmaaOut" style="margin-top:18px"></div>
+  </div>
+</section>
+
+</div>
+
+<section>
+  <div class="shead"><span class="snum">04</span><span class="stitle">What this tells you</span></div>
+  <div class="sbody"><div class="flags" id="flags"></div></div>
+</section>
+
+<section style="border:none;background:none">
+  <div class="carry">
+    <h3>Carry forward</h3>
+    <div id="carrybody"></div>
+  </div>
+</section>
+
+<div class="bar">
+  <button class="act p" onclick="window.print()">Print / Save as PDF</button>
+  <button class="act" onclick="dlCSV()">Download CSV</button>
+  <button class="act" onclick="resetAll()">Reset</button>
+</div>
+
+<div id="assistant-slot"></div>
+<script src="../assistant.js" data-mode="month" data-month="05" data-title="May — The Coverage Bridge"></script>
+
+<p class="foot" id="footNote"></p>
+
+
+
+</div>
+
+<script>
+/* ============================================================
+   DATA — update each autumn when FPL, Medicare, and IRMAA publish.
+   Marketplace coverage for a given year uses the PRIOR year's
+   federal poverty guidelines.
+   ============================================================ */
+const DATA={
+  year:2026,
+  fpl:{base:15650, perPerson:5500},   /* 2025 guidelines, used for 2026 coverage */
+  cliffPct:4.00,                       /* credit ends above 400% of FPL */
+  expectedContribAt400:.0902,          /* share of income paid for the benchmark plan at the top of the range */
+  partB:202.90, partBDeductible:283,
+  irmaa:{
+    single:[109000,137000,171000,205000,500000],
+    mfj:[218000,274000,342000,410000,750000],
+    partBTotal:[202.90,284.10,405.90,527.70,649.50,689.90],
+    partDAdd:[0,14.50,37.50,60.40,83.30,91.00]
+  },
+  lateFeePerYear:.10                   /* Part B penalty: 10% per full 12 months late, for life */
+};
+
+const $=id=>document.getElementById(id);
+const money=n=>(n<0?'-$':'$')+Math.abs(Math.round(n)).toLocaleString('en-US');
+const num=id=>{const el=$(id);if(!el)return 0;const v=(el.value||'').replace(/[^0-9.\-]/g,'');const n=parseFloat(v);return isFinite(n)?n:0;};
+let MODE='under';
+
+$('size').innerHTML=[1,2,3,4,5].map(n=>`<option value="${n}" ${n===2?'selected':''}>${n} ${n===1?'person':'people'}</option>`).join('');
+
+function setMode(m){
+  MODE=m;
+  $('under').className=m==='under'?'':'hide';
+  $('over').className=m==='over'?'':'hide';
+  $('mUnder').className=m==='under'?'on':'';
+  $('mOver').className=m==='over'?'on':'';
+  render();
+}
+
+function fplFor(size){ return DATA.fpl.base + (size-1)*DATA.fpl.perPerson; }
+
+function render(){
+  const F=[];
+  let carry=[];
+
+  if(MODE==='under'){
+    const size=parseInt($('size').value,10);
+    const fpl=fplFor(size);
+    const threshold=fpl*DATA.cliffPct;
+    $('thNote').textContent='Cliff at '+money(threshold)+' for '+size+' '+(size===1?'person':'people');
+
+    const magi=['i1','i2','i3','i4','i5','i6','i7'].reduce((s,i)=>s+num(i),0);
+    const notCounted=['n1','n2','n3'].reduce((s,i)=>s+num(i),0);
+    $('magiTot').textContent=money(magi);
+
+    const pctFpl=fpl>0?(magi/fpl)*100:0;
+    const over=magi>threshold;
+    const distance=Math.abs(threshold-magi);
+
+    const premium=num('premium')*12;
+    /* At the top of the eligible range you pay roughly the capped share of income;
+       the credit is the difference between the full premium and that amount. */
+    const expectedContrib=magi*DATA.expectedContribAt400;
+    const credit=over?0:Math.max(0,premium-expectedContrib);
+
+    const gaugeMax=threshold*1.35;
+    const fillPct=Math.min(100,(magi/gaugeMax)*100);
+    const linePct=(threshold/gaugeMax)*100;
+
+    $('cliffOut').innerHTML=`
+      <div class="cliff">
+        <div class="cliff-h">Your income against the ${DATA.year} threshold</div>
+        <div class="gauge">
+          <div class="gfill ${over?'over':'safe'}" style="width:${fillPct}%"></div>
+          <div class="gline" style="left:${linePct}%"></div>
+        </div>
+        <div class="glabs"><span>$0</span><span>Cliff · ${money(threshold)}</span><span>${money(gaugeMax)}</span></div>
+        <div class="biglab">${over?'You are over the line by':'You have room before the line of'}</div>
+        <div class="big ${over?'over':'safe'}">${money(distance)}</div>
+        <div class="bignote">${over
+          ? `Projected income of ${money(magi)} is ${pctFpl.toFixed(0)}% of the poverty level — above the ${DATA.cliffPct*100}% cutoff. <b>The premium credit is zero</b>, and anything already received during the year is repaid on your tax return. Reducing income by ${money(distance+1)} restores the whole credit.`
+          : `Projected income of ${money(magi)} is ${pctFpl.toFixed(0)}% of the poverty level. You can add ${money(distance)} more before the credit disappears entirely — and it disappears all at once, not gradually.`}</div>
+      </div>`;
+
+    $('cliffCards').innerHTML=`
+      <div class="rgrid">
+        <div class="r ${over?'warn':'hero'}"><div class="r-l">Credit this year</div>
+          <div class="r-v">${money(credit)}</div>
+          <div class="r-n">${over?`Nothing, because you are over the line. Full-price premiums of ${money(premium)} a year come entirely out of pocket.`:`Estimated, against a full-price premium of ${money(premium)}. Confirm the exact figure at healthcare.gov — this is an approximation.`}</div></div>
+        <div class="r"><div class="r-l">What you'd actually pay</div>
+          <div class="r-v">${money((premium-credit)/12)}</div>
+          <div class="r-n">Per month${over?`. With the credit you'd pay about ${money(expectedContrib/12)}.`:`, instead of ${money(premium/12)} at full price.`}</div></div>
+        <div class="r good"><div class="r-l">Spendable without counting</div>
+          <div class="r-v">${money(notCounted)}</div>
+          <div class="r-n">Roth withdrawals, brokerage principal, and cash. This is money you can live on that does not move you toward the line at all.</div></div>
+        <div class="r"><div class="r-l">Total available to spend</div>
+          <div class="r-v">${money(magi+notCounted)}</div>
+          <div class="r-n">Counted income plus the sources that don't count. Two households can spend the same and report completely different income.</div></div>
+      </div>`;
+
+    /* flags */
+    if(over){
+      F.push({t:'w',h:`Reducing income by ${money(distance+1)} restores the entire credit`,
+        b:`That is the whole point of the cliff — it is not proportional. ${money(distance+1)} less of counted income is worth roughly ${money(Math.max(0,premium-expectedContrib))} to you. Look at what you can shift to Roth withdrawals, brokerage principal, or cash before year end.`});
+    } else if(distance<12000){
+      F.push({t:'w',h:'You are close to the line',
+        b:`${money(distance)} of room. One unplanned withdrawal, a capital gain distribution from a mutual fund in December, or a conversion could put you over — and the credit does not shrink, it vanishes. Watch this number for the rest of the year.`});
+    } else {
+      F.push({t:'g',h:'Comfortable distance from the cliff',
+        b:`${money(distance)} of headroom. Still worth projecting again in the autumn, because mutual fund capital gain distributions arrive in December and are outside your control.`});
+    }
+    if(num('i2')>0){
+      F.push({t:'w',h:'Your Roth conversion is pushing you toward the line',
+        b:`${money(num('i2'))} of conversion counts fully. Before 65 on a marketplace plan, the credit is frequently worth more than the tax saved on a conversion of similar size. Set the conversion to zero above and see what happens to the credit — then decide which is bigger. August works this properly.`});
+    }
+    if(num('n1')===0 && num('i1')>0){
+      F.push({t:'n',h:'No Roth withdrawals entered',
+        b:'If you have a Roth balance, this is the single most valuable lever available to you before 65. Roth withdrawals do not count toward the threshold at all — not contributions, not earnings. Shifting even part of your spending there can be worth thousands.'});
+    }
+    F.push({t:'n',h:'Project the full year, and check again in the autumn',
+      b:'The threshold is measured on your whole year. Mutual funds distribute capital gains in December whether you sell anything or not, and those count. By the time a surprise shows up on the tax return, it is too late to undo.'});
+
+    carry=[
+      ['Household size',size+''],
+      ['Cliff threshold',money(threshold)],
+      ['Projected counted income',money(magi)],
+      ['Percent of poverty level',pctFpl.toFixed(0)+'%'],
+      [over?'Over by':'Room remaining',money(distance)],
+      ['Estimated credit',money(credit)],
+      ['Spendable without counting',money(notCounted)]
+    ];
+    $('footNote').innerHTML=`Threshold figures use the federal poverty guidelines that apply to ${DATA.year} coverage. The credit shown is an approximation for planning — confirm the exact amount at healthcare.gov. <b>This area is legislatively live:</b> the enhanced credits expired at the end of 2025 and the ${DATA.cliffPct*100}% cutoff applies for ${DATA.year}. Verify current law before acting.`;
+
+  } else {
+    /* ---------- 65+ ---------- */
+    const onTime=$('onTime').value, lateYrs=parseInt($('lateYrs').value,10), empSize=$('empSize').value;
+    const penaltyPct=(onTime==='no')?lateYrs*DATA.lateFeePerYear:0;
+    const penaltyMo=DATA.partB*penaltyPct;
+
+    if(onTime==='yes'){
+      $('penaltyOut').innerHTML=`<div class="rgrid"><div class="r good" style="grid-column:1/-1">
+        <div class="r-l">Enrollment</div><div class="r-v">No penalty</div>
+        <div class="r-n">You enrolled during your initial window. The standard ${DATA.year} Part B premium is ${money(DATA.partB)} a month, with a ${money(DATA.partBDeductible)} annual deductible.</div></div></div>`;
+    } else if(onTime==='employer'){
+      $('penaltyOut').innerHTML=`<div class="rgrid">
+        <div class="r ${empSize==='no'?'warn':'good'}"><div class="r-l">Employer coverage exception</div>
+          <div class="r-v">${empSize==='yes'?'Protected':empSize==='no'?'Check this':'Confirm'}</div>
+          <div class="r-n">${empSize==='yes'
+            ?'Coverage from a current employer with 20 or more employees lets you delay Part B without penalty. You get a special enrollment period when that coverage ends.'
+            :empSize==='no'
+              ?'At companies under 20 employees, Medicare generally becomes the primary payer at 65 — meaning you were expected to enroll. Confirm with the plan administrator, because if that is the case a penalty may apply and the coverage may have been paying secondary.'
+              :'Answer the employer size question — it determines whether the exception applies at all.'}</div></div>
+        <div class="r"><div class="r-l">What does not count</div><div class="r-v" style="font-size:17px">COBRA · retiree plans</div>
+          <div class="r-n">Neither qualifies you for the delay. People rely on them and discover the penalty years later.</div></div></div>`;
+    } else {
+      $('penaltyOut').innerHTML=`<div class="rgrid">
+        <div class="r warn"><div class="r-l">Part B late penalty</div><div class="r-v">${(penaltyPct*100).toFixed(0)}%</div>
+          <div class="r-n">Ten percent for every full twelve months you were eligible and did not enroll.</div></div>
+        <div class="r warn"><div class="r-l">Added to your premium</div><div class="r-v">${money(penaltyMo)}/mo</div>
+          <div class="r-n">${money(penaltyMo*12)} a year — and it is permanent. It does not stop after a set period.</div></div></div>`;
+    }
+
+    const pbM=parseInt($('pbMonths').value,10), planType=$('planType').value, gi=$('gi').value;
+    let gapMsg;
+    if(pbM===0){
+      gapMsg={c:'hero',t:'Your window has not opened yet',n:'When Part B starts, you get six months to buy any supplement policy sold in your state with no health questions. Decide before then, not after — it is the only time the door is guaranteed open.'};
+    } else if(pbM<=6){
+      gapMsg={c:'good',t:'Open now — this is the window',n:'You can buy any supplement sold in your state regardless of health, with no underwriting. Once these six months pass, most states let insurers ask health questions and decline you.'};
+    } else {
+      gapMsg={c:gi==='yes'?'good':'warn',t:gi==='yes'?'Closed, but your state protects you':'Closed',
+        n:gi==='yes'
+          ?'Your window has passed, but you indicated your state requires guaranteed issue on an ongoing basis. Confirm the specifics — the rules vary in scope even among states that have them.'
+          :gi==='no'
+            ?'Your window has passed and your state does not require ongoing guaranteed issue. If you wanted to move to a supplement later, insurers can underwrite and decline you.'
+            :'Your window has passed. Whether you can still buy a supplement without health questions depends entirely on your state. Find out — it determines what options you actually have from here.'};
+    }
+    $('gapOut').innerHTML=`<div class="rgrid"><div class="r ${gapMsg.c}" style="grid-column:1/-1">
+      <div class="r-l">Medigap guaranteed-issue window</div><div class="r-v" style="font-size:19px">${gapMsg.t}</div>
+      <div class="r-n">${gapMsg.n}</div></div></div>`;
+
+    const st=$('mStatus').value, mmagi=num('mMagi'), lines=DATA.irmaa[st];
+    let tier=0; for(let i=0;i<lines.length;i++){ if(mmagi>=lines[i]) tier=i+1; }
+    let nextLine=null; for(const L of lines){ if(mmagi<L){ nextLine=L; break; } }
+    const pbTotal=DATA.irmaa.partBTotal[Math.min(tier,DATA.irmaa.partBTotal.length-1)];
+    const pdAdd=DATA.irmaa.partDAdd[Math.min(tier,DATA.irmaa.partDAdd.length-1)];
+    const people=st==='mfj'?2:1;
+    const annualSurcharge=((pbTotal-DATA.partB)+pdAdd)*12*people;
+
+    $('irmaaOut').innerHTML=`<div class="rgrid">
+      <div class="r ${tier>0?'warn':'good'}"><div class="r-l">Your Part B premium</div>
+        <div class="r-v">${money(pbTotal)}/mo</div>
+        <div class="r-n">${tier>0?`Includes a surcharge of ${money(pbTotal-DATA.partB)} a month${pdAdd>0?`, plus ${money(pdAdd)} on Part D`:''}. Across ${people===2?'both of you':'the year'} that is ${money(annualSurcharge)} annually.`:`The standard premium — no surcharge. Deductible is ${money(DATA.partBDeductible)}.`}</div></div>
+      <div class="r ${nextLine&&nextLine-mmagi<15000?'hero':''}"><div class="r-l">${nextLine?'Room to the next threshold':'Above the top threshold'}</div>
+        <div class="r-v">${nextLine?money(nextLine-mmagi):'—'}</div>
+        <div class="r-n">${nextLine?`Next line at ${money(nextLine)}. It is a cliff, not a slope — a dollar over and the full surcharge applies for the year, to each of you. Remember this is set by the return from two years ago.`:'You are above the highest published threshold.'}</div></div></div>`;
+
+    if(onTime==='no'&&penaltyPct>0){
+      F.push({t:'w',h:'The Part B penalty never expires',
+        b:`${(penaltyPct*100).toFixed(0)}% added to your premium — ${money(penaltyMo*12)} a year, every year, for life. It is worth confirming the enrollment history with Medicare directly, since periods of qualifying employer coverage can sometimes be documented after the fact and reduce it.`});
+    }
+    if(pbM<=6&&pbM>0&&planType!=='sup'){
+      F.push({t:'w',h:'Your guaranteed-issue window is open right now',
+        b:'This is the only period when you can buy any supplement sold in your state with no health questions asked. If a supplement is something you might ever want, this is when the decision is genuinely free. After it closes, in most states, your health determines whether you can buy one.'});
+    }
+    if(pbM>6&&planType==='adv'&&gi!=='yes'){
+      F.push({t:'w',h:'Switching from Advantage to a supplement may not be available to you',
+        b:'You can return to Original Medicare at any open enrollment. But without a supplement there is no annual cap on what you can spend — and in most states insurers can underwrite and decline the supplement. Find out your state\'s rules before you need to know them.'});
+    }
+    if(gi==='unknown'){
+      F.push({t:'n',h:'Find out your state\'s rule — it should drive the decision',
+        b:'A few states require insurers to sell you a supplement regardless of health, at any time. Most do not. Which kind of state you live in changes how reversible the Advantage decision is, and it is a single phone call to your state insurance department.'});
+    }
+    if(nextLine&&nextLine-mmagi<15000){
+      F.push({t:'n',h:'Close to a premium threshold',
+        b:`${money(nextLine-mmagi)} of headroom. Because it is based on the return from two years ago, the decision that sets your premium is one you are making now. A large conversion or a property sale this year shows up on the premium two years out. September is that month.`});
+    }
+    F.push({t:'n',h:'Compare plans against your actual prescriptions and doctors',
+      b:'Formularies and networks change every year, and the default is to do nothing. October is when the comparison happens — the window runs October 15 to December 7.'});
+
+    carry=[
+      ['Part B premium',money(pbTotal)+'/mo'],
+      ['Late enrollment penalty',penaltyPct>0?(penaltyPct*100).toFixed(0)+'%':'None'],
+      ['Income tier',tier===0?'Standard':'Tier '+tier],
+      ['Room to next threshold',nextLine?money(nextLine-mmagi):'—'],
+      ['Medigap window',pbM===0?'Not open yet':pbM<=6?'Open':'Closed']
+    ];
+    $('footNote').innerHTML=`Medicare figures are the published amounts for ${DATA.year}. Premium surcharges are based on your tax return from two years earlier. Supplement guaranteed-issue rules vary by state — verify yours directly. Bring this to the May call.`;
+  }
+
+  $('flags').innerHTML=F.map(f=>`<div class="flag ${f.t}"><b>${f.h}</b>${f.b}</div>`).join('');
+  $('carrybody').innerHTML='<table>'+carry.map(r=>`<tr><td>${r[0]}</td><td>${r[1]}</td></tr>`).join('')+'</table>'
+    +'<p>'+(MODE==='under'
+      ? 'August sizes Roth conversions. If you are on a marketplace plan, bring the room-remaining figure to that month — a conversion that looks cheap on tax alone can cost you the entire credit.'
+      : 'September works the premium thresholds properly, and October is the plan comparison. The income figure you set this year is the one that decides your premium two years from now.')+'</p>';
+}
+
+function dlCSV(){
+  const rows=[['Field','Value']];
+  document.querySelectorAll('#carrybody tr').forEach(tr=>rows.push([tr.cells[0].textContent,tr.cells[1].textContent]));
+  document.querySelectorAll('.flag b').forEach(b=>rows.push(['Note',b.textContent]));
+  const csv=rows.map(r=>r.map(c=>'"'+String(c).replace(/"/g,'""')+'"').join(',')).join('\n');
+  const a=document.createElement('a');
+  a.href=URL.createObjectURL(new Blob([csv],{type:'text/csv'}));
+  a.download='coverage-bridge.csv'; a.click();
+}
+function resetAll(){
+  ['i2','i3','i5','i6','i7','n1','n2','n3'].forEach(i=>$(i).value='0');
+  $('i1').value='45,000'; $('i4').value='9,000'; $('premium').value='1,650';
+  $('size').value='2'; $('age').value='62';
+  $('onTime').value='yes'; $('lateYrs').value='0'; $('empSize').value='na';
+  $('pbMonths').value='0'; $('planType').value='none'; $('gi').value='unknown';
+  $('mStatus').value='mfj'; $('mMagi').value='95,000';
+  render();
+}
+document.addEventListener('input',render);
+document.addEventListener('change',render);
+render();
+</script>
+<!--AW:FOOTER-->
+</body>
+</html>

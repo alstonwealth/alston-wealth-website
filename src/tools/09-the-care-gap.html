@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Care Gap — Alston Wealth</title>
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Alston Wealth">
+<meta property="og:title" content="The Care Gap — Alston Wealth">
+<meta property="og:description" content="Twelve retirement decisions, twelve months. Free tools, briefings, and a live monthly call.">
+<meta property="og:image" content="{{SITE_URL}}/og-image.png">
+<meta property="og:url" content="{{SITE_URL}}/tools/09-the-care-gap.html">
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-YJFKJ8MCV3"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}
+gtag('js',new Date());gtag('config','G-YJFKJ8MCV3');</script>
+<meta name="twitter:card" content="summary_large_image">
+
+<style>
+:root{
+  --ink:#16233A; --ink2:#46505F; --ink3:#5E6878;
+  --paper:#FBFAF7; --card:#FFFFFF; --rule:#E6E2D9; --rule2:#EDEAE3;
+  --brass:#8A5F24; --brass-tint:#F5EEE1;
+  --good:#2F6B4F; --good-tint:#E9F2ED;
+  --warn:#9A4A22; --warn-tint:#FBEDE5;
+  --u:"Archivo","Helvetica Neue",Helvetica,sans-serif;
+  --s:"Source Serif 4",Charter,"Bitstream Charter",Georgia,serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--paper);color:var(--ink);font-family:var(--s);
+  font-size:16px;line-height:1.5;-webkit-font-smoothing:antialiased;padding:0 0 80px}
+.wrap{max-width:940px;margin:0 auto;padding:0 20px}
+header{border-bottom:2px solid var(--ink);padding:34px 0 14px;margin-bottom:26px}
+.eyebrow{font-family:var(--u);font-weight:700;font-size:10px;letter-spacing:.19em;
+  text-transform:uppercase;color:var(--brass);margin-bottom:7px}
+h1{font-family:var(--u);font-weight:700;font-size:31px;letter-spacing:-.02em;line-height:1.05}
+.sub{color:var(--ink2);margin-top:9px;max-width:64ch;font-size:15.5px}
+.hdr-row{display:flex;justify-content:space-between;align-items:flex-end;gap:20px;flex-wrap:wrap}
+.firm{font-family:var(--u);font-weight:700;font-size:11px;letter-spacing:.15em;
+  text-transform:uppercase;color:var(--ink2);white-space:nowrap}
+
+section{background:var(--card);border:1px solid var(--rule);margin-bottom:20px}
+.shead{display:flex;align-items:baseline;gap:12px;padding:15px 20px;
+  border-bottom:1px solid var(--rule2);background:#FCFBF8;flex-wrap:wrap}
+.snum{font-family:var(--u);font-weight:700;font-size:10px;letter-spacing:.14em;color:var(--brass);
+  border:1px solid var(--brass);padding:3px 7px;flex:none}
+.stitle{font-family:var(--u);font-weight:700;font-size:16px;letter-spacing:-.01em}
+.shint{font-size:14px;color:var(--ink3);margin-left:auto;font-family:var(--u);font-weight:500}
+.sbody{padding:20px}
+.lede{color:var(--ink2);font-size:15px;margin-bottom:16px;max-width:68ch}
+
+.grid{display:grid;gap:12px}
+.g2{grid-template-columns:repeat(2,1fr)}
+.g3{grid-template-columns:repeat(3,1fr)}
+.g4{grid-template-columns:repeat(4,1fr)}
+label.f{display:block}
+label.f span{display:block;font-family:var(--u);font-weight:600;font-size:11.5px;
+  letter-spacing:.05em;text-transform:uppercase;color:var(--ink2);margin-bottom:5px}
+label.f em{font-style:normal;color:var(--ink3);text-transform:none;letter-spacing:0;
+  font-weight:500;font-size:11px;display:block;margin-top:2px}
+input[type=text],select{width:100%;padding:10px 11px;border:1px solid var(--rule);
+  background:#fff;font-family:var(--u);font-size:15.5px;color:var(--ink);border-radius:0}
+input[type=text]:focus,select:focus{outline:2px solid var(--brass);outline-offset:-1px}
+
+/* care type cards */
+.types{display:grid;grid-template-columns:repeat(2,1fr);gap:9px}
+.type{display:flex;gap:10px;align-items:flex-start;padding:12px 13px;border:1px solid var(--rule);
+  cursor:pointer;background:#fff}
+.type:hover{border-color:var(--brass)}
+.type input{margin-top:3px;flex:none;width:16px;height:16px;accent-color:var(--brass)}
+.type b{font-family:var(--u);font-weight:700;font-size:14px;display:block}
+.type i{font-style:normal;color:var(--ink3);font-size:13px;display:block;margin-top:2px}
+.type .amt{font-family:var(--u);font-weight:700;font-size:14px;color:var(--brass);
+  display:block;margin-top:3px}
+
+/* scenario columns */
+.scn{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--rule);
+  border:1px solid var(--rule)}
+.sc{background:#fff;padding:17px 18px}
+.sc-t{font-family:var(--u);font-weight:700;font-size:14px;margin-bottom:2px}
+.sc-s{font-size:12.5px;color:var(--ink3);margin-bottom:12px}
+.sc-v{font-family:var(--u);font-weight:700;font-size:26px;letter-spacing:-.02em;line-height:1}
+.sc-u{font-family:var(--u);font-weight:600;font-size:10px;letter-spacing:.11em;
+  text-transform:uppercase;color:var(--ink3);margin-top:5px}
+.sc-n{font-size:13px;color:var(--ink2);margin-top:11px;line-height:1.4;
+  padding-top:10px;border-top:1px solid var(--rule2)}
+.sc.mild{background:var(--good-tint)} .sc.mild .sc-v{color:var(--good)}
+.sc.severe{background:var(--warn-tint)} .sc.severe .sc-v{color:var(--warn)}
+
+/* survivor bar */
+.surv{border:1px solid var(--rule);background:#fff;padding:22px;margin-top:1px}
+.surv-h{font-family:var(--u);font-weight:600;font-size:10.5px;letter-spacing:.13em;
+  text-transform:uppercase;color:var(--ink3);margin-bottom:14px}
+.bars{display:flex;flex-direction:column;gap:12px}
+.brow{display:grid;grid-template-columns:150px 1fr 110px;gap:12px;align-items:center;font-size:14px}
+.brow .lab{font-family:var(--u);font-weight:600;font-size:12.5px;color:var(--ink2)}
+.track{height:24px;background:#EFEDE6;border:1px solid var(--rule);position:relative;overflow:hidden}
+.fill{height:100%}
+.fill.now{background:var(--ink);opacity:.75}
+.fill.after{background:var(--warn);opacity:.85}
+.brow .val{font-family:var(--u);font-weight:700;text-align:right}
+.surv-n{font-size:14.5px;color:var(--ink2);margin-top:16px;line-height:1.45;
+  padding-top:14px;border-top:1px solid var(--rule2);max-width:72ch}
+.surv-n b{color:var(--ink)}
+
+/* options */
+.opts{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--rule);
+  border:1px solid var(--rule)}
+.opt{background:#fff;padding:17px 18px}
+.opt h4{font-family:var(--u);font-weight:700;font-size:14.5px;margin-bottom:2px}
+.opt .tag{font-family:var(--u);font-weight:600;font-size:10px;letter-spacing:.11em;
+  text-transform:uppercase;color:var(--ink3);margin-bottom:11px}
+.opt .n{font-family:var(--u);font-weight:700;font-size:22px;letter-spacing:-.02em}
+.opt p{font-size:13px;color:var(--ink2);margin-top:11px;line-height:1.42;
+  padding-top:10px;border-top:1px solid var(--rule2)}
+.opt p b{color:var(--ink)}
+
+.flags{margin-top:18px}
+.flag{border-left:3px solid;padding:12px 15px;margin-bottom:9px;font-size:14.5px;line-height:1.45}
+.flag b{font-family:var(--u);font-weight:700;font-size:12px;letter-spacing:.06em;
+  text-transform:uppercase;display:block;margin-bottom:4px}
+.flag.w{border-color:var(--warn);background:var(--warn-tint)} .flag.w b{color:var(--warn)}
+.flag.g{border-color:var(--good);background:var(--good-tint)} .flag.g b{color:var(--good)}
+.flag.n{border-color:var(--brass);background:var(--brass-tint)} .flag.n b{color:var(--brass)}
+
+.carry{background:var(--ink);color:#fff;padding:20px}
+.carry h3{font-family:var(--u);font-weight:700;font-size:13px;letter-spacing:.13em;
+  text-transform:uppercase;color:#C9A26B;margin-bottom:12px}
+.carry table{width:100%;border-collapse:collapse;font-size:14.5px}
+.carry td{padding:7px 0;border-bottom:1px solid rgba(255,255,255,.13)}
+.carry td:last-child{text-align:right;font-family:var(--u);font-weight:700}
+.carry tr:last-child td{border-bottom:none}
+.carry p{font-size:13.5px;color:#B9C2D0;margin-top:13px;line-height:1.5}
+
+.bar{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px}
+button.act{font-family:var(--u);font-weight:600;font-size:13.5px;letter-spacing:.03em;
+  padding:11px 18px;border:1px solid var(--ink);background:#fff;color:var(--ink);cursor:pointer;border-radius:0}
+button.act:hover{background:var(--ink);color:#fff}
+button.act.p{background:var(--ink);color:#fff}
+button.act.p:hover{background:var(--brass);border-color:var(--brass)}
+.foot{margin-top:26px;padding-top:16px;border-top:1px solid var(--rule);
+  font-size:13.5px;color:var(--ink3);line-height:1.5}
+
+@media (max-width:720px){
+  .g2,.g3,.g4,.scn,.opts,.types{grid-template-columns:1fr}
+  h1{font-size:25px} .shint{margin-left:0;flex-basis:100%}
+  .brow{grid-template-columns:1fr;gap:4px} .brow .val{text-align:left}
+}
+@media print{
+  body{background:#fff;padding:0;font-size:11pt}
+  .bar,.shint{display:none}
+  section{break-inside:avoid;border-color:#bbb}
+  .carry{background:#fff;color:#000;border:2px solid #000}
+  .carry h3{color:#000} .carry p{color:#444} .carry td{border-bottom:1px solid #ccc}
+  .sc.mild,.sc.severe,.fill{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+}
+
+/* nav */
+nav{border-bottom:1px solid var(--rule);background:var(--paper);position:sticky;top:0;z-index:10;
+  margin:0 0 4px}
+nav .navwrap{max-width:940px;margin:0 auto;padding:0 20px;display:flex;align-items:center;
+  justify-content:space-between;height:58px;gap:20px}
+nav .brand{font-family:var(--u);font-weight:700;font-size:15px;color:var(--ink);
+  text-decoration:none;letter-spacing:-.01em}
+nav .brand:hover{color:var(--brass)}
+nav ul{list-style:none;display:flex;gap:22px;font-family:var(--u);font-size:13.5px;font-weight:600;
+  margin:0;padding:0}
+nav a{text-decoration:none;color:var(--ink2)}
+nav a:hover{color:var(--brass)}
+@media(max-width:620px){nav .hide-sm{display:none} nav ul{gap:16px}}
+@media print{nav{display:none}}
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap">
+<link rel="stylesheet" href="../assets/alston.css">
+</head>
+<body>
+<!--AW:HEADER-->
+
+<div class="wrap">
+
+<header>
+  <div class="hdr-row">
+    <div>
+      <div class="eyebrow">September · The Decision Calendar</div>
+      <h1>The Care Gap</h1>
+    </div>
+    <div class="firm">Alex&nbsp;Alston</div>
+  </div>
+  <p class="sub">What a care event would cost at your local prices — and the question that
+  matters more: what would be left for the healthy spouse afterward.</p>
+</header>
+
+<!-- 1 -->
+<section>
+  <div class="shead"><span class="snum">01</span><span class="stitle">The kind of care</span>
+    <span class="shint">National medians shown — replace with local figures</span></div>
+  <div class="sbody">
+    <p class="lede">Costs vary two to three times across the country. The national median is a
+    starting point; the number where you live is the one that matters. Look yours up and
+    overwrite the figure below.</p>
+    <div class="types" id="types"></div>
+    <div class="grid g3" style="margin-top:16px">
+      <label class="f"><span>Annual cost in your area</span><em>Overwrite with a local figure</em>
+        <input type="text" id="cost" inputmode="decimal" value="74,400"></label>
+      <label class="f"><span>Years until care might be needed</span><em>For inflating the cost</em>
+        <select id="yearsOut"></select></label>
+      <label class="f"><span>Care cost inflation</span><em>Has been running above general inflation</em>
+        <select id="careInf"><option value="3">3%</option><option value="4" selected>4%</option>
+        <option value="5">5%</option><option value="6">6%</option></select></label>
+    </div>
+  </div>
+</section>
+
+<!-- 2 -->
+<section>
+  <div class="shead"><span class="snum">02</span><span class="stitle">What an event costs</span>
+    <span class="shint" id="futNote"></span></div>
+  <div class="sbody">
+    <p class="lede">The risk here is not the average — it is the tail. A short stay is a
+    manageable expense. A multi-year event is a different category entirely.</p>
+    <div class="scn" id="scenarios"></div>
+  </div>
+</section>
+
+<!-- 3 -->
+<section>
+  <div class="shead"><span class="snum">03</span><span class="stitle">What's left for the healthy spouse</span>
+    <span class="shint">The number that actually matters</span></div>
+  <div class="sbody">
+    <div class="grid g3" style="margin-bottom:18px">
+      <label class="f"><span>Investable assets</span><em>From January</em>
+        <input type="text" id="assets" inputmode="decimal" value="880,000"></label>
+      <label class="f"><span>Annual spending the household still has</span><em>The healthy spouse keeps living</em>
+        <input type="text" id="spend" inputmode="decimal" value="62,000"></label>
+      <label class="f"><span>Guaranteed income continuing</span><em>Social Security and pension</em>
+        <input type="text" id="guar" inputmode="decimal" value="52,000"></label>
+    </div>
+    <div id="survivor"></div>
+  </div>
+</section>
+
+<!-- 4 -->
+<section>
+  <div class="shead"><span class="snum">04</span><span class="stitle">Four ways to handle it</span>
+    <span class="shint">Priced, not recommended</span></div>
+  <div class="sbody">
+    <div class="grid g2" style="margin-bottom:18px">
+      <label class="f"><span>Annual premium quoted, if you've asked</span><em>Traditional long-term care policy</em>
+        <input type="text" id="prem" inputmode="decimal" value="4,200"></label>
+      <label class="f"><span>Monthly benefit it would pay</span><em>Times the benefit period</em>
+        <input type="text" id="benefit" inputmode="decimal" value="6,000"></label>
+    </div>
+    <div class="opts" id="options"></div>
+  </div>
+</section>
+
+<!-- 5 -->
+<section>
+  <div class="shead"><span class="snum">05</span><span class="stitle">What this tells you</span></div>
+  <div class="sbody"><div class="flags" id="flags"></div></div>
+</section>
+
+<section style="border:none;background:none">
+  <div class="carry">
+    <h3>Carry forward</h3>
+    <div id="carrybody"></div>
+  </div>
+</section>
+
+<div class="bar">
+  <button class="act p" onclick="window.print()">Print / Save as PDF</button>
+  <button class="act" onclick="dlCSV()">Download CSV</button>
+  <button class="act" onclick="resetAll()">Reset</button>
+</div>
+
+<div id="assistant-slot"></div>
+<script src="../assistant.js" data-mode="month" data-month="09" data-title="September — The Care Gap"></script>
+
+<p class="foot">
+  Cost figures are national medians from the most recent industry cost-of-care survey and are
+  starting points only — local costs vary substantially and should replace them. Insurance
+  figures use whatever quote you enter. Medicaid eligibility, the five-year lookback, and
+  spousal protection amounts are state-specific. Bring this to the September call.
+</p>
+
+
+
+</div>
+
+<script>
+/* ============================================================
+   CARE COST DATA — refresh each spring when the survey publishes.
+   National medians, most recent survey.
+   ============================================================ */
+const CARE={
+  types:[
+    {id:'home',  n:'In-home care',        d:'Non-medical caregiver, 44 hours a week at about $35/hour', cost:80080},
+    {id:'assist',n:'Assisted living',     d:'About $6,200 a month', cost:74400, on:true},
+    {id:'memory',n:'Memory care',         d:'Typically 20–30% above assisted living', cost:93000},
+    {id:'semi',  n:'Nursing home, shared',d:'About $315 a day', cost:114975},
+    {id:'priv',  n:'Nursing home, private',d:'About $355 a day', cost:129575},
+    {id:'home24',n:'Round-the-clock home care',d:'More expensive than a nursing home', cost:153000}
+  ]
+};
+
+const $=id=>document.getElementById(id);
+const money=n=>(n<0?'-$':'$')+Math.abs(Math.round(n)).toLocaleString('en-US');
+const num=id=>{const el=$(id);if(!el)return 0;const v=(el.value||'').replace(/[^0-9.\-]/g,'');const n=parseFloat(v);return isFinite(n)?n:0;};
+
+$('types').innerHTML=CARE.types.map(t=>
+  `<label class="type"><input type="radio" name="ct" data-cost="${t.cost}" ${t.on?'checked':''}>
+   <span><b>${t.n}</b><i>${t.d}</i><span class="amt">${money(t.cost)} a year</span></span></label>`).join('');
+$('yearsOut').innerHTML=[0,5,10,15,20,25].map(y=>
+  `<option value="${y}" ${y===15?'selected':''}>${y===0?'Now':y+' years'}</option>`).join('');
+
+document.querySelectorAll('[name=ct]').forEach(r=>r.addEventListener('change',()=>{
+  $('cost').value=Number(r.dataset.cost).toLocaleString('en-US'); render();
+}));
+
+function render(){
+  const costNow=num('cost');
+  const yrs=parseInt($('yearsOut').value,10);
+  const inf=parseFloat($('careInf').value)/100;
+  const costThen=costNow*Math.pow(1+inf,yrs);
+  $('futNote').textContent=yrs>0
+    ? money(costNow)+' today becomes '+money(costThen)+' in '+yrs+' years'
+    : 'At today\'s prices';
+
+  const assets=num('assets'), spend=num('spend'), guar=num('guar');
+  const gap=Math.max(0,spend-guar);
+
+  /* --- scenarios: cost grows with inflation during the event --- */
+  function eventCost(years){
+    let total=0;
+    for(let i=0;i<years;i++) total+=costThen*Math.pow(1+inf,i);
+    return total;
+  }
+  const s1=eventCost(1), s3=eventCost(3), s5=eventCost(5);
+  const scs=[
+    {c:'mild',t:'One year',s:'The common case',v:s1,
+     n:`Most people who need care need it for a relatively short period. At ${((s1/Math.max(assets,1))*100).toFixed(0)}% of your investable assets, this is a manageable expense.`},
+    {c:'',t:'Three years',s:'The planning case',v:s3,
+     n:`${((s3/Math.max(assets,1))*100).toFixed(0)}% of your investable assets. This is the scenario worth building a plan around — long enough to matter, common enough to expect.`},
+    {c:'severe',t:'Five years',s:'The tail risk',v:s5,
+     n:`${((s5/Math.max(assets,1))*100).toFixed(0)}% of your investable assets. Less likely, and the one you cannot recover from. This is what insurance exists for.`}
+  ];
+  $('scenarios').innerHTML=scs.map(s=>
+    `<div class="sc ${s.c}"><div class="sc-t">${s.t}</div><div class="sc-s">${s.s}</div>
+     <div class="sc-v">${money(s.v)}</div><div class="sc-u">total cost of care</div>
+     <div class="sc-n">${s.n}</div></div>`).join('');
+
+  /* --- survivor picture: 3-year event --- */
+  /* assets grow at a modest real rate, drawn on for both the gap and the care */
+  const growth=0.04;
+  let bal=assets;
+  for(let i=0;i<Math.max(yrs,0);i++) bal=(bal-gap)*(1+growth);
+  const beforeEvent=Math.max(0,bal);
+  let during=beforeEvent;
+  for(let i=0;i<3;i++){
+    during=during - gap - costThen*Math.pow(1+inf,i);
+    if(during<0){during=0;break;}
+    during=during*(1+growth);
+  }
+  const after=Math.max(0,during);
+  const pctLeft=beforeEvent>0?(after/beforeEvent)*100:0;
+  const survYears=gap>0?after/gap:Infinity;
+
+  const maxBar=Math.max(beforeEvent,1);
+  $('survivor').innerHTML=`
+    <div class="surv">
+      <div class="surv-h">A three-year care event, ${yrs>0?'starting in '+yrs+' years':'starting now'}</div>
+      <div class="bars">
+        <div class="brow"><span class="lab">Before the event</span>
+          <span class="track"><span class="fill now" style="width:100%"></span></span>
+          <span class="val">${money(beforeEvent)}</span></div>
+        <div class="brow"><span class="lab">After three years of care</span>
+          <span class="track"><span class="fill after" style="width:${Math.min(100,(after/maxBar)*100)}%"></span></span>
+          <span class="val">${money(after)}</span></div>
+      </div>
+      <div class="surv-n">${after<=0
+        ? `A three-year event would <b>exhaust the portfolio entirely</b>. The healthy spouse would be left with guaranteed income of ${money(guar)} a year against ${money(spend)} of spending — and no assets to close the gap. This is the case where Medicaid becomes the plan whether or not anyone chose it.`
+        : `<b>${pctLeft.toFixed(0)}% of the portfolio would remain</b> — ${money(after)}. At a ${money(gap)} annual gap between guaranteed income and spending, that funds the healthy spouse for roughly <b>${isFinite(survYears)?survYears.toFixed(0)+' more years':'as long as needed'}</b>.
+          ${isFinite(survYears)&&survYears<20?' That is the number to sit with. A survivor at 80 may need twenty.':''}`}
+        And this compounds with what June measured — the survivor also loses a Social Security check and moves to single filing rates.</div>
+    </div>`;
+
+  /* --- four options --- */
+  const prem=num('prem'), benefit=num('benefit');
+  const policyPays3=Math.min(benefit*12*3, s3);
+  const premTo85=prem*Math.max(0,Math.min(yrs+3,30));
+  const opts=[
+    {h:'Self-fund',t:'Pay from assets',n:money(s3),
+     p:`A three-year event costs <b>${money(s3)}</b> at your local prices. ${after>0
+        ?`It leaves ${money(after)} for the healthy spouse. Defensible if that is enough for them.`
+        :'It exhausts the portfolio. This is not a plan, it is an assumption that the event will be short.'} Costs nothing unless it happens.`},
+    {h:'Traditional insurance',t:'Most coverage per dollar',n:prem>0?money(prem)+'/yr':'Get a quote',
+     p:prem>0
+       ?`About <b>${money(premTo85)}</b> in premiums if paid for ${Math.min(yrs+3,30)} years, covering roughly <b>${money(policyPays3)}</b> of a three-year event. Use it or lose it, and premiums on older policies have risen sharply — some by more than half.`
+       :'Enter a quoted premium and monthly benefit above to price this. Underwriting gets harder and costlier with age; by the mid-seventies many people cannot qualify.'},
+    {h:'Hybrid policy',t:'Life or annuity with a care rider',n:'Costs more',
+     p:'Less care benefit per premium dollar than traditional coverage — but if you never need care there is a death benefit rather than nothing, and premiums are typically guaranteed. You are paying extra for the certainty the money is not wasted. Whether that trade is worth it is a real question.'},
+    {h:'Medicaid',t:'The default if nothing else is chosen',n:'After spend-down',
+     p:'Pays for nursing home care once assets are spent down to a low level. <b>Five-year lookback</b> on gifts and transfers, so late transfers do not work as hoped. Real protections exist for the healthy spouse — the house, a vehicle, a share of assets — but amounts are limited and facility choice narrows. Learn your state\'s rules before you need them.'}
+  ];
+  $('options').innerHTML=opts.map(o=>
+    `<div class="opt"><h4>${o.h}</h4><div class="tag">${o.t}</div>
+     <div class="n">${o.n}</div><p>${o.p}</p></div>`).join('');
+
+  /* --- flags --- */
+  const F=[];
+  if(after<=0){
+    F.push({t:'w',h:'A three-year event exhausts the portfolio',
+      b:`At ${money(costThen)} a year in ${yrs>0?yrs+' years':'today\'s dollars'}, three years of care consumes everything and leaves the healthy spouse with guaranteed income alone. Self-funding is not available to you as a strategy — it is a hope that the event stays short. Insurance, or an honest Medicaid plan, is the real choice here.`});
+  } else if(pctLeft<40){
+    F.push({t:'w',h:`Only ${pctLeft.toFixed(0)}% of the portfolio would survive a three-year event`,
+      b:`${money(after)} left, funding the healthy spouse for about ${isFinite(survYears)?survYears.toFixed(0):'many'} years at their current gap. If the survivor is in their late seventies when this happens, that may not be long enough — and it stacks on top of losing a Social Security check.`});
+  } else {
+    F.push({t:'g',h:`${pctLeft.toFixed(0)}% of the portfolio would remain`,
+      b:`${money(after)} for the healthy spouse after a three-year event. That is genuine self-funding capacity. Worth confirming with a five-year scenario too — the tail is what insurance is actually for.`});
+  }
+  if(s5>assets){
+    F.push({t:'n',h:'A five-year event exceeds your investable assets',
+      b:`${money(s5)} against ${money(assets)}. Low probability, unrecoverable consequence — the exact shape insurance is designed for. That does not mean buy a policy; it means the decision deserves an explicit answer rather than silence.`});
+  }
+  if(yrs>=10 && inf>=0.04){
+    F.push({t:'n',h:'Inflation does most of the damage here',
+      b:`${money(costNow)} today becomes ${money(costThen)} in ${yrs} years at ${(inf*100).toFixed(0)}%. If you look at a policy, ask specifically about the inflation rider — a fixed benefit that looked generous when purchased often covers a fraction of the cost by the time it is claimed.`});
+  }
+  if(prem>0 && benefit>0){
+    const coverage=policyPays3/Math.max(s3,1);
+    F.push({t:'n',h:`That policy covers about ${(coverage*100).toFixed(0)}% of a three-year event`,
+      b:`${money(policyPays3)} of ${money(s3)}. Partial coverage is a legitimate strategy — the goal is usually to keep a care event from reaching the healthy spouse's core assets, not to cover every dollar.`});
+  }
+  F.push({t:'n',h:'Look up your local cost before trusting any of this',
+    b:'Care pricing varies two to three times across the country and these are national medians. The free CareScout cost-of-care tool is searchable by metro area. Replace the figure above with your real one and run it again.'});
+  F.push({t:'n',h:'The real default plan is a family member',
+    b:'Usually a spouse until they physically cannot, then usually a daughter who reduces her hours or leaves a job. That happens whether or not anyone planned it. The only question is whether it was discussed while everyone was healthy.'});
+  $('flags').innerHTML=F.map(f=>`<div class="flag ${f.t}"><b>${f.h}</b>${f.b}</div>`).join('');
+
+  /* --- carry --- */
+  const rows=[
+    ['Care type cost today',money(costNow)],
+    ['Cost when needed',money(costThen)],
+    ['One-year event',money(s1)],
+    ['Three-year event',money(s3)],
+    ['Five-year event',money(s5)],
+    ['Assets before the event',money(beforeEvent)],
+    ['Left for the healthy spouse',money(after)],
+    ['Share of portfolio surviving',pctLeft.toFixed(0)+'%'],
+    ['Years it funds the survivor',isFinite(survYears)?survYears.toFixed(0):'—']
+  ];
+  $('carrybody').innerHTML='<table>'+rows.map(r=>`<tr><td>${r[0]}</td><td>${r[1]}</td></tr>`).join('')+'</table>'
+    +'<p>Pair this with June. A care event followed by a death is the combination that does the damage — the survivor is left with a smaller portfolio, one fewer Social Security check, and single filing rates, all at once. Either alone is survivable. Together they are the scenario worth planning against.</p>';
+}
+
+function dlCSV(){
+  const rows=[['Field','Value']];
+  document.querySelectorAll('#carrybody tr').forEach(tr=>rows.push([tr.cells[0].textContent,tr.cells[1].textContent]));
+  document.querySelectorAll('.flag b').forEach(b=>rows.push(['Note',b.textContent]));
+  const csv=rows.map(r=>r.map(c=>'"'+String(c).replace(/"/g,'""')+'"').join(',')).join('\n');
+  const a=document.createElement('a');
+  a.href=URL.createObjectURL(new Blob([csv],{type:'text/csv'}));
+  a.download='care-gap.csv'; a.click();
+}
+function resetAll(){
+  $('cost').value='74,400'; $('yearsOut').value='15'; $('careInf').value='4';
+  $('assets').value='880,000'; $('spend').value='62,000'; $('guar').value='52,000';
+  $('prem').value='4,200'; $('benefit').value='6,000';
+  const r=document.querySelector('[name=ct]'); if(r) document.querySelectorAll('[name=ct]')[1].checked=true;
+  render();
+}
+document.addEventListener('input',render);
+document.addEventListener('change',render);
+render();
+</script>
+<!--AW:FOOTER-->
+</body>
+</html>

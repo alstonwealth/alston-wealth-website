@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Claiming Decision — Alston Wealth</title>
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Alston Wealth">
+<meta property="og:title" content="The Claiming Decision — Alston Wealth">
+<meta property="og:description" content="Twelve retirement decisions, twelve months. Free tools, briefings, and a live monthly call.">
+<meta property="og:image" content="{{SITE_URL}}/og-image.png">
+<meta property="og:url" content="{{SITE_URL}}/tools/04-claiming-decision.html">
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-YJFKJ8MCV3"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}
+gtag('js',new Date());gtag('config','G-YJFKJ8MCV3');</script>
+<meta name="twitter:card" content="summary_large_image">
+
+<style>
+:root{
+  --ink:#16233A; --ink2:#46505F; --ink3:#5E6878;
+  --paper:#FBFAF7; --card:#FFFFFF; --rule:#E6E2D9; --rule2:#EDEAE3;
+  --brass:#8A5F24; --brass-tint:#F5EEE1;
+  --good:#2F6B4F; --good-tint:#E9F2ED;
+  --warn:#9A4A22; --warn-tint:#FBEDE5;
+  --u:"Archivo","Helvetica Neue",Helvetica,sans-serif;
+  --s:"Source Serif 4",Charter,"Bitstream Charter",Georgia,serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--paper);color:var(--ink);font-family:var(--s);
+  font-size:16px;line-height:1.5;-webkit-font-smoothing:antialiased;padding:0 0 80px}
+.wrap{max-width:940px;margin:0 auto;padding:0 20px}
+header{border-bottom:2px solid var(--ink);padding:34px 0 14px;margin-bottom:26px}
+.eyebrow{font-family:var(--u);font-weight:700;font-size:10px;letter-spacing:.19em;
+  text-transform:uppercase;color:var(--brass);margin-bottom:7px}
+h1{font-family:var(--u);font-weight:700;font-size:31px;letter-spacing:-.02em;line-height:1.05}
+.sub{color:var(--ink2);margin-top:9px;max-width:64ch;font-size:15.5px}
+.hdr-row{display:flex;justify-content:space-between;align-items:flex-end;gap:20px;flex-wrap:wrap}
+.firm{font-family:var(--u);font-weight:700;font-size:11px;letter-spacing:.15em;
+  text-transform:uppercase;color:var(--ink2);white-space:nowrap}
+
+section{background:var(--card);border:1px solid var(--rule);margin-bottom:20px}
+.shead{display:flex;align-items:baseline;gap:12px;padding:15px 20px;
+  border-bottom:1px solid var(--rule2);background:#FCFBF8;flex-wrap:wrap}
+.snum{font-family:var(--u);font-weight:700;font-size:10px;letter-spacing:.14em;color:var(--brass);
+  border:1px solid var(--brass);padding:3px 7px;flex:none}
+.stitle{font-family:var(--u);font-weight:700;font-size:16px;letter-spacing:-.01em}
+.shint{font-size:14px;color:var(--ink3);margin-left:auto;font-family:var(--u);font-weight:500}
+.sbody{padding:20px}
+.lede{color:var(--ink2);font-size:15px;margin-bottom:16px;max-width:68ch}
+
+.grid{display:grid;gap:12px}
+.g2{grid-template-columns:repeat(2,1fr)}
+.g3{grid-template-columns:repeat(3,1fr)}
+.g4{grid-template-columns:repeat(4,1fr)}
+label.f{display:block}
+label.f span{display:block;font-family:var(--u);font-weight:600;font-size:11.5px;
+  letter-spacing:.05em;text-transform:uppercase;color:var(--ink2);margin-bottom:5px}
+label.f em{font-style:normal;color:var(--ink3);text-transform:none;letter-spacing:0;
+  font-weight:500;font-size:11px;display:block;margin-top:2px}
+input[type=text],select{width:100%;padding:10px 11px;border:1px solid var(--rule);
+  background:#fff;font-family:var(--u);font-size:15.5px;color:var(--ink);border-radius:0}
+input[type=text]:focus,select:focus{outline:2px solid var(--brass);outline-offset:-1px}
+
+/* age table */
+.agetab{width:100%;border-collapse:collapse;font-size:14.5px;margin-top:4px}
+.agetab th{font-family:var(--u);font-weight:600;font-size:10.5px;letter-spacing:.1em;
+  text-transform:uppercase;color:var(--ink3);text-align:right;padding:8px 10px;
+  border-bottom:1px solid var(--rule)}
+.agetab th:first-child{text-align:left}
+.agetab td{padding:8px 10px;text-align:right;border-bottom:1px solid var(--rule2);
+  font-family:var(--u);font-weight:600}
+.agetab td:first-child{text-align:left;font-family:var(--s);font-weight:400;color:var(--ink2)}
+.agetab tr.fra td{background:#F7F5F0}
+.agetab tr.pick td{background:var(--brass-tint);color:var(--brass)}
+.agetab tr:last-child td{border-bottom:none}
+.pctcell{color:var(--ink3);font-weight:500}
+
+/* survivor grid */
+.surv{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--rule);
+  border:1px solid var(--rule)}
+.sv{background:#fff;padding:17px 18px}
+.sv-l{font-family:var(--u);font-weight:600;font-size:10.5px;letter-spacing:.12em;
+  text-transform:uppercase;color:var(--ink3);margin-bottom:6px}
+.sv-v{font-family:var(--u);font-weight:700;font-size:26px;letter-spacing:-.02em;line-height:1}
+.sv-n{font-size:13.5px;color:var(--ink2);margin-top:8px;line-height:1.42}
+.sv.drop{background:var(--warn-tint)} .sv.drop .sv-v{color:var(--warn)}
+.sv.hero{background:var(--brass-tint)} .sv.hero .sv-v{color:var(--brass)}
+
+/* strategy compare */
+.strat{width:100%;border-collapse:collapse;font-size:14.5px}
+.strat th{font-family:var(--u);font-weight:600;font-size:10.5px;letter-spacing:.1em;
+  text-transform:uppercase;color:var(--ink3);text-align:right;padding:9px 10px;
+  border-bottom:1px solid var(--rule)}
+.strat th:first-child{text-align:left}
+.strat td{padding:11px 10px;text-align:right;border-bottom:1px solid var(--rule2);
+  font-family:var(--u);font-weight:600}
+.strat td:first-child{text-align:left;font-family:var(--s);font-weight:400}
+.strat td:first-child b{font-family:var(--u);font-weight:700;font-size:14px;display:block}
+.strat td:first-child i{font-style:normal;font-size:12.5px;color:var(--ink3)}
+.strat tr.best td{background:var(--good-tint)}
+.strat tr.best td:last-child{color:var(--good)}
+.strat tr:last-child td{border-bottom:none}
+
+.flags{margin-top:18px}
+.flag{border-left:3px solid;padding:12px 15px;margin-bottom:9px;font-size:14.5px;line-height:1.45}
+.flag b{font-family:var(--u);font-weight:700;font-size:12px;letter-spacing:.06em;
+  text-transform:uppercase;display:block;margin-bottom:4px}
+.flag.w{border-color:var(--warn);background:var(--warn-tint)} .flag.w b{color:var(--warn)}
+.flag.g{border-color:var(--good);background:var(--good-tint)} .flag.g b{color:var(--good)}
+.flag.n{border-color:var(--brass);background:var(--brass-tint)} .flag.n b{color:var(--brass)}
+
+.carry{background:var(--ink);color:#fff;padding:20px}
+.carry h3{font-family:var(--u);font-weight:700;font-size:13px;letter-spacing:.13em;
+  text-transform:uppercase;color:#C9A26B;margin-bottom:12px}
+.carry table{width:100%;border-collapse:collapse;font-size:14.5px}
+.carry td{padding:7px 0;border-bottom:1px solid rgba(255,255,255,.13)}
+.carry td:last-child{text-align:right;font-family:var(--u);font-weight:700}
+.carry tr:last-child td{border-bottom:none}
+.carry p{font-size:13.5px;color:#B9C2D0;margin-top:13px;line-height:1.5}
+
+.bar{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px}
+button.act{font-family:var(--u);font-weight:600;font-size:13.5px;letter-spacing:.03em;
+  padding:11px 18px;border:1px solid var(--ink);background:#fff;color:var(--ink);cursor:pointer;border-radius:0}
+button.act:hover{background:var(--ink);color:#fff}
+button.act.p{background:var(--ink);color:#fff}
+button.act.p:hover{background:var(--brass);border-color:var(--brass)}
+.foot{margin-top:26px;padding-top:16px;border-top:1px solid var(--rule);
+  font-size:13.5px;color:var(--ink3);line-height:1.5}
+.empty{color:var(--ink3);font-style:italic;font-size:15px}
+
+@media (max-width:720px){
+  .g2,.g3,.g4,.surv{grid-template-columns:1fr}
+  h1{font-size:25px} .shint{margin-left:0;flex-basis:100%}
+  .agetab,.strat{font-size:13px} .agetab th,.agetab td,.strat th,.strat td{padding:7px 5px}
+}
+@media print{
+  body{background:#fff;padding:0;font-size:11pt}
+  .bar,.shint{display:none}
+  section{break-inside:avoid;border-color:#bbb}
+  .carry{background:#fff;color:#000;border:2px solid #000}
+  .carry h3{color:#000} .carry p{color:#444} .carry td{border-bottom:1px solid #ccc}
+  .sv.drop,.sv.hero,tr.pick td,tr.best td{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+}
+
+/* nav */
+nav{border-bottom:1px solid var(--rule);background:var(--paper);position:sticky;top:0;z-index:10;
+  margin:0 0 4px}
+nav .navwrap{max-width:940px;margin:0 auto;padding:0 20px;display:flex;align-items:center;
+  justify-content:space-between;height:58px;gap:20px}
+nav .brand{font-family:var(--u);font-weight:700;font-size:15px;color:var(--ink);
+  text-decoration:none;letter-spacing:-.01em}
+nav .brand:hover{color:var(--brass)}
+nav ul{list-style:none;display:flex;gap:22px;font-family:var(--u);font-size:13.5px;font-weight:600;
+  margin:0;padding:0}
+nav a{text-decoration:none;color:var(--ink2)}
+nav a:hover{color:var(--brass)}
+@media(max-width:620px){nav .hide-sm{display:none} nav ul{gap:16px}}
+@media print{nav{display:none}}
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap">
+<link rel="stylesheet" href="../assets/alston.css">
+</head>
+<body>
+<!--AW:HEADER-->
+
+<div class="wrap">
+
+<header>
+  <div class="hdr-row">
+    <div>
+      <div class="eyebrow">April · The Decision Calendar</div>
+      <h1>The Claiming Decision</h1>
+    </div>
+    <div class="firm">Alex&nbsp;Alston</div>
+  </div>
+  <p class="sub">Both benefits at every age from 62 to 70 — and, more importantly, what the
+  survivor is left with under each combination. Pull your real figures from ssa.gov first;
+  remembered estimates are usually wrong by a lot.</p>
+</header>
+
+<!-- 1 -->
+<section>
+  <div class="shead"><span class="snum">01</span><span class="stitle">Your benefits</span>
+    <span class="shint">The full retirement age figure from your statement</span></div>
+  <div class="sbody">
+    <div class="grid g3">
+      <label class="f"><span>Household</span>
+        <select id="hh"><option value="couple" selected>Married couple</option>
+        <option value="single">Single</option></select></label>
+      <label class="f"><span>Your benefit at full retirement age</span><em>Monthly, from ssa.gov</em>
+        <input type="text" id="b1" inputmode="decimal" value="2,850"></label>
+      <label class="f"><span>Your full retirement age</span><em>67 if born 1960 or later</em>
+        <select id="fra1"><option value="66">66</option><option value="66.5">66 and 6 months</option>
+        <option value="67" selected>67</option></select></label>
+    </div>
+    <div class="grid g3" id="spouseRow" style="margin-top:12px">
+      <label class="f"><span>Spouse's benefit at full retirement age</span><em>Monthly</em>
+        <input type="text" id="b2" inputmode="decimal" value="1,500"></label>
+      <label class="f"><span>Spouse's full retirement age</span>
+        <select id="fra2"><option value="66">66</option><option value="66.5">66 and 6 months</option>
+        <option value="67" selected>67</option></select></label>
+      <label class="f"><span>Plan to what age?</span><em>For the lifetime totals below</em>
+        <select id="horizon"></select></label>
+    </div>
+  </div>
+</section>
+
+<!-- 2 -->
+<section>
+  <div class="shead"><span class="snum">02</span><span class="stitle">What each age pays</span>
+    <span class="shint">Monthly, in today's dollars</span></div>
+  <div class="sbody">
+    <div class="grid g2" style="margin-bottom:16px">
+      <label class="f"><span>Age you claim</span>
+        <select id="age1"></select></label>
+      <label class="f" id="age2Wrap"><span>Age spouse claims</span>
+        <select id="age2"></select></label>
+    </div>
+    <div id="ageTable"></div>
+  </div>
+</section>
+
+<!-- 3 -->
+<section>
+  <div class="shead"><span class="snum">03</span><span class="stitle">What the survivor is left with</span>
+    <span class="shint">The question that actually matters</span></div>
+  <div class="sbody">
+    <p class="lede">When one spouse dies, the household keeps the <b>larger</b> of the two
+    benefits. The smaller one stops. Expenses do not fall by half.</p>
+    <div id="survivor"></div>
+  </div>
+</section>
+
+<!-- 4 -->
+<section>
+  <div class="shead"><span class="snum">04</span><span class="stitle">Four strategies compared</span>
+    <span class="shint" id="hzNote"></span></div>
+  <div class="sbody">
+    <p class="lede">Cumulative household benefits received, in today's dollars, plus what the
+    survivor keeps. The bridge cost is what you draw from the portfolio while waiting.</p>
+    <div id="strategies"></div>
+  </div>
+</section>
+
+<!-- 5 -->
+<section>
+  <div class="shead"><span class="snum">05</span><span class="stitle">What this tells you</span></div>
+  <div class="sbody"><div class="flags" id="flags"></div></div>
+</section>
+
+<section style="border:none;background:none">
+  <div class="carry">
+    <h3>Carry forward</h3>
+    <div id="carrybody"></div>
+  </div>
+</section>
+
+<div class="bar">
+  <button class="act p" onclick="window.print()">Print / Save as PDF</button>
+  <button class="act" onclick="dlCSV()">Download CSV</button>
+  <button class="act" onclick="resetAll()">Reset</button>
+</div>
+
+<div id="assistant-slot"></div>
+<script src="../assistant.js" data-mode="month" data-month="04" data-title="April — The Claiming Decision"></script>
+
+<p class="foot">
+  Figures are in today's dollars and use the standard reduction and delayed-credit rules.
+  Cost-of-living adjustments apply to every scenario, so they are left out rather than
+  double-counted. Spousal benefits, the earnings test, and taxation of benefits are covered in
+  the briefing and are not modeled here. Bring this to the April call.
+</p>
+
+
+
+</div>
+
+<script>
+const $=id=>document.getElementById(id);
+const money=n=>(n<0?'-$':'$')+Math.abs(Math.round(n)).toLocaleString('en-US');
+const num=id=>{const v=($(id).value||'').replace(/[^0-9.\-]/g,'');const n=parseFloat(v);return isFinite(n)?n:0;};
+
+const AGES=[62,63,64,65,66,67,68,69,70];
+$('age1').innerHTML=AGES.map(a=>`<option value="${a}" ${a===67?'selected':''}>${a}</option>`).join('');
+$('age2').innerHTML=AGES.map(a=>`<option value="${a}" ${a===62?'selected':''}>${a}</option>`).join('');
+$('horizon').innerHTML=[85,88,90,92,95].map(a=>`<option value="${a}" ${a===90?'selected':''}>Age ${a}</option>`).join('');
+
+/* Standard rules: reduction is 5/9 of 1% per month for the first 36 months before FRA,
+   then 5/12 of 1% per month. Delayed credit is 2/3 of 1% per month after FRA, to 70. */
+function factor(claimAge, fra){
+  const months=Math.round((claimAge-fra)*12);
+  if(months>=0) return 1+months*(2/3)/100;
+  const m=-months;
+  if(m<=36) return 1-m*(5/9)/100;
+  return 1-(36*(5/9)/100)-((m-36)*(5/12)/100);
+}
+
+function render(){
+  const couple=$('hh').value==='couple';
+  $('spouseRow').style.display=couple?'':'none';
+  $('age2Wrap').style.display=couple?'':'none';
+
+  const b1=num('b1'), fra1=parseFloat($('fra1').value);
+  const b2=couple?num('b2'):0, fra2=parseFloat($('fra2').value);
+  const a1=parseInt($('age1').value,10), a2=couple?parseInt($('age2').value,10):0;
+  const hz=parseInt($('horizon').value,10);
+  $('hzNote').textContent='Through age '+hz;
+
+  /* ---- age table ---- */
+  const rows=AGES.map(a=>{
+    const f1=factor(a,fra1), m1=b1*f1;
+    const f2=couple?factor(a,fra2):0, m2=couple?b2*f2:0;
+    const cls=(a===a1||(couple&&a===a2))?'pick':(a===Math.round(fra1)?'fra':'');
+    return `<tr class="${cls}">
+      <td>Age ${a}${a===Math.round(fra1)?' · full retirement age':''}</td>
+      <td class="pctcell">${(f1*100).toFixed(0)}%</td>
+      <td>${money(m1)}</td>
+      ${couple?`<td class="pctcell">${(f2*100).toFixed(0)}%</td><td>${money(m2)}</td>`:''}
+      ${couple?`<td>${money(m1+m2)}</td>`:''}
+    </tr>`;
+  }).join('');
+  $('ageTable').innerHTML=`<table class="agetab">
+    <tr><th>Claim at</th><th>%</th><th>You</th>${couple?'<th>%</th><th>Spouse</th><th>Both</th>':''}</tr>
+    ${rows}</table>`;
+
+  /* ---- survivor ---- */
+  const my=b1*factor(a1,fra1), sp=couple?b2*factor(a2,fra2):0;
+  const both=my+sp;
+  const survivor=couple?Math.max(my,sp):my;
+  const dropPct=both>0?(1-survivor/both)*100:0;
+
+  if(couple){
+    $('survivor').innerHTML=`
+      <div class="surv">
+        <div class="sv"><div class="sv-l">While you are both alive</div>
+          <div class="sv-v">${money(both)}</div>
+          <div class="sv-n">${money(my)} plus ${money(sp)} a month, ${money(both*12)} a year.</div></div>
+        <div class="sv drop"><div class="sv-l">After the first death</div>
+          <div class="sv-v">${money(survivor)}</div>
+          <div class="sv-n">A drop of ${money(both-survivor)} a month — <b>${dropPct.toFixed(0)}% less household income</b>, ${money((both-survivor)*12)} a year gone. Housing, insurance, and property taxes barely change.</div></div>
+        <div class="sv hero"><div class="sv-l">If the higher earner waits to 70</div>
+          <div class="sv-v">${money(Math.max(b1*factor(70,fra1), sp))}</div>
+          <div class="sv-n">${money(Math.max(b1*factor(70,fra1),sp)-survivor)} a month more for the survivor than your current selection — ${money((Math.max(b1*factor(70,fra1),sp)-survivor)*12)} a year, for as long as they live.</div></div>
+        <div class="sv"><div class="sv-l">If the higher earner claims at 62</div>
+          <div class="sv-v">${money(Math.max(b1*factor(62,fra1), sp))}</div>
+          <div class="sv-n">The permanent floor a survivor would be left with in the earliest-claim case. This is the number worth sitting with before claiming early.</div></div>
+      </div>`;
+  } else {
+    $('survivor').innerHTML=`<p class="empty">Single household — the survivor question does not apply. The relevant framing is that your benefit is inflation-adjusted longevity insurance: it is the one asset that improves in the scenario where you live a very long time.</p>`;
+  }
+
+  /* ---- strategies ---- */
+  function lifetime(age1,age2){
+    let tot=0;
+    for(let y=62;y<hz;y++){
+      if(y>=age1) tot+=b1*factor(age1,fra1)*12;
+      if(couple&&y>=age2) tot+=b2*factor(age2,fra2)*12;
+    }
+    const surv=couple?Math.max(b1*factor(age1,fra1),b2*factor(age2,fra2)):b1*factor(age1,fra1);
+    /* bridge: benefits forgone by not claiming at 62 */
+    const bridge=(age1-62)*b1*factor(62,fra1)*12+(couple?(age2-62)*b2*factor(62,fra2)*12:0);
+    return {tot,surv,bridge};
+  }
+  const opts=couple?[
+    {n:'Both claim at 62',d:'Earliest possible',a1:62,a2:62},
+    {n:'Both at full retirement age',d:'The default',a1:Math.round(fra1),a2:Math.round(fra2)},
+    {n:'Lower earner 62, higher earner 70',d:'Income early, survivor protected',a1:70,a2:62},
+    {n:'Both wait to 70',d:'Maximum benefit',a1:70,a2:70}
+  ]:[
+    {n:'Claim at 62',d:'Earliest possible',a1:62,a2:0},
+    {n:'Claim at full retirement age',d:'The default',a1:Math.round(fra1),a2:0},
+    {n:'Claim at 68',d:'Partial delay',a1:68,a2:0},
+    {n:'Wait to 70',d:'Maximum benefit',a1:70,a2:0}
+  ];
+  const res=opts.map(o=>({...o,...lifetime(o.a1,o.a2)}));
+  const bestSurv=Math.max(...res.map(r=>r.surv));
+  $('strategies').innerHTML=`<table class="strat">
+    <tr><th>Strategy</th><th>Bridge cost</th><th>Received by ${hz}</th><th>${couple?'Survivor keeps':'Monthly'}</th></tr>
+    ${res.map(r=>`<tr class="${r.surv===bestSurv?'best':''}">
+      <td><b>${r.n}</b><i>${r.d}</i></td>
+      <td>${r.bridge>0?money(r.bridge):'—'}</td>
+      <td>${money(r.tot)}</td>
+      <td>${money(r.surv)}/mo</td></tr>`).join('')}
+  </table>`;
+
+  /* ---- flags ---- */
+  const F=[];
+  const higherIsSpouse=couple&&b2>b1;
+  const hiFRA=higherIsSpouse?fra2:fra1, hiBen=Math.max(b1,b2), hiAge=higherIsSpouse?a2:a1;
+  const loAge=higherIsSpouse?a1:a2;
+
+  if(couple && hiAge<70){
+    const gain=hiBen*factor(70,hiFRA)-hiBen*factor(hiAge,hiFRA);
+    F.push({t:'n',h:`Delaying the larger benefit to 70 adds ${money(gain)} a month to the survivor's floor`,
+      b:`That is ${money(gain*12)} a year, inflation-adjusted, for as long as whichever of you lives longer is alive. It is the single highest-value lever on this page, and it has nothing to do with your own life expectancy — it is about the joint horizon.`});
+  }
+  if(couple && a1===a2){
+    F.push({t:'w',h:'You have both benefits claiming at the same age',
+      b:'These are different assets and they deserve different decisions. The smaller benefit disappears at the first death, so delaying it buys a bigger check that only lasts while you are both alive. The larger one becomes the survivor\'s permanent floor. Try the lower earner at 62 with the higher earner at 70 and compare the survivor column.'});
+  }
+  if(couple && dropPct>=40){
+    F.push({t:'w',h:`Household income falls ${dropPct.toFixed(0)}% at the first death`,
+      b:`From ${money(both)} to ${money(survivor)} a month. Expenses do not fall anywhere near that much — and the survivor also moves from joint to single filing, with narrower brackets and roughly half the standard deduction. June works through the full picture.`});
+  }
+  if(a1<=63 && b1>0){
+    F.push({t:'n',h:'Claiming at 62 is a permanent reduction, not a temporary one',
+      b:`At ${a1} you receive ${(factor(a1,fra1)*100).toFixed(0)}% of your full benefit for life. If the reason is worry about the program's future — claiming early locks in a certain cut to hedge against a possible, smaller, later one. The 2026 projections show reserves depleting in late 2032 with about 78% of scheduled benefits still payable, not zero.`});
+  }
+  if(a1>=70||(couple&&a2>=70)){
+    F.push({t:'n',h:'There is no benefit to waiting past 70',
+      b:'Delayed credits stop at 70. If you are past that age and have not filed, file now — every month costs you a full check with nothing gained.'});
+  }
+  F.push({t:'n',h:'Pull the real statement, and check the earnings record while you are there',
+    b:'Both spouses, at ssa.gov. A missing year of earnings permanently reduces your benefit, and it is far easier to correct now than later. Most people run this exercise on a number they half-remember.'});
+  F.push({t:'n',h:'Working while collecting does not permanently cut your benefit',
+    b:'If you claim before full retirement age and earn above the annual limit, part of your check is withheld — but it is credited back through a permanent recalculation at full retirement age. It is a cash-flow issue, not a penalty, and people turn down work over it for no reason.'});
+  $('flags').innerHTML=F.map(f=>`<div class="flag ${f.t}"><b>${f.h}</b>${f.b}</div>`).join('');
+
+  /* ---- carry ---- */
+  const rows2=[
+    ['Your benefit at '+a1,money(my)+'/mo'],
+    couple?['Spouse benefit at '+a2,money(sp)+'/mo']:null,
+    couple?['Household while both alive',money(both*12)+'/yr']:null,
+    couple?['Survivor keeps',money(survivor*12)+'/yr']:null,
+    couple?['Drop at first death',dropPct.toFixed(0)+'%']:null,
+    ['Guaranteed income from Social Security',money((couple?both:my)*12)+'/yr']
+  ].filter(Boolean);
+  $('carrybody').innerHTML='<table>'+rows2.map(r=>`<tr><td>${r[0]}</td><td>${r[1]}</td></tr>`).join('')+'</table>'
+    +'<p>The annual figure feeds back into March\'s floor — if your claiming decision changed, the coverage ratio changed with it. June takes the survivor number and works out the full income and tax picture for whichever of you is left.</p>';
+}
+
+function dlCSV(){
+  const rows=[['Field','Value']];
+  document.querySelectorAll('#carrybody tr').forEach(tr=>rows.push([tr.cells[0].textContent,tr.cells[1].textContent]));
+  document.querySelectorAll('.flag b').forEach(b=>rows.push(['Note',b.textContent]));
+  const csv=rows.map(r=>r.map(c=>'"'+String(c).replace(/"/g,'""')+'"').join(',')).join('\n');
+  const a=document.createElement('a');
+  a.href=URL.createObjectURL(new Blob([csv],{type:'text/csv'}));
+  a.download='claiming-decision.csv'; a.click();
+}
+function resetAll(){
+  $('hh').value='couple'; $('b1').value='2,850'; $('b2').value='1,500';
+  $('fra1').value='67'; $('fra2').value='67';
+  $('age1').value='67'; $('age2').value='62'; $('horizon').value='90'; render();
+}
+document.addEventListener('input',render);
+document.addEventListener('change',render);
+render();
+</script>
+<!--AW:FOOTER-->
+</body>
+</html>

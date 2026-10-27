@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Retirement Decision Calendar — Alston Wealth</title>
+<meta name="description" content="Twelve retirement decisions, one a month. A free briefing and planning tool for each, and a live call every third Tuesday.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="The Retirement Decision Calendar — Alston Wealth">
+<meta property="og:description" content="Twelve retirement decisions, one a month. Free briefings, tools and a monthly live call.">
+<meta property="og:url" content="{{SITE_URL}}/learn.html">
+<!--AW:HEAD-->
+<style>
+.grid12{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-top:1px solid var(--aw-rule);border-left:1px solid var(--aw-rule);margin-top:48px}
+.mo{display:block;background:#fff;border-right:1px solid var(--aw-rule);border-bottom:1px solid var(--aw-rule);padding:24px 22px 26px;text-decoration:none;color:var(--aw-ink) !important;position:relative;min-width:0}
+.mo:hover{background:var(--aw-tint)}
+.mo .m{font-family:var(--aw-sans);font-weight:700;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--aw-ink3);margin-bottom:10px}
+.mo .q{font-family:var(--aw-sans);font-weight:700;font-size:17.5px;line-height:1.25;margin-bottom:8px}
+.mo .t{font-size:14.5px;line-height:1.45;color:var(--aw-ink2)}
+.mo .now{display:none;position:absolute;top:22px;right:20px;font-family:var(--aw-sans);font-weight:700;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--aw-brass)}
+.mo.is-now{box-shadow:inset 0 3px 0 var(--aw-brass)}
+.mo.is-now .m{color:var(--aw-brass)} .mo.is-now .now{display:block}
+.when{border-top:1px solid var(--aw-rule2);border-bottom:1px solid var(--aw-rule2);padding:16px 0;margin:22px 0 26px}
+.when b{display:block;font-family:var(--aw-sans);font-size:17px}
+.when span{font-family:var(--aw-sans);font-size:14px;color:var(--aw-ink3)}
+.list{list-style:none;margin:0 0 26px;padding:0;border-top:1px solid var(--aw-rule2)}
+.list li{border-bottom:1px solid var(--aw-rule2)}
+.list a{display:block;padding:12px 0;font-size:16px;color:var(--aw-ink) !important;text-decoration:none}
+.list a:hover{color:var(--aw-brass) !important}
+#assistant-slot{margin-top:40px}
+@media (max-width:1000px){.grid12{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media (max-width:860px){.grid12{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:560px){.grid12{grid-template-columns:1fr}}
+</style>
+</head>
+<body class="aw">
+<!--AW:HEADER-->
+<main>
+
+<section class="aw-pagehead">
+  <div class="aw-in">
+    <div class="aw-eyebrow">Free to everyone</div>
+    <h1 class="aw-h1">The Retirement Decision Calendar</h1>
+    <p class="aw-lede">Retirement is not one decision you make and then live with. It is a different question every month, and most of them arrive with no reminder. Each month has a written briefing and a tool that goes with it, and we work through it together on a live call. Read them in any order.</p>
+    <div class="aw-acts">
+      <a class="aw-btn aw-btn-ink" id="mo-read" href="{{MO_READ}}" data-track="learn-month">Read this month's briefing</a>
+      <a class="aw-btn aw-btn-line" href="#call" data-track="learn-call">Join the monthly call</a>
+    </div>
+  </div>
+</section>
+
+<section class="aw-sec" id="twelve">
+  <div class="aw-in">
+    <h2 class="aw-h2">The twelve months</h2>
+    <p class="aw-lede">Free, no account. Nothing you type into a tool is saved or sent anywhere.</p>
+    <div class="grid12">
+      <a class="mo" href="read/01.html" data-i="0" data-track="month-january"><span class="now">This month</span><div class="m">January</div><div class="q">Where do I actually stand?</div><div class="t">Net worth, real spending, and the one ratio the whole year turns on.</div></a>
+      <a class="mo" href="read/02.html" data-i="1" data-track="month-february"><span class="now">This month</span><div class="m">February</div><div class="q">Will it last?</div><div class="t">How long the money holds — and how the answer changes if the first five years go badly.</div></a>
+      <a class="mo" href="read/03.html" data-i="2" data-track="month-march"><span class="now">This month</span><div class="m">March</div><div class="q">How does a pile become a paycheck?</div><div class="t">What's guaranteed for life, what's variable, and the gap between them.</div></a>
+      <a class="mo" href="read/04.html" data-i="3" data-track="month-april"><span class="now">This month</span><div class="m">April</div><div class="q">When should I take Social Security?</div><div class="t">The largest single decision most households make — and why the survivor benefit matters more than the breakeven.</div></a>
+      <a class="mo" href="read/05.html" data-i="4" data-track="month-may"><span class="now">This month</span><div class="m">May</div><div class="q">What about health insurance?</div><div class="t">Bridging to 65, the subsidy cliff, and what Medicare does not cover.</div></a>
+      <a class="mo" href="read/06.html" data-i="5" data-track="month-june"><span class="now">This month</span><div class="m">June</div><div class="q">What if one of us dies?</div><div class="t">Income falls more than 20% and the tax bill often rises. Entirely predictable.</div></a>
+      <a class="mo" href="read/07.html" data-i="6" data-track="month-july"><span class="now">This month</span><div class="m">July</div><div class="q">What will I owe this year?</div><div class="t">Build the number now so December isn't a guess — then fix your withholding.</div></a>
+      <a class="mo" href="read/08.html" data-i="7" data-track="month-august"><span class="now">This month</span><div class="m">August</div><div class="q">Is this my low-tax window?</div><div class="t">What the next dollar actually costs — not what the bracket table says.</div></a>
+      <a class="mo" href="read/09.html" data-i="8" data-track="month-september"><span class="now">This month</span><div class="m">September</div><div class="q">What if one of us needs care?</div><div class="t">What care costs, what Medicare pays for, and what a long event does to the healthy spouse.</div></a>
+      <a class="mo" href="read/10.html" data-i="9" data-track="month-october"><span class="now">This month</span><div class="m">October</div><div class="q">Is my coverage still right?</div><div class="t">Formularies and networks change every year. Open enrollment closes December 7.</div></a>
+      <a class="mo" href="read/11.html" data-i="10" data-track="month-november"><span class="now">This month</span><div class="m">November</div><div class="q">What is due by December 31?</div><div class="t">Distributions, conversions, harvesting, charitable transfers — all in one month.</div></a>
+      <a class="mo" href="read/12.html" data-i="11" data-track="month-december"><span class="now">This month</span><div class="m">December</div><div class="q">How did the year go?</div><div class="t">Close every open item, then look back at the decisions rather than the balance.</div></a>
+    </div>
+    <div id="assistant-slot"></div>
+  </div>
+</section>
+
+<section class="aw-sec aw-cream" id="call">
+  <div class="aw-in aw-grid aw-g2">
+    <div class="aw-card">
+      <h2 class="aw-h3" style="font-size:28px">The monthly call</h2>
+      <p>One hour, once a month. We teach that month's question for about fifteen minutes, then work the tool together on screen and take questions. You do not have to be a client. Send a question ahead if you would rather not ask live.</p>
+      <div class="when"><b>Third Tuesday · 4:00pm Central</b><span>Same link every month. Recorded and posted to the library.</span></div>
+      <div style="margin-top:auto"><a class="aw-btn aw-btn-ink" id="call-link" href="{{CALL_LINK}}" data-track="call-register">Get the link</a></div>
+    </div>
+    <div class="aw-card">
+      <h2 class="aw-h3" style="font-size:28px">The toolbox</h2>
+      <p>For the questions that arrive on their own schedule — a pension election lands on your desk, or a mortgage question will not leave you alone.</p>
+      <ul class="list" style="margin-top:22px">
+        <li><a href="tools/pension-election.html" data-track="tool-pension">Lump sum or monthly?</a></li>
+        <li><a href="tools/mortgage-payoff.html" data-track="tool-mortgage">Should I pay off the mortgage?</a></li>
+        <li><a href="tools/deferred-tax.html" data-track="tool-deferred">What is deferral costing?</a></li>
+      </ul>
+      <div style="margin-top:auto;display:flex;flex-wrap:wrap;gap:24px"><a class="aw-more" href="toolbox.html">All fifteen tools</a><a class="aw-more" href="library.html">Recordings and articles</a></div>
+    </div>
+  </div>
+</section>
+
+<section class="aw-sec">
+  <div class="aw-in" style="text-align:center">
+    <h2 class="aw-h2" style="margin-left:auto;margin-right:auto">Want someone to run your actual numbers?</h2>
+    <p class="aw-lede" style="margin:0 auto">The tools are the same ones we use. What they cannot do is look at your situation and tell you which of the twelve matters most for you. That is a conversation, and it is free.</p>
+    <div class="aw-acts" style="justify-content:center"><a class="aw-btn aw-btn-ink book-link" href="{{BOOK_LINK}}" data-track="learn-book">Book a free call</a></div>
+  </div>
+</section>
+
+</main>
+<!--AW:FOOTER-->
+<script src="assistant.js" data-mode="router"></script>
+<script>
+(function(){var i=new Date().getMonth(),n=String(i+1).padStart(2,'0');
+document.getElementById('mo-read').href='read/'+n+'.html';
+document.querySelectorAll('.mo').forEach(function(el){el.classList.toggle('is-now',Number(el.dataset.i)===i);});})();
+</script>
+</body>
+</html>

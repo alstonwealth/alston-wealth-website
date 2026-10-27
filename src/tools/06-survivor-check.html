@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Survivor Check — Alston Wealth</title>
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Alston Wealth">
+<meta property="og:title" content="The Survivor Check — Alston Wealth">
+<meta property="og:description" content="Twelve retirement decisions, twelve months. Free tools, briefings, and a live monthly call.">
+<meta property="og:image" content="{{SITE_URL}}/og-image.png">
+<meta property="og:url" content="{{SITE_URL}}/tools/06-survivor-check.html">
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-YJFKJ8MCV3"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}
+gtag('js',new Date());gtag('config','G-YJFKJ8MCV3');</script>
+<meta name="twitter:card" content="summary_large_image">
+
+<style>
+:root{
+  --ink:#16233A; --ink2:#46505F; --ink3:#5E6878;
+  --paper:#FBFAF7; --card:#FFFFFF; --rule:#E6E2D9; --rule2:#EDEAE3;
+  --brass:#8A5F24; --brass-tint:#F5EEE1;
+  --good:#2F6B4F; --good-tint:#E9F2ED;
+  --warn:#9A4A22; --warn-tint:#FBEDE5;
+  --u:"Archivo","Helvetica Neue",Helvetica,sans-serif;
+  --s:"Source Serif 4",Charter,"Bitstream Charter",Georgia,serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--paper);color:var(--ink);font-family:var(--s);
+  font-size:16px;line-height:1.5;-webkit-font-smoothing:antialiased;padding:0 0 80px}
+.wrap{max-width:940px;margin:0 auto;padding:0 20px}
+header{border-bottom:2px solid var(--ink);padding:34px 0 14px;margin-bottom:26px}
+.eyebrow{font-family:var(--u);font-weight:700;font-size:10px;letter-spacing:.19em;
+  text-transform:uppercase;color:var(--brass);margin-bottom:7px}
+h1{font-family:var(--u);font-weight:700;font-size:31px;letter-spacing:-.02em;line-height:1.05}
+.sub{color:var(--ink2);margin-top:9px;max-width:64ch;font-size:15.5px}
+.hdr-row{display:flex;justify-content:space-between;align-items:flex-end;gap:20px;flex-wrap:wrap}
+.firm{font-family:var(--u);font-weight:700;font-size:11px;letter-spacing:.15em;
+  text-transform:uppercase;color:var(--ink2);white-space:nowrap}
+
+section{background:var(--card);border:1px solid var(--rule);margin-bottom:20px}
+.shead{display:flex;align-items:baseline;gap:12px;padding:15px 20px;
+  border-bottom:1px solid var(--rule2);background:#FCFBF8;flex-wrap:wrap}
+.snum{font-family:var(--u);font-weight:700;font-size:10px;letter-spacing:.14em;color:var(--brass);
+  border:1px solid var(--brass);padding:3px 7px;flex:none}
+.stitle{font-family:var(--u);font-weight:700;font-size:16px;letter-spacing:-.01em}
+.shint{font-size:14px;color:var(--ink3);margin-left:auto;font-family:var(--u);font-weight:500}
+.sbody{padding:20px}
+.lede{color:var(--ink2);font-size:15px;margin-bottom:16px;max-width:68ch}
+
+.grid{display:grid;gap:12px}
+.g2{grid-template-columns:repeat(2,1fr)}
+.g3{grid-template-columns:repeat(3,1fr)}
+label.f{display:block}
+label.f span{display:block;font-family:var(--u);font-weight:600;font-size:11.5px;
+  letter-spacing:.05em;text-transform:uppercase;color:var(--ink2);margin-bottom:5px}
+label.f em{font-style:normal;color:var(--ink3);text-transform:none;letter-spacing:0;
+  font-weight:500;font-size:11px;display:block;margin-top:2px}
+input[type=text],select{width:100%;padding:10px 11px;border:1px solid var(--rule);
+  background:#fff;font-family:var(--u);font-size:15.5px;color:var(--ink);border-radius:0}
+input[type=text]:focus,select:focus{outline:2px solid var(--brass);outline-offset:-1px}
+
+.line{display:grid;grid-template-columns:1fr 140px;gap:10px 16px;align-items:center;
+  padding:9px 0;border-bottom:1px solid var(--rule2)}
+.line:last-of-type{border-bottom:none}
+.line label b{color:var(--ink);font-weight:600;display:block;font-family:var(--u);font-size:14px}
+.line label i{font-style:normal;font-size:12.5px;color:var(--ink3);display:block;margin-top:1px}
+.line input{text-align:right}
+
+/* comparison table */
+.cmp{width:100%;border-collapse:collapse;font-size:14.5px}
+.cmp th{font-family:var(--u);font-weight:600;font-size:10.5px;letter-spacing:.1em;
+  text-transform:uppercase;color:var(--ink3);text-align:right;padding:10px;
+  border-bottom:1px solid var(--rule)}
+.cmp th:first-child{text-align:left}
+.cmp th.a{color:var(--ink)} .cmp th.b{color:var(--warn)}
+.cmp td{padding:10px;text-align:right;border-bottom:1px solid var(--rule2);
+  font-family:var(--u);font-weight:600}
+.cmp td:first-child{text-align:left;font-family:var(--s);font-weight:400;color:var(--ink2)}
+.cmp tr.sec td{background:#F7F5F0;font-family:var(--u);font-weight:700;font-size:11px;
+  letter-spacing:.1em;text-transform:uppercase;color:var(--ink3);padding:8px 10px}
+.cmp tr.tot td{border-top:2px solid var(--ink);border-bottom:none;font-size:16px;padding-top:12px}
+.cmp tr.tot td:last-child{color:var(--warn)}
+.cmp td.worse{color:var(--warn)}
+.cmp td.better{color:var(--good)}
+
+/* headline */
+.head3{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--rule);
+  border:1px solid var(--rule)}
+.h3c{background:#fff;padding:18px}
+.h3l{font-family:var(--u);font-weight:600;font-size:10.5px;letter-spacing:.12em;
+  text-transform:uppercase;color:var(--ink3);margin-bottom:7px}
+.h3v{font-family:var(--u);font-weight:700;font-size:32px;letter-spacing:-.03em;line-height:.95}
+.h3n{font-size:13.5px;color:var(--ink2);margin-top:9px;line-height:1.42}
+.h3c.down{background:var(--warn-tint)} .h3c.down .h3v{color:var(--warn)}
+.h3c.up{background:var(--warn-tint)} .h3c.up .h3v{color:var(--warn)}
+.h3c.ok{background:var(--good-tint)} .h3c.ok .h3v{color:var(--good)}
+
+/* checklists */
+.chk{display:flex;gap:11px;align-items:flex-start;padding:11px 0;border-bottom:1px solid var(--rule2)}
+.chk:last-child{border-bottom:none}
+.chk input{margin-top:4px;flex:none;width:16px;height:16px;accent-color:var(--brass)}
+.chk-t{font-family:var(--u);font-weight:700;font-size:14px;margin-bottom:2px}
+.chk-d{font-size:14px;color:var(--ink2);line-height:1.4}
+
+.flags{margin-top:18px}
+.flag{border-left:3px solid;padding:12px 15px;margin-bottom:9px;font-size:14.5px;line-height:1.45}
+.flag b{font-family:var(--u);font-weight:700;font-size:12px;letter-spacing:.06em;
+  text-transform:uppercase;display:block;margin-bottom:4px}
+.flag.w{border-color:var(--warn);background:var(--warn-tint)} .flag.w b{color:var(--warn)}
+.flag.g{border-color:var(--good);background:var(--good-tint)} .flag.g b{color:var(--good)}
+.flag.n{border-color:var(--brass);background:var(--brass-tint)} .flag.n b{color:var(--brass)}
+
+.carry{background:var(--ink);color:#fff;padding:20px}
+.carry h3{font-family:var(--u);font-weight:700;font-size:13px;letter-spacing:.13em;
+  text-transform:uppercase;color:#C9A26B;margin-bottom:12px}
+.carry table{width:100%;border-collapse:collapse;font-size:14.5px}
+.carry td{padding:7px 0;border-bottom:1px solid rgba(255,255,255,.13)}
+.carry td:last-child{text-align:right;font-family:var(--u);font-weight:700}
+.carry tr:last-child td{border-bottom:none}
+.carry p{font-size:13.5px;color:#B9C2D0;margin-top:13px;line-height:1.5}
+
+.bar{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px}
+button.act{font-family:var(--u);font-weight:600;font-size:13.5px;letter-spacing:.03em;
+  padding:11px 18px;border:1px solid var(--ink);background:#fff;color:var(--ink);cursor:pointer;border-radius:0}
+button.act:hover{background:var(--ink);color:#fff}
+button.act.p{background:var(--ink);color:#fff}
+button.act.p:hover{background:var(--brass);border-color:var(--brass)}
+.foot{margin-top:26px;padding-top:16px;border-top:1px solid var(--rule);
+  font-size:13.5px;color:var(--ink3);line-height:1.5}
+
+@media (max-width:720px){
+  .g2,.g3,.head3{grid-template-columns:1fr}
+  h1{font-size:25px} .shint{margin-left:0;flex-basis:100%}
+  .line{grid-template-columns:1fr} .line input{text-align:left}
+  .cmp{font-size:13px} .cmp th,.cmp td{padding:7px 5px}
+  .h3v{font-size:26px}
+}
+@media print{
+  body{background:#fff;padding:0;font-size:11pt}
+  .bar,.shint{display:none}
+  section{break-inside:avoid;border-color:#bbb}
+  .carry{background:#fff;color:#000;border:2px solid #000}
+  .carry h3{color:#000} .carry p{color:#444} .carry td{border-bottom:1px solid #ccc}
+  .h3c.down,.h3c.up,.h3c.ok{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+}
+
+/* nav */
+nav{border-bottom:1px solid var(--rule);background:var(--paper);position:sticky;top:0;z-index:10;
+  margin:0 0 4px}
+nav .navwrap{max-width:940px;margin:0 auto;padding:0 20px;display:flex;align-items:center;
+  justify-content:space-between;height:58px;gap:20px}
+nav .brand{font-family:var(--u);font-weight:700;font-size:15px;color:var(--ink);
+  text-decoration:none;letter-spacing:-.01em}
+nav .brand:hover{color:var(--brass)}
+nav ul{list-style:none;display:flex;gap:22px;font-family:var(--u);font-size:13.5px;font-weight:600;
+  margin:0;padding:0}
+nav a{text-decoration:none;color:var(--ink2)}
+nav a:hover{color:var(--brass)}
+@media(max-width:620px){nav .hide-sm{display:none} nav ul{gap:16px}}
+@media print{nav{display:none}}
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap">
+<link rel="stylesheet" href="../assets/alston.css">
+</head>
+<body>
+<!--AW:HEADER-->
+
+<div class="wrap">
+
+<header>
+  <div class="hdr-row">
+    <div>
+      <div class="eyebrow">June · The Decision Calendar</div>
+      <h1>The Survivor Check</h1>
+    </div>
+    <div class="firm">Alex&nbsp;Alston</div>
+  </div>
+  <p class="sub">What the income becomes, what the tax bill becomes, and whether the essentials
+  are still covered — for whichever of you is left. Run it both directions.</p>
+</header>
+
+<!-- 1 -->
+<section>
+  <div class="shead"><span class="snum">01</span><span class="stitle">Today</span>
+    <span class="shint">Annual figures, both of you</span></div>
+  <div class="sbody">
+    <div class="line"><label><b>Social Security — higher earner</b></label><input type="text" id="ssHi" inputmode="decimal" value="34,000"></div>
+    <div class="line"><label><b>Social Security — lower earner</b><i>This one stops at the first death</i></label><input type="text" id="ssLo" inputmode="decimal" value="18,000"></div>
+    <div class="line"><label><b>Pension</b><i>Annual, before any survivor reduction</i></label><input type="text" id="pen" inputmode="decimal" value="0"></div>
+    <div class="line"><label><b>IRA and 401(k) withdrawals</b><i>Including required distributions</i></label><input type="text" id="ira" inputmode="decimal" value="30,000"></div>
+    <div class="line"><label><b>Interest, dividends, other taxable income</b></label><input type="text" id="other" inputmode="decimal" value="6,000"></div>
+
+    <div class="grid g3" style="margin-top:18px">
+      <label class="f"><span>Pension survivor election</span><em>If you have one</em>
+        <select id="penSurv"><option value="1" selected>No pension</option>
+        <option value="1.0">100% continues</option><option value="0.75">75%</option>
+        <option value="0.5">50%</option><option value="0">Nothing — single life</option></select></label>
+      <label class="f"><span>Essential expenses today</span><em>From January</em>
+        <input type="text" id="ess" inputmode="decimal" value="62,000"></label>
+      <label class="f"><span>Survivor's essentials</span><em>They fall far less than income does</em>
+        <select id="essDrop"><option value="0.95">Barely change — 5% less</option>
+        <option value="0.85" selected>Somewhat less — 15%</option>
+        <option value="0.75">Meaningfully less — 25%</option></select></label>
+    </div>
+  </div>
+</section>
+
+<!-- 2 -->
+<section>
+  <div class="shead"><span class="snum">02</span><span class="stitle">The two pictures</span>
+    <span class="shint">Assuming the higher earner dies first</span></div>
+  <div class="sbody">
+    <div id="headline"></div>
+    <div style="margin-top:20px"><div id="table"></div></div>
+  </div>
+</section>
+
+<!-- 3 -->
+<section>
+  <div class="shead"><span class="snum">03</span><span class="stitle">Beneficiary audit</span>
+    <span class="shint">Twenty minutes, six-figure consequences</span></div>
+  <div class="sbody">
+    <p class="lede">The beneficiary form controls where the account goes. <b>Your will does
+    not.</b> Work through every account you have.</p>
+    <div id="benList"></div>
+  </div>
+</section>
+
+<!-- 4 -->
+<section>
+  <div class="shead"><span class="snum">04</span><span class="stitle">Could they actually find it?</span>
+    <span class="shint">The drill nobody runs</span></div>
+  <div class="sbody">
+    <p class="lede">If the person who handles the money dies first, the other one is learning
+    all of this in the worst month of their life. Check what is genuinely in place.</p>
+    <div id="accessList"></div>
+  </div>
+</section>
+
+<!-- 5 -->
+<section>
+  <div class="shead"><span class="snum">05</span><span class="stitle">What this tells you</span></div>
+  <div class="sbody"><div class="flags" id="flags"></div></div>
+</section>
+
+<section style="border:none;background:none">
+  <div class="carry">
+    <h3>Carry forward</h3>
+    <div id="carrybody"></div>
+  </div>
+</section>
+
+<div class="bar">
+  <button class="act p" onclick="window.print()">Print / Save as PDF</button>
+  <button class="act" onclick="dlCSV()">Download CSV</button>
+  <button class="act" onclick="resetAll()">Reset</button>
+</div>
+
+<div id="assistant-slot"></div>
+<script src="../assistant.js" data-mode="month" data-month="06" data-title="June — The Survivor Check"></script>
+
+<p class="foot">
+  Federal tax only, using current-year figures and standard deductions. State treatment varies.
+  The year of death you generally still file jointly — this shows the year after, which is when
+  the change lands. Bring it to the June call.
+</p>
+
+
+
+</div>
+
+<script>
+/* ============================================================
+   TAX DATA — update each November.
+   ============================================================ */
+const TAX={
+  brackets:{
+    single:[[12400,.10],[50400,.12],[105700,.22],[201775,.24],[256225,.32],[640600,.35],[Infinity,.37]],
+    mfj:   [[24800,.10],[100800,.12],[211400,.22],[403550,.24],[512450,.32],[768700,.35],[Infinity,.37]]
+  },
+  std:{single:16100,mfj:32200},
+  add65:{single:2050,mfj:1650},          /* mfj figure is per qualifying spouse */
+  seniorBonus:6000, seniorPhase:{single:75000,mfj:150000}, seniorRate:.06,
+  ssThresh:{single:[25000,34000], mfj:[32000,44000]},   /* never indexed since 1984 */
+  irmaa1:{single:109000, mfj:218000}
+};
+
+const $=id=>document.getElementById(id);
+const money=n=>(n<0?'-$':'$')+Math.abs(Math.round(n)).toLocaleString('en-US');
+const num=id=>{const el=$(id);if(!el)return 0;const v=(el.value||'').replace(/[^0-9.\-]/g,'');const n=parseFloat(v);return isFinite(n)?n:0;};
+
+/* Taxable portion of Social Security, per the standard worksheet logic */
+function ssTaxable(ss, otherIncome, status){
+  const [b1,b2]=TAX.ssThresh[status];
+  const prov=otherIncome+ss*0.5;
+  if(prov<=b1) return 0;
+  if(prov<=b2) return Math.min(0.5*(prov-b1), 0.5*ss);
+  const tier1=Math.min(0.5*(b2-b1), 0.5*ss);
+  return Math.min(0.85*(prov-b2)+tier1, 0.85*ss);
+}
+
+function taxOn(taxable, status){
+  let t=0, prev=0;
+  for(const [cap,rate] of TAX.brackets[status]){
+    if(taxable>prev){ t+=(Math.min(taxable,cap)-prev)*rate; prev=cap; } else break;
+  }
+  return t;
+}
+
+function marginal(taxable,status){
+  for(const [cap,rate] of TAX.brackets[status]) if(taxable<=cap) return rate;
+  return .37;
+}
+
+/* Full picture for one filing status */
+function picture(ss, otherOrdinary, status, seniors){
+  const ssTax=ssTaxable(ss, otherOrdinary, status);
+  const agi=otherOrdinary+ssTax;
+  const stdBase=TAX.std[status];
+  const add=status==='mfj'?TAX.add65[status]*seniors:(seniors?TAX.add65.single:0);
+  /* senior bonus deduction, phased out above the threshold */
+  const phaseStart=TAX.seniorPhase[status];
+  const bonusFull=TAX.seniorBonus*seniors;
+  const over=Math.max(0,agi-phaseStart);
+  const bonus=Math.max(0, bonusFull - over*TAX.seniorRate);
+  const deductions=stdBase+add+bonus;
+  const taxable=Math.max(0, agi-deductions);
+  const tax=taxOn(taxable,status);
+  return {ssTax, agi, deductions, taxable, tax, marginal:marginal(taxable,status),
+          gross:ss+otherOrdinary, net:ss+otherOrdinary-tax, bonus};
+}
+
+const BENS=[
+  {t:'Every IRA and Roth IRA',d:'One form per account, not one per company. Confirm the primary is current.'},
+  {t:'Every 401(k), 403(b), and old employer plan',d:'Accounts left behind at former employers are where stale beneficiaries hide — often an ex-spouse or a deceased parent.'},
+  {t:'Annuities and life insurance policies',d:'Both the owner and beneficiary designations. Policies bought decades ago are frequently never revisited.'},
+  {t:'Contingent beneficiaries named on all of the above',d:'For if you die together, or the primary dies first. A missing contingent sends the account through probate — slow, public, expensive.'},
+  {t:'Per stirpes or per capita, if children are named',d:'If one child predeceases you, per stirpes sends their share to their children; per capita splits it among the surviving siblings. Usually just a checkbox.'},
+  {t:'Payable-on-death on bank accounts',d:'Does the same job for checking and savings, and keeps them out of probate.'},
+  {t:'Transfer-on-death on brokerage accounts',d:'Same for taxable investments. Free to add and most people never do.'},
+  {t:'Deed and vehicle titles',d:'How property is titled decides what happens to it, independent of any will.'}
+];
+const ACCESS=[
+  {t:'A written list of every account and institution',d:'Including anything small or forgotten. If it is not on a list, it may simply never be found.'},
+  {t:'A way to reach the passwords',d:'A password manager you both can access, or a sealed envelope in a safe someone else can open.'},
+  {t:'They can log in to the primary bank account',d:'Not theoretically — have them actually do it once. Two-factor codes going to a phone only one of you carries is the usual failure.'},
+  {t:'They know which bills are on autopay, and from where',d:'Autopay running from one person\'s login is the most common practical problem in the first month.'},
+  {t:'They know where the will, trust, and deeds physically are',d:'And that they can get into the safe or box without a key only you have.'},
+  {t:'A phone list — attorney, accountant, advisor, insurance agent',d:'With names, not just firms.'},
+  {t:'They know what income arrives, and when',d:'Which deposits are Social Security, which is the pension, which is a distribution.'}
+];
+
+function render(){
+  const ssHi=num('ssHi'), ssLo=num('ssLo'), pen=num('pen'), ira=num('ira'), other=num('other');
+  const penFactor=parseFloat($('penSurv').value);
+  const ess=num('ess'), essFactor=parseFloat($('essDrop').value);
+
+  /* --- today, filing jointly, both 65+ --- */
+  const ssBoth=ssHi+ssLo;
+  const ordBoth=pen+ira+other;
+  const now=picture(ssBoth, ordBoth, 'mfj', 2);
+
+  /* --- survivor: higher earner dies first --- */
+  const ssSurv=Math.max(ssHi,ssLo);
+  const penSurv=pen*penFactor;
+  const ordSurv=penSurv+ira+other;
+  const surv=picture(ssSurv, ordSurv, 'single', 1);
+
+  const essSurv=ess*essFactor;
+  const incDrop=now.gross>0?(1-surv.gross/now.gross)*100:0;
+  const taxChange=surv.tax-now.tax;
+  const effNow=now.gross>0?now.tax/now.gross:0;
+  const effSurv=surv.gross>0?surv.tax/surv.gross:0;
+  const netDrop=now.net>0?(1-surv.net/now.net)*100:0;
+  const covNow=ess>0?(ssBoth+penSurv*0+pen)/ess:0;
+  const covSurv=essSurv>0?(ssSurv+penSurv)/essSurv:0;
+
+  /* headline */
+  $('headline').innerHTML=`
+    <div class="head3">
+      <div class="h3c down"><div class="h3l">Income falls</div>
+        <div class="h3v">${incDrop.toFixed(0)}%</div>
+        <div class="h3n">From ${money(now.gross)} to ${money(surv.gross)} a year — ${money(now.gross-surv.gross)} gone.</div></div>
+      <div class="h3c ${taxChange>=0?'up':'ok'}"><div class="h3l">Federal tax</div>
+        <div class="h3v">${taxChange>=0?'+':''}${money(taxChange)}</div>
+        <div class="h3n">${money(now.tax)} today, ${money(surv.tax)} as a survivor. Effective rate moves from ${(effNow*100).toFixed(1)}% to ${(effSurv*100).toFixed(1)}%.</div></div>
+      <div class="h3c ${covSurv>=1?'ok':'down'}"><div class="h3l">Coverage of essentials</div>
+        <div class="h3v">${Math.round(covSurv*100)}%</div>
+        <div class="h3n">Guaranteed income against ${money(essSurv)} of essentials — down from ${Math.round(covNow*100)}% today.</div></div>
+    </div>`;
+
+  /* comparison table */
+  const row=(l,a,b,cls)=>`<tr><td>${l}</td><td>${a}</td><td class="${cls||''}">${b}</td></tr>`;
+  $('table').innerHTML=`<table class="cmp">
+    <tr><th>&nbsp;</th><th class="a">Both of you</th><th class="b">Survivor alone</th></tr>
+    <tr class="sec"><td colspan="3">Income</td></tr>
+    ${row('Social Security',money(ssBoth),money(ssSurv),'worse')}
+    ${row('Pension',money(pen),money(penSurv),penSurv<pen?'worse':'')}
+    ${row('Withdrawals and other',money(ira+other),money(ira+other))}
+    ${row('<b>Total income</b>','<b>'+money(now.gross)+'</b>','<b>'+money(surv.gross)+'</b>','worse')}
+    <tr class="sec"><td colspan="3">How it's taxed</td></tr>
+    ${row('Filing status','Married jointly','Single','worse')}
+    ${row('Social Security taxed',money(now.ssTax)+' ('+(ssBoth>0?Math.round(now.ssTax/ssBoth*100):0)+'%)',money(surv.ssTax)+' ('+(ssSurv>0?Math.round(surv.ssTax/ssSurv*100):0)+'%)',(ssSurv>0&&ssBoth>0&&surv.ssTax/ssSurv>now.ssTax/ssBoth)?'worse':'')}
+    ${row('Adjusted gross income',money(now.agi),money(surv.agi))}
+    ${row('Deductions',money(now.deductions),money(surv.deductions),'worse')}
+    ${row('Taxable income',money(now.taxable),money(surv.taxable),surv.taxable>now.taxable?'worse':'')}
+    ${row('Marginal bracket',(now.marginal*100).toFixed(0)+'%',(surv.marginal*100).toFixed(0)+'%',surv.marginal>now.marginal?'worse':'')}
+    <tr class="tot"><td><b>Federal tax</b></td><td><b>${money(now.tax)}</b></td><td><b>${money(surv.tax)}</b></td></tr>
+  </table>`;
+
+  $('benList').innerHTML=BENS.map(b=>
+    `<div class="chk"><input type="checkbox"><div><div class="chk-t">${b.t}</div><div class="chk-d">${b.d}</div></div></div>`).join('');
+  $('accessList').innerHTML=ACCESS.map(a=>
+    `<div class="chk"><input type="checkbox"><div><div class="chk-t">${a.t}</div><div class="chk-d">${a.d}</div></div></div>`).join('');
+
+  /* flags */
+  const F=[];
+  if(taxChange>=0){
+    F.push({t:'w',h:'Income falls '+incDrop.toFixed(0)+'% and the tax bill does not',
+      b:`Federal tax goes from ${money(now.tax)} to ${money(surv.tax)} — ${taxChange>0?'an increase of '+money(taxChange):'unchanged'} — on ${money(now.gross-surv.gross)} less income. The effective rate rises from ${(effNow*100).toFixed(1)}% to ${(effSurv*100).toFixed(1)}%. That is the widow's penalty, and it is entirely mechanical: half the standard deduction, brackets that are half as wide, and more Social Security pulled into tax.`});
+  } else {
+    F.push({t:'n',h:'Tax falls, but by far less than income',
+      b:`Income drops ${incDrop.toFixed(0)}% while tax drops only ${money(-taxChange)}. After tax, the survivor keeps ${netDrop.toFixed(0)}% less — while essentials fall only ${((1-essFactor)*100).toFixed(0)}%.`});
+  }
+  if(penFactor===0 && pen>0){
+    F.push({t:'w',h:'Your pension stops entirely at the first death',
+      b:`${money(pen)} a year gone, on top of the smaller Social Security check. Combined, the survivor loses ${money(ssLo+pen)} of guaranteed annual income. If this election has not been made yet, run these numbers before signing — it is almost always irrevocable.`});
+  } else if(penFactor>0 && penFactor<1 && pen>0){
+    F.push({t:'n',h:`Your pension drops to ${(penFactor*100).toFixed(0)}% for the survivor`,
+      b:`${money(pen-penSurv)} a year less, stacking with the ${money(ssLo)} of Social Security that stops. Worth confirming the election with the plan administrator rather than relying on memory.`});
+  }
+  if(covSurv<1 && covNow>=1){
+    F.push({t:'w',h:'Guaranteed income covers your essentials today but not the survivor\'s',
+      b:`Coverage falls from ${Math.round(covNow*100)}% to ${Math.round(covSurv*100)}%. That means the survivor has to draw from the portfolio for necessities in every market — exactly the exposure February measured. Delaying the larger Social Security benefit is the most direct fix.`});
+  }
+  if(surv.marginal>now.marginal){
+    F.push({t:'n',h:`The survivor's marginal bracket rises from ${(now.marginal*100).toFixed(0)}% to ${(surv.marginal*100).toFixed(0)}%`,
+      b:'This is the argument for Roth conversions that August will weigh. Money converted now is taxed at joint rates. The same money withdrawn later by a survivor is taxed at single rates, in narrower brackets, with half the deduction.'});
+  }
+  if(surv.agi>=TAX.irmaa1.single && now.agi<TAX.irmaa1.mfj){
+    F.push({t:'w',h:'The survivor could cross a Medicare surcharge threshold you are nowhere near today',
+      b:`The single threshold is ${money(TAX.irmaa1.single)} against ${money(TAX.irmaa1.mfj)} for a couple. On less income, the survivor may owe a premium surcharge the two of you never faced.`});
+  }
+  if(ssHi>0){
+    F.push({t:'n',h:'Delaying the larger benefit is the single most effective fix',
+      b:`The survivor keeps ${money(ssSurv)} — the larger of the two. Every dollar the higher earner adds by waiting is a dollar the survivor keeps for as long as they live, inflation-adjusted. That is April's month, and this is why it matters.`});
+  }
+  F.push({t:'n',h:'Two tasks worth about an hour total',
+    b:'Check every beneficiary form, including contingents — the form controls the account and the will does not. Then write the one-page list: accounts, advisors, where the documents are, and how the other person gets to the passwords.'});
+  $('flags').innerHTML=F.map(f=>`<div class="flag ${f.t}"><b>${f.h}</b>${f.b}</div>`).join('');
+
+  /* carry */
+  const rows=[
+    ['Income today',money(now.gross)],
+    ['Income as survivor',money(surv.gross)],
+    ['Income drop',incDrop.toFixed(0)+'%'],
+    ['Federal tax today',money(now.tax)],
+    ['Federal tax as survivor',money(surv.tax)],
+    ['Change in tax',(taxChange>=0?'+':'')+money(taxChange)],
+    ['Effective rate today',(effNow*100).toFixed(1)+'%'],
+    ['Effective rate as survivor',(effSurv*100).toFixed(1)+'%'],
+    ['Survivor coverage ratio',Math.round(covSurv*100)+'%'],
+    ['Survivor marginal bracket',(surv.marginal*100).toFixed(0)+'%']
+  ];
+  $('carrybody').innerHTML='<table>'+rows.map(r=>`<tr><td>${r[0]}</td><td>${r[1]}</td></tr>`).join('')+'</table>'
+    +'<p>The survivor marginal bracket is the number August needs. If it is higher than your bracket today, conversions made while you are both alive are being taxed at the cheaper rate — and that is one of the strongest arguments for doing them.</p>';
+}
+
+function dlCSV(){
+  const rows=[['Field','Value']];
+  document.querySelectorAll('#carrybody tr').forEach(tr=>rows.push([tr.cells[0].textContent,tr.cells[1].textContent]));
+  document.querySelectorAll('.flag b').forEach(b=>rows.push(['Note',b.textContent]));
+  const csv=rows.map(r=>r.map(c=>'"'+String(c).replace(/"/g,'""')+'"').join(',')).join('\n');
+  const a=document.createElement('a');
+  a.href=URL.createObjectURL(new Blob([csv],{type:'text/csv'}));
+  a.download='survivor-check.csv'; a.click();
+}
+function resetAll(){
+  $('ssHi').value='34,000'; $('ssLo').value='18,000'; $('pen').value='0';
+  $('ira').value='30,000'; $('other').value='6,000';
+  $('penSurv').value='1'; $('ess').value='62,000'; $('essDrop').value='0.85';
+  render();
+}
+document.addEventListener('input',render);
+document.addEventListener('change',render);
+render();
+</script>
+<!--AW:FOOTER-->
+</body>
+</html>

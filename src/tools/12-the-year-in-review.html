@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Year in Review — Alston Wealth</title>
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Alston Wealth">
+<meta property="og:title" content="The Year in Review — Alston Wealth">
+<meta property="og:description" content="Twelve retirement decisions, twelve months. Free tools, briefings, and a live monthly call.">
+<meta property="og:image" content="{{SITE_URL}}/og-image.png">
+<meta property="og:url" content="{{SITE_URL}}/tools/12-the-year-in-review.html">
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-YJFKJ8MCV3"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}
+gtag('js',new Date());gtag('config','G-YJFKJ8MCV3');</script>
+<meta name="twitter:card" content="summary_large_image">
+
+<style>
+:root{
+  --ink:#16233A; --ink2:#46505F; --ink3:#5E6878;
+  --paper:#FBFAF7; --card:#FFFFFF; --rule:#E6E2D9; --rule2:#EDEAE3;
+  --brass:#8A5F24; --brass-tint:#F5EEE1;
+  --good:#2F6B4F; --good-tint:#E9F2ED;
+  --warn:#9A4A22; --warn-tint:#FBEDE5;
+  --u:"Archivo","Helvetica Neue",Helvetica,sans-serif;
+  --s:"Source Serif 4",Charter,"Bitstream Charter",Georgia,serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--paper);color:var(--ink);font-family:var(--s);
+  font-size:16px;line-height:1.5;-webkit-font-smoothing:antialiased;padding:0 0 80px}
+.wrap{max-width:940px;margin:0 auto;padding:0 20px}
+header{border-bottom:2px solid var(--ink);padding:34px 0 14px;margin-bottom:26px}
+.eyebrow{font-family:var(--u);font-weight:700;font-size:10px;letter-spacing:.19em;
+  text-transform:uppercase;color:var(--brass);margin-bottom:7px}
+h1{font-family:var(--u);font-weight:700;font-size:31px;letter-spacing:-.02em;line-height:1.05}
+.sub{color:var(--ink2);margin-top:9px;max-width:64ch;font-size:15.5px}
+.hdr-row{display:flex;justify-content:space-between;align-items:flex-end;gap:20px;flex-wrap:wrap}
+.firm{font-family:var(--u);font-weight:700;font-size:11px;letter-spacing:.15em;
+  text-transform:uppercase;color:var(--ink2);white-space:nowrap}
+
+section{background:var(--card);border:1px solid var(--rule);margin-bottom:20px}
+.shead{display:flex;align-items:baseline;gap:12px;padding:15px 20px;
+  border-bottom:1px solid var(--rule2);background:#FCFBF8;flex-wrap:wrap}
+.snum{font-family:var(--u);font-weight:700;font-size:10px;letter-spacing:.14em;color:var(--brass);
+  border:1px solid var(--brass);padding:3px 7px;flex:none}
+.stitle{font-family:var(--u);font-weight:700;font-size:16px;letter-spacing:-.01em}
+.shint{font-size:14px;color:var(--ink3);margin-left:auto;font-family:var(--u);font-weight:500}
+.sbody{padding:20px}
+.lede{color:var(--ink2);font-size:15px;margin-bottom:16px;max-width:68ch}
+
+.grid{display:grid;gap:12px}
+.g2{grid-template-columns:repeat(2,1fr)}
+.g3{grid-template-columns:repeat(3,1fr)}
+label.f{display:block}
+label.f span{display:block;font-family:var(--u);font-weight:600;font-size:11.5px;
+  letter-spacing:.05em;text-transform:uppercase;color:var(--ink2);margin-bottom:5px}
+input[type=text],select,textarea{width:100%;padding:10px 11px;border:1px solid var(--rule);
+  background:#fff;font-family:var(--u);font-size:15.5px;color:var(--ink);border-radius:0}
+textarea{font-family:var(--s);min-height:74px;resize:vertical;line-height:1.45}
+input[type=text]:focus,select:focus,textarea:focus{outline:2px solid var(--brass);outline-offset:-1px}
+
+/* closeout */
+.close{display:flex;gap:11px;align-items:flex-start;padding:11px 0;border-bottom:1px solid var(--rule2)}
+.close:last-child{border-bottom:none}
+.close input{margin-top:4px;flex:none;width:17px;height:17px;accent-color:var(--good)}
+.close-t{font-family:var(--u);font-weight:700;font-size:14px;margin-bottom:2px}
+.close-d{font-size:13.5px;color:var(--ink2);line-height:1.4}
+.close-x{font-family:var(--u);font-weight:700;font-size:10.5px;letter-spacing:.09em;
+  text-transform:uppercase;color:var(--warn);margin-left:auto;flex:none;white-space:nowrap;padding-top:2px}
+.close-x.soft{color:var(--ink3)}
+
+/* trend table */
+.trend{width:100%;border-collapse:collapse;font-size:14.5px}
+.trend th{font-family:var(--u);font-weight:600;font-size:10.5px;letter-spacing:.1em;
+  text-transform:uppercase;color:var(--ink3);text-align:right;padding:9px 10px;
+  border-bottom:1px solid var(--rule)}
+.trend th:first-child{text-align:left}
+.trend th.now{color:var(--brass)}
+.trend td{padding:6px 10px;text-align:right;border-bottom:1px solid var(--rule2)}
+.trend td:first-child{text-align:left;font-family:var(--s);color:var(--ink2)}
+.trend td input{text-align:right;padding:7px 9px;font-size:14px;width:100%}
+.trend td.calc{font-family:var(--u);font-weight:700}
+.trend td.up{color:var(--good)} .trend td.down{color:var(--warn)}
+.trend tr:last-child td{border-bottom:none}
+
+/* headline cards */
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--rule);
+  border:1px solid var(--rule)}
+.c{background:#fff;padding:17px 18px}
+.c-l{font-family:var(--u);font-weight:600;font-size:10.5px;letter-spacing:.12em;
+  text-transform:uppercase;color:var(--ink3);margin-bottom:7px}
+.c-v{font-family:var(--u);font-weight:700;font-size:28px;letter-spacing:-.03em;line-height:.95}
+.c-n{font-size:13px;color:var(--ink2);margin-top:9px;line-height:1.4}
+.c.good{background:var(--good-tint)} .c.good .c-v{color:var(--good)}
+.c.warn{background:var(--warn-tint)} .c.warn .c-v{color:var(--warn)}
+.c.hero{background:var(--brass-tint)} .c.hero .c-v{color:var(--brass)}
+
+/* decisions */
+.dec{display:grid;grid-template-columns:1fr 130px;gap:10px 14px;align-items:center;
+  padding:9px 0;border-bottom:1px solid var(--rule2)}
+.dec:last-of-type{border-bottom:none}
+.dec label b{font-family:var(--u);font-weight:600;font-size:14px;display:block}
+.dec label i{font-style:normal;font-size:12.5px;color:var(--ink3);display:block;margin-top:1px}
+.dec input{text-align:right}
+
+.three{counter-reset:t}
+.tr{display:flex;gap:13px;align-items:flex-start;padding:12px 0;border-bottom:1px solid var(--rule2)}
+.tr:last-child{border-bottom:none}
+.tr::before{counter-increment:t;content:counter(t);font-family:var(--u);font-weight:700;
+  font-size:12px;color:#fff;background:var(--brass);width:24px;height:24px;flex:none;
+  display:flex;align-items:center;justify-content:center;margin-top:8px}
+
+.flags{margin-top:18px}
+.flag{border-left:3px solid;padding:12px 15px;margin-bottom:9px;font-size:14.5px;line-height:1.45}
+.flag b{font-family:var(--u);font-weight:700;font-size:12px;letter-spacing:.06em;
+  text-transform:uppercase;display:block;margin-bottom:4px}
+.flag.w{border-color:var(--warn);background:var(--warn-tint)} .flag.w b{color:var(--warn)}
+.flag.g{border-color:var(--good);background:var(--good-tint)} .flag.g b{color:var(--good)}
+.flag.n{border-color:var(--brass);background:var(--brass-tint)} .flag.n b{color:var(--brass)}
+
+.closing{background:var(--ink);color:#fff;padding:26px}
+.closing h3{font-family:var(--u);font-weight:700;font-size:13px;letter-spacing:.13em;
+  text-transform:uppercase;color:#C9A26B;margin-bottom:14px}
+.closing p{font-size:16px;line-height:1.55;color:#DDE3EC;max-width:66ch}
+.closing p+p{margin-top:13px}
+.closing b{color:#fff}
+
+.bar{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px}
+button.act{font-family:var(--u);font-weight:600;font-size:13.5px;letter-spacing:.03em;
+  padding:11px 18px;border:1px solid var(--ink);background:#fff;color:var(--ink);cursor:pointer;border-radius:0}
+button.act:hover{background:var(--ink);color:#fff}
+button.act.p{background:var(--ink);color:#fff}
+button.act.p:hover{background:var(--brass);border-color:var(--brass)}
+.foot{margin-top:26px;padding-top:16px;border-top:1px solid var(--rule);
+  font-size:13.5px;color:var(--ink3);line-height:1.5}
+
+@media (max-width:760px){
+  .g2,.g3,.cards{grid-template-columns:1fr}
+  h1{font-size:25px} .shint{margin-left:0;flex-basis:100%}
+  .dec{grid-template-columns:1fr} .dec input{text-align:left}
+  .trend{font-size:13px} .trend th,.trend td{padding:6px 4px}
+  .close-x{margin-left:0;flex-basis:100%;padding-top:4px}
+}
+@media print{
+  body{background:#fff;padding:0;font-size:11pt}
+  .bar,.shint{display:none}
+  section{break-inside:avoid;border-color:#bbb}
+  .closing{background:#fff;color:#000;border:2px solid #000}
+  .closing h3{color:#000} .closing p{color:#333}
+  .c.good,.c.warn,.c.hero{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+}
+
+/* nav */
+nav{border-bottom:1px solid var(--rule);background:var(--paper);position:sticky;top:0;z-index:10;
+  margin:0 0 4px}
+nav .navwrap{max-width:940px;margin:0 auto;padding:0 20px;display:flex;align-items:center;
+  justify-content:space-between;height:58px;gap:20px}
+nav .brand{font-family:var(--u);font-weight:700;font-size:15px;color:var(--ink);
+  text-decoration:none;letter-spacing:-.01em}
+nav .brand:hover{color:var(--brass)}
+nav ul{list-style:none;display:flex;gap:22px;font-family:var(--u);font-size:13.5px;font-weight:600;
+  margin:0;padding:0}
+nav a{text-decoration:none;color:var(--ink2)}
+nav a:hover{color:var(--brass)}
+@media(max-width:620px){nav .hide-sm{display:none} nav ul{gap:16px}}
+@media print{nav{display:none}}
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap">
+<link rel="stylesheet" href="../assets/alston.css">
+</head>
+<body>
+<!--AW:HEADER-->
+
+<div class="wrap">
+
+<header>
+  <div class="hdr-row">
+    <div>
+      <div class="eyebrow">December · The Decision Calendar</div>
+      <h1>The Year in Review</h1>
+    </div>
+    <div class="firm">Alex&nbsp;Alston</div>
+  </div>
+  <p class="sub">Close the year, then look back at it properly — at the decisions rather than
+  the balance. <b>Keep this sheet.</b> Next December it goes beside this one, and that is when
+  the trend starts telling you things no single year could.</p>
+</header>
+
+<!-- 1 -->
+<section>
+  <div class="shead"><span class="snum">01</span><span class="stitle">Close it</span>
+    <span class="shint">Confirmed against a statement, not from memory</span></div>
+  <div class="sbody">
+    <p class="lede">Every year somebody discovers in February that a request never processed —
+    and by then nothing can be done. Check each against an actual statement.</p>
+    <div id="closeout"></div>
+  </div>
+</section>
+
+<!-- 2 -->
+<section>
+  <div class="shead"><span class="snum">02</span><span class="stitle">The year, in numbers</span>
+    <span class="shint">Fill the right column now; add prior years if you have them</span></div>
+  <div class="sbody">
+    <div class="grid g3" style="margin-bottom:18px">
+      <label class="f"><span>Two years ago</span><input type="text" id="y1lab" value="Year 1"></label>
+      <label class="f"><span>Last year</span><input type="text" id="y2lab" value="Year 2"></label>
+      <label class="f"><span>This year</span><input type="text" id="y3lab" value="This year"></label>
+    </div>
+    <div id="trend"></div>
+  </div>
+</section>
+
+<!-- 3 -->
+<section>
+  <div class="shead"><span class="snum">03</span><span class="stitle">Where you stand</span></div>
+  <div class="sbody"><div id="cards"></div><div class="flags" id="flags"></div></div>
+</section>
+
+<!-- 4 -->
+<section>
+  <div class="shead"><span class="snum">04</span><span class="stitle">What you decided</span>
+    <span class="shint">Worth more over twenty years than any single year's return</span></div>
+  <div class="sbody">
+    <p class="lede">The balance moved for reasons that had nothing to do with you. These didn't.</p>
+    <div class="dec"><label><b>Roth conversion</b><i>Amount moved to a Roth this year</i></label><input type="text" id="dConv" inputmode="decimal" placeholder="$"></div>
+    <div class="dec"><label><b>Gains harvested at 0%</b><i>Permanently removed from future tax</i></label><input type="text" id="dGains" inputmode="decimal" placeholder="$"></div>
+    <div class="dec"><label><b>Losses harvested</b><i>Offsetting gains now or carrying forward</i></label><input type="text" id="dLoss" inputmode="decimal" placeholder="$"></div>
+    <div class="dec"><label><b>Charitable transfers from the IRA</b><i>Excluded from income entirely</i></label><input type="text" id="dQcd" inputmode="decimal" placeholder="$"></div>
+    <div class="dec"><label><b>Gifts made</b><i>Out of the estate, using this year's exclusion</i></label><input type="text" id="dGift" inputmode="decimal" placeholder="$"></div>
+    <label class="f" style="margin-top:16px"><span>Decisions that don't have a dollar figure</span>
+      <textarea id="dOther" placeholder="Delayed a benefit. Changed the withholding. Updated beneficiaries. Had the conversation about care. Chose not to convert, deliberately."></textarea></label>
+  </div>
+</section>
+
+<!-- 5 -->
+<section>
+  <div class="shead"><span class="snum">05</span><span class="stitle">Three questions</span>
+    <span class="shint">Answer them honestly, they're the input for next year</span></div>
+  <div class="sbody">
+    <label class="f"><span>What changed that you didn't plan for?</span>
+      <textarea id="qChange" placeholder="A diagnosis. A grandchild. A move. A parent needing help. Something the market did."></textarea></label>
+    <label class="f" style="margin-top:14px"><span>What did you put off?</span>
+      <textarea id="qDefer" placeholder="Everybody defers something. Naming it is most of the work."></textarea></label>
+    <label class="f" style="margin-top:14px"><span>What are you glad you did?</span>
+      <textarea id="qGlad" placeholder="Worth writing down. This is the one people never record and always want later."></textarea></label>
+  </div>
+</section>
+
+<!-- 6 -->
+<section>
+  <div class="shead"><span class="snum">06</span><span class="stitle">Three things for next year</span>
+    <span class="shint">Three. Not twelve — the calendar handles the rest</span></div>
+  <div class="sbody">
+    <div class="three">
+      <div class="tr"><textarea id="n1" placeholder="Specific to you, not the general calendar."></textarea></div>
+      <div class="tr"><textarea id="n2"></textarea></div>
+      <div class="tr"><textarea id="n3"></textarea></div>
+    </div>
+  </div>
+</section>
+
+<section style="border:none;background:none">
+  <div class="closing">
+    <h3>One last thing</h3>
+    <p>The balance is not the scorecard. It moved for reasons that had almost nothing to do
+    with you, and it was never what any of this was for.</p>
+    <p><b>The scorecard is whether the money did its job</b> — whether it paid for the life you
+    wanted while you were well enough to have it. Whether you took the trip. Whether you helped
+    when you wanted to help. Whether you stopped worrying about something because it was
+    actually handled.</p>
+    <p>A plan that produces a large balance and a small life has failed at something, even if
+    every calculation in it was correct.</p>
+  </div>
+</section>
+
+<div class="bar">
+  <button class="act p" onclick="window.print()">Print / Save as PDF</button>
+  <button class="act" onclick="dlCSV()">Download CSV</button>
+  <button class="act" onclick="resetAll()">Reset</button>
+</div>
+
+<div id="assistant-slot"></div>
+<script src="../assistant.js" data-mode="month" data-month="12" data-title="December — The Year in Review"></script>
+
+<p class="foot">
+  <b>Save this sheet.</b> The teaching repeats each year; your numbers do not. Two or three
+  years side by side show a trend that no single reading can — a coverage ratio climbing, a
+  spending pattern settling, a pretax balance coming down on purpose. That record only exists
+  if you keep it.
+</p>
+
+
+
+</div>
+
+<script>
+const CLOSEOUT=[
+  {t:'Required distribution taken and settled',d:'Confirm against a statement. Missing it costs 25% of the shortfall.',x:'Dec 31'},
+  {t:'Roth conversion processed',d:'Cannot be done late and cannot be undone. A conversion that did not settle is a conversion you did not make.',x:'Dec 31'},
+  {t:'Charitable transfer received by the charity',d:'Direct from custodian. Confirm the charity actually has it — not just that you requested it.',x:'Dec 31'},
+  {t:'Loss and gain harvesting settled',d:'Trade date matters. Watch the 30-day wash sale window on both sides for losses.',x:'Dec 31'},
+  {t:'Gifts delivered',d:'The annual exclusion does not carry forward. Cheques need to be cashed, not just written.',x:'Dec 31'},
+  {t:'Withholding true-up done',d:'If you were short of the safe harbor, a distribution with heavy withholding still fixes the whole year.',x:'Dec 31'},
+  {t:'HSA contribution',d:'Not a hard deadline — this one runs to the filing date.',x:'Filing date',soft:1},
+  {t:'IRA contribution for this year',d:'Also runs to the filing date. An extension does not extend it.',x:'Filing date',soft:1},
+  {t:'Next year\'s plan selection confirmed',d:'Medicare open enrollment closed December 7. Marketplace runs to January 15.',x:'Closed',soft:1}
+];
+
+const ROWS=[
+  {id:'net',   n:'Net worth',                 fmt:'money', up:1},
+  {id:'inv',   n:'Investable assets',          fmt:'money', up:1},
+  {id:'pretax',n:'Tax-deferred balance',       fmt:'money', up:-1, note:'Coming down deliberately is progress'},
+  {id:'roth',  n:'Roth balance',               fmt:'money', up:1},
+  {id:'spend', n:'Actual spending',            fmt:'money', up:0},
+  {id:'ess',   n:'Essential expenses',         fmt:'money', up:0},
+  {id:'guar',  n:'Guaranteed lifetime income', fmt:'money', up:1},
+  {id:'cov',   n:'Coverage ratio',             fmt:'pct',   up:1, calc:1},
+  {id:'draw',  n:'Drawn from the portfolio',   fmt:'money', up:-1},
+  {id:'wr',    n:'Withdrawal rate',            fmt:'pct',   up:-1, calc:1},
+  {id:'tax',   n:'Federal tax paid',           fmt:'money', up:0},
+  {id:'eff',   n:'Effective tax rate',         fmt:'pct',   up:-1, calc:1}
+];
+
+const $=id=>document.getElementById(id);
+const money=n=>(n<0?'-$':'$')+Math.abs(Math.round(n)).toLocaleString('en-US');
+const num=id=>{const el=$(id);if(!el)return 0;const v=(el.value||'').replace(/[^0-9.\-]/g,'');const n=parseFloat(v);return isFinite(n)?n:0;};
+
+$('closeout').innerHTML=CLOSEOUT.map(c=>
+  `<div class="close"><input type="checkbox">
+   <div><div class="close-t">${c.t}</div><div class="close-d">${c.d}</div></div>
+   <span class="close-x ${c.soft?'soft':''}">${c.x}</span></div>`).join('');
+
+/* build the trend table */
+$('trend').innerHTML=`<table class="trend">
+  <tr><th>&nbsp;</th><th id="h1">Year 1</th><th id="h2">Year 2</th><th class="now" id="h3">This year</th><th>Change</th></tr>
+  ${ROWS.map(r=>`<tr>
+    <td>${r.n}${r.note?'<br><span style="font-size:12px;color:#5E6878">'+r.note+'</span>':''}</td>
+    ${r.calc
+      ? `<td class="calc" id="${r.id}-1">—</td><td class="calc" id="${r.id}-2">—</td><td class="calc" id="${r.id}-3">—</td>`
+      : `<td><input type="text" id="${r.id}-1" inputmode="decimal" placeholder="$"></td>
+         <td><input type="text" id="${r.id}-2" inputmode="decimal" placeholder="$"></td>
+         <td><input type="text" id="${r.id}-3" inputmode="decimal" placeholder="$"></td>`}
+    <td class="calc" id="${r.id}-d">—</td></tr>`).join('')}
+</table>`;
+
+function render(){
+  ['1','2','3'].forEach(i=>{ const l=$('y'+i+'lab'); if(l) $('h'+i).textContent=l.value||('Year '+i); });
+
+  const v={};
+  ROWS.filter(r=>!r.calc).forEach(r=>{
+    v[r.id]=[num(r.id+'-1'),num(r.id+'-2'),num(r.id+'-3')];
+  });
+
+  /* derived rows */
+  const cov=[0,1,2].map(i=>v.ess[i]>0?v.guar[i]/v.ess[i]:0);
+  const wr =[0,1,2].map(i=>v.inv[i]>0?v.draw[i]/v.inv[i]:0);
+  const eff=[0,1,2].map(i=>v.spend[i]>0?v.tax[i]/v.spend[i]:0);
+  const derived={cov,wr,eff};
+  Object.entries(derived).forEach(([k,arr])=>{
+    arr.forEach((x,i)=>{ const el=$(k+'-'+(i+1)); if(el) el.textContent=x>0?(x*100).toFixed(1)+'%':'—'; });
+  });
+
+  /* change column */
+  ROWS.forEach(r=>{
+    const el=$(r.id+'-d'); if(!el) return;
+    const arr=r.calc?derived[r.id]:v[r.id];
+    const prevIdx=arr[1]>0?1:0;
+    const prev=arr[prevIdx], now=arr[2];
+    if(!(prev>0&&now>0)){ el.textContent='—'; el.className='calc'; return; }
+    const delta=now-prev;
+    const good = r.up===0 ? null : (r.up>0 ? delta>0 : delta<0);
+    el.className='calc'+(good===true?' up':good===false?' down':'');
+    el.textContent=(r.fmt==='pct')
+      ? (delta>=0?'+':'')+(delta*100).toFixed(1)+' pts'
+      : (delta>=0?'+':'')+money(delta);
+  });
+
+  /* headline cards */
+  const spendNow=v.spend[2], spendPrev=v.spend[1]>0?v.spend[1]:v.spend[0];
+  const covNow=cov[2], covPrev=cov[1]>0?cov[1]:cov[0];
+  const pretaxNow=v.pretax[2], pretaxPrev=v.pretax[1]>0?v.pretax[1]:v.pretax[0];
+  const decisions=['dConv','dGains','dLoss','dQcd','dGift'].reduce((s,i)=>s+num(i),0);
+
+  const cards=[];
+  cards.push({c:covNow>=1?'good':covNow>0?'hero':'', l:'Coverage ratio',
+    v:covNow>0?(covNow*100).toFixed(0)+'%':'—',
+    n:covNow>0
+      ? (covPrev>0
+          ? `${covPrev<covNow?'Up':covPrev>covNow?'Down':'Level'} from ${(covPrev*100).toFixed(0)}% — ${covNow>=1?'your essentials are fully covered by income that arrives regardless of markets.':'the share of essential spending covered by guaranteed income.'}`
+          : 'Guaranteed income against essential expenses. Next year this becomes a trend.')
+      : 'Enter essential expenses and guaranteed income above.'});
+  cards.push({c:(spendPrev>0&&spendNow<spendPrev*0.92)?'warn':'', l:'Spending',
+    v:spendNow>0?money(spendNow):'—',
+    n:spendNow>0
+      ? (spendPrev>0
+          ? (spendNow<spendPrev*0.92
+              ? `Down ${money(spendPrev-spendNow)} from last year. Worth asking why — underspending is the quietest failure in retirement.`
+              : spendNow>spendPrev*1.15
+                ? `Up ${money(spendNow-spendPrev)}. Worth understanding whether that is a new pattern or a one-off.`
+                : 'Broadly in line with last year — which is what a settled plan looks like.')
+          : 'The baseline. Next year you will have something to compare it to.')
+      : 'Enter this year\'s actual spending.'});
+  cards.push({c:decisions>0?'hero':'', l:'Decisions made',
+    v:decisions>0?money(decisions):'—',
+    n:decisions>0
+      ? 'Converted, harvested, transferred, and gifted. Every dollar here was yours to decide — unlike the balance, which moved for reasons that had nothing to do with you.'
+      : 'Record what you decided below. That is the real scorecard for the year.'});
+  $('cards').innerHTML='<div class="cards">'+cards.map(c=>
+    `<div class="c ${c.c}"><div class="c-l">${c.l}</div><div class="c-v">${c.v}</div>
+     <div class="c-n">${c.n}</div></div>`).join('')+'</div>';
+
+  /* flags */
+  const F=[];
+  if(spendNow>0&&spendPrev>0&&spendNow<spendPrev*0.92&&covNow>=0.9){
+    F.push({t:'w',h:`You spent ${money(spendPrev-spendNow)} less than last year, with your essentials covered`,
+      b:'That combination is worth examining rather than celebrating. When guaranteed income covers what you must pay, the portfolio exists for the life you want — and a large balance at eighty-five bought with a decade of saying no is not a good trade. If the reduction was deliberate, fine. If it was caution, that is the thing to work on next year.'});
+  }
+  if(pretaxNow>0&&pretaxPrev>0&&pretaxNow<pretaxPrev){
+    F.push({t:'g',h:`Tax-deferred balance came down ${money(pretaxPrev-pretaxNow)}`,
+      b:'Deliberately reducing the pretax pile is progress even though the number got smaller. It means smaller required distributions later, less pressure on Social Security taxation, and a better position for whichever of you files as a survivor.'});
+  } else if(pretaxNow>0&&pretaxPrev>0&&pretaxNow>pretaxPrev*1.08){
+    F.push({t:'n',h:'Tax-deferred balance grew this year',
+      b:'Not a failure — market growth does this. But it means larger required distributions ahead. Worth taking to August next year, where the low-bracket window gets sized.'});
+  }
+  if(covNow>0&&covPrev>0&&covNow>covPrev){
+    F.push({t:'g',h:`Coverage ratio improved ${((covNow-covPrev)*100).toFixed(0)} points`,
+      b:'More of your essential spending is now covered by income that arrives regardless of what markets do. That is the single most durable improvement available in retirement planning, and it does not reverse.'});
+  }
+  if(num('dConv')>0){
+    F.push({t:'n',h:`${money(num('dConv'))} converted this year`,
+      b:'That money is never taxed again, generates no required distribution, and passes to heirs without a tax bill attached. Note the amount here — the running total across years is more informative than any single conversion.'});
+  }
+  if(num('dQcd')>0){
+    F.push({t:'g',h:`${money(num('dQcd'))} given directly from the IRA`,
+      b:'Excluded from income rather than deducted, which also kept your adjusted gross income down — affecting Social Security taxability and Medicare thresholds. The most efficient charitable giving available after 70½.'});
+  }
+  if(spendNow>0&&covNow>0){
+    F.push({t:'n',h:'Save this sheet for next December',
+      b:'The teaching repeats each year. Your numbers do not. Two or three of these side by side show a coverage ratio climbing, a spending pattern settling, and a pretax balance coming down on purpose — a picture no single year can give you.'});
+  }
+  $('flags').innerHTML=F.map(f=>`<div class="flag ${f.t}"><b>${f.h}</b>${f.b}</div>`).join('');
+}
+
+function dlCSV(){
+  const rows=[['Field','Year 1','Year 2','This year']];
+  ROWS.forEach(r=>{
+    const g=i=>{const el=$(r.id+'-'+i); return el?(el.value!==undefined?el.value:el.textContent):'';};
+    rows.push([r.n,g(1),g(2),g(3)]);
+  });
+  rows.push(['','','','']);
+  [['Roth conversion','dConv'],['Gains harvested','dGains'],['Losses harvested','dLoss'],
+   ['Charitable transfers','dQcd'],['Gifts','dGift'],['Other decisions','dOther'],
+   ['What changed','qChange'],['What was put off','qDefer'],['Glad you did','qGlad'],
+   ['Next year 1','n1'],['Next year 2','n2'],['Next year 3','n3']]
+   .forEach(([l,id])=>{const el=$(id); rows.push([l, el?el.value:'','','']);});
+  const csv=rows.map(r=>r.map(c=>'"'+String(c||'').replace(/"/g,'""')+'"').join(',')).join('\n');
+  const a=document.createElement('a');
+  a.href=URL.createObjectURL(new Blob([csv],{type:'text/csv'}));
+  a.download='year-in-review.csv'; a.click();
+}
+function resetAll(){
+  ROWS.filter(r=>!r.calc).forEach(r=>[1,2,3].forEach(i=>{const el=$(r.id+'-'+i); if(el) el.value='';}));
+  ['dConv','dGains','dLoss','dQcd','dGift','dOther','qChange','qDefer','qGlad','n1','n2','n3']
+    .forEach(i=>{const el=$(i); if(el) el.value='';});
+  document.querySelectorAll('.close input').forEach(c=>c.checked=false);
+  render();
+}
+document.addEventListener('input',render);
+document.addEventListener('change',render);
+render();
+</script>
+<!--AW:FOOTER-->
+</body>
+</html>

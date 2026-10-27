@@ -1,0 +1,24 @@
+<div class="aw-hd" role="banner">
+  <div class="aw-in aw-hd-row">
+    <a class="aw-logo" href="{{P}}index.html"><img src="{{P}}assets/logo/header-logo.svg" alt="Alston Wealth" width="199" height="40"></a>
+    <button class="aw-menu" type="button" aria-expanded="false" aria-controls="aw-links">Menu</button>
+    <div class="aw-links" id="aw-links" role="navigation" aria-label="Main">
+      <a href="{{P}}services.html">Services</a>
+      <a href="{{P}}who-we-help.html">Who we help</a>
+      <a href="{{P}}how-we-work.html">How we work</a>
+      <a href="{{P}}learn.html">Learn</a>
+      <a href="{{P}}insights/">Insights</a>
+      <a href="{{P}}about.html">About</a>
+      <a class="aw-btn aw-btn-ink book-link" href="{{BOOK_LINK}}" data-track="nav-book">Book a free call</a>
+    </div>
+  </div>
+</div>
+<script>
+(function(){
+  try{ if('scrollRestoration' in history) history.scrollRestoration='manual'; }catch(e){}
+  function top(){ if(!location.hash) window.scrollTo(0,0); }
+  top(); window.addEventListener('load', top); window.addEventListener('pageshow', top);
+})();
+(function(){var b=document.currentScript.previousElementSibling.querySelector('.aw-menu'),l=document.getElementById('aw-links');
+b.addEventListener('click',function(){var o=l.classList.toggle('open');b.setAttribute('aria-expanded',o?'true':'false');});})();
+</script>

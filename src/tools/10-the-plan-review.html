@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Plan Review — Alston Wealth</title>
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Alston Wealth">
+<meta property="og:title" content="The Plan Review — Alston Wealth">
+<meta property="og:description" content="Twelve retirement decisions, twelve months. Free tools, briefings, and a live monthly call.">
+<meta property="og:image" content="{{SITE_URL}}/og-image.png">
+<meta property="og:url" content="{{SITE_URL}}/tools/10-the-plan-review.html">
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-YJFKJ8MCV3"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}
+gtag('js',new Date());gtag('config','G-YJFKJ8MCV3');</script>
+<meta name="twitter:card" content="summary_large_image">
+
+<style>
+:root{
+  --ink:#16233A; --ink2:#46505F; --ink3:#5E6878;
+  --paper:#FBFAF7; --card:#FFFFFF; --rule:#E6E2D9; --rule2:#EDEAE3;
+  --brass:#8A5F24; --brass-tint:#F5EEE1;
+  --good:#2F6B4F; --good-tint:#E9F2ED;
+  --warn:#9A4A22; --warn-tint:#FBEDE5;
+  --u:"Archivo","Helvetica Neue",Helvetica,sans-serif;
+  --s:"Source Serif 4",Charter,"Bitstream Charter",Georgia,serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--paper);color:var(--ink);font-family:var(--s);
+  font-size:16px;line-height:1.5;-webkit-font-smoothing:antialiased;padding:0 0 80px}
+.wrap{max-width:940px;margin:0 auto;padding:0 20px}
+header{border-bottom:2px solid var(--ink);padding:34px 0 14px;margin-bottom:20px}
+.eyebrow{font-family:var(--u);font-weight:700;font-size:10px;letter-spacing:.19em;
+  text-transform:uppercase;color:var(--brass);margin-bottom:7px}
+h1{font-family:var(--u);font-weight:700;font-size:31px;letter-spacing:-.02em;line-height:1.05}
+.sub{color:var(--ink2);margin-top:9px;max-width:64ch;font-size:15.5px}
+.hdr-row{display:flex;justify-content:space-between;align-items:flex-end;gap:20px;flex-wrap:wrap}
+.firm{font-family:var(--u);font-weight:700;font-size:11px;letter-spacing:.15em;
+  text-transform:uppercase;color:var(--ink2);white-space:nowrap}
+.deadline{background:var(--brass);color:#fff;font-family:var(--u);font-weight:700;
+  font-size:12px;letter-spacing:.11em;text-transform:uppercase;padding:11px 15px;
+  margin-bottom:22px;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
+
+section{background:var(--card);border:1px solid var(--rule);margin-bottom:20px}
+.shead{display:flex;align-items:baseline;gap:12px;padding:15px 20px;
+  border-bottom:1px solid var(--rule2);background:#FCFBF8;flex-wrap:wrap}
+.snum{font-family:var(--u);font-weight:700;font-size:10px;letter-spacing:.14em;color:var(--brass);
+  border:1px solid var(--brass);padding:3px 7px;flex:none}
+.stitle{font-family:var(--u);font-weight:700;font-size:16px;letter-spacing:-.01em}
+.shint{font-size:14px;color:var(--ink3);margin-left:auto;font-family:var(--u);font-weight:500}
+.sbody{padding:20px}
+.lede{color:var(--ink2);font-size:15px;margin-bottom:16px;max-width:68ch}
+
+.grid{display:grid;gap:12px}
+.g2{grid-template-columns:repeat(2,1fr)}
+.g3{grid-template-columns:repeat(3,1fr)}
+label.f{display:block}
+label.f span{display:block;font-family:var(--u);font-weight:600;font-size:11.5px;
+  letter-spacing:.05em;text-transform:uppercase;color:var(--ink2);margin-bottom:5px}
+label.f em{font-style:normal;color:var(--ink3);text-transform:none;letter-spacing:0;
+  font-weight:500;font-size:11px;display:block;margin-top:2px}
+input[type=text],select{width:100%;padding:10px 11px;border:1px solid var(--rule);
+  background:#fff;font-family:var(--u);font-size:15.5px;color:var(--ink);border-radius:0}
+input[type=text]:focus,select:focus{outline:2px solid var(--brass);outline-offset:-1px}
+
+/* plan compare */
+.plans{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.plan{border:1px solid var(--rule);padding:18px}
+.plan h4{font-family:var(--u);font-weight:700;font-size:15px;margin-bottom:14px}
+.plan .fields{display:grid;gap:11px}
+
+.cmp{width:100%;border-collapse:collapse;font-size:14.5px;margin-top:4px}
+.cmp th{font-family:var(--u);font-weight:600;font-size:10.5px;letter-spacing:.1em;
+  text-transform:uppercase;color:var(--ink3);text-align:right;padding:9px 10px;
+  border-bottom:1px solid var(--rule)}
+.cmp th:first-child{text-align:left}
+.cmp td{padding:11px 10px;text-align:right;border-bottom:1px solid var(--rule2);
+  font-family:var(--u);font-weight:600}
+.cmp td:first-child{text-align:left;font-family:var(--s);font-weight:400;color:var(--ink2)}
+.cmp tr.tot td{border-top:2px solid var(--ink);border-bottom:none;font-size:18px;padding-top:14px}
+.cmp td.win{color:var(--good)} .cmp td.lose{color:var(--warn)}
+
+.verdict{margin-top:18px;padding:17px 19px;border-left:3px solid var(--good);
+  background:var(--good-tint);font-size:15px;line-height:1.45}
+.verdict b{font-family:var(--u);display:block;font-size:13px;letter-spacing:.06em;
+  text-transform:uppercase;color:var(--good);margin-bottom:5px}
+.verdict.tie{border-color:var(--brass);background:var(--brass-tint)}
+.verdict.tie b{color:var(--brass)}
+
+/* cap gauge */
+.cap{border:1px solid var(--rule);background:#fff;padding:20px;margin-top:1px}
+.cap-h{font-family:var(--u);font-weight:600;font-size:10.5px;letter-spacing:.13em;
+  text-transform:uppercase;color:var(--ink3);margin-bottom:13px}
+.gauge{height:28px;background:#EFEDE6;border:1px solid var(--rule);position:relative;overflow:hidden}
+.gfill{height:100%;background:var(--brass);opacity:.85}
+.glabs{display:flex;justify-content:space-between;font-family:var(--u);
+  font-size:11px;font-weight:600;color:var(--ink3);margin-top:6px}
+.cap-n{font-size:14.5px;color:var(--ink2);margin-top:14px;line-height:1.45;max-width:72ch}
+.cap-n b{color:var(--ink)}
+
+/* checklist */
+.chk{display:flex;gap:11px;align-items:flex-start;padding:11px 0;border-bottom:1px solid var(--rule2)}
+.chk:last-child{border-bottom:none}
+.chk input{margin-top:4px;flex:none;width:16px;height:16px;accent-color:var(--brass)}
+.chk-t{font-family:var(--u);font-weight:700;font-size:14px;margin-bottom:2px}
+.chk-d{font-size:14px;color:var(--ink2);line-height:1.4}
+
+.flags{margin-top:18px}
+.flag{border-left:3px solid;padding:12px 15px;margin-bottom:9px;font-size:14.5px;line-height:1.45}
+.flag b{font-family:var(--u);font-weight:700;font-size:12px;letter-spacing:.06em;
+  text-transform:uppercase;display:block;margin-bottom:4px}
+.flag.w{border-color:var(--warn);background:var(--warn-tint)} .flag.w b{color:var(--warn)}
+.flag.g{border-color:var(--good);background:var(--good-tint)} .flag.g b{color:var(--good)}
+.flag.n{border-color:var(--brass);background:var(--brass-tint)} .flag.n b{color:var(--brass)}
+
+.carry{background:var(--ink);color:#fff;padding:20px}
+.carry h3{font-family:var(--u);font-weight:700;font-size:13px;letter-spacing:.13em;
+  text-transform:uppercase;color:#C9A26B;margin-bottom:12px}
+.carry table{width:100%;border-collapse:collapse;font-size:14.5px}
+.carry td{padding:7px 0;border-bottom:1px solid rgba(255,255,255,.13)}
+.carry td:last-child{text-align:right;font-family:var(--u);font-weight:700}
+.carry tr:last-child td{border-bottom:none}
+.carry p{font-size:13.5px;color:#B9C2D0;margin-top:13px;line-height:1.5}
+
+.bar{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px}
+button.act{font-family:var(--u);font-weight:600;font-size:13.5px;letter-spacing:.03em;
+  padding:11px 18px;border:1px solid var(--ink);background:#fff;color:var(--ink);cursor:pointer;border-radius:0}
+button.act:hover{background:var(--ink);color:#fff}
+button.act.p{background:var(--ink);color:#fff}
+button.act.p:hover{background:var(--brass);border-color:var(--brass)}
+.foot{margin-top:26px;padding-top:16px;border-top:1px solid var(--rule);
+  font-size:13.5px;color:var(--ink3);line-height:1.5}
+
+@media (max-width:720px){
+  .g2,.g3,.plans{grid-template-columns:1fr}
+  h1{font-size:25px} .shint{margin-left:0;flex-basis:100%}
+  .cmp{font-size:13px} .cmp th,.cmp td{padding:8px 5px}
+}
+@media print{
+  body{background:#fff;padding:0;font-size:11pt}
+  .bar,.shint{display:none}
+  section{break-inside:avoid;border-color:#bbb}
+  .carry{background:#fff;color:#000;border:2px solid #000}
+  .carry h3{color:#000} .carry p{color:#444} .carry td{border-bottom:1px solid #ccc}
+  .deadline,.gfill,.verdict{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+}
+
+/* nav */
+nav{border-bottom:1px solid var(--rule);background:var(--paper);position:sticky;top:0;z-index:10;
+  margin:0 0 4px}
+nav .navwrap{max-width:940px;margin:0 auto;padding:0 20px;display:flex;align-items:center;
+  justify-content:space-between;height:58px;gap:20px}
+nav .brand{font-family:var(--u);font-weight:700;font-size:15px;color:var(--ink);
+  text-decoration:none;letter-spacing:-.01em}
+nav .brand:hover{color:var(--brass)}
+nav ul{list-style:none;display:flex;gap:22px;font-family:var(--u);font-size:13.5px;font-weight:600;
+  margin:0;padding:0}
+nav a{text-decoration:none;color:var(--ink2)}
+nav a:hover{color:var(--brass)}
+@media(max-width:620px){nav .hide-sm{display:none} nav ul{gap:16px}}
+@media print{nav{display:none}}
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap">
+<link rel="stylesheet" href="../assets/alston.css">
+</head>
+<body>
+<!--AW:HEADER-->
+
+<div class="wrap">
+
+<header>
+  <div class="hdr-row">
+    <div>
+      <div class="eyebrow">October · The Decision Calendar</div>
+      <h1>The Plan Review</h1>
+    </div>
+    <div class="firm">Alex&nbsp;Alston</div>
+  </div>
+  <p class="sub">Compare two plans on what they will actually cost you across the year — premium
+  plus deductible plus your real drug costs — instead of on the premium, which is the number
+  that misleads people.</p>
+</header>
+
+<div class="deadline">
+  <span>Medicare open enrollment · October 15 – December 7</span>
+  <span>Marketplace · November 1 – January 15</span>
+</div>
+
+<!-- 1 -->
+<section>
+  <div class="shead"><span class="snum">01</span><span class="stitle">Your prescriptions</span>
+    <span class="shint">Full retail cost, before any plan</span></div>
+  <div class="sbody">
+    <p class="lede">Enter the total annual retail cost of your medications — what they would cost
+    with no coverage at all. The Plan Finder at medicare.gov will give you this precisely once
+    you enter your drugs and pharmacy; a rough figure works here.</p>
+    <div class="grid g2">
+      <label class="f"><span>Total annual drug cost, retail</span><em>All prescriptions, full price</em>
+        <input type="text" id="drugs" inputmode="decimal" value="7,800"></label>
+      <label class="f"><span>Anything not on the formulary?</span><em>Off-formulary drugs are full price and count toward nothing</em>
+        <input type="text" id="offForm" inputmode="decimal" value="0"></label>
+    </div>
+  </div>
+</section>
+
+<!-- 2 -->
+<section>
+  <div class="shead"><span class="snum">02</span><span class="stitle">The two plans</span>
+    <span class="shint">From your envelope, or the Plan Finder</span></div>
+  <div class="sbody">
+    <div class="plans">
+      <div class="plan"><h4>Plan A — what you have now</h4>
+        <div class="fields">
+          <label class="f"><span>Monthly premium</span><input type="text" id="aPrem" inputmode="decimal" value="0"></label>
+          <label class="f"><span>Annual deductible</span><em>Maximum allowed is $615 for 2026</em><input type="text" id="aDed" inputmode="decimal" value="615"></label>
+          <label class="f"><span>Your share after the deductible</span>
+            <select id="aCoins"><option value="25" selected>25% — standard</option>
+            <option value="20">20%</option><option value="33">33%</option><option value="40">40%</option></select></label>
+        </div></div>
+      <div class="plan"><h4>Plan B — the alternative</h4>
+        <div class="fields">
+          <label class="f"><span>Monthly premium</span><input type="text" id="bPrem" inputmode="decimal" value="52"></label>
+          <label class="f"><span>Annual deductible</span><em>Many plans set this below the maximum</em><input type="text" id="bDed" inputmode="decimal" value="0"></label>
+          <label class="f"><span>Your share after the deductible</span>
+            <select id="bCoins"><option value="25" selected>25% — standard</option>
+            <option value="20">20%</option><option value="33">33%</option><option value="40">40%</option></select></label>
+        </div></div>
+    </div>
+    <div id="compare" style="margin-top:22px"></div>
+  </div>
+</section>
+
+<!-- 3 -->
+<section>
+  <div class="shead"><span class="snum">03</span><span class="stitle">Where the cap kicks in</span>
+    <span class="shint" id="capNote"></span></div>
+  <div class="sbody"><div id="capOut"></div></div>
+</section>
+
+<!-- 4 -->
+<section>
+  <div class="shead"><span class="snum">04</span><span class="stitle">The checks that aren't about money</span>
+    <span class="shint">Do these before you decide</span></div>
+  <div class="sbody"><div id="checks"></div></div>
+</section>
+
+<!-- 5 -->
+<section>
+  <div class="shead"><span class="snum">05</span><span class="stitle">What this tells you</span></div>
+  <div class="sbody"><div class="flags" id="flags"></div></div>
+</section>
+
+<section style="border:none;background:none">
+  <div class="carry">
+    <h3>Carry forward</h3>
+    <div id="carrybody"></div>
+  </div>
+</section>
+
+<div class="bar">
+  <button class="act p" onclick="window.print()">Print / Save as PDF</button>
+  <button class="act" onclick="dlCSV()">Download CSV</button>
+  <button class="act" onclick="resetAll()">Reset</button>
+</div>
+
+<div id="assistant-slot"></div>
+<script src="../assistant.js" data-mode="month" data-month="10" data-title="October — The Plan Review"></script>
+
+<p class="foot">
+  This models standard Part D cost sharing and the annual out-of-pocket cap. Real plans use tiered
+  copays that vary by drug, so treat this as a comparison of structure rather than a quote —
+  medicare.gov/plan-compare gives exact figures once you enter your medications and pharmacy.
+  Bring this to the October call.
+</p>
+
+
+
+</div>
+
+<script>
+/* ============================================================
+   MEDICARE DATA — refresh every October when CMS publishes.
+   ============================================================ */
+const MED={
+  year:2026,
+  oopCap:2100,        /* Part D out-of-pocket cap on covered drugs */
+  maxDeductible:615,
+  partB:202.90, partBDeductible:283,
+  maPartD:9250,       /* Medicare Advantage in-network out-of-pocket maximum */
+  avgPartD:34.50,
+  cola:2.8
+};
+
+const CHECKS=[
+  {t:'Every prescription checked against next year\'s formulary',
+   d:'Not this year\'s. A drug can move to a higher tier, gain a prior authorization requirement, pick up a quantity limit, or come off the list entirely — and none of it is announced in a way you would notice.'},
+  {t:'Your pharmacy is still preferred, not just in network',
+   d:'Preferred pharmacies carry lower cost sharing. The same plan can cost noticeably more if you fill at a merely in-network pharmacy.'},
+  {t:'Your doctors are in network for next year',
+   d:'Advantage plans especially — providers leave networks every year and nobody sends a notice. Confirm for the coming year, not the current one.'},
+  {t:'Your hospital is in network',
+   d:'Worth checking separately from your physicians. They are often contracted independently.'},
+  {t:'You know your out-of-pocket maximum',
+   d:'For Advantage plans this is the number that defines your worst year. The 2026 ceiling on in-network costs is $9,250, though most plans set theirs below it.'},
+  {t:'You have not chosen on premium alone',
+   d:'A zero-premium plan with the maximum deductible can be the best or the worst option available, depending entirely on what you take.'},
+  {t:'If considering a move from Advantage to Original Medicare — you checked your state',
+   d:'Your guaranteed-issue window for a supplement was the six months after Part B began. Outside it, most states allow insurers to underwrite and decline you. The switch is not symmetrical.'}
+];
+
+const $=id=>document.getElementById(id);
+const money=n=>(n<0?'-$':'$')+Math.abs(Math.round(n)).toLocaleString('en-US');
+const num=id=>{const el=$(id);if(!el)return 0;const v=(el.value||'').replace(/[^0-9.\-]/g,'');const n=parseFloat(v);return isFinite(n)?n:0;};
+
+/* Out-of-pocket on covered drugs: full price to the deductible, then a share,
+   capped at the annual out-of-pocket limit. */
+function planOOP(drugCost, deductible, coinsPct){
+  const ded=Math.min(deductible, drugCost);
+  const after=Math.max(0, drugCost-ded);
+  const raw=ded+after*(coinsPct/100);
+  return Math.min(raw, MED.oopCap);
+}
+/* Drug spend at which the cap is reached */
+function capPoint(deductible, coinsPct){
+  const c=coinsPct/100;
+  if(MED.oopCap<=deductible) return MED.oopCap;
+  return deductible + (MED.oopCap-deductible)/c;
+}
+
+$('checks').innerHTML=CHECKS.map(c=>
+  `<div class="chk"><input type="checkbox"><div><div class="chk-t">${c.t}</div><div class="chk-d">${c.d}</div></div></div>`).join('');
+
+function render(){
+  const drugs=num('drugs'), off=num('offForm');
+  const covered=Math.max(0, drugs-off);
+
+  const A={prem:num('aPrem')*12, ded:num('aDed'), co:parseFloat($('aCoins').value)};
+  const B={prem:num('bPrem')*12, ded:num('bDed'), co:parseFloat($('bCoins').value)};
+  A.oop=planOOP(covered,A.ded,A.co); B.oop=planOOP(covered,B.ded,B.co);
+  A.total=A.prem+A.oop+off;         B.total=B.prem+B.oop+off;
+  A.cap=capPoint(A.ded,A.co);       B.cap=capPoint(B.ded,B.co);
+
+  const diff=A.total-B.total;
+  const better=diff>0?'B':diff<0?'A':null;
+  const cell=(v,isBetter)=>`<td class="${isBetter===true?'win':isBetter===false?'lose':''}">${v}</td>`;
+
+  $('compare').innerHTML=`
+    <table class="cmp">
+      <tr><th>&nbsp;</th><th>Plan A (current)</th><th>Plan B</th></tr>
+      <tr><td>Annual premium</td>${cell(money(A.prem),A.prem<B.prem?true:A.prem>B.prem?false:null)}${cell(money(B.prem),B.prem<A.prem?true:B.prem>A.prem?false:null)}</tr>
+      <tr><td>Deductible</td><td>${money(A.ded)}</td><td>${money(B.ded)}</td></tr>
+      <tr><td>Your share of drug costs</td><td>${A.co}%</td><td>${B.co}%</td></tr>
+      <tr><td>Out of pocket on covered drugs</td>${cell(money(A.oop),A.oop<B.oop?true:A.oop>B.oop?false:null)}${cell(money(B.oop),B.oop<A.oop?true:B.oop>A.oop?false:null)}</tr>
+      ${off>0?`<tr><td>Off-formulary drugs, full price</td><td>${money(off)}</td><td>${money(off)}</td></tr>`:''}
+      <tr class="tot"><td><b>Total annual cost</b></td>${cell('<b>'+money(A.total)+'</b>',better==='A')}${cell('<b>'+money(B.total)+'</b>',better==='B')}</tr>
+    </table>
+    <div class="verdict ${better?'':'tie'}">
+      <b>${better?'Plan '+better+' costs '+money(Math.abs(diff))+' less':'Effectively a tie'}</b>
+      ${better
+        ? `Across the year, ${money(Math.abs(diff))} in your pocket. Note that the plan with the ${A.prem<B.prem?'lower':'higher'} premium is ${((better==='A')===(A.prem<B.prem))?'also the cheaper one overall — but that is a coincidence of these numbers, not a rule':'<b>not</b> the cheaper one overall. That is exactly why comparing premiums fails'}.`
+        : `The two come out within a few dollars of each other on cost. Decide on the things money does not capture — the formulary, the pharmacy, and the network.`}
+    </div>`;
+
+  /* ---- cap gauge ---- */
+  const capAt=Math.min(A.cap,B.cap);
+  const hitA=covered>=A.cap, hitB=covered>=B.cap;
+  $('capNote').textContent=MED.year+' cap: '+money(MED.oopCap);
+  const gaugeMax=Math.max(capAt*1.3, covered*1.15, 1);
+  $('capOut').innerHTML=`
+    <div class="cap">
+      <div class="cap-h">Your covered drug spend against the cap</div>
+      <div class="gauge"><div class="gfill" style="width:${Math.min(100,(covered/gaugeMax)*100)}%"></div></div>
+      <div class="glabs"><span>$0</span><span>${money(covered)} in drugs</span><span>${money(gaugeMax)}</span></div>
+      <div class="cap-n">
+        The coverage gap — the old donut hole — is gone. Once your out-of-pocket spending on
+        covered drugs reaches <b>${money(MED.oopCap)}</b>, your plan pays 100% for the rest of
+        the calendar year.
+        <br><br>
+        Plan A reaches the cap once total drug costs pass <b>${money(A.cap)}</b>; Plan B at
+        <b>${money(B.cap)}</b>. ${hitA&&hitB
+          ? 'At your level of spending <b>both plans hit the cap</b> — so your out-of-pocket on covered drugs is '+money(MED.oopCap)+' either way, and the entire decision comes down to premium, formulary, and pharmacy.'
+          : hitA||hitB
+            ? 'At your level of spending <b>only Plan '+(hitA?'A':'B')+' reaches the cap.</b>'
+            : 'Neither reaches the cap at your current spending, so your share scales with what you actually use.'}
+        <br><br>
+        Two things people get wrong: <b>premiums do not count toward the cap</b>, and it applies
+        only to drugs your plan covers. Anything off-formulary is full price and moves you no
+        closer to it.
+      </div>
+    </div>`;
+
+  /* ---- flags ---- */
+  const F=[];
+  if(better && ((better==='A')!==(A.prem<B.prem)) && A.prem!==B.prem){
+    F.push({t:'w',h:'The cheaper premium is not the cheaper plan',
+      b:`Plan ${A.prem<B.prem?'A':'B'} has the lower premium, but Plan ${better} costs ${money(Math.abs(diff))} less across the year once the deductible and your share of drug costs are included. This is the most common and most expensive mistake at open enrollment.`});
+  }
+  if(off>0){
+    F.push({t:'w',h:`${money(off)} of your drugs are off-formulary`,
+      b:'Off-formulary medications are paid at full retail and do not count toward the out-of-pocket cap at all. Before accepting that, check whether a different plan covers them, or ask your doctor about a covered alternative — the difference is often larger than any premium gap.'});
+  }
+  if(hitA&&hitB){
+    F.push({t:'g',h:'Both plans hit the cap, which simplifies the decision',
+      b:`Your covered drug spending of ${money(covered)} exceeds both plans' cap points, so you pay ${money(MED.oopCap)} out of pocket either way. What actually differs is the premium, the formulary, and whether your pharmacy is preferred — not the cost sharing.`});
+  }
+  if(covered>0 && covered<Math.min(A.cap,B.cap)*0.4){
+    F.push({t:'n',h:'Your drug costs are well below the cap',
+      b:'The cap is unlikely to matter for you this year, which means the deductible and your share of costs drive everything. A low-premium plan with a higher deductible often wins in this situation — but only if every one of your prescriptions is on its formulary at a favourable tier.'});
+  }
+  F.push({t:'n',h:'Run it properly at medicare.gov/plan-compare',
+    b:'This compares plan structures. The Plan Finder compares actual plans — enter your medications with doses and your pharmacy, and it estimates your total annual cost under every plan available where you live. Twenty minutes, and it is the only comparison that reflects real tiered copays.'});
+  F.push({t:'w',h:'December 7. It does not extend.',
+    b:'After the window closes you are in your plan for the full calendar year. If you are on Medicare Advantage there is a second, narrower window from January 1 to March 31 — one change, to a different Advantage plan or back to Original Medicare.'});
+  F.push({t:'n',h:'Moving back to Original Medicare may not get you a supplement',
+    b:'Your guaranteed-issue window for Medigap was the six months after Part B started. Outside it, most states let insurers medically underwrite and decline you. Without a supplement, Original Medicare has no annual cap on what you spend. Check your state\'s rules before making the move.'});
+  $('flags').innerHTML=F.map(f=>`<div class="flag ${f.t}"><b>${f.h}</b>${f.b}</div>`).join('');
+
+  /* ---- carry ---- */
+  const rows=[
+    ['Annual drug cost, retail',money(drugs)],
+    ['Plan A total annual cost',money(A.total)],
+    ['Plan B total annual cost',money(B.total)],
+    ['Difference',money(Math.abs(diff))+(better?' in favour of '+better:'')],
+    ['Out-of-pocket cap',money(MED.oopCap)],
+    ['Plan A reaches cap at',money(A.cap)+' of drug cost'],
+    ['Plan B reaches cap at',money(B.cap)+' of drug cost'],
+    ['Decision deadline','December 7']
+  ];
+  $('carrybody').innerHTML='<table>'+rows.map(r=>`<tr><td>${r[0]}</td><td>${r[1]}</td></tr>`).join('')+'</table>'
+    +'<p>Note the premium change for next year — it feeds the January baseline as part of essential expenses, and the Part B premium comes straight out of the Social Security deposit where it is easy to overlook.</p>';
+}
+
+function dlCSV(){
+  const rows=[['Field','Value']];
+  document.querySelectorAll('#carrybody tr').forEach(tr=>rows.push([tr.cells[0].textContent,tr.cells[1].textContent]));
+  document.querySelectorAll('.chk-t').forEach(t=>rows.push(['Check',t.textContent]));
+  document.querySelectorAll('.flag b').forEach(b=>rows.push(['Note',b.textContent]));
+  const csv=rows.map(r=>r.map(c=>'"'+String(c).replace(/"/g,'""')+'"').join(',')).join('\n');
+  const a=document.createElement('a');
+  a.href=URL.createObjectURL(new Blob([csv],{type:'text/csv'}));
+  a.download='plan-review.csv'; a.click();
+}
+function resetAll(){
+  $('drugs').value='7,800'; $('offForm').value='0';
+  $('aPrem').value='0'; $('aDed').value='615'; $('aCoins').value='25';
+  $('bPrem').value='52'; $('bDed').value='0'; $('bCoins').value='25';
+  render();
+}
+document.addEventListener('input',render);
+document.addEventListener('change',render);
+render();
+</script>
+<!--AW:FOOTER-->
+</body>
+</html>

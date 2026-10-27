@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Pension Election — Alston Wealth</title>
+<meta name="description" content="Lump sum or monthly, single life or survivor — priced side by side. The decision is usually irreversible.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Alston Wealth">
+<meta property="og:title" content="The Pension Election — Alston Wealth">
+<meta property="og:description" content="Lump sum or monthly, single life or survivor — priced side by side. The decision is usually irreversible.">
+<meta property="og:image" content="{{SITE_URL}}/og-image.png">
+<meta property="og:url" content="{{SITE_URL}}/tools/pension-election.html">
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-YJFKJ8MCV3"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}
+gtag('js',new Date());gtag('config','G-YJFKJ8MCV3');</script>
+<meta name="twitter:card" content="summary_large_image">
+<style>
+:root{
+  --ink:#16233A; --ink2:#46505F; --ink3:#5E6878;
+  --paper:#FBFAF7; --card:#FFFFFF; --rule:#E6E2D9; --rule2:#EDEAE3;
+  --brass:#8A5F24; --brass-tint:#F5EEE1;
+  --good:#2F6B4F; --good-tint:#E9F2ED;
+  --warn:#9A4A22; --warn-tint:#FBEDE5;
+  --u:"Archivo","Helvetica Neue",Helvetica,sans-serif;
+  --s:"Source Serif 4",Charter,"Bitstream Charter",Georgia,serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--paper);color:var(--ink);font-family:var(--s);
+  font-size:16px;line-height:1.5;-webkit-font-smoothing:antialiased;padding:0 0 80px}
+.wrap{max-width:940px;margin:0 auto;padding:0 20px}
+header{border-bottom:2px solid var(--ink);padding:34px 0 14px;margin-bottom:26px}
+.eyebrow{font-family:var(--u);font-weight:700;font-size:10px;letter-spacing:.19em;
+  text-transform:uppercase;color:var(--brass);margin-bottom:7px}
+h1{font-family:var(--u);font-weight:700;font-size:31px;letter-spacing:-.02em;line-height:1.05}
+.sub{color:var(--ink2);margin-top:9px;max-width:64ch;font-size:15.5px}
+.hdr-row{display:flex;justify-content:space-between;align-items:flex-end;gap:20px;flex-wrap:wrap}
+.firm{font-family:var(--u);font-weight:700;font-size:11px;letter-spacing:.15em;
+  text-transform:uppercase;color:var(--ink2);white-space:nowrap}
+.firm a{color:inherit;text-decoration:none}
+
+section{background:var(--card);border:1px solid var(--rule);margin-bottom:20px}
+.shead{display:flex;align-items:baseline;gap:12px;padding:15px 20px;
+  border-bottom:1px solid var(--rule2);background:#FCFBF8;flex-wrap:wrap}
+.snum{font-family:var(--u);font-weight:700;font-size:10px;letter-spacing:.14em;color:var(--brass);
+  border:1px solid var(--brass);padding:3px 7px;flex:none}
+.stitle{font-family:var(--u);font-weight:700;font-size:16px;letter-spacing:-.01em}
+.shint{font-size:14px;color:var(--ink3);margin-left:auto;font-family:var(--u);font-weight:500}
+.sbody{padding:20px}
+.lede{color:var(--ink2);font-size:15px;margin-bottom:16px;max-width:68ch}
+
+.grid{display:grid;gap:12px}
+.g2{grid-template-columns:repeat(2,1fr)}
+.g3{grid-template-columns:repeat(3,1fr)}
+label.f{display:block}
+label.f span{display:block;font-family:var(--u);font-weight:600;font-size:11.5px;
+  letter-spacing:.05em;text-transform:uppercase;color:var(--ink2);margin-bottom:5px}
+label.f em{font-style:normal;color:var(--ink3);text-transform:none;letter-spacing:0;
+  font-weight:500;font-size:11px;display:block;margin-top:2px}
+input[type=text],select{width:100%;padding:10px 11px;border:1px solid var(--rule);
+  background:#fff;font-family:var(--u);font-size:15.5px;color:var(--ink);border-radius:0}
+input[type=text]:focus,select:focus{outline:2px solid var(--brass);outline-offset:-1px}
+
+.opts{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--rule);
+  border:1px solid var(--rule)}
+.opt{background:#fff;padding:17px 18px;display:flex;flex-direction:column}
+.opt-n{font-family:var(--u);font-weight:600;font-size:9.5px;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--brass);margin-bottom:7px}
+.opt-t{font-family:var(--u);font-weight:700;font-size:15px;margin-bottom:3px;line-height:1.2}
+.opt-s{font-size:12.5px;color:var(--ink3);margin-bottom:12px}
+.opt-v{font-family:var(--u);font-weight:700;font-size:25px;letter-spacing:-.02em;line-height:1}
+.opt-u{font-family:var(--u);font-weight:600;font-size:10px;letter-spacing:.11em;
+  text-transform:uppercase;color:var(--ink3);margin-top:5px}
+.opt-b{margin-top:13px;padding-top:11px;border-top:1px solid var(--rule2);font-size:13px;
+  line-height:1.42;color:var(--ink2);flex:1}
+.opt-b b{color:var(--ink);font-family:var(--u);font-size:11px;letter-spacing:.05em;
+  text-transform:uppercase;display:block;margin-bottom:3px;margin-top:9px}
+.opt-b b:first-child{margin-top:0}
+.opt.best{background:var(--brass-tint)} .opt.best .opt-v{color:var(--brass)}
+
+.rgrid{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--rule);
+  border:1px solid var(--rule);margin-top:1px}
+.r{background:#fff;padding:15px 16px}
+.r-l{font-family:var(--u);font-weight:600;font-size:10.5px;letter-spacing:.13em;
+  text-transform:uppercase;color:var(--ink3);margin-bottom:6px}
+.r-v{font-family:var(--u);font-weight:700;font-size:24px;letter-spacing:-.02em;line-height:1}
+.r-n{font-size:13.5px;color:var(--ink2);margin-top:7px;line-height:1.42}
+.r.hero{background:var(--brass-tint)} .r.hero .r-v{color:var(--brass)}
+.r.warn{background:var(--warn-tint)} .r.warn .r-v{color:var(--warn)}
+.r.good{background:var(--good-tint)} .r.good .r-v{color:var(--good)}
+
+.flags{margin-top:18px}
+.flag{border-left:3px solid;padding:12px 15px;margin-bottom:9px;font-size:14.5px;line-height:1.45}
+.flag b{font-family:var(--u);font-weight:700;font-size:12px;letter-spacing:.06em;
+  text-transform:uppercase;display:block;margin-bottom:4px}
+.flag.w{border-color:var(--warn);background:var(--warn-tint)} .flag.w b{color:var(--warn)}
+.flag.g{border-color:var(--good);background:var(--good-tint)} .flag.g b{color:var(--good)}
+.flag.n{border-color:var(--brass);background:var(--brass-tint)} .flag.n b{color:var(--brass)}
+
+.bar{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px}
+button.act{font-family:var(--u);font-weight:600;font-size:13.5px;letter-spacing:.03em;
+  padding:11px 18px;border:1px solid var(--ink);background:#fff;color:var(--ink);cursor:pointer;border-radius:0}
+button.act:hover{background:var(--ink);color:#fff}
+button.act.p{background:var(--ink);color:#fff}
+button.act.p:hover{background:var(--brass);border-color:var(--brass)}
+.foot{margin-top:26px;padding-top:16px;border-top:1px solid var(--rule);
+  font-size:13.5px;color:var(--ink3);line-height:1.5}
+
+@media (max-width:720px){
+  .g2,.g3,.opts,.rgrid{grid-template-columns:1fr}
+  h1{font-size:25px} .shint{margin-left:0;flex-basis:100%}
+}
+@media print{
+  body{background:#fff;padding:0;font-size:11pt}
+  .bar,.shint{display:none}
+  section{break-inside:avoid;border-color:#bbb}
+  .opt.best,.r.hero,.r.warn,.r.good{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+}
+
+/* nav */
+nav{border-bottom:1px solid var(--rule);background:var(--paper);position:sticky;top:0;z-index:10;
+  margin:0 0 4px}
+nav .navwrap{max-width:940px;margin:0 auto;padding:0 20px;display:flex;align-items:center;
+  justify-content:space-between;height:58px;gap:20px}
+nav .brand{font-family:var(--u);font-weight:700;font-size:15px;color:var(--ink);
+  text-decoration:none;letter-spacing:-.01em}
+nav .brand:hover{color:var(--brass)}
+nav ul{list-style:none;display:flex;gap:22px;font-family:var(--u);font-size:13.5px;font-weight:600;
+  margin:0;padding:0}
+nav a{text-decoration:none;color:var(--ink2)}
+nav a:hover{color:var(--brass)}
+@media(max-width:620px){nav .hide-sm{display:none} nav ul{gap:16px}}
+@media print{nav{display:none}}
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap">
+<link rel="stylesheet" href="../assets/alston.css">
+</head>
+<body>
+<!--AW:HEADER-->
+
+<div class="wrap">
+
+<header>
+  <div class="hdr-row">
+    <div>
+      <div class="eyebrow">The Toolbox</div>
+      <h1>The Pension Election</h1>
+    </div>
+    <div class="firm"><a href="../index.html">Alex&nbsp;Alston</a></div>
+  </div>
+  <p class="sub">Lump sum or monthly. Single life or survivor. Priced side by side — because
+  this is one of the few retirement decisions that genuinely cannot be undone.</p>
+</header>
+
+<!-- 1 -->
+<section>
+  <div class="shead"><span class="snum">01</span><span class="stitle">What they offered you</span>
+    <span class="shint">From your election paperwork</span></div>
+  <div class="sbody">
+    <p class="lede">Your plan gives you these numbers. Enter whichever options you were offered —
+    leave anything blank that does not apply.</p>
+    <div class="grid g3">
+      <label class="f"><span>Lump sum offered</span><em>If a cash-out option exists</em>
+        <input type="text" id="lump" inputmode="decimal" value="410,000"></label>
+      <label class="f"><span>Single life — monthly</span><em>Pays you, stops at your death</em>
+        <input type="text" id="single" inputmode="decimal" value="2,340"></label>
+      <label class="f"><span>Joint 100% — monthly</span><em>Continues in full to your spouse</em>
+        <input type="text" id="joint100" inputmode="decimal" value="1,955"></label>
+    </div>
+    <div class="grid g3" style="margin-top:12px">
+      <label class="f"><span>Joint 50% — monthly</span><em>Halves at your death</em>
+        <input type="text" id="joint50" inputmode="decimal" value="2,140"></label>
+      <label class="f"><span>Does it adjust for inflation?</span><em>Most private pensions do not</em>
+        <select id="cola"><option value="0" selected>No — fixed forever</option>
+        <option value="0.02">Partial — about 2%</option>
+        <option value="0.03">Yes — roughly with inflation</option></select></label>
+      <label class="f"><span>Is the plan well funded?</span><em>Check the annual funding notice</em>
+        <select id="funded"><option value="ok" selected>Yes, or I don't know</option>
+        <option value="weak">It looks underfunded</option></select></label>
+    </div>
+  </div>
+</section>
+
+<!-- 2 -->
+<section>
+  <div class="shead"><span class="snum">02</span><span class="stitle">The two of you</span></div>
+  <div class="sbody">
+    <div class="grid g3">
+      <label class="f"><span>Your age at election</span>
+        <input type="text" id="age" inputmode="numeric" value="65"></label>
+      <label class="f"><span>Spouse's age</span><em>Leave blank if single</em>
+        <input type="text" id="ageSp" inputmode="numeric" value="63"></label>
+      <label class="f"><span>Plan to what age?</span><em>For the lifetime comparison</em>
+        <select id="hz"><option value="82">82</option><option value="85">85</option>
+        <option value="88" selected>88</option><option value="92">92</option>
+        <option value="95">95</option></select></label>
+    </div>
+    <div class="grid g2" style="margin-top:12px">
+      <label class="f"><span>If you took the lump sum, what would it earn?</span>
+        <em>Conservatively — this money has a job</em>
+        <select id="ret"><option value="4">4%</option><option value="5" selected>5%</option>
+        <option value="6">6%</option><option value="7">7%</option></select></label>
+      <label class="f"><span>Inflation</span>
+        <select id="inf"><option value="2">2%</option><option value="2.5">2.5%</option>
+        <option value="3" selected>3%</option><option value="3.5">3.5%</option></select></label>
+    </div>
+  </div>
+</section>
+
+<!-- 3 -->
+<section>
+  <div class="shead"><span class="snum">03</span><span class="stitle">Side by side</span>
+    <span class="shint" id="hzNote"></span></div>
+  <div class="sbody">
+    <div class="opts" id="opts"></div>
+    <div id="cards"></div>
+  </div>
+</section>
+
+<!-- 4 -->
+<section>
+  <div class="shead"><span class="snum">04</span><span class="stitle">What this tells you</span></div>
+  <div class="sbody"><div class="flags" id="flags"></div></div>
+</section>
+
+<div class="bar">
+  <button class="act p" onclick="window.print()">Print / Save as PDF</button>
+  <button class="act" onclick="resetAll()">Reset</button>
+  <button class="act" onclick="location.href='../index.html'">Back to the calendar</button>
+</div>
+
+<p class="foot">
+  This compares the options your plan offered, in today's dollars, using the assumptions you
+  enter. It does not account for taxes, which apply to pension income as ordinary income and to
+  a lump sum only when withdrawn from the IRA you roll it into. <b>Pension elections are almost
+  always irrevocable.</b> Run this, then talk it through with someone before you sign.
+</p>
+
+
+
+</div>
+
+<script>
+const $=id=>document.getElementById(id);
+const money=n=>(n<0?'-$':'$')+Math.abs(Math.round(n)).toLocaleString('en-US');
+const num=id=>{const el=$(id);if(!el)return 0;const v=(el.value||'').replace(/[^0-9.\-]/g,'');const n=parseFloat(v);return isFinite(n)?n:0;};
+
+function render(){
+  const lump=num('lump'), single=num('single')*12,
+        j100=num('joint100')*12, j50=num('joint50')*12;
+  const cola=parseFloat($('cola').value), age=num('age'), ageSp=num('ageSp');
+  const hz=parseInt($('hz').value,10), ret=parseFloat($('ret').value)/100,
+        inf=parseFloat($('inf').value)/100;
+  const years=Math.max(0,hz-age);
+  $('hzNote').textContent='Through age '+hz+' — '+years+' years';
+
+  /* what the pension pays out in total, in today's dollars */
+  function realTotal(annual){
+    let t=0;
+    for(let y=0;y<years;y++) t += annual*Math.pow(1+cola,y)/Math.pow(1+inf,y);
+    return t;
+  }
+  /* the payout rate the lump sum would have to sustain to match */
+  const rate = a => lump>0 ? a/lump : 0;
+
+  /* what the lump sum could pay for the same period at the chosen return */
+  function lumpSustains(){
+    if(lump<=0||years<=0) return 0;
+    const real = (1+ret)/(1+inf)-1;
+    if(Math.abs(real)<0.0005) return lump/years;
+    return lump*real/(1-Math.pow(1+real,-years));
+  }
+  const lumpIncome=lumpSustains();
+
+  const options=[
+    {n:'Option A', t:'Take the lump sum', s:'Roll it to an IRA', v:lump>0?money(lumpIncome):'—',
+     u:'a year it could sustain', total:lump>0?lumpIncome*years:0, surv:lump>0?lumpIncome:0,
+     b:`<b>What you get</b>Full control, full liquidity, and whatever is left goes to your heirs. It can grow. You can spend unevenly — more early, less later.
+        <b>What you carry</b>Market risk, sequence risk, and the risk of living longer than the money. To produce ${money(lumpIncome)} a year for ${years} years it has to earn ${(ret*100).toFixed(0)}% and you have to not panic in a bad year.`},
+    {n:'Option B', t:'Single life', s:'Stops at your death', v:single>0?money(single):'—',
+     u:'a year, for your life', total:realTotal(single), surv:0,
+     b:`<b>What you get</b>The largest monthly cheque available, guaranteed for as long as you live, with no market risk at all${lump>0?` — an effective payout rate of ${(rate(single)*100).toFixed(1)}% on the lump sum you turned down`:''}.
+        <b>What you give up</b>Everything, at your death. Your spouse receives nothing from this pension. Nothing passes to heirs.`},
+    {n:'Option C', t:'Joint and survivor', s:'Continues to your spouse', v:j100>0?money(j100):'—',
+     u:'a year, for both lives', total:realTotal(j100), surv:j100,
+     b:`<b>What you get</b>Income for as long as either of you is alive${single>0?`. It costs ${money(single-j100)} a year — ${(((single-j100)/single)*100).toFixed(0)}% of the single-life amount — and that is the price of insuring your spouse`:''}.
+        <b>What it is really for</b>The survivor keeps this whether you die at 68 or 98. Combined with losing one Social Security check, that is often the difference between comfortable and constrained.`}
+  ];
+  const best=options.reduce((a,b)=>b.total>a.total?b:a);
+  $('opts').innerHTML=options.map(o=>
+    `<div class="opt ${o===best&&o.total>0?'best':''}">
+      <div class="opt-n">${o.n}</div><div class="opt-t">${o.t}</div><div class="opt-s">${o.s}</div>
+      <div class="opt-v">${o.v}</div><div class="opt-u">${o.u}</div>
+      <div class="opt-b">${o.b}</div></div>`).join('');
+
+  /* headline cards */
+  const survCost=single>0&&j100>0?single-j100:0;
+  const survPct=single>0?survCost/single:0;
+  const breakeven=(lump>0&&single>0)?lump/single:0;
+  const cards=[];
+  if(lump>0&&single>0){
+    cards.push({c:'hero',l:'Payout rate on the lump sum',v:(rate(single)*100).toFixed(1)+'%',
+      n:`The single-life pension pays ${money(single)} a year on a ${money(lump)} lump sum. To beat that from the lump sum you would need to sustain the same rate for life — and a ${(rate(single)*100).toFixed(1)}% lifetime withdrawal rate is well above what most planning treats as safe.`});
+    cards.push({c:'',l:'Years to get your money back',v:breakeven.toFixed(1)+' yrs',
+      n:`Taking the monthly payment, you recover the ${money(lump)} you turned down by about age ${Math.round(age+breakeven)}. Everything after that is what the pension is actually for — it is longevity insurance, not an investment.`});
+  }
+  if(survCost>0){
+    cards.push({c:survPct>0.25?'warn':'',l:'What the survivor option costs',v:money(survCost),
+      n:`Per year — ${(survPct*100).toFixed(0)}% of the single-life payment. Over ${years} years that is ${money(survCost*years)} of income you are giving up to guarantee your spouse keeps ${money(j100)} a year for as long as they live.`});
+  }
+  if(cola===0){
+    const lost=1-1/Math.pow(1+inf,years);
+    cards.push({c:'warn',l:'What inflation takes',v:(lost*100).toFixed(0)+'%',
+      n:`With no cost-of-living adjustment, this pension buys ${(lost*100).toFixed(0)}% less by age ${hz}. ${single>0?`${money(single)} today has the purchasing power of ${money(single/Math.pow(1+inf,years))} then.`:''} It is guaranteed in dollars and shrinking in what it buys.`});
+  }
+  $('cards').innerHTML=cards.length?'<div class="rgrid">'+cards.map(c=>
+    `<div class="r ${c.c}"><div class="r-l">${c.l}</div><div class="r-v">${c.v}</div>
+     <div class="r-n">${c.n}</div></div>`).join('')+'</div>':'';
+
+  /* flags */
+  const F=[];
+  if(survCost>0 && ageSp>0 && ageSp<age){
+    F.push({t:'n',h:`Your spouse is ${age-ageSp} years younger`,
+      b:`Which makes them very likely to be the survivor, possibly for a long time. The survivor option costs ${money(survCost)} a year and pays ${money(j100)} a year for as long as they live. If they outlive you by fifteen years, that is ${money(j100*15)} of income the single-life election would not have produced.`});
+  }
+  if(single>0&&j100>0&&survPct<0.15){
+    F.push({t:'g',h:'The survivor option is unusually cheap here',
+      b:`It costs only ${(survPct*100).toFixed(0)}% of the single-life payment. That is a low price for guaranteeing your spouse's income for life — and it is far cheaper than most alternatives.`});
+  } else if(survPct>0.25){
+    F.push({t:'n',h:'The survivor option is expensive here',
+      b:`${(survPct*100).toFixed(0)}% of the payment. That is worth comparing against other ways to protect your spouse — a smaller pension plus a term policy is sometimes cheaper, though it depends entirely on your health and it is not a decision to make casually. Run both before assuming either.`});
+  }
+  if(cola===0&&years>=20){
+    F.push({t:'w',h:'A fixed pension over a long retirement loses roughly half its purchasing power',
+      b:'This is the most underestimated feature of the whole decision. People compare the monthly figures and forget that one of them is frozen and their expenses are not. If the pension is a large share of your income floor, that erosion is a planning problem you should solve now, not discover at 80.'});
+  }
+  if($('funded').value==='weak'){
+    F.push({t:'w',h:'An underfunded plan changes the calculation',
+      b:'Private pensions are insured by the Pension Benefit Guaranty Corporation, but only up to a limit that depends on your age — a large benefit may not be fully covered. If the funding notice looks weak and your benefit is large, that is a genuine argument for the lump sum that does not apply to a healthy plan.'});
+  }
+  if(lump>0&&single>0&&rate(single)>0.06){
+    F.push({t:'g',h:`The pension is paying ${(rate(single)*100).toFixed(1)}% — that is hard to beat`,
+      b:'You would need to sustain that withdrawal rate from the lump sum for the rest of your life, through every market. Most planning treats anything above about 5% as strained over a long horizon. When the payout rate is this high, the monthly option is usually the stronger one.'});
+  } else if(lump>0&&single>0&&rate(single)<0.05){
+    F.push({t:'n',h:`The pension is only paying ${(rate(single)*100).toFixed(1)}%`,
+      b:'That is a modest rate for giving up control permanently. Worth taking the lump sum seriously here — particularly if you already have Social Security covering your essential expenses, or if leaving something to your children matters to you.'});
+  }
+  F.push({t:'w',h:'This decision is almost always irreversible',
+    b:'Once elected, you generally cannot change it — not if your spouse dies first, not if you divorce, not if your situation changes. Spousal consent is normally required to decline the survivor option, and there is a reason for that. Take the paperwork to someone before you sign it.'});
+  $('flags').innerHTML=F.map(f=>`<div class="flag ${f.t}"><b>${f.h}</b>${f.b}</div>`).join('');
+}
+
+function resetAll(){
+  $('lump').value='410,000'; $('single').value='2,340';
+  $('joint100').value='1,955'; $('joint50').value='2,140';
+  $('cola').value='0'; $('funded').value='ok';
+  $('age').value='65'; $('ageSp').value='63'; $('hz').value='88';
+  $('ret').value='5'; $('inf').value='3'; render();
+}
+document.addEventListener('input',render);
+document.addEventListener('change',render);
+render();
+</script>
+<!--AW:FOOTER-->
+</body>
+</html>

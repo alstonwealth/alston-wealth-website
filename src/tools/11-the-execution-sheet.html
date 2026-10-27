@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Execution Sheet — Alston Wealth</title>
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Alston Wealth">
+<meta property="og:title" content="The Execution Sheet — Alston Wealth">
+<meta property="og:description" content="Twelve retirement decisions, twelve months. Free tools, briefings, and a live monthly call.">
+<meta property="og:image" content="{{SITE_URL}}/og-image.png">
+<meta property="og:url" content="{{SITE_URL}}/tools/11-the-execution-sheet.html">
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-YJFKJ8MCV3"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}
+gtag('js',new Date());gtag('config','G-YJFKJ8MCV3');</script>
+<meta name="twitter:card" content="summary_large_image">
+
+<style>
+:root{
+  --ink:#16233A; --ink2:#46505F; --ink3:#5E6878;
+  --paper:#FBFAF7; --card:#FFFFFF; --rule:#E6E2D9; --rule2:#EDEAE3;
+  --brass:#8A5F24; --brass-tint:#F5EEE1;
+  --good:#2F6B4F; --good-tint:#E9F2ED;
+  --warn:#9A4A22; --warn-tint:#FBEDE5;
+  --u:"Archivo","Helvetica Neue",Helvetica,sans-serif;
+  --s:"Source Serif 4",Charter,"Bitstream Charter",Georgia,serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--paper);color:var(--ink);font-family:var(--s);
+  font-size:16px;line-height:1.5;-webkit-font-smoothing:antialiased;padding:0 0 80px}
+.wrap{max-width:940px;margin:0 auto;padding:0 20px}
+header{border-bottom:2px solid var(--ink);padding:34px 0 14px;margin-bottom:18px}
+.eyebrow{font-family:var(--u);font-weight:700;font-size:10px;letter-spacing:.19em;
+  text-transform:uppercase;color:var(--brass);margin-bottom:7px}
+h1{font-family:var(--u);font-weight:700;font-size:31px;letter-spacing:-.02em;line-height:1.05}
+.sub{color:var(--ink2);margin-top:9px;max-width:64ch;font-size:15.5px}
+.hdr-row{display:flex;justify-content:space-between;align-items:flex-end;gap:20px;flex-wrap:wrap}
+.firm{font-family:var(--u);font-weight:700;font-size:11px;letter-spacing:.15em;
+  text-transform:uppercase;color:var(--ink2);white-space:nowrap}
+.deadline{background:var(--warn);color:#fff;font-family:var(--u);font-weight:700;
+  font-size:12.5px;letter-spacing:.09em;text-transform:uppercase;padding:12px 16px;
+  margin-bottom:22px;line-height:1.4}
+.deadline span{display:block;font-weight:500;letter-spacing:.02em;text-transform:none;
+  font-size:13px;margin-top:4px;opacity:.92}
+
+section{background:var(--card);border:1px solid var(--rule);margin-bottom:20px}
+.shead{display:flex;align-items:baseline;gap:12px;padding:15px 20px;
+  border-bottom:1px solid var(--rule2);background:#FCFBF8;flex-wrap:wrap}
+.snum{font-family:var(--u);font-weight:700;font-size:10px;letter-spacing:.14em;color:var(--brass);
+  border:1px solid var(--brass);padding:3px 7px;flex:none}
+.stitle{font-family:var(--u);font-weight:700;font-size:16px;letter-spacing:-.01em}
+.shint{font-size:14px;color:var(--ink3);margin-left:auto;font-family:var(--u);font-weight:500}
+.sbody{padding:20px}
+.lede{color:var(--ink2);font-size:15px;margin-bottom:16px;max-width:68ch}
+
+.grid{display:grid;gap:12px}
+.g2{grid-template-columns:repeat(2,1fr)}
+.g3{grid-template-columns:repeat(3,1fr)}
+.g4{grid-template-columns:repeat(4,1fr)}
+label.f{display:block}
+label.f span{display:block;font-family:var(--u);font-weight:600;font-size:11.5px;
+  letter-spacing:.05em;text-transform:uppercase;color:var(--ink2);margin-bottom:5px}
+label.f em{font-style:normal;color:var(--ink3);text-transform:none;letter-spacing:0;
+  font-weight:500;font-size:11px;display:block;margin-top:2px}
+input[type=text],select{width:100%;padding:10px 11px;border:1px solid var(--rule);
+  background:#fff;font-family:var(--u);font-size:15.5px;color:var(--ink);border-radius:0}
+input[type=text]:focus,select:focus{outline:2px solid var(--brass);outline-offset:-1px}
+
+/* the sheet */
+.item{border:1px solid var(--rule);margin-bottom:10px;background:#fff}
+.item-h{display:grid;grid-template-columns:34px 1fr 120px 120px;gap:12px;
+  align-items:center;padding:13px 15px}
+.item-n{font-family:var(--u);font-weight:700;font-size:11px;color:#fff;background:var(--ink);
+  width:24px;height:24px;display:flex;align-items:center;justify-content:center}
+.item-t{font-family:var(--u);font-weight:700;font-size:15px;line-height:1.2}
+.item-t i{font-style:normal;display:block;font-weight:500;font-size:12.5px;
+  color:var(--ink3);margin-top:2px}
+.item input[type=text]{padding:8px 10px;font-size:14.5px;text-align:right}
+.item-done{display:flex;align-items:center;gap:8px;justify-content:flex-end;
+  font-family:var(--u);font-weight:600;font-size:12px;color:var(--ink3)}
+.item-done input{width:18px;height:18px;accent-color:var(--good)}
+.item.done{background:var(--good-tint);border-color:var(--good)}
+.item.done .item-n{background:var(--good)}
+.item-w{padding:0 15px 13px 61px;font-size:13.5px;color:var(--ink2);line-height:1.42}
+.item-w b{color:var(--warn);font-family:var(--u);font-size:11.5px;letter-spacing:.05em;
+  text-transform:uppercase;display:block;margin-bottom:3px}
+
+.rgrid{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--rule);
+  border:1px solid var(--rule)}
+.r{background:#fff;padding:15px 16px}
+.r-l{font-family:var(--u);font-weight:600;font-size:10.5px;letter-spacing:.13em;
+  text-transform:uppercase;color:var(--ink3);margin-bottom:6px}
+.r-v{font-family:var(--u);font-weight:700;font-size:25px;letter-spacing:-.02em;line-height:1}
+.r-n{font-size:13.5px;color:var(--ink2);margin-top:7px;line-height:1.42}
+.r.hero{background:var(--brass-tint)} .r.hero .r-v{color:var(--brass)}
+.r.good{background:var(--good-tint)} .r.good .r-v{color:var(--good)}
+.r.warn{background:var(--warn-tint)} .r.warn .r-v{color:var(--warn)}
+
+.prog{display:flex;align-items:center;gap:14px;margin-top:4px}
+.ptrack{flex:1;height:22px;background:#EFEDE6;border:1px solid var(--rule);overflow:hidden}
+.pfill{height:100%;background:var(--good);opacity:.85}
+.pnum{font-family:var(--u);font-weight:700;font-size:15px;white-space:nowrap}
+
+.flags{margin-top:18px}
+.flag{border-left:3px solid;padding:12px 15px;margin-bottom:9px;font-size:14.5px;line-height:1.45}
+.flag b{font-family:var(--u);font-weight:700;font-size:12px;letter-spacing:.06em;
+  text-transform:uppercase;display:block;margin-bottom:4px}
+.flag.w{border-color:var(--warn);background:var(--warn-tint)} .flag.w b{color:var(--warn)}
+.flag.g{border-color:var(--good);background:var(--good-tint)} .flag.g b{color:var(--good)}
+.flag.n{border-color:var(--brass);background:var(--brass-tint)} .flag.n b{color:var(--brass)}
+
+.carry{background:var(--ink);color:#fff;padding:20px}
+.carry h3{font-family:var(--u);font-weight:700;font-size:13px;letter-spacing:.13em;
+  text-transform:uppercase;color:#C9A26B;margin-bottom:12px}
+.carry table{width:100%;border-collapse:collapse;font-size:14.5px}
+.carry td{padding:7px 0;border-bottom:1px solid rgba(255,255,255,.13)}
+.carry td:last-child{text-align:right;font-family:var(--u);font-weight:700}
+.carry tr:last-child td{border-bottom:none}
+.carry p{font-size:13.5px;color:#B9C2D0;margin-top:13px;line-height:1.5}
+
+.bar{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px}
+button.act{font-family:var(--u);font-weight:600;font-size:13.5px;letter-spacing:.03em;
+  padding:11px 18px;border:1px solid var(--ink);background:#fff;color:var(--ink);cursor:pointer;border-radius:0}
+button.act:hover{background:var(--ink);color:#fff}
+button.act.p{background:var(--ink);color:#fff}
+button.act.p:hover{background:var(--brass);border-color:var(--brass)}
+.foot{margin-top:26px;padding-top:16px;border-top:1px solid var(--rule);
+  font-size:13.5px;color:var(--ink3);line-height:1.5}
+
+@media (max-width:760px){
+  .g2,.g3,.g4,.rgrid{grid-template-columns:1fr}
+  h1{font-size:25px} .shint{margin-left:0;flex-basis:100%}
+  .item-h{grid-template-columns:28px 1fr;gap:8px}
+  .item-h input[type=text]{grid-column:2}
+  .item-done{grid-column:2;justify-content:flex-start}
+  .item-w{padding-left:15px}
+}
+@media print{
+  body{background:#fff;padding:0;font-size:11pt}
+  .bar,.shint{display:none}
+  section{break-inside:avoid;border-color:#bbb}
+  .item{break-inside:avoid}
+  .carry{background:#fff;color:#000;border:2px solid #000}
+  .carry h3{color:#000} .carry p{color:#444} .carry td{border-bottom:1px solid #ccc}
+  .deadline,.item.done,.pfill,.r.hero,.r.warn,.r.good{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+}
+
+/* nav */
+nav{border-bottom:1px solid var(--rule);background:var(--paper);position:sticky;top:0;z-index:10;
+  margin:0 0 4px}
+nav .navwrap{max-width:940px;margin:0 auto;padding:0 20px;display:flex;align-items:center;
+  justify-content:space-between;height:58px;gap:20px}
+nav .brand{font-family:var(--u);font-weight:700;font-size:15px;color:var(--ink);
+  text-decoration:none;letter-spacing:-.01em}
+nav .brand:hover{color:var(--brass)}
+nav ul{list-style:none;display:flex;gap:22px;font-family:var(--u);font-size:13.5px;font-weight:600;
+  margin:0;padding:0}
+nav a{text-decoration:none;color:var(--ink2)}
+nav a:hover{color:var(--brass)}
+@media(max-width:620px){nav .hide-sm{display:none} nav ul{gap:16px}}
+@media print{nav{display:none}}
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap">
+<link rel="stylesheet" href="../assets/alston.css">
+</head>
+<body>
+<!--AW:HEADER-->
+
+<div class="wrap">
+
+<header>
+  <div class="hdr-row">
+    <div>
+      <div class="eyebrow">November · The Decision Calendar</div>
+      <h1>The Execution Sheet</h1>
+    </div>
+    <div class="firm">Alex&nbsp;Alston</div>
+  </div>
+  <p class="sub">Everything with a December 31 deadline, in the order it should be done. Print
+  it, work it, tick each box when it's confirmed — not initiated.</p>
+</header>
+
+<div class="deadline">
+  Work to mid-December, not December 31
+  <span>December 31 is the IRS's deadline. It is not your custodian's — anything submitted in the last two weeks can fail to settle, and there is no fixing it afterward.</span>
+</div>
+
+<!-- 1 -->
+<section>
+  <div class="shead"><span class="snum">01</span><span class="stitle">Your required distribution</span>
+    <span class="shint">If you're 73 or older</span></div>
+  <div class="sbody">
+    <div class="grid g4">
+      <label class="f"><span>Your age at year end</span>
+        <input type="text" id="age" inputmode="numeric" value="75"></label>
+      <label class="f"><span>Birth year</span><em>Sets when distributions begin — 73 or 75</em>
+        <input type="text" id="birthYear" inputmode="numeric" value="1951"></label>
+      <label class="f"><span>Balance on December 31 last year</span><em>All traditional IRAs combined</em>
+        <input type="text" id="bal" inputmode="decimal" value="620,000"></label>
+      <label class="f"><span>Already withdrawn this year</span><em>From that IRA, any reason</em>
+        <input type="text" id="taken" inputmode="decimal" value="0"></label>
+    </div>
+    <div id="rmdOut" style="margin-top:18px"></div>
+  </div>
+</section>
+
+<!-- 2 -->
+<section>
+  <div class="shead"><span class="snum">02</span><span class="stitle">The sheet</span>
+    <span class="shint" id="progNote"></span></div>
+  <div class="sbody">
+    <div class="prog" style="margin-bottom:18px">
+      <span class="ptrack"><span class="pfill" id="pfill" style="width:0%"></span></span>
+      <span class="pnum" id="pnum">0 of 0</span>
+    </div>
+    <div id="sheet"></div>
+  </div>
+</section>
+
+<!-- 3 -->
+<section>
+  <div class="shead"><span class="snum">03</span><span class="stitle">Watch for</span></div>
+  <div class="sbody"><div class="flags" id="flags"></div></div>
+</section>
+
+<section style="border:none;background:none">
+  <div class="carry">
+    <h3>Carry forward to December</h3>
+    <div id="carrybody"></div>
+  </div>
+</section>
+
+<div class="bar">
+  <button class="act p" onclick="window.print()">Print / Save as PDF</button>
+  <button class="act" onclick="dlCSV()">Download CSV</button>
+  <button class="act" onclick="resetAll()">Reset</button>
+</div>
+
+<div id="assistant-slot"></div>
+<script src="../assistant.js" data-mode="month" data-month="11" data-title="November — The Execution Sheet"></script>
+
+<p class="foot">
+  Required distribution figures use the IRS Uniform Lifetime Table, which applies to most account
+  owners. A different table applies if your sole beneficiary is a spouse more than ten years
+  younger. Inherited accounts follow separate rules. Bring this to the November call.
+</p>
+
+
+
+</div>
+
+<script>
+/* ============================================================
+   TAX DATA — update each November.
+   ============================================================ */
+const TAX={
+  year:2026,
+  /* SECURE 2.0: born 1950 or earlier -> 72 (already begun); 1951-1959 -> 73; 1960+ -> 75 */
+  rmdAgeFor: function(birthYear){
+    if(!birthYear) return 73;
+    if(birthYear >= 1960) return 75;
+    if(birthYear >= 1951) return 73;
+    return 72;
+  },
+  qcdLimit:111000,      /* per person */
+  qcdSplitInterest:55000,
+  qcdAge:70.5,
+  giftExclusion:19000,  /* per recipient */
+  rmdPenalty:0.25, rmdPenaltyCorrected:0.10,
+  lossOffsetOrdinary:3000,
+  /* IRS Uniform Lifetime Table */
+  ult:{72:27.4,73:26.5,74:25.5,75:24.6,76:23.7,77:22.9,78:22.0,79:21.1,80:20.2,
+       81:19.4,82:18.5,83:17.7,84:16.8,85:16.0,86:15.2,87:14.4,88:13.7,89:12.9,
+       90:12.2,91:11.5,92:10.8,93:10.1,94:9.5,95:8.9,96:8.4,97:7.8,98:7.3,99:6.8,100:6.4}
+};
+
+const ITEMS=[
+  {id:'qcd', n:1, t:'Charitable transfer from the IRA',
+   s:'Do this before anything else leaves the account',
+   w:'The first dollar out of your IRA this year counts toward your required distribution — and it cannot be reclassified later. It must go <b>directly</b> from custodian to charity; a withdrawal you then donate is not a QCD. Donor-advised funds and private foundations do not qualify.',
+   limit:'qcd'},
+  {id:'rmd', n:2, t:'Required distribution',
+   s:'Must be fully satisfied before any conversion',
+   w:'A required distribution cannot be converted to a Roth — it has to come out first. Penalty for missing it is 25% of the shortfall, reduced to 10% on prompt correction.'},
+  {id:'rmdInh', n:3, t:'Required distribution — inherited IRA',
+   s:'Separate from your own, and separate rules',
+   w:'Inherited accounts have their own schedule and their own required amounts. They do not aggregate with your own IRAs.'},
+  {id:'conv', n:4, t:'Roth conversion',
+   s:'The amount August decided, rechecked against where the year landed',
+   w:'Pay the tax from a taxable account — never withhold from the conversion itself, because withheld money never reaches the Roth. Conversions cannot be undone.'},
+  {id:'harvL', n:5, t:'Tax-loss harvesting',
+   s:'Offsets gains first, then up to $3,000 of ordinary income',
+   w:'Wash sale rule: no purchase of the same or a substantially identical security within 30 days <b>before or after</b>. It applies across all your accounts including your IRA — where the loss is permanently lost, not deferred — and to your spouse\'s accounts too.'},
+  {id:'harvG', n:6, t:'Capital gains harvested at 0%',
+   s:'Only if you have room in the zero-rate band',
+   w:'There is no wash sale rule on gains — sell and buy back immediately. Your basis resets higher. Unused room does not carry forward.'},
+  {id:'stock', n:7, t:'Appreciated stock to charity',
+   s:'Held more than a year',
+   w:'Avoids the capital gain entirely and, if you itemize, deducts full market value. Giving cash while keeping the appreciated stock is strictly worse.'},
+  {id:'daf', n:8, t:'Donor-advised fund contribution',
+   s:'Deduction now, recipients decided later',
+   w:'Useful for bunching several years of giving into one so that itemizing beats the standard deduction. Note a donor-advised fund does <b>not</b> qualify for a QCD.'},
+  {id:'gift', n:9, t:'Annual gifting',
+   s:'Per recipient, and it does not carry forward',
+   w:'No gift tax, no filing, and no effect on the lifetime exemption at or below the annual exclusion. A married couple can effectively double it per recipient.',
+   limit:'gift'},
+  {id:'hsa', n:10, t:'HSA contribution',
+   s:'Only if still eligible — Medicare enrollment ends eligibility',
+   w:'The deadline for this one is actually the filing date, not December 31. But enrolling in any part of Medicare stops eligibility, and Part A can be backdated up to six months.'},
+  {id:'with', n:11, t:'Withholding true-up',
+   s:'Take a distribution and withhold heavily from it',
+   w:'Withholding counts as paid evenly across the whole year no matter when it happens, so a December withholding cures a shortfall dating back to April. An estimated payment does not — it is credited when made.'},
+  {id:'benef', n:12, t:'Beneficiary review',
+   s:'No deadline, but this is when people actually do it',
+   w:'The beneficiary form controls the account; your will does not. Confirm primaries are current and contingents are named.'}
+];
+
+const $=id=>document.getElementById(id);
+const money=n=>(n<0?'-$':'$')+Math.abs(Math.round(n)).toLocaleString('en-US');
+const num=id=>{const el=$(id);if(!el)return 0;const v=(el.value||'').replace(/[^0-9.\-]/g,'');const n=parseFloat(v);return isFinite(n)?n:0;};
+
+/* build the sheet once */
+$('sheet').innerHTML=ITEMS.map(i=>`
+  <div class="item" id="row-${i.id}">
+    <div class="item-h">
+      <span class="item-n">${i.n}</span>
+      <span class="item-t">${i.t}<i>${i.s}</i></span>
+      <input type="text" id="amt-${i.id}" inputmode="decimal" placeholder="$" data-item="${i.id}">
+      <label class="item-done"><input type="checkbox" id="done-${i.id}" data-done="${i.id}"> Done</label>
+    </div>
+    <div class="item-w"><b>Watch for</b>${i.w}</div>
+  </div>`).join('');
+
+function render(){
+  const age=num('age'), bal=num('bal'), taken=num('taken');
+  const birthYear=num('birthYear');
+  const RMD_AGE=TAX.rmdAgeFor(birthYear);
+
+  /* ---- RMD ---- */
+  const divisor=TAX.ult[Math.min(Math.max(Math.round(age),72),100)];
+  const required=(age>=RMD_AGE && divisor)?bal/divisor:0;
+  const remaining=Math.max(0, required-taken);
+  const penalty=remaining*TAX.rmdPenalty;
+
+  if(age>=RMD_AGE && bal>0){
+    $('rmdOut').innerHTML=`
+      <div class="rgrid">
+        <div class="r hero"><div class="r-l">Your required distribution</div><div class="r-v">${money(required)}</div>
+          <div class="r-n">${money(bal)} divided by ${divisor} — the Uniform Lifetime Table factor for age ${Math.round(age)}. Born ${birthYear||'—'}, so your requirements began at ${RMD_AGE}.</div></div>
+        <div class="r ${remaining>0?'warn':'good'}"><div class="r-l">${remaining>0?'Still to take':'Satisfied'}</div>
+          <div class="r-v">${remaining>0?money(remaining):'Complete'}</div>
+          <div class="r-n">${remaining>0
+            ?`${money(taken)} already withdrawn. Missing it costs 25% of the shortfall — about ${money(penalty)} — reduced to 10% on prompt correction.`
+            :`${money(taken)} withdrawn against a ${money(required)} requirement. Nothing further is required from this account.`}</div></div>
+      </div>`;
+  } else if(age>=70.5 && age<RMD_AGE){
+    $('rmdOut').innerHTML=`<div class="rgrid"><div class="r good" style="grid-column:1/-1">
+      <div class="r-l">No required distribution yet</div><div class="r-v">Age ${Math.round(age)}</div>
+      <div class="r-n">Born ${birthYear||'—'}, so requirements begin at <b>${RMD_AGE}</b>${RMD_AGE===75?' — the later age, which applies to anyone born in 1960 or after':''}. But you are already eligible for charitable transfers from an IRA at 70½ — and these gap years are the best time to use them, because every dollar moved out now permanently reduces every future required distribution.</div></div></div>`;
+  } else {
+    $('rmdOut').innerHTML=`<div class="rgrid"><div class="r" style="grid-column:1/-1">
+      <div class="r-l">No required distribution</div><div class="r-v">Age ${Math.round(age)||'—'}</div>
+      <div class="r-n">Born ${birthYear||'—'}, so requirements begin at <b>${RMD_AGE}</b>${RMD_AGE===75?'. Anyone born in 1960 or later gets the later age — five extra years of low-bracket window before distributions are forced.':'.'} Charitable transfers from an IRA become available at 70½.</div></div></div>`;
+  }
+
+  /* ---- sheet state ---- */
+  let filled=0, done=0;
+  const amounts={};
+  ITEMS.forEach(i=>{
+    const a=num('amt-'+i.id);
+    amounts[i.id]=a;
+    const d=$('done-'+i.id).checked;
+    if(a>0||d) filled++;
+    if(d) done++;
+    $('row-'+i.id).className='item'+(d?' done':'');
+  });
+  $('pfill').style.width=(filled>0?(done/filled)*100:0)+'%';
+  $('pnum').textContent=done+' of '+filled+' confirmed';
+  $('progNote').textContent=filled>0?filled+' items in play':'Enter amounts as you decide them';
+
+  /* ---- flags ---- */
+  const F=[];
+  if(amounts.qcd>0 && taken>0){
+    F.push({t:'w',h:'You have already withdrawn from the IRA this year',
+      b:`${money(taken)} came out before the charitable transfer. That amount has already been applied to your required distribution and cannot be reclassified. The QCD still excludes income above the required amount — but it can no longer satisfy the portion already withdrawn. Next year, do the charitable transfer first.`});
+  }
+  if(amounts.qcd>TAX.qcdLimit){
+    F.push({t:'w',h:'Above the annual charitable transfer limit',
+      b:`The ${TAX.year} limit is ${money(TAX.qcdLimit)} per person. The excess is a taxable distribution. Each spouse has a separate limit and must use their own IRA — one cannot use the other's.`});
+  }
+  if(amounts.conv>0 && remaining>0){
+    F.push({t:'w',h:'Take the required distribution before converting',
+      b:`${money(remaining)} of your requirement is still outstanding. A required distribution cannot be converted to a Roth — it must come out of the account first. Converting before satisfying it creates an excess contribution that has to be corrected.`});
+  }
+  if(amounts.conv>0){
+    F.push({t:'n',h:'Pay the conversion tax from a taxable account',
+      b:'Withholding from the conversion itself means that money never reaches the Roth — you convert less than you decided and lose the tax-free growth on it permanently. And the conversion cannot be undone; recharacterization ended in 2018.'});
+  }
+  if(amounts.harvL>0){
+    F.push({t:'n',h:'The wash sale window is 61 days wide, across every account',
+      b:'No purchase of the same or a substantially identical security within 30 days before or after the sale. It reaches into your IRA — where a disallowed loss is permanently gone rather than deferred — and into your spouse\'s accounts. Losses offset gains first, then up to $3,000 of ordinary income, with the remainder carrying forward indefinitely.'});
+  }
+  if(amounts.gift>TAX.giftExclusion){
+    F.push({t:'n',h:'Above the annual exclusion per recipient',
+      b:`The ${TAX.year} exclusion is ${money(TAX.giftExclusion)} per recipient. Above that a gift tax return is required, though tax is only owed once the lifetime exemption is exhausted — which for most households will not happen. A married couple electing to split gifts can give ${money(TAX.giftExclusion*2)} per recipient, but splitting requires filing.`});
+  }
+  if(amounts.hsa>0){
+    F.push({t:'n',h:'The HSA deadline is the filing date, not December 31',
+      b:'But enrolling in any part of Medicare ends eligibility — and Part A can be backdated up to six months when you enroll after 65, or when you file for Social Security. Contributions inside that backdated window become excess contributions penalized at 6% per year.'});
+  }
+  F.push({t:'w',h:'Submit everything by mid-December',
+    b:'December 31 is the IRS deadline; your custodian needs lead time to process. A conversion that does not settle is simply a conversion you did not make, and there is no remedy after the year closes.'});
+  F.push({t:'n',h:'Watch mutual fund distributions if you are buying late in the year',
+    b:'Funds distribute capital gains in December. Buy just before the distribution and you receive a taxable payout on money you only just invested — tax on gains you had no part in. Check the distribution date first, and remember funds you already hold will distribute whether you sold anything or not.'});
+  $('flags').innerHTML=F.map(f=>`<div class="flag ${f.t}"><b>${f.h}</b>${f.b}</div>`).join('');
+
+  /* ---- carry ---- */
+  const rows=[
+    ['Required distribution',age>=RMD_AGE?money(required):'None yet'],
+    ['Still to take',age>=RMD_AGE?money(remaining):'—'],
+    ['Charitable transfer',money(amounts.qcd)],
+    ['Roth conversion',money(amounts.conv)],
+    ['Losses harvested',money(amounts.harvL)],
+    ['Gains harvested at 0%',money(amounts.harvG)],
+    ['Gifting',money(amounts.gift)],
+    ['Withholding true-up',money(amounts.with)],
+    ['Items confirmed done',done+' of '+filled]
+  ];
+  $('carrybody').innerHTML='<table>'+rows.map(r=>`<tr><td>${r[0]}</td><td>${r[1]}</td></tr>`).join('')+'</table>'
+    +'<p>December confirms every open line before the last business day, then closes the year — what you spent against plan, what these decisions were worth, and the three things that matter most next year.</p>';
+}
+
+function dlCSV(){
+  const rows=[['Item','Amount','Done']];
+  ITEMS.forEach(i=>rows.push([i.t, $('amt-'+i.id).value||'', $('done-'+i.id).checked?'Yes':'No']));
+  rows.push(['','','']);
+  document.querySelectorAll('#carrybody tr').forEach(tr=>rows.push([tr.cells[0].textContent,tr.cells[1].textContent,'']));
+  const csv=rows.map(r=>r.map(c=>'"'+String(c).replace(/"/g,'""')+'"').join(',')).join('\n');
+  const a=document.createElement('a');
+  a.href=URL.createObjectURL(new Blob([csv],{type:'text/csv'}));
+  a.download='execution-sheet.csv'; a.click();
+}
+function resetAll(){
+  $('age').value='75'; $('birthYear').value='1951'; $('bal').value='620,000'; $('taken').value='0';
+  ITEMS.forEach(i=>{$('amt-'+i.id).value=''; $('done-'+i.id).checked=false;});
+  render();
+}
+document.addEventListener('input',render);
+document.addEventListener('change',render);
+render();
+</script>
+<!--AW:FOOTER-->
+</body>
+</html>

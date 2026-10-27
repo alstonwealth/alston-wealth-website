@@ -1,0 +1,12 @@
+/services/retirement-income.html  /services/distribution-planning  301
+/services/retirement-income  /services/distribution-planning  301
+
+# Old Blogger addresses from when alstonwealth.com pointed to Blogger (Aug 2026).
+# The blog now lives at blog.alstonwealth.com with the same paths, so send each one to its post.
+/2024/*    https://blog.alstonwealth.com/2024/:splat  301
+/2025/*    https://blog.alstonwealth.com/2025/:splat  301
+/2026/*    https://blog.alstonwealth.com/2026/:splat  301
+/p/*       https://blog.alstonwealth.com/p/:splat  301
+/search/*  https://blog.alstonwealth.com/search/:splat  301
+/search    https://blog.alstonwealth.com/search  301
+/feeds/*   https://blog.alstonwealth.com/feeds/:splat  301

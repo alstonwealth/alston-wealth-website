@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Window — Alston Wealth</title>
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Alston Wealth">
+<meta property="og:title" content="The Window — Alston Wealth">
+<meta property="og:description" content="Twelve retirement decisions, twelve months. Free tools, briefings, and a live monthly call.">
+<meta property="og:image" content="{{SITE_URL}}/og-image.png">
+<meta property="og:url" content="{{SITE_URL}}/tools/08-the-window.html">
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-YJFKJ8MCV3"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}
+gtag('js',new Date());gtag('config','G-YJFKJ8MCV3');</script>
+<meta name="twitter:card" content="summary_large_image">
+
+<style>
+:root{
+  --ink:#16233A; --ink2:#46505F; --ink3:#5E6878;
+  --paper:#FBFAF7; --card:#FFFFFF; --rule:#E6E2D9; --rule2:#EDEAE3;
+  --brass:#8A5F24; --brass-tint:#F5EEE1;
+  --good:#2F6B4F; --good-tint:#E9F2ED;
+  --warn:#9A4A22; --warn-tint:#FBEDE5;
+  --u:"Archivo","Helvetica Neue",Helvetica,sans-serif;
+  --s:"Source Serif 4",Charter,"Bitstream Charter",Georgia,serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--paper);color:var(--ink);font-family:var(--s);
+  font-size:16px;line-height:1.5;-webkit-font-smoothing:antialiased;padding:0 0 80px}
+.wrap{max-width:940px;margin:0 auto;padding:0 20px}
+header{border-bottom:2px solid var(--ink);padding:34px 0 14px;margin-bottom:26px}
+.eyebrow{font-family:var(--u);font-weight:700;font-size:10px;letter-spacing:.19em;
+  text-transform:uppercase;color:var(--brass);margin-bottom:7px}
+h1{font-family:var(--u);font-weight:700;font-size:31px;letter-spacing:-.02em;line-height:1.05}
+.sub{color:var(--ink2);margin-top:9px;max-width:64ch;font-size:15.5px}
+.hdr-row{display:flex;justify-content:space-between;align-items:flex-end;gap:20px;flex-wrap:wrap}
+.firm{font-family:var(--u);font-weight:700;font-size:11px;letter-spacing:.15em;
+  text-transform:uppercase;color:var(--ink2);white-space:nowrap}
+
+section{background:var(--card);border:1px solid var(--rule);margin-bottom:20px}
+.shead{display:flex;align-items:baseline;gap:12px;padding:15px 20px;
+  border-bottom:1px solid var(--rule2);background:#FCFBF8;flex-wrap:wrap}
+.snum{font-family:var(--u);font-weight:700;font-size:10px;letter-spacing:.14em;color:var(--brass);
+  border:1px solid var(--brass);padding:3px 7px;flex:none}
+.stitle{font-family:var(--u);font-weight:700;font-size:16px;letter-spacing:-.01em}
+.shint{font-size:14px;color:var(--ink3);margin-left:auto;font-family:var(--u);font-weight:500}
+.sbody{padding:20px}
+.lede{color:var(--ink2);font-size:15px;margin-bottom:16px;max-width:68ch}
+
+.grid{display:grid;gap:12px}
+.g2{grid-template-columns:repeat(2,1fr)}
+.g3{grid-template-columns:repeat(3,1fr)}
+.g4{grid-template-columns:repeat(4,1fr)}
+label.f{display:block}
+label.f span{display:block;font-family:var(--u);font-weight:600;font-size:11.5px;
+  letter-spacing:.05em;text-transform:uppercase;color:var(--ink2);margin-bottom:5px}
+label.f em{font-style:normal;color:var(--ink3);text-transform:none;letter-spacing:0;
+  font-weight:500;font-size:11px;display:block;margin-top:2px}
+input[type=text],select{width:100%;padding:10px 11px;border:1px solid var(--rule);
+  background:#fff;font-family:var(--u);font-size:15.5px;color:var(--ink);border-radius:0}
+input[type=text]:focus,select:focus{outline:2px solid var(--brass);outline-offset:-1px}
+input[type=range]{width:100%;accent-color:var(--brass);margin-top:6px}
+
+/* headline marginal */
+.mrg{border:1px solid var(--rule);background:#fff;padding:22px}
+.mrg-l{font-family:var(--u);font-weight:600;font-size:10.5px;letter-spacing:.13em;
+  text-transform:uppercase;color:var(--ink3);margin-bottom:8px}
+.mrg-row{display:flex;gap:34px;flex-wrap:wrap;align-items:flex-end;margin-bottom:6px}
+.mrg-n{font-family:var(--u);font-weight:700;font-size:46px;line-height:.9;letter-spacing:-.03em;color:var(--brass)}
+.mrg-v{font-family:var(--u);font-weight:700;font-size:26px;line-height:1;color:var(--ink3)}
+.mrg-c{font-size:12px;font-family:var(--u);font-weight:600;letter-spacing:.09em;
+  text-transform:uppercase;color:var(--ink3);margin-top:5px}
+.mrg-note{font-size:14.5px;color:var(--ink2);margin-top:14px;line-height:1.45;
+  padding-top:13px;border-top:1px solid var(--rule2);max-width:72ch}
+.mrg-note b{color:var(--ink)}
+
+.chart{border:1px solid var(--rule);background:#fff;padding:20px;margin-top:1px}
+.chart-h{font-family:var(--u);font-weight:600;font-size:10.5px;letter-spacing:.13em;
+  text-transform:uppercase;color:var(--ink3);margin-bottom:14px}
+svg{display:block;width:100%;height:auto}
+.key{display:flex;gap:18px;flex-wrap:wrap;margin-top:12px;
+  font-family:var(--u);font-size:11.5px;font-weight:600;color:var(--ink2)}
+.key i{display:inline-block;width:16px;height:3px;margin-right:6px;vertical-align:middle;font-style:normal}
+
+/* ceilings */
+.ceil{width:100%;border-collapse:collapse;font-size:14.5px}
+.ceil th{font-family:var(--u);font-weight:600;font-size:10.5px;letter-spacing:.1em;
+  text-transform:uppercase;color:var(--ink3);text-align:right;padding:9px 10px;
+  border-bottom:1px solid var(--rule)}
+.ceil th:first-child{text-align:left}
+.ceil td{padding:11px 10px;text-align:right;border-bottom:1px solid var(--rule2);
+  font-family:var(--u);font-weight:600}
+.ceil td:first-child{text-align:left;font-family:var(--s);font-weight:400}
+.ceil td:first-child b{font-family:var(--u);font-weight:700;font-size:14px;display:block}
+.ceil td:first-child i{font-style:normal;font-size:12.5px;color:var(--ink3)}
+.ceil tr.binds td{background:var(--brass-tint)}
+.ceil tr.binds td:last-child{color:var(--brass)}
+.ceil tr.na td{color:var(--ink3)}
+.ceil tr:last-child td{border-bottom:none}
+
+/* compare */
+.vs{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--rule);
+  border:1px solid var(--rule)}
+.vs>div{background:#fff;padding:18px}
+.vs h4{font-family:var(--u);font-weight:700;font-size:15px;margin-bottom:2px}
+.vs .tag{font-family:var(--u);font-weight:600;font-size:10px;letter-spacing:.12em;
+  text-transform:uppercase;color:var(--ink3);margin-bottom:12px}
+.vs .n{font-family:var(--u);font-weight:700;font-size:27px;letter-spacing:-.02em;line-height:1}
+.vs .u{font-family:var(--u);font-weight:600;font-size:10px;letter-spacing:.11em;
+  text-transform:uppercase;color:var(--ink3);margin-top:5px}
+.vs p{font-size:13.5px;color:var(--ink2);margin-top:13px;line-height:1.45;
+  padding-top:11px;border-top:1px solid var(--rule2)}
+.vs .free{background:var(--good-tint)} .vs .free .n{color:var(--good)}
+
+.flags{margin-top:18px}
+.flag{border-left:3px solid;padding:12px 15px;margin-bottom:9px;font-size:14.5px;line-height:1.45}
+.flag b{font-family:var(--u);font-weight:700;font-size:12px;letter-spacing:.06em;
+  text-transform:uppercase;display:block;margin-bottom:4px}
+.flag.w{border-color:var(--warn);background:var(--warn-tint)} .flag.w b{color:var(--warn)}
+.flag.g{border-color:var(--good);background:var(--good-tint)} .flag.g b{color:var(--good)}
+.flag.n{border-color:var(--brass);background:var(--brass-tint)} .flag.n b{color:var(--brass)}
+
+.carry{background:var(--ink);color:#fff;padding:20px}
+.carry h3{font-family:var(--u);font-weight:700;font-size:13px;letter-spacing:.13em;
+  text-transform:uppercase;color:#C9A26B;margin-bottom:12px}
+.carry table{width:100%;border-collapse:collapse;font-size:14.5px}
+.carry td{padding:7px 0;border-bottom:1px solid rgba(255,255,255,.13)}
+.carry td:last-child{text-align:right;font-family:var(--u);font-weight:700}
+.carry tr:last-child td{border-bottom:none}
+.carry p{font-size:13.5px;color:#B9C2D0;margin-top:13px;line-height:1.5}
+
+.bar{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px}
+button.act{font-family:var(--u);font-weight:600;font-size:13.5px;letter-spacing:.03em;
+  padding:11px 18px;border:1px solid var(--ink);background:#fff;color:var(--ink);cursor:pointer;border-radius:0}
+button.act:hover{background:var(--ink);color:#fff}
+button.act.p{background:var(--ink);color:#fff}
+button.act.p:hover{background:var(--brass);border-color:var(--brass)}
+.foot{margin-top:26px;padding-top:16px;border-top:1px solid var(--rule);
+  font-size:13.5px;color:var(--ink3);line-height:1.5}
+
+@media (max-width:720px){
+  .g2,.g3,.g4,.vs{grid-template-columns:1fr}
+  h1{font-size:25px} .shint{margin-left:0;flex-basis:100%}
+  .mrg-n{font-size:34px} .ceil{font-size:13px} .ceil th,.ceil td{padding:7px 5px}
+}
+@media print{
+  body{background:#fff;padding:0;font-size:11pt}
+  .bar,.shint{display:none}
+  section{break-inside:avoid;border-color:#bbb}
+  .carry{background:#fff;color:#000;border:2px solid #000}
+  .carry h3{color:#000} .carry p{color:#444} .carry td{border-bottom:1px solid #ccc}
+  tr.binds td,.vs .free{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+}
+
+/* nav */
+nav{border-bottom:1px solid var(--rule);background:var(--paper);position:sticky;top:0;z-index:10;
+  margin:0 0 4px}
+nav .navwrap{max-width:940px;margin:0 auto;padding:0 20px;display:flex;align-items:center;
+  justify-content:space-between;height:58px;gap:20px}
+nav .brand{font-family:var(--u);font-weight:700;font-size:15px;color:var(--ink);
+  text-decoration:none;letter-spacing:-.01em}
+nav .brand:hover{color:var(--brass)}
+nav ul{list-style:none;display:flex;gap:22px;font-family:var(--u);font-size:13.5px;font-weight:600;
+  margin:0;padding:0}
+nav a{text-decoration:none;color:var(--ink2)}
+nav a:hover{color:var(--brass)}
+@media(max-width:620px){nav .hide-sm{display:none} nav ul{gap:16px}}
+@media print{nav{display:none}}
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap">
+<link rel="stylesheet" href="../assets/alston.css">
+</head>
+<body>
+<!--AW:HEADER-->
+
+<div class="wrap">
+
+<header>
+  <div class="hdr-row">
+    <div>
+      <div class="eyebrow">August · The Decision Calendar</div>
+      <h1>The Window</h1>
+    </div>
+    <div class="firm">Alex&nbsp;Alston</div>
+  </div>
+  <p class="sub">What the next dollar of conversion actually costs — not what the bracket table
+  says. This computes the real marginal rate including the Social Security effect, capital gains
+  displacement, and the senior deduction phase-out.</p>
+</header>
+
+<!-- 1 -->
+<section>
+  <div class="shead"><span class="snum">01</span><span class="stitle">Your year, before any conversion</span>
+    <span class="shint">From July's projection</span></div>
+  <div class="sbody">
+    <div class="grid g4">
+      <label class="f"><span>Filing status</span>
+        <select id="status"><option value="mfj" selected>Married jointly</option><option value="single">Single</option></select></label>
+      <label class="f"><span>Age 65+</span>
+        <select id="seniors"><option value="0">Neither</option><option value="1">One</option><option value="2" selected>Both</option></select></label>
+      <label class="f"><span>Social Security</span><em>Gross, both spouses</em>
+        <input type="text" id="ss" inputmode="decimal" value="52,000"></label>
+      <label class="f"><span>Other ordinary income</span><em>Pension, IRA, interest, work</em>
+        <input type="text" id="ord" inputmode="decimal" value="36,000"></label>
+    </div>
+    <div class="grid g4" style="margin-top:12px">
+      <label class="f"><span>Long-term gains and qualified dividends</span>
+        <input type="text" id="ltg" inputmode="decimal" value="6,000"></label>
+      <label class="f"><span>Traditional IRA balance</span><em>What could be converted</em>
+        <input type="text" id="iraBal" inputmode="decimal" value="620,000"></label>
+      <label class="f"><span>Under 65 on a marketplace plan?</span>
+        <select id="aca"><option value="no" selected>No</option><option value="yes">Yes</option></select></label>
+      <label class="f"><span>Rate you expect to pay later</span><em>Yours, a survivor's, or your children's</em>
+        <select id="later"><option value=".10">10%</option><option value=".12">12%</option>
+        <option value=".22" selected>22%</option><option value=".24">24%</option>
+        <option value=".32">32%</option><option value=".35">35%</option></select></label>
+    </div>
+  </div>
+</section>
+
+<!-- 2 -->
+<section>
+  <div class="shead"><span class="snum">02</span><span class="stitle">Size the conversion</span>
+    <span class="shint" id="convLab"></span></div>
+  <div class="sbody">
+    <input type="range" id="conv" min="0" max="200000" step="2500" value="0">
+    <div id="marginal" style="margin-top:18px"></div>
+    <div class="chart">
+      <div class="chart-h">What each additional dollar costs, as the conversion grows</div>
+      <div id="curve"></div>
+      <div class="key">
+        <span><i style="background:#8A5F24"></i>True marginal cost</span>
+        <span><i style="background:#5E6878"></i>What the bracket table says</span>
+        <span><i style="background:#16233A;height:12px;width:2px"></i>Your current conversion</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 3 -->
+<section>
+  <div class="shead"><span class="snum">03</span><span class="stitle">Which ceiling binds first</span></div>
+  <div class="sbody"><div id="ceilings"></div></div>
+</section>
+
+<!-- 4 -->
+<section>
+  <div class="shead"><span class="snum">04</span><span class="stitle">Convert, or harvest gains?</span>
+    <span class="shint">They compete for the same space</span></div>
+  <div class="sbody"><div id="compare"></div></div>
+</section>
+
+<!-- 5 -->
+<section>
+  <div class="shead"><span class="snum">05</span><span class="stitle">What this tells you</span></div>
+  <div class="sbody"><div class="flags" id="flags"></div></div>
+</section>
+
+<section style="border:none;background:none">
+  <div class="carry">
+    <h3>Carry forward to November</h3>
+    <div id="carrybody"></div>
+  </div>
+</section>
+
+<div class="bar">
+  <button class="act p" onclick="window.print()">Print / Save as PDF</button>
+  <button class="act" onclick="dlCSV()">Download CSV</button>
+  <button class="act" onclick="resetAll()">Reset</button>
+</div>
+
+<div id="assistant-slot"></div>
+<script src="../assistant.js" data-mode="month" data-month="08" data-title="August — The Window"></script>
+
+<p class="foot">
+  The true marginal rate is measured by computing your full federal tax at your income and again
+  a step higher — which captures the Social Security effect, capital gains displacement, and the
+  senior deduction phase-out without assuming any of them. Federal only; state tax is not
+  included. Conversions cannot be undone. Bring this to the August call.
+</p>
+
+
+
+</div>
+
+<script>
+/* ============================================================
+   TAX DATA — update each November.
+   ============================================================ */
+const TAX={
+  brackets:{
+    single:[[12400,.10],[50400,.12],[105700,.22],[201775,.24],[256225,.32],[640600,.35],[Infinity,.37]],
+    mfj:   [[24800,.10],[100800,.12],[211400,.22],[403550,.24],[512450,.32],[768700,.35],[Infinity,.37]]
+  },
+  ltcg:{ single:[49450,545500], mfj:[98900,613700] },
+  std:{single:16100,mfj:32200},
+  add65:{single:2050,mfj:1650},
+  seniorBonus:6000, seniorPhase:{single:75000,mfj:150000}, seniorRate:.06,
+  ssThresh:{single:[25000,34000], mfj:[32000,44000]},
+  irmaa1:{single:109000, mfj:218000},
+  acaCliff:{single:62600, mfj:84600}
+};
+
+const $=id=>document.getElementById(id);
+const money=n=>(n<0?'-$':'$')+Math.abs(Math.round(n)).toLocaleString('en-US');
+const num=id=>{const el=$(id);if(!el)return 0;const v=(el.value||'').replace(/[^0-9.\-]/g,'');const n=parseFloat(v);return isFinite(n)?n:0;};
+
+function ssTaxable(ss, other, status){
+  const [b1,b2]=TAX.ssThresh[status];
+  const prov=other+ss*0.5;
+  if(prov<=b1) return 0;
+  if(prov<=b2) return Math.min(0.5*(prov-b1), 0.5*ss);
+  return Math.min(0.85*(prov-b2)+Math.min(0.5*(b2-b1),0.5*ss), 0.85*ss);
+}
+function ordinaryTax(t, status){
+  let tax=0, prev=0;
+  for(const [cap,rate] of TAX.brackets[status]){
+    if(t>prev){ tax+=(Math.min(t,cap)-prev)*rate; prev=cap; } else break;
+  }
+  return tax;
+}
+function gainsTax(ordTaxable, gains, status){
+  const [z,f]=TAX.ltcg[status];
+  let rem=gains, tax=0, pos=ordTaxable;
+  const inZ=Math.max(0,Math.min(rem, z-pos)); rem-=inZ; pos+=inZ;
+  const in15=Math.max(0,Math.min(rem, f-pos)); tax+=in15*0.15; rem-=in15;
+  tax+=Math.max(0,rem)*0.20;
+  return tax;
+}
+/* Full federal tax for a given amount of additional ordinary income */
+function totalTax(extra, p){
+  const ord=p.ord+extra;
+  const sst=ssTaxable(p.ss, ord+p.ltg, p.status);
+  const agi=ord+p.ltg+sst;
+  const add=p.status==='mfj'?TAX.add65[p.status]*p.seniors:(p.seniors?TAX.add65.single:0);
+  const over=Math.max(0,agi-TAX.seniorPhase[p.status]);
+  const bonus=Math.max(0, TAX.seniorBonus*p.seniors - over*TAX.seniorRate);
+  const ded=TAX.std[p.status]+add+bonus;
+  const taxableTotal=Math.max(0, agi-ded);
+  const taxableOrd=Math.max(0, taxableTotal-p.ltg);
+  const g=Math.min(p.ltg, taxableTotal);
+  return {tax:ordinaryTax(taxableOrd,p.status)+gainsTax(taxableOrd,g,p.status),
+          agi, taxableOrd, taxableTotal};
+}
+function trueMarginal(extra, p, step){
+  step=step||1000;
+  return (totalTax(extra+step,p).tax - totalTax(extra,p).tax)/step;
+}
+function tableMarginal(taxableOrd, status){
+  for(const [cap,rate] of TAX.brackets[status]) if(taxableOrd<=cap) return rate;
+  return .37;
+}
+
+function render(){
+  const status=TAX.brackets[$('status').value]?$('status').value:'mfj';
+  const seniors=parseInt($('seniors').value,10)||0;
+  const p={ss:num('ss'), ord:num('ord'), ltg:num('ltg'), status, seniors};
+  const conv=parseFloat($('conv').value)||0;
+  const iraBal=num('iraBal'), laterRate=parseFloat($('later').value);
+  const onACA=$('aca').value==='yes';
+
+  $('conv').max=Math.max(50000, Math.min(300000, Math.round(iraBal/1000)*1000));
+  $('convLab').textContent='Converting '+money(conv);
+
+  const base=totalTax(0,p), withConv=totalTax(conv,p);
+  const convCost=withConv.tax-base.tax;
+  const avgRate=conv>0?convCost/conv:0;
+  const marg=trueMarginal(conv,p);
+  const tableRate=tableMarginal(withConv.taxableOrd,status);
+  const gap=marg-tableRate;
+
+  /* headline */
+  $('marginal').innerHTML=`
+    <div class="mrg">
+      <div class="mrg-l">The next dollar of conversion costs</div>
+      <div class="mrg-row">
+        <div><div class="mrg-n">${(marg*100).toFixed(1)}%</div><div class="mrg-c">True marginal cost</div></div>
+        <div><div class="mrg-v">${(tableRate*100).toFixed(0)}%</div><div class="mrg-c">What the bracket table says</div></div>
+        ${conv>0?`<div><div class="mrg-v">${money(convCost)}</div><div class="mrg-c">Tax on ${money(conv)} — ${(avgRate*100).toFixed(1)}% average</div></div>`:''}
+      </div>
+      <div class="mrg-note">${gap>0.02
+        ? `The table understates it by <b>${(gap*100).toFixed(1)} percentage points</b>. That difference is real money and it comes from things no bracket chart shows — Social Security being pulled into the tax base, long-term gains displaced out of the 0% band, and the senior deduction phasing out.`
+        : gap<-0.01
+          ? `Your true cost is currently <b>below</b> the table rate, because deductions are still absorbing part of the income.`
+          : `Your true cost matches the table here — none of the hidden effects are active at this income level.`}
+      ${laterRate>marg
+        ? ` At a ${(marg*100).toFixed(1)}% cost today against ${(laterRate*100).toFixed(0)}% expected later, <b>converting is favourable</b> by ${((laterRate-marg)*100).toFixed(1)} points on the next dollar.`
+        : ` At a ${(marg*100).toFixed(1)}% cost today against ${(laterRate*100).toFixed(0)}% expected later, <b>the next dollar is not worth converting</b> — you would be paying more now than later.`}</div>
+    </div>`;
+
+  /* ---- marginal curve ---- */
+  const W=880,H=250,PL=52,PR=16,PT=14,PB=30;
+  const maxX=parseFloat($('conv').max);
+  const pts=[], tbl=[];
+  for(let i=0;i<=60;i++){
+    const x=(maxX/60)*i;
+    pts.push([x, trueMarginal(x,p,1000)]);
+    tbl.push([x, tableMarginal(totalTax(x,p).taxableOrd,status)]);
+  }
+  const maxY=Math.max(0.45, ...pts.map(a=>a[1]))*1.08;
+  const X=v=>PL+(v/maxX)*(W-PL-PR);
+  const Y=v=>PT+(1-v/maxY)*(H-PT-PB);
+  const path=a=>a.map((d,i)=>(i?'L':'M')+X(d[0]).toFixed(1)+' '+Y(d[1]).toFixed(1)).join(' ');
+  const yticks=[0,.1,.2,.3,.4].filter(v=>v<=maxY).map(v=>
+    `<line x1="${PL}" y1="${Y(v)}" x2="${W-PR}" y2="${Y(v)}" stroke="#EDEAE3"/>
+     <text x="${PL-8}" y="${Y(v)+4}" text-anchor="end" font-family="Archivo,Helvetica,sans-serif" font-size="10.5" fill="#5E6878">${(v*100).toFixed(0)}%</text>`).join('');
+  const xticks=[0,.25,.5,.75,1].map(f=>{
+    const v=maxX*f;
+    return `<text x="${X(v)}" y="${H-9}" text-anchor="middle" font-family="Archivo,Helvetica,sans-serif" font-size="10.5" fill="#5E6878">${v===0?'$0':'$'+Math.round(v/1000)+'k'}</text>`;
+  }).join('');
+  $('curve').innerHTML=`<svg viewBox="0 0 ${W} ${H}" xmlns="http://www.w3.org/2000/svg">
+    ${yticks}${xticks}
+    <path d="${path(tbl)}" fill="none" stroke="#5E6878" stroke-width="1.6" stroke-dasharray="4 3"/>
+    <path d="${path(pts)}" fill="none" stroke="#8A5F24" stroke-width="2.6"/>
+    ${conv>0?`<line x1="${X(conv)}" y1="${PT}" x2="${X(conv)}" y2="${H-PB}" stroke="#16233A" stroke-width="2" opacity=".55"/>`:''}
+  </svg>`;
+
+  /* ---- ceilings ---- */
+  const agiNow=base.agi;
+  const rows=[];
+  const topOrd=(()=>{for(const[c,r]of TAX.brackets[status]) if(base.taxableOrd<=c) return c; return Infinity;})();
+  rows.push({n:'Top of your bracket',d:`The ${(tableMarginal(base.taxableOrd,status)*100).toFixed(0)}% bracket ends here`,
+    room:isFinite(topOrd)?Math.max(0,topOrd-base.taxableOrd):Infinity});
+  const zeroTop=TAX.ltcg[status][0];
+  rows.push({n:'0% capital gains band',d:'Ordinary income displaces gains out of the zero rate',
+    room:p.ltg>0?Math.max(0,zeroTop-base.taxableOrd):null,
+    na:p.ltg<=0, naMsg:'No gains entered'});
+  const ssCeiling=p.ss>0?(()=>{
+    let lo=0,hi=400000;
+    for(let i=0;i<40;i++){const m=(lo+hi)/2;
+      if(ssTaxable(p.ss,p.ord+m+p.ltg,status)>=0.849*p.ss) hi=m; else lo=m;}
+    return hi;})():null;
+  rows.push({n:'Social Security fully taxed',d:'Above here the benefit stops being dragged in — the torpedo ends',
+    room:ssCeiling!==null?Math.max(0,ssCeiling):null, na:p.ss<=0, naMsg:'No Social Security'});
+  const phaseRoom=seniors>0?Math.max(0,TAX.seniorPhase[status]-agiNow):null;
+  rows.push({n:'Senior deduction phase-out',d:'Adds about 6 points on the dollar once you are inside it',
+    room:phaseRoom, na:seniors===0, naMsg:'Under 65'});
+  rows.push({n:'Health insurance subsidy cliff',d:'One dollar over and the entire premium credit is gone',
+    room:onACA?Math.max(0,TAX.acaCliff[status]-agiNow):null, na:!onACA, naMsg:'Not on a marketplace plan'});
+  rows.push({n:'Medicare surcharge threshold',d:'Sets your premium two years out',
+    room:Math.max(0,TAX.irmaa1[status]-agiNow)});
+
+  const live=rows.filter(r=>!r.na&&r.room!==null&&isFinite(r.room));
+  const binding=live.length?live.reduce((a,b)=>b.room<a.room?b:a):null;
+  $('ceilings').innerHTML=`<table class="ceil">
+    <tr><th>Ceiling</th><th>Room before you hit it</th></tr>
+    ${rows.map(r=>{
+      const isB=binding&&r.n===binding.n;
+      return `<tr class="${r.na?'na':''} ${isB?'binds':''}">
+        <td><b>${r.n}</b><i>${r.na?r.naMsg:r.d}</i></td>
+        <td>${r.na?'—':r.room===null?'—':!isFinite(r.room)?'No limit':money(r.room)}</td></tr>`;
+    }).join('')}
+  </table>
+  ${binding?`<div class="flag n" style="margin-top:16px"><b>Binding constraint: ${binding.n}</b>
+    ${money(binding.room)} of room before you reach it. That is the practical ceiling on this year's conversion, whatever the bracket table suggests.</div>`:''}`;
+
+  /* ---- compare ---- */
+  const zeroRoom=Math.max(0, zeroTop-base.taxableOrd);
+  const harvestable=Math.min(zeroRoom, 200000);
+  const convBenefit=conv>0?conv*(laterRate-avgRate):0;
+  $('compare').innerHTML=`
+    <div class="vs">
+      <div>
+        <h4>Convert to a Roth</h4><div class="tag">Costs your real marginal rate today</div>
+        <div class="n">${money(convCost)}</div><div class="u">tax on ${money(conv)} converted</div>
+        <p>Never taxed again. No required distributions. Better for a survivor filing single, and better for children who must empty an inherited account within ten years.
+        ${conv>0?`At ${(avgRate*100).toFixed(1)}% now against ${(laterRate*100).toFixed(0)}% later, the estimated benefit is <b>${money(convBenefit)}</b> before any growth.`:'Move the slider to size it.'}</p>
+      </div>
+      <div class="${harvestable>0?'free':''}">
+        <h4>Harvest gains at 0%</h4><div class="tag">Costs nothing at all</div>
+        <div class="n">${harvestable>0?money(harvestable):'$0'}</div><div class="u">${harvestable>0?'of gains you could realize free':'no room available'}</div>
+        <p>${harvestable>0
+          ? `Sell, realize the gain, pay nothing, buy back immediately — there is no wash sale rule on gains. Your basis resets higher and that gain is permanently out of the tax system. Saves roughly <b>${money(harvestable*0.15)}</b> against realizing it later at 15%.`
+          : 'Your ordinary income already fills the 0% band. Any gain realized now is taxed at 15% or more.'}
+        ${conv>0&&harvestable>0?'<br><br><b>These compete.</b> Every dollar converted pushes gains out of the free band.':''}</p>
+      </div>
+    </div>`;
+
+  /* ---- flags ---- */
+  const F=[];
+  if(onACA){
+    const acaRoom=Math.max(0,TAX.acaCliff[status]-agiNow);
+    F.push({t:'w',h:'The subsidy cliff probably ends this conversation',
+      b:`You are under 65 on a marketplace plan with ${money(acaRoom)} of room before the cliff at ${money(TAX.acaCliff[status])}. One dollar over and the entire premium credit disappears and is repaid — frequently $12,000–$15,000. That almost always exceeds the tax saved on a conversion of similar size. Consider doing conversions after 65.`});
+  }
+  if(gap>0.05){
+    F.push({t:'w',h:`Your real cost is ${(gap*100).toFixed(1)} points above the bracket table`,
+      b:'This is the tax torpedo. Below the 85% ceiling, each dollar of conversion drags additional Social Security into the tax base with it. It is a middle-income phenomenon — households with large incomes are past it entirely, which is why it catches the people who assume it does not apply to them.'});
+  }
+  if(marg>laterRate && conv>0){
+    F.push({t:'w',h:'You have converted past the point where it pays',
+      b:`The next dollar costs ${(marg*100).toFixed(1)}% against ${(laterRate*100).toFixed(0)}% expected later. Reduce the conversion until the true marginal cost sits below your expected future rate — that crossover point is the honest size.`});
+  } else if(conv>0 && laterRate>marg){
+    F.push({t:'g',h:`Still favourable at ${money(conv)}`,
+      b:`The next dollar costs ${(marg*100).toFixed(1)}% against ${(laterRate*100).toFixed(0)}% later. There is room to convert more before the arithmetic turns — watch the curve for where the brass line crosses your expected rate.`});
+  }
+  if(harvestable>0 && conv>0){
+    F.push({t:'n',h:'You are spending free space on something that costs money',
+      b:`${money(harvestable)} of 0% capital gains room is available, and every dollar of conversion consumes it. Harvesting is free; converting costs ${(avgRate*100).toFixed(1)}%. The conversion may still win on durability — no future distributions, better for a survivor and heirs — but run both before assuming it.`});
+  }
+  if(iraBal>0 && iraBal<250000){
+    F.push({t:'n',h:'Your pretax balance may be small enough that this does not matter',
+      b:`${money(iraBal)} in tax-deferred accounts. Required distributions from a balance this size are unlikely to push you into a higher bracket, which means converting is paying tax sooner for little benefit. This is the case where the honest answer is often to do nothing.`});
+  }
+  if(conv>0){
+    F.push({t:'n',h:'Pay the tax from a taxable account, not out of the conversion',
+      b:`${money(convCost)} of tax. Withholding it from the conversion means that money never reaches the Roth — you convert less and lose the tax-free growth on it permanently. Under 59½ it can also carry a 10% penalty.`});
+  }
+  F.push({t:'n',h:'Conversions cannot be undone',
+    b:'Recharacterizing a conversion ended in 2018. Decide the number now, in August, and execute in November — not under deadline pressure in the last week of December.'});
+  $('flags').innerHTML=F.map(f=>`<div class="flag ${f.t}"><b>${f.h}</b>${f.b}</div>`).join('');
+
+  /* ---- carry ---- */
+  const carry=[
+    ['Conversion decided',money(conv)],
+    ['Tax it creates',money(convCost)],
+    ['Average rate on the conversion',conv>0?(avgRate*100).toFixed(1)+'%':'—'],
+    ['True marginal cost of next dollar',(marg*100).toFixed(1)+'%'],
+    ['Bracket table rate',(tableRate*100).toFixed(0)+'%'],
+    ['Binding ceiling',binding?binding.n:'—'],
+    ['Room to it',binding?money(binding.room):'—'],
+    ['0% gains room',money(zeroRoom)],
+    ['Projected AGI after conversion',money(withConv.agi)]
+  ];
+  $('carrybody').innerHTML='<table>'+carry.map(r=>`<tr><td>${r[0]}</td><td>${r[1]}</td></tr>`).join('')+'</table>'
+    +'<p>November executes this. Take the conversion amount and the tax figure to that month, along with the reminder that the tax gets paid from a taxable account and the custodian needs lead time before December 31.</p>';
+}
+
+function dlCSV(){
+  const rows=[['Field','Value']];
+  document.querySelectorAll('#carrybody tr').forEach(tr=>rows.push([tr.cells[0].textContent,tr.cells[1].textContent]));
+  document.querySelectorAll('.flag b').forEach(b=>rows.push(['Note',b.textContent]));
+  const csv=rows.map(r=>r.map(c=>'"'+String(c).replace(/"/g,'""')+'"').join(',')).join('\n');
+  const a=document.createElement('a');
+  a.href=URL.createObjectURL(new Blob([csv],{type:'text/csv'}));
+  a.download='the-window.csv'; a.click();
+}
+function resetAll(){
+  $('status').value='mfj'; $('seniors').value='2'; $('ss').value='52,000';
+  $('ord').value='36,000'; $('ltg').value='6,000'; $('iraBal').value='620,000';
+  $('aca').value='no'; $('later').value='.22'; $('conv').value=0; render();
+}
+document.addEventListener('input',render);
+document.addEventListener('change',render);
+render();
+</script>
+<!--AW:FOOTER-->
+</body>
+</html>

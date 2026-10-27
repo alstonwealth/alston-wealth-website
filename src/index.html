@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Alston Wealth — Retirement and legacy planning</title>
+<meta name="description" content="Alston Wealth is an independent, family-run retirement planning firm. We plan how you draw on your savings, what you owe in taxes and what you leave behind, and manage the money behind it, for households across the country.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Alston Wealth — Retirement and legacy planning">
+<meta property="og:description" content="An independent, family-run wealth management firm, meeting with households across the country by video.">
+<meta property="og:url" content="{{SITE_URL}}/">
+<!--AW:HEAD-->
+<style>
+.svc{transition:border-color .15s}
+.svc h3{font-size:20px}
+.situ{border-top:3px solid var(--aw-ink)}
+.cal-row{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px;margin-top:44px}
+.cal-row .aw-card b{display:block;font-family:var(--aw-sans);font-size:30px;line-height:1;color:var(--aw-ink);margin-bottom:12px}
+.close{text-align:center}
+.close .aw-h2{margin-left:auto;margin-right:auto;max-width:15em}
+.close .aw-lede{margin:0 auto}
+.close .aw-acts{justify-content:center}
+.head-row{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:16px 40px}
+.head-row .aw-h2{margin-bottom:0 !important}
+@media (max-width:860px){.cal-row{grid-template-columns:1fr}}
+</style>
+</head>
+<body class="aw">
+<!--AW:HEADER-->
+<main>
+
+<section class="aw-hero aw-hero-full">
+  <div class="aw-hero-media" aria-hidden="true">
+    <video class="aw-hero-video" autoplay muted loop playsinline preload="auto" tabindex="-1"></video>
+  </div>
+  <div class="aw-in aw-hero-copy">
+    <div class="aw-eyebrow">Distribution, tax and legacy planning</div>
+    <h1>You spent a lifetime building it. <span>Now make it last, and pass it on well.</span></h1>
+    <p class="aw-lede">An independent, family-run firm. We plan how your money supports you, what you'll owe on it and where it goes after you — and we manage it.</p>
+    <div class="aw-acts">
+      <a class="aw-btn aw-btn-gold book-link" href="{{BOOK_LINK}}" data-track="hero-book">Book a free call</a>
+      <a class="aw-btn aw-btn-line-dk" href="how-we-work.html" data-track="hero-how">See how we work</a>
+    </div>
+    <p class="aw-fine">Thirty to forty-five minutes by video. Nothing to prepare.</p>
+  </div>
+  <script>
+  (function(){
+    var v=document.querySelector('.aw-hero-video'); if(!v) return;
+    /* phones get the version cropped scene by scene for a tall screen; only one version downloads */
+    var phone=window.matchMedia('(max-width: 760px)').matches, sfx=phone?'-mobile':'';
+    v.poster='media/hero-poster'+sfx+'.jpg';
+    [['webm','video/webm'],['mp4','video/mp4']].forEach(function(t){var s=document.createElement('source');s.src='media/hero-montage'+sfx+'.'+t[0];s.type=t[1];v.appendChild(s);});
+    v.load();
+    var mq=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)');
+    function apply(){ if(mq&&mq.matches){ v.removeAttribute('autoplay'); v.pause(); } else { var p=v.play(); if(p&&p.catch) p.catch(function(){}); } }
+    apply(); if(mq&&mq.addEventListener) mq.addEventListener('change',apply);
+  })();
+  </script>
+</section>
+
+<section class="aw-trust2 aw-cream" style="border-top:0" aria-label="What to expect">
+  <div class="aw-in aw-grid aw-g4">
+    <div class="aw-ti"><span class="aw-ico aw-ico-sm"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v16M7 20h10M5 7h14"/><path d="M5 7l-2.5 6h5z"/><path d="M19 7l-2.5 6h5z"/></svg></span><div><b>Independent and family-run</b><span class="t">You know who you're working with, every time.</span></div></div>
+    <div class="aw-ti"><span class="aw-ico aw-ico-sm"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12V4h8l10 10-7 7z"/><circle cx="7.5" cy="8.5" r="1.3"/></svg></span><div><b>Fees up front</b><span class="t">What we charge, and how, before you sign anything.</span></div></div>
+    <div class="aw-ti"><span class="aw-ico aw-ico-sm"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 9l9-5 9 5"/><path d="M5 9v9M9.5 9v9M14.5 9v9M19 9v9"/><path d="M3 20h18"/></svg></span><div><b>Your name on the account</b><span class="t">Held at Schwab or Fidelity. We manage it, never hold it.</span></div></div>
+    <div class="aw-ti"><span class="aw-ico aw-ico-sm"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="13" height="12" rx="1.5"/><path d="M16 10l5-3v10l-5-3"/></svg></span><div><b>Wherever you live</b><span class="t">We meet by video, with households across the country.</span></div></div>
+  </div>
+</section>
+
+<section class="aw-sec">
+  <div class="aw-in">
+    <div class="head-row">
+      <div><div class="aw-eyebrow">What we do</div><h2 class="aw-h2">Four parts of your money, planned as one.</h2></div>
+      <a class="aw-more" href="services.html">All services</a>
+    </div>
+    <div class="aw-grid aw-g4" style="margin-top:44px">
+      <a class="aw-card svc" href="services/distribution-planning.html"><span class="aw-ico"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="6" width="18" height="12" rx="1.5"/><circle cx="12" cy="12" r="2.5"/><path d="M6.5 9.5v5M17.5 9.5v5"/></svg></span><h3 class="aw-h3">Distribution planning</h3><p>A monthly paycheck from your savings — what to draw first, how much is safe, and when to claim Social Security.</p><span class="aw-more">Learn more</span></a>
+      <a class="aw-card svc" href="services/investment-management.html"><span class="aw-ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l7 3v5c0 4.5-3 8-7 10-4-2-7-5.5-7-10V6z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></svg></span><h3 class="aw-h3">Investment management</h3><p>The money behind the plan. Avoiding a big loss comes before chasing a big gain.</p><span class="aw-more">Learn more</span></a>
+      <a class="aw-card svc" href="services/tax-planning.html"><span class="aw-ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h8l4 4v14H6z"/><path d="M14 3v4h4"/><path d="M9 17l6-6"/><circle cx="9.5" cy="11.5" r="1"/><circle cx="14.5" cy="16.5" r="1"/></svg></span><h3 class="aw-h3">Tax planning</h3><p>What you'll owe this year and after — and the moves that lower it before the deadlines.</p><span class="aw-more">Learn more</span></a>
+      <a class="aw-card svc" href="services/estate-legacy.html"><span class="aw-ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21v-7"/><path d="M12 14c-4 0-6.5-2.6-6.5-5.7C5.5 5.4 8.4 3 12 3s6.5 2.4 6.5 5.3c0 3.1-2.5 5.7-6.5 5.7z"/><path d="M8 21h8"/></svg></span><h3 class="aw-h3">Estate and legacy</h3><p>Who gets what, how it gets there, and how little of it the tax bill takes on the way.</p><span class="aw-more">Learn more</span></a>
+    </div>
+  </div>
+</section>
+
+<section class="aw-band" aria-label="How we think">
+  <figure class="aw-ph aw-ph-dk"><img src="images/working-review.jpg" alt="Alex and Andrew going over a printed plan" onerror="this.remove()"><figcaption><b>Photo</b>Alex and Andrew going over a printed plan</figcaption></figure>
+  <div class="aw-in">
+    <p class="q">Sometimes the answer is that you're fine and should change nothing. We write that down too.</p>
+  </div>
+</section>
+
+<section class="aw-sec aw-cream" style="border-top:0">
+  <div class="aw-in">
+    <div class="aw-eyebrow">Who we help</div>
+    <h2 class="aw-h2">Most people come to us at one of four moments.</h2>
+    <div class="aw-grid aw-g4" style="margin-top:44px">
+      <a class="aw-card situ" href="who-we-help.html#nearing"><span class="aw-ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 21V4"/><path d="M5 4h11l-2 4 2 4H5"/></svg></span><h3 class="aw-h3">Retiring in the next five years</h3><p>The choices you make now are hard to undo. See them clearly first.</p><span class="aw-more">Read more</span></a>
+      <a class="aw-card situ" href="who-we-help.html#retired"><span class="aw-ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 11l8-7 8 7"/><path d="M6 9.5V20h12V9.5"/><path d="M10 20v-5h4v5"/></svg></span><h3 class="aw-h3">Already retired</h3><p>The plan that got you here needs checking every year.</p><span class="aw-more">Read more</span></a>
+      <a class="aw-card situ" href="who-we-help.html#spouse"><span class="aw-ico"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="3.5"/><path d="M5 20c0-3.9 3.1-7 7-7s7 3.1 7 7"/></svg></span><h3 class="aw-h3">After losing a spouse</h3><p>What needs deciding now, and what can wait.</p><span class="aw-more">Read more</span></a>
+      <a class="aw-card situ" href="who-we-help.html#legacy"><span class="aw-ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21v-7"/><path d="M12 14c-4 0-6.5-2.6-6.5-5.7C5.5 5.4 8.4 3 12 3s6.5 2.4 6.5 5.3c0 3.1-2.5 5.7-6.5 5.7z"/><path d="M8 21h8"/></svg></span><h3 class="aw-h3">Planning what you leave</h3><p>You have more than you'll need. Now it's about who gets it, and how.</p><span class="aw-more">Read more</span></a>
+    </div>
+  </div>
+</section>
+
+<section class="aw-sec aw-dark">
+  <div class="aw-in">
+    <div class="aw-eyebrow">How it works</div>
+    <h2 class="aw-h2">A conversation, a written plan, then two reviews a year.</h2>
+    <div class="aw-steps">
+      <div><div class="n">1</div><h3>A free call</h3><p>30 to 45 minutes by video, all about you: your goals, your situation, and a purpose for every dollar.</p></div>
+      <div><div class="n">2</div><h3>A written plan</h3><p>Built from your actual statements. Where what you want and what your money supports disagree, we say so.</p></div>
+      <div><div class="n">3</div><h3>Put it in place</h3><p>Then we meet twice a year — summer to plan, fall to act before the December deadlines.</p></div>
+    </div>
+    <div class="aw-acts" style="margin-top:44px"><a class="aw-btn aw-btn-gold book-link" href="{{BOOK_LINK}}" data-track="steps-book">Book a free call</a><a class="aw-btn aw-btn-line-dk" href="how-we-work.html#fees">How we're paid</a></div>
+  </div>
+</section>
+
+<section class="aw-month" aria-label="This month" style="background:var(--aw-cream);border-bottom:1px solid var(--aw-rule)">
+  <div class="aw-in">
+    <div class="aw-m-copy">
+      <div class="aw-lab" id="mo-lab" style="color:var(--aw-brass)">This month · {{MO_NAME}}</div>
+      <h2 id="mo-q">{{MO_Q}}</h2>
+      <p id="mo-t" style="color:var(--aw-ink2)">{{MO_T}}</p>
+    </div>
+    <div class="aw-m-acts">
+      <a class="aw-btn aw-btn-ink" id="mo-read" href="{{MO_READ}}" data-track="month-read">Read the briefing</a>
+      <a class="aw-btn aw-btn-line" href="learn.html" data-track="month-calendar">See all twelve</a>
+    </div>
+  </div>
+</section>
+
+<section class="aw-sec">
+  <div class="aw-in">
+    <div class="head-row">
+      <div><div class="aw-eyebrow">Free to everyone</div><h2 class="aw-h2">The Retirement Decision Calendar.</h2></div>
+      <a class="aw-more" href="learn.html">Go to Learn</a>
+    </div>
+    <p class="aw-lede" style="margin-top:16px">Retirement asks a different question every month. We publish a briefing for each one and walk through it live. You don't have to be a client.</p>
+    <div class="cal-row">
+      <a class="aw-card aw-card-fill" href="learn.html"><b>12</b><h3 class="aw-h3">Monthly briefings</h3><p>One decision a month, January to December.</p><span class="aw-more">See the calendar</span></a>
+      <a class="aw-card aw-card-fill" href="learn.html#call"><b>1</b><h3 class="aw-h3">Live call a month</h3><p>Third Tuesday, 4:00pm Central. Recorded for the library.</p><span class="aw-more">Get the link</span></a>
+      <a class="aw-card aw-card-fill" href="toolbox.html"><b>15</b><h3 class="aw-h3">Planning tools</h3><p>Free calculators for the questions with a real answer.</p><span class="aw-more">Open the tools</span></a>
+    </div>
+  </div>
+</section>
+
+<section class="aw-sec aw-cream">
+  <div class="aw-in">
+    <div class="head-row">
+      <div><div class="aw-eyebrow">Who we are</div><h2 class="aw-h2">A family firm.</h2></div>
+      <a class="aw-more" href="about.html">Our story</a>
+    </div>
+    <div class="aw-grid aw-g4" style="margin-top:44px">
+      <div class="aw-person">
+        <figure class="aw-ph aw-r45"><img src="images/headshot-alex.jpg" alt="Alex Alston" onerror="this.remove()"><figcaption><b>Photo</b>Alex — headshot</figcaption></figure>
+        <h3>Alex Alston</h3><p class="aw-role">Lead Advisor</p>
+        <p>10 years in the business. Specializes in tax efficiency, distribution planning, estate planning and investment management.</p>
+      </div>
+      <div class="aw-person">
+        <figure class="aw-ph aw-r45"><img src="images/headshot-andrew.jpg" alt="Andrew Alston" onerror="this.remove()"><figcaption><b>Photo</b>Andrew — headshot</figcaption></figure>
+        <h3>Andrew Alston</h3><p class="aw-role">Lead Advisor</p>
+        <p>10 years in the business. Specializes in tax efficiency, distribution planning, estate planning and investment management.</p>
+      </div>
+      <div class="aw-person">
+        <figure class="aw-ph aw-r45"><img src="images/headshot-michael.jpg" alt="Michael Alston" onerror="this.remove()"><figcaption><b>Photo</b>Michael — headshot</figcaption></figure>
+        <h3>Michael Alston</h3><p class="aw-role">President</p>
+        <p>Spent his career as the consultant businesses brought in when something wasn't working, and brings that perspective to how the firm is run.</p>
+      </div>
+      <div class="aw-person">
+        <figure class="aw-ph aw-r45"><img src="images/headshot-aaron.jpg" alt="Aaron Alston" onerror="this.remove()"><figcaption><b>Photo</b>Aaron — headshot</figcaption></figure>
+        <h3>Aaron Alston</h3><p class="aw-role">Board Member</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="aw-sec">
+  <div class="aw-in aw-split">
+    <div class="aw-split-media" style="flex-basis:300px;max-width:420px">
+      <figure class="aw-ph aw-r45" style="box-shadow:0 18px 44px rgba(22,35,58,.12)"><img src="images/michael-document.jpg" alt="Michael Alston with the original Alston Financial Services incorporation document" onerror="this.remove()"><figcaption><b>Photo</b>Michael holding the original Alston Financial Services incorporation document</figcaption></figure>
+    </div>
+    <div class="aw-split-copy">
+      <div class="aw-eyebrow">The Alston name</div>
+      <h2 class="aw-h2">A name with a little history.</h2>
+      <p class="aw-lede" style="margin-bottom:16px">Long before Alston Wealth, there was Alston Financial Services — Michael's consulting company, the one businesses called when something wasn't working and they couldn't see why.</p>
+      <p class="aw-lede">Different business, same family, and the same first question we ask every household: what's the real goal underneath, and what's standing in the way of it?</p>
+      <p style="margin-top:28px"><a class="aw-more" href="about.html">Our story</a></p>
+    </div>
+  </div>
+</section>
+
+<section class="aw-sec aw-dark close">
+  <div class="aw-in">
+    <h2 class="aw-h2">Find out where you actually stand.</h2>
+    <p class="aw-lede">Thirty to forty-five minutes by video. Nothing to prepare. At the very least, you'll leave pointed in the right direction.</p>
+    <div class="aw-acts">
+      <a class="aw-btn aw-btn-gold book-link" href="{{BOOK_LINK}}" data-track="close-book">Book a free call</a>
+    </div>
+  </div>
+</section>
+
+</main>
+<!--AW:FOOTER-->
+<script>
+(function(){
+  var M=[['January','Where do I actually stand?','Net worth, real spending, and the one ratio the whole year turns on.'],['February','Will it last?','How long the money holds — and how the answer changes if the first five years go badly.'],['March','How does a pile become a paycheck?',"What's guaranteed for life, what's variable, and the gap between them."],['April','When should I take Social Security?','The largest single decision most households make — and why the survivor benefit matters more than the breakeven.'],['May','What about health insurance?','Bridging to 65, the subsidy cliff, and what Medicare does not cover.'],['June','What if one of us dies?','Income falls more than 20% and the tax bill often rises. Entirely predictable.'],['July','What will I owe this year?',"Build the number now so December isn't a guess — then fix your withholding."],['August','Is this my low-tax window?','What the next dollar actually costs — not what the bracket table says.'],['September','What if one of us needs care?','What care costs, what Medicare pays for, and what a long event does to the healthy spouse.'],['October','Is my coverage still right?','Formularies and networks change every year. Open enrollment closes December 7.'],['November','What is due by December 31?','Distributions, conversions, harvesting, charitable transfers — all in one month.'],['December','How did the year go?','Close every open item, then look back at the decisions rather than the balance.']];
+  var i=new Date().getMonth(),m=M[i],n=String(i+1).padStart(2,'0');
+  document.getElementById('mo-lab').textContent='This month · '+m[0];
+  document.getElementById('mo-q').textContent=m[1];
+  document.getElementById('mo-t').textContent=m[2];
+  document.getElementById('mo-read').href='read/'+n+'.html';
+})();
+</script>
+</body>
+</html>

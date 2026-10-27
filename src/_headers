@@ -1,0 +1,5 @@
+/images/blog/*
+  Access-Control-Allow-Origin: *
+
+/images/brand/*
+  Access-Control-Allow-Origin: *

@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Baseline — Alston Wealth</title>
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Alston Wealth">
+<meta property="og:title" content="The Baseline — Alston Wealth">
+<meta property="og:description" content="Twelve retirement decisions, twelve months. Free tools, briefings, and a live monthly call.">
+<meta property="og:image" content="{{SITE_URL}}/og-image.png">
+<meta property="og:url" content="{{SITE_URL}}/tools/01-the-baseline.html">
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-YJFKJ8MCV3"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}
+gtag('js',new Date());gtag('config','G-YJFKJ8MCV3');</script>
+<meta name="twitter:card" content="summary_large_image">
+
+<style>
+:root{
+  --ink:#16233A; --ink2:#46505F; --ink3:#5E6878;
+  --paper:#FBFAF7; --card:#FFFFFF; --rule:#E6E2D9; --rule2:#EDEAE3;
+  --brass:#8A5F24; --brass-tint:#F5EEE1;
+  --good:#2F6B4F; --good-tint:#E9F2ED;
+  --warn:#9A4A22; --warn-tint:#FBEDE5;
+  --u:"Archivo","Helvetica Neue",Helvetica,sans-serif;
+  --s:"Source Serif 4",Charter,"Bitstream Charter",Georgia,serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--paper);color:var(--ink);font-family:var(--s);
+  font-size:16px;line-height:1.5;-webkit-font-smoothing:antialiased;padding:0 0 80px}
+.wrap{max-width:940px;margin:0 auto;padding:0 20px}
+header{border-bottom:2px solid var(--ink);padding:34px 0 14px;margin-bottom:26px}
+.eyebrow{font-family:var(--u);font-weight:700;font-size:10px;letter-spacing:.19em;
+  text-transform:uppercase;color:var(--brass);margin-bottom:7px}
+h1{font-family:var(--u);font-weight:700;font-size:31px;letter-spacing:-.02em;line-height:1.05}
+.sub{color:var(--ink2);margin-top:9px;max-width:64ch;font-size:15.5px}
+.hdr-row{display:flex;justify-content:space-between;align-items:flex-end;gap:20px;flex-wrap:wrap}
+.firm{font-family:var(--u);font-weight:700;font-size:11px;letter-spacing:.15em;
+  text-transform:uppercase;color:var(--ink2);white-space:nowrap}
+
+section{background:var(--card);border:1px solid var(--rule);margin-bottom:20px}
+.shead{display:flex;align-items:baseline;gap:12px;padding:15px 20px;
+  border-bottom:1px solid var(--rule2);background:#FCFBF8;flex-wrap:wrap}
+.snum{font-family:var(--u);font-weight:700;font-size:10px;letter-spacing:.14em;color:var(--brass);
+  border:1px solid var(--brass);padding:3px 7px;flex:none}
+.stitle{font-family:var(--u);font-weight:700;font-size:16px;letter-spacing:-.01em}
+.shint{font-size:14px;color:var(--ink3);margin-left:auto;font-family:var(--u);font-weight:500}
+.sbody{padding:20px}
+.lede{color:var(--ink2);font-size:15px;margin-bottom:16px;max-width:68ch}
+
+.grid{display:grid;gap:12px}
+.g2{grid-template-columns:repeat(2,1fr)}
+.g3{grid-template-columns:repeat(3,1fr)}
+label.f{display:block}
+label.f span{display:block;font-family:var(--u);font-weight:600;font-size:11.5px;
+  letter-spacing:.05em;text-transform:uppercase;color:var(--ink2);margin-bottom:5px}
+label.f em{font-style:normal;color:var(--ink3);text-transform:none;letter-spacing:0;
+  font-weight:500;font-size:11px;display:block;margin-top:2px}
+input[type=text],select{width:100%;padding:10px 11px;border:1px solid var(--rule);
+  background:#fff;font-family:var(--u);font-size:15.5px;color:var(--ink);border-radius:0}
+input[type=text]:focus,select:focus{outline:2px solid var(--brass);outline-offset:-1px}
+
+.line{display:grid;grid-template-columns:1fr 140px;gap:10px 16px;align-items:center;
+  padding:9px 0;border-bottom:1px solid var(--rule2)}
+.line:last-of-type{border-bottom:none}
+.line label b{color:var(--ink);font-weight:600;display:block;font-family:var(--u);font-size:14px}
+.line label i{font-style:normal;font-size:12.5px;color:var(--ink3);display:block;margin-top:1px}
+.line input{text-align:right}
+.tot{display:flex;justify-content:space-between;align-items:baseline;
+  margin-top:14px;padding-top:13px;border-top:2px solid var(--ink);
+  font-family:var(--u);font-weight:700;font-size:16px}
+.subtot{display:flex;justify-content:space-between;align-items:baseline;
+  margin-top:10px;padding-top:9px;border-top:1px solid var(--rule);
+  font-family:var(--u);font-weight:600;font-size:14px;color:var(--ink2)}
+
+.toggle{display:flex;gap:0;margin-bottom:18px;border:1px solid var(--rule)}
+.toggle button{flex:1;border:none;border-right:1px solid var(--rule);background:#fff;
+  padding:11px;font-family:var(--u);font-weight:600;font-size:13.5px;color:var(--ink2);cursor:pointer}
+.toggle button:last-child{border-right:none}
+.toggle button.on{background:var(--ink);color:#fff}
+.toggle button:hover:not(.on){background:#F3F1EB}
+
+.rgrid{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--rule);border:1px solid var(--rule)}
+.r{background:#fff;padding:15px 16px}
+.r-l{font-family:var(--u);font-weight:600;font-size:10.5px;letter-spacing:.13em;
+  text-transform:uppercase;color:var(--ink3);margin-bottom:6px}
+.r-v{font-family:var(--u);font-weight:700;font-size:25px;letter-spacing:-.02em;line-height:1}
+.r-n{font-size:13.5px;color:var(--ink2);margin-top:7px;line-height:1.42}
+.r.hero{background:var(--brass-tint)} .r.hero .r-v{color:var(--brass)}
+.r.good{background:var(--good-tint)} .r.good .r-v{color:var(--good)}
+.r.warn{background:var(--warn-tint)} .r.warn .r-v{color:var(--warn)}
+.r.dead .r-v{color:var(--ink3)}
+
+/* coverage bar */
+.cov{border:1px solid var(--rule);background:#fff;padding:20px;margin-bottom:1px}
+.cov-h{font-family:var(--u);font-weight:600;font-size:10.5px;letter-spacing:.13em;
+  text-transform:uppercase;color:var(--ink3);margin-bottom:12px}
+.cov-n{font-family:var(--u);font-weight:700;font-size:42px;letter-spacing:-.03em;
+  line-height:.95;color:var(--brass);margin-bottom:4px}
+.cov-s{font-size:14.5px;color:var(--ink2);margin-bottom:16px}
+.track{height:26px;background:#EFEDE6;border:1px solid var(--rule);position:relative;overflow:hidden}
+.fill{height:100%;background:var(--brass);opacity:.85}
+.mark{position:absolute;top:0;bottom:0;width:1px;background:var(--ink);opacity:.35}
+.mark span{position:absolute;top:29px;left:-14px;width:30px;text-align:center;
+  font-family:var(--u);font-weight:600;font-size:10px;color:var(--ink3)}
+.cov-band{margin-top:34px;font-size:14.5px;line-height:1.45;color:var(--ink2);
+  padding-top:14px;border-top:1px solid var(--rule2)}
+.cov-band b{color:var(--ink);font-family:var(--u);font-size:13.5px;
+  letter-spacing:.04em;text-transform:uppercase;display:block;margin-bottom:4px}
+
+/* buckets */
+.buckets{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--rule);
+  border:1px solid var(--rule);margin-top:16px}
+.bk{background:#fff;padding:14px 15px}
+.bk-l{font-family:var(--u);font-weight:600;font-size:10.5px;letter-spacing:.1em;
+  text-transform:uppercase;color:var(--ink3);margin-bottom:5px}
+.bk-v{font-family:var(--u);font-weight:700;font-size:20px}
+.bk-p{font-size:13px;color:var(--ink2);margin-top:4px}
+
+.flags{margin-top:18px}
+.flag{border-left:3px solid;padding:12px 15px;margin-bottom:9px;font-size:14.5px;line-height:1.45}
+.flag b{font-family:var(--u);font-weight:700;font-size:12px;letter-spacing:.06em;
+  text-transform:uppercase;display:block;margin-bottom:4px}
+.flag.w{border-color:var(--warn);background:var(--warn-tint)} .flag.w b{color:var(--warn)}
+.flag.g{border-color:var(--good);background:var(--good-tint)} .flag.g b{color:var(--good)}
+.flag.n{border-color:var(--brass);background:var(--brass-tint)} .flag.n b{color:var(--brass)}
+
+.carry{background:var(--ink);color:#fff;padding:20px}
+.carry h3{font-family:var(--u);font-weight:700;font-size:13px;letter-spacing:.13em;
+  text-transform:uppercase;color:#C9A26B;margin-bottom:12px}
+.carry table{width:100%;border-collapse:collapse;font-size:14.5px}
+.carry td{padding:7px 0;border-bottom:1px solid rgba(255,255,255,.13)}
+.carry td:last-child{text-align:right;font-family:var(--u);font-weight:700}
+.carry tr:last-child td{border-bottom:none}
+.carry p{font-size:13.5px;color:#B9C2D0;margin-top:13px;line-height:1.5}
+
+.bar{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px}
+button.act{font-family:var(--u);font-weight:600;font-size:13.5px;letter-spacing:.03em;
+  padding:11px 18px;border:1px solid var(--ink);background:#fff;color:var(--ink);cursor:pointer;border-radius:0}
+button.act:hover{background:var(--ink);color:#fff}
+button.act.p{background:var(--ink);color:#fff}
+button.act.p:hover{background:var(--brass);border-color:var(--brass)}
+.foot{margin-top:26px;padding-top:16px;border-top:1px solid var(--rule);
+  font-size:13.5px;color:var(--ink3);line-height:1.5}
+.empty{color:var(--ink3);font-style:italic;font-size:15px}
+.hide{display:none}
+
+@media (max-width:720px){
+  .g2,.g3,.rgrid,.buckets{grid-template-columns:1fr}
+  h1{font-size:25px} .shint{margin-left:0;flex-basis:100%}
+  .line{grid-template-columns:1fr} .line input{text-align:left}
+  .cov-n{font-size:34px}
+}
+@media print{
+  body{background:#fff;padding:0;font-size:11pt}
+  .bar,.shint,.toggle{display:none}
+  section{break-inside:avoid;border-color:#bbb}
+  .carry{background:#fff;color:#000;border:2px solid #000}
+  .carry h3{color:#000} .carry p{color:#444} .carry td{border-bottom:1px solid #ccc}
+  .fill{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+}
+
+/* nav */
+nav{border-bottom:1px solid var(--rule);background:var(--paper);position:sticky;top:0;z-index:10;
+  margin:0 0 4px}
+nav .navwrap{max-width:940px;margin:0 auto;padding:0 20px;display:flex;align-items:center;
+  justify-content:space-between;height:58px;gap:20px}
+nav .brand{font-family:var(--u);font-weight:700;font-size:15px;color:var(--ink);
+  text-decoration:none;letter-spacing:-.01em}
+nav .brand:hover{color:var(--brass)}
+nav ul{list-style:none;display:flex;gap:22px;font-family:var(--u);font-size:13.5px;font-weight:600;
+  margin:0;padding:0}
+nav a{text-decoration:none;color:var(--ink2)}
+nav a:hover{color:var(--brass)}
+@media(max-width:620px){nav .hide-sm{display:none} nav ul{gap:16px}}
+@media print{nav{display:none}}
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap">
+<link rel="stylesheet" href="../assets/alston.css">
+</head>
+<body>
+<!--AW:HEADER-->
+
+<div class="wrap">
+
+<header>
+  <div class="hdr-row">
+    <div>
+      <div class="eyebrow">January · The Decision Calendar</div>
+      <h1>The Baseline</h1>
+    </div>
+    <div class="firm">Alex&nbsp;Alston</div>
+  </div>
+  <p class="sub">Four numbers: what you spend, what's essential, what's guaranteed for life,
+  and the ratio between the last two. Every other month this year measures against these.
+  About fifteen minutes with your statements.</p>
+</header>
+
+<!-- 1 SPENDING -->
+<section>
+  <div class="shead"><span class="snum">01</span><span class="stitle">What you actually spend</span>
+    <span class="shint">The number almost nobody has</span></div>
+  <div class="sbody">
+    <div class="toggle">
+      <button id="tTop" class="on" onclick="setMode('top')">Work backwards (faster, more accurate)</button>
+      <button id="tItem" onclick="setMode('item')">Itemize it</button>
+    </div>
+
+    <div id="modeTop">
+      <p class="lede">Don't build a budget — you'll miss things. Take everything that came in,
+      subtract what you saved and what you paid in tax. What's left, you spent. Including the
+      roof and the vet bill.</p>
+      <div class="line"><label><b>Everything that came in last year</b><i>Wages, Social Security, pension, withdrawals, interest — all of it</i></label><input type="text" id="inflow" inputmode="decimal" placeholder="$"></div>
+      <div class="line"><label><b>Added to savings and investments</b><i>Contributions and deposits, not market growth</i></label><input type="text" id="saved" inputmode="decimal" placeholder="$"></div>
+      <div class="line"><label><b>Total tax paid</b><i>Federal, state, and property</i></label><input type="text" id="taxPaid" inputmode="decimal" placeholder="$"></div>
+      <div class="tot"><span>You spent</span><span id="spentTop">$0</span></div>
+      <div class="line" style="margin-top:16px"><label><b>Of that, how much was essential?</b><i>What you'd still pay in a bad year — housing, food, insurance, healthcare, transport, taxes</i></label><input type="text" id="essTop" inputmode="decimal" placeholder="$"></div>
+    </div>
+
+    <div id="modeItem" class="hide">
+      <p class="lede"><b>Essential</b> — what you'd still be paying in a bad year. Annual figures.</p>
+      <div class="line"><label><b>Housing</b><i>Mortgage or rent, property tax, insurance, upkeep</i></label><input type="text" id="e1" inputmode="decimal" placeholder="$"></div>
+      <div class="line"><label><b>Utilities</b></label><input type="text" id="e2" inputmode="decimal" placeholder="$"></div>
+      <div class="line"><label><b>Food and household</b><i>Groceries and basics — not restaurants</i></label><input type="text" id="e3" inputmode="decimal" placeholder="$"></div>
+      <div class="line"><label><b>Healthcare</b><i>Premiums, prescriptions, out of pocket</i></label><input type="text" id="e4" inputmode="decimal" placeholder="$"></div>
+      <div class="line"><label><b>Transportation</b><i>Payments, fuel, insurance, maintenance</i></label><input type="text" id="e5" inputmode="decimal" placeholder="$"></div>
+      <div class="line"><label><b>Insurance</b><i>Life, umbrella, long-term care</i></label><input type="text" id="e6" inputmode="decimal" placeholder="$"></div>
+      <div class="line"><label><b>Taxes</b><i>Income tax you expect to pay</i></label><input type="text" id="e7" inputmode="decimal" placeholder="$"></div>
+      <div class="line"><label><b>Other essential</b><i>Support for family, debt payments</i></label><input type="text" id="e8" inputmode="decimal" placeholder="$"></div>
+      <div class="subtot"><span>Essential</span><span id="essSub">$0</span></div>
+
+      <p class="lede" style="margin-top:22px"><b>Discretionary</b> — what you could actually cut.
+      Honest test: if the market fell 30%, what would you really stop doing?</p>
+      <div class="line"><label><b>Travel</b></label><input type="text" id="d1" inputmode="decimal" placeholder="$"></div>
+      <div class="line"><label><b>Dining and entertainment</b></label><input type="text" id="d2" inputmode="decimal" placeholder="$"></div>
+      <div class="line"><label><b>Gifts and giving</b><i>Family, charity</i></label><input type="text" id="d3" inputmode="decimal" placeholder="$"></div>
+      <div class="line"><label><b>Hobbies and everything else</b></label><input type="text" id="d4" inputmode="decimal" placeholder="$"></div>
+      <div class="subtot"><span>Discretionary</span><span id="discSub">$0</span></div>
+      <div class="tot"><span>Total spending</span><span id="spentItem">$0</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- 2 GUARANTEED -->
+<section>
+  <div class="shead"><span class="snum">02</span><span class="stitle">What's guaranteed for life</span>
+    <span class="shint">Arrives regardless of markets</span></div>
+  <div class="sbody">
+    <p class="lede">Only income that shows up every month for as long as you live.
+    <b>Portfolio withdrawals don't count</b> — that's your own money and it can run out.
+    Neither does rental income or part-time work.</p>
+    <div class="line"><label><b>Your Social Security</b><i>Annual, before tax</i></label><input type="text" id="g1" inputmode="decimal" placeholder="$"></div>
+    <div class="line"><label><b>Spouse's Social Security</b></label><input type="text" id="g2" inputmode="decimal" placeholder="$"></div>
+    <div class="line"><label><b>Pension</b><i>Annual</i></label><input type="text" id="g3" inputmode="decimal" placeholder="$"></div>
+    <div class="line"><label><b>Lifetime annuity income</b><i>Only if it pays for life</i></label><input type="text" id="g4" inputmode="decimal" placeholder="$"></div>
+    <div class="tot"><span>Guaranteed for life</span><span id="gTot">$0</span></div>
+
+    <div class="grid g2" style="margin-top:20px">
+      <label class="f"><span>Does the pension adjust for inflation?</span><em>Most private pensions do not</em>
+        <select id="penCola"><option value="na" selected>No pension</option><option value="yes">Yes</option><option value="no">No</option></select></label>
+      <label class="f"><span>What does the survivor receive?</span><em>Pension survivor election</em>
+        <select id="penSurv"><option value="na" selected>No pension</option><option value="100">100%</option>
+        <option value="50">50%</option><option value="0">Nothing — single life</option></select></label>
+    </div>
+  </div>
+</section>
+
+<!-- 3 ASSETS -->
+<section>
+  <div class="shead"><span class="snum">03</span><span class="stitle">What you have</span>
+    <span class="shint">By tax treatment — it matters later</span></div>
+  <div class="sbody">
+    <div class="line"><label><b>Tax-deferred</b><i>Traditional IRA, 401(k), 403(b) — taxed on the way out</i></label><input type="text" id="a1" inputmode="decimal" placeholder="$"></div>
+    <div class="line"><label><b>Roth</b><i>Roth IRA and Roth 401(k) — never taxed again</i></label><input type="text" id="a2" inputmode="decimal" placeholder="$"></div>
+    <div class="line"><label><b>Taxable brokerage</b><i>Non-retirement investments</i></label><input type="text" id="a3" inputmode="decimal" placeholder="$"></div>
+    <div class="line"><label><b>Cash and savings</b></label><input type="text" id="a4" inputmode="decimal" placeholder="$"></div>
+    <div class="subtot"><span>Investable</span><span id="investSub">$0</span></div>
+    <div class="line" style="margin-top:14px"><label><b>Home equity</b><i>Real, but you can't spend it without moving or borrowing</i></label><input type="text" id="a5" inputmode="decimal" placeholder="$"></div>
+    <div class="line"><label><b>Other assets</b><i>Rental property, business, land</i></label><input type="text" id="a6" inputmode="decimal" placeholder="$"></div>
+    <div class="line"><label><b>Debt</b><i>Mortgage balance, loans, credit</i></label><input type="text" id="a7" inputmode="decimal" placeholder="$"></div>
+    <div class="tot"><span>Net worth</span><span id="nwTot">$0</span></div>
+  </div>
+</section>
+
+<!-- 4 RESULTS -->
+<section>
+  <div class="shead"><span class="snum">04</span><span class="stitle">Where you stand</span></div>
+  <div class="sbody">
+    <div id="cov"></div>
+    <div id="results" style="margin-top:1px"></div>
+    <div id="bk"></div>
+    <div class="flags" id="flags"></div>
+  </div>
+</section>
+
+<section style="border:none;background:none">
+  <div class="carry">
+    <h3>Carry forward — every month reads these</h3>
+    <div id="carrybody"><p style="color:#B9C2D0;font-size:14px">Fills in as you go.</p></div>
+  </div>
+</section>
+
+<div class="bar">
+  <button class="act p" onclick="window.print()">Print / Save as PDF</button>
+  <button class="act" onclick="dlCSV()">Download CSV</button>
+  <button class="act" onclick="resetAll()">Reset</button>
+</div>
+
+<div id="assistant-slot"></div>
+<script src="../assistant.js" data-mode="month" data-month="01" data-title="January — The Baseline"></script>
+
+<p class="foot">
+  These figures come entirely from what you enter. Do the spending calculation for two or three
+  years if you can — one year is a snapshot, three shows the pattern. Bring this to the January call.
+</p>
+
+
+
+</div>
+
+<script>
+const $=id=>document.getElementById(id);
+const money=n=>(n<0?'-$':'$')+Math.abs(Math.round(n)).toLocaleString('en-US');
+const num=id=>{const el=$(id);if(!el)return 0;const v=(el.value||'').replace(/[^0-9.\-]/g,'');const n=parseFloat(v);return isFinite(n)?n:0;};
+let MODE='top';
+
+function setMode(m){
+  MODE=m;
+  $('modeTop').className=m==='top'?'':'hide';
+  $('modeItem').className=m==='item'?'':'hide';
+  $('tTop').className=m==='top'?'on':'';
+  $('tItem').className=m==='item'?'on':'';
+  render();
+}
+
+function render(){
+  /* ---- spending ---- */
+  let spent=0, essential=0, discretionary=0;
+  if(MODE==='top'){
+    spent=Math.max(0,num('inflow')-num('saved')-num('taxPaid'));
+    essential=num('essTop');
+    discretionary=Math.max(0,spent-essential);
+    $('spentTop').textContent=money(spent);
+  } else {
+    essential=['e1','e2','e3','e4','e5','e6','e7','e8'].reduce((s,i)=>s+num(i),0);
+    discretionary=['d1','d2','d3','d4'].reduce((s,i)=>s+num(i),0);
+    spent=essential+discretionary;
+    $('essSub').textContent=money(essential);
+    $('discSub').textContent=money(discretionary);
+    $('spentItem').textContent=money(spent);
+  }
+
+  /* ---- guaranteed ---- */
+  const gTot=['g1','g2','g3','g4'].reduce((s,i)=>s+num(i),0);
+  $('gTot').textContent=money(gTot);
+
+  /* ---- assets ---- */
+  const deferred=num('a1'), roth=num('a2'), taxable=num('a3'), cash=num('a4');
+  const investable=deferred+roth+taxable+cash;
+  const home=num('a5'), other=num('a6'), debt=num('a7');
+  const netWorth=investable+home+other-debt;
+  $('investSub').textContent=money(investable);
+  $('nwTot').textContent=money(netWorth);
+
+  /* ---- coverage ratio ---- */
+  const ratio = essential>0 ? gTot/essential : 0;
+  const pct = Math.round(ratio*100);
+  const gapEss = Math.max(0, essential-gTot);
+  const gapTotal = Math.max(0, spent-gTot);
+  const wr = investable>0 ? gapTotal/investable : 0;
+
+  if(essential>0 && gTot>0){
+    let band;
+    if(ratio>=1){
+      band={t:'High coverage',
+        d:'Your essential expenses are fully covered by income that arrives regardless of what markets do. The portfolio exists for the good years — a bad market is uncomfortable rather than dangerous. Your real question this year is probably whether you are spending too little.'};
+    } else if(ratio>=.7){
+      band={t:'Solid coverage',
+        d:'Most of your bedrock is covered. The portfolio fills a modest gap, which means a bad market changes your discretionary spending rather than your ability to pay the bills. This is a comfortable place to be.'};
+    } else if(ratio>=.45){
+      band={t:'Middle coverage',
+        d:'This is where most households land. Your portfolio has a job it has to perform, sequence of returns matters enormously, and how you draw from it matters as much as what is in it. March and June are the months that speak to this directly.'};
+    } else {
+      band={t:'Low coverage',
+        d:'A large share of what you must pay each month depends on markets. That is not a verdict — it is where the year concentrates its work. March looks at closing the gap, and whether some of it should be made guaranteed.'};
+    }
+    const fillPct=Math.min(100,pct);
+    $('cov').innerHTML=`
+      <div class="cov">
+        <div class="cov-h">Coverage ratio — guaranteed income ÷ essential expenses</div>
+        <div class="cov-n">${pct}%</div>
+        <div class="cov-s">${money(gTot)} guaranteed for life against ${money(essential)} of essential expenses.</div>
+        <div class="track">
+          <div class="fill" style="width:${fillPct}%"></div>
+          <div class="mark" style="left:50%"><span>50%</span></div>
+          <div class="mark" style="left:75%"><span>75%</span></div>
+        </div>
+        <div class="cov-band"><b>${band.t}</b>${band.d}</div>
+      </div>`;
+  } else {
+    $('cov').innerHTML='<p class="empty">Enter your essential expenses and guaranteed income and the coverage ratio appears here.</p>';
+  }
+
+  /* ---- result cards ---- */
+  if(spent>0||gTot>0||investable>0){
+    const cards=[
+      {l:'The gap on essentials',v:money(gapEss),hero:gapEss>0,good:gapEss===0,
+       n:gapEss>0
+         ? `${money(gapEss)} a year of must-pay expenses has to come from the portfolio. That is ${money(gapEss/12)} a month your investments are responsible for producing, in every market.`
+         : 'Guaranteed income covers your essentials entirely. Everything the portfolio produces is for the life you want rather than the bills you owe.'},
+      {l:'The gap on total spending',v:money(gapTotal),
+       n:gapTotal>0
+         ? `Including discretionary, the portfolio needs to produce ${money(gapTotal)} a year — ${money(gapTotal/12)} a month.`
+         : 'Guaranteed income covers everything you spend.'},
+      {l:'That is a withdrawal rate of',v:investable>0?(wr*100).toFixed(1)+'%':'—',
+       warn:wr>.055, good:wr>0&&wr<=.04,
+       n:investable>0
+         ? (wr>.055
+            ? `Above the range most planning assumes is sustainable over a long retirement. February looks at this properly — including what happens if the first five years go badly.`
+            : wr<=.04
+              ? `Within the range most planning treats as sustainable. February tests it against a poor first decade.`
+              : `In the middle of the range where the answer depends on how long the money has to last and how the first years go. February works through it.`)
+         : 'Enter your investable assets to see this.'},
+      {l:'Investable assets',v:money(investable),
+       n:home>0?`Net worth is ${money(netWorth)}, but ${money(home)} of that is home equity — real, and not spendable without moving or borrowing against it.`:'Cash and investments you could actually draw on.'}
+    ];
+    $('results').innerHTML='<div class="rgrid">'+cards.map(c=>
+      `<div class="r ${c.hero?'hero':''} ${c.good?'good':''} ${c.warn?'warn':''}">
+        <div class="r-l">${c.l}</div><div class="r-v">${c.v}</div><div class="r-n">${c.n}</div></div>`).join('')+'</div>';
+  } else {
+    $('results').innerHTML='';
+  }
+
+  /* ---- tax buckets ---- */
+  if(investable>0){
+    const p=x=>((x/investable)*100).toFixed(0)+'%';
+    $('bk').innerHTML=`
+      <div class="buckets">
+        <div class="bk"><div class="bk-l">Taxed later</div><div class="bk-v">${money(deferred)}</div>
+          <div class="bk-p">${p(deferred)} — every dollar comes out as ordinary income and eventually forces required distributions.</div></div>
+        <div class="bk"><div class="bk-l">Never taxed again</div><div class="bk-v">${money(roth)}</div>
+          <div class="bk-p">${p(roth)} — no tax, no required distributions, and the best thing to leave behind.</div></div>
+        <div class="bk"><div class="bk-l">Already taxed</div><div class="bk-v">${money(taxable+cash)}</div>
+          <div class="bk-p">${p(taxable+cash)} — you owe tax only on gains, and it gets a stepped-up basis at death.</div></div>
+      </div>`;
+  } else { $('bk').innerHTML=''; }
+
+  /* ---- flags ---- */
+  const F=[];
+  if(investable>0 && deferred/investable>.75){
+    F.push({t:'n',h:'Nearly everything you have is in one tax bucket',
+      b:`${((deferred/investable)*100).toFixed(0)}% of your investable assets are tax-deferred. That means most of your future income is taxable at ordinary rates, required distributions will be large, and you have little flexibility to control taxable income in any given year. August looks at whether the low-bracket window is worth using.`});
+  }
+  if($('penCola').value==='no'){
+    F.push({t:'w',h:'Your pension does not adjust for inflation',
+      b:'It buys measurably less every year you live. Treat it as guaranteed in dollars but shrinking in purchasing power — over a 25-year retirement, a fixed pension can lose close to half its real value. That is a gap that grows quietly.'});
+  }
+  if($('penSurv').value==='0'){
+    F.push({t:'w',h:'Your pension ends at death — the survivor gets nothing',
+      b:'Combined with losing the smaller Social Security check, this can cut a surviving spouse\'s income sharply while most of the expenses stay. June works through exactly what that looks like for you.'});
+  } else if($('penSurv').value==='50'){
+    F.push({t:'n',h:'Your pension drops by half for the survivor',
+      b:'Worth knowing precisely, because it stacks with the loss of one Social Security check. June runs the survivor scenario.'});
+  }
+  if(essential>0 && gTot>0 && ratio<.45){
+    F.push({t:'n',h:'Your essentials depend on markets',
+      b:'With coverage under about 45%, a poor sequence of returns early in retirement is not just uncomfortable — it can force cuts to things you cannot easily cut. This is the case where making part of the gap guaranteed deserves a serious look. March is that month.'});
+  }
+  if(spent>0 && discretionary/spent<.10 && MODE==='item'){
+    F.push({t:'n',h:'Almost nothing is marked discretionary',
+      b:'Under 10% flexible spending means you have very little room to absorb a bad year without touching things that matter. Either the split needs another honest pass, or the plan needs more guaranteed income. Both are worth knowing now.'});
+  }
+  if(home>0 && netWorth>0 && home/netWorth>.5){
+    F.push({t:'n',h:'Over half your net worth is in the house',
+      b:`${money(home)} of ${money(netWorth)}. It is real wealth, but it produces no income and cannot be spent without moving or borrowing. Plan from the investable number, not the net worth number.`});
+  }
+  if(spent>0){
+    F.push({t:'n',h:'Run the spending number for three years if you can',
+      b:'One year is a snapshot — it either caught the roof or missed it. Three years shows the pattern, and the pattern is almost always higher than people expect.'});
+  }
+  $('flags').innerHTML=F.map(f=>`<div class="flag ${f.t}"><b>${f.h}</b>${f.b}</div>`).join('');
+
+  /* ---- carry forward ---- */
+  const rows=[
+    ['Total annual spending',money(spent)],
+    ['Essential expenses',money(essential)],
+    ['Discretionary expenses',money(discretionary)],
+    ['Guaranteed lifetime income',money(gTot)],
+    ['Coverage ratio',essential>0?pct+'%':'—'],
+    ['Gap on essentials',money(gapEss)],
+    ['Gap on total spending',money(gapTotal)],
+    ['Investable assets',money(investable)],
+    ['Implied withdrawal rate',investable>0?(wr*100).toFixed(1)+'%':'—'],
+    ['Net worth',money(netWorth)]
+  ];
+  $('carrybody').innerHTML='<table>'+rows.map(r=>`<tr><td>${r[0]}</td><td>${r[1]}</td></tr>`).join('')+'</table>'
+    +'<p>February tests the withdrawal rate against a bad first decade. March builds the paycheck around the gap. June runs the survivor version of the coverage ratio. July starts from the spending figure. Print this or save the CSV — you will use it all year.</p>';
+}
+
+function dlCSV(){
+  const rows=[['Field','Value']];
+  document.querySelectorAll('#carrybody tr').forEach(tr=>rows.push([tr.cells[0].textContent,tr.cells[1].textContent]));
+  document.querySelectorAll('.flag b').forEach(b=>rows.push(['Note',b.textContent]));
+  const csv=rows.map(r=>r.map(c=>'"'+String(c).replace(/"/g,'""')+'"').join(',')).join('\n');
+  const a=document.createElement('a');
+  a.href=URL.createObjectURL(new Blob([csv],{type:'text/csv'}));
+  a.download='baseline.csv'; a.click();
+}
+function resetAll(){
+  ['inflow','saved','taxPaid','essTop','e1','e2','e3','e4','e5','e6','e7','e8',
+   'd1','d2','d3','d4','g1','g2','g3','g4','a1','a2','a3','a4','a5','a6','a7']
+   .forEach(i=>{const el=$(i); if(el) el.value='';});
+  $('penCola').value='na'; $('penSurv').value='na';
+  render();
+}
+document.addEventListener('input',render);
+document.addEventListener('change',render);
+render();
+</script>
+<!--AW:FOOTER-->
+</body>
+</html>

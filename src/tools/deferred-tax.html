@@ -1,0 +1,1530 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>What Is Deferral Costing? — Alston Wealth</title>
+<meta name="description" content="An educational illustration of projected tax-deferred account value, estimated future tax liability, and estimated after-tax value.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Alston Wealth">
+<meta property="og:title" content="Tax-Deferred Account Calculator">
+<meta property="og:description" content="An educational illustration of projected tax-deferred account value, estimated future tax liability, and estimated after-tax value.">
+<meta property="og:image" content="{{SITE_URL}}/og-image.png">
+<meta property="og:url" content="{{SITE_URL}}/tools/deferred-tax.html">
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-YJFKJ8MCV3"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}
+gtag('js',new Date());gtag('config','G-YJFKJ8MCV3');</script>
+<meta name="twitter:card" content="summary_large_image">
+<meta name="robots" content="noindex">
+
+<style>
+/* ==========================================================================
+   Tax-Deferred Account Calculator
+   Palette: cool paper, near-black ink, deep spruce (client) vs brass (tax).
+   Type:    Archivo throughout (brand spec).
+   ========================================================================== */
+
+:root {
+  /* Brand palette -------------------------------------------------------
+     Alston Wealth brand-spec tokens (navy / brass)
+     White      #FFFFFF   Grey       #464646
+     Everything below is either one of those four or a tint derived from
+     them, so nothing off-palette enters the design.                     */
+
+  --rose:         #8A5F24;
+  --rose-deep:    #6E4B1C;  /* darkened rose, for small text on tinted fields */
+  --blue-grey:    #16233A;
+  --blue-grey-dk: #0F1A2C;  /* pressed / hover state */
+  --grey:         #46505F;
+
+  --paper:        #F7F6F2;  /* blue-grey tint */
+  --surface:      #FFFFFF;
+  --ink:          #16233A;  /* headings and headline figures */
+  --ink-2:        #46505F;  /* labels and body copy */
+  --ink-3:        #5E6878;  /* grey tint, for notes and eyebrows */
+  --rule:         #E6E2D9;
+  --rule-strong:  #C9C3B6;
+
+  --you:          #16233A;
+  --you-soft:     #E9ECF1;
+  --tax:          #8A5F24;
+  --tax-soft:     #F5EEE1;
+
+  --focus:        #16233A;
+
+  --step-0: 1rem;
+  --step-1: 1.125rem;
+  --step-2: 1.375rem;
+  --step-3: 1.875rem;
+  --step-hero: clamp(2.75rem, 6.5vw, 4.25rem);
+
+  --serif: "Archivo","Helvetica Neue",Helvetica,sans-serif;
+  --sans:  "Archivo","Helvetica Neue",Helvetica,sans-serif;
+  --mono:  "Archivo","Helvetica Neue",Helvetica,sans-serif;
+
+  --radius: 4px;
+  --gap: 1.5rem;
+  --shell: 1360px;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--sans);
+  font-size: var(--step-0);
+  line-height: 1.5;
+  font-variant-numeric: tabular-nums;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2 { margin: 0; font-family: var(--serif); font-weight: 600; letter-spacing: -0.01em; }
+p { margin: 0; }
+
+.sr-only {
+  position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+  overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0;
+}
+
+.skip-link {
+  position: absolute; left: -9999px; top: 0; z-index: 20;
+  background: var(--blue-grey); color: #fff; padding: 0.75rem 1rem; text-decoration: none;
+}
+.skip-link:focus { left: 0; }
+
+:focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: 2px;
+}
+
+/* ------------------------------- Top bar -------------------------------- */
+
+.topbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 1rem;
+  max-width: var(--shell);
+  margin: 0 auto;
+  padding: 2rem 1.5rem 1.25rem;
+  border-bottom: 1px solid var(--rule);
+}
+
+.eyebrow {
+  font-family: var(--mono);
+  font-size: 0.6875rem;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+  margin-bottom: 0.4rem;
+}
+
+.topbar h1 { font-size: var(--step-3); line-height: 1.1; }
+
+.topbar-actions { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+
+/* ------------------------------- Buttons -------------------------------- */
+
+.btn {
+  font-family: var(--sans);
+  font-size: 0.9375rem;
+  font-weight: 500;
+  line-height: 1;
+  padding: 0.7rem 1.1rem;
+  border-radius: var(--radius);
+  border: 1px solid var(--rule-strong);
+  background: var(--surface);
+  color: var(--ink);
+  cursor: pointer;
+  transition: background-color 120ms ease, border-color 120ms ease, color 120ms ease;
+}
+.btn:hover { border-color: var(--ink-2); }
+.btn:active { background: var(--paper); }
+
+.btn-primary {
+  background: var(--blue-grey);
+  border-color: var(--blue-grey);
+  color: #fff;
+  font-size: var(--step-1);
+  padding: 1.1rem 1.75rem;
+  font-weight: 600;
+}
+.btn-primary:hover { background: var(--blue-grey-dk); border-color: var(--blue-grey-dk); }
+
+.btn-wide { display: block; width: 100%; }
+
+#webinar-toggle[aria-pressed="true"] {
+  background: var(--rose);
+  border-color: var(--rose);
+  color: #fff;
+}
+
+/* ------------------------------- Layout --------------------------------- */
+
+.layout {
+  display: grid;
+  grid-template-columns: minmax(320px, 380px) 1fr;
+  gap: var(--gap);
+  align-items: start;
+  max-width: var(--shell);
+  margin: 0 auto;
+  padding: var(--gap) 1.5rem 0;
+}
+
+@media (max-width: 900px) {
+  .layout { grid-template-columns: 1fr; }
+}
+
+/* ------------------------------- Inputs --------------------------------- */
+
+.panel {
+  background: var(--surface);
+  border: 1px solid var(--rule);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+}
+
+.panel-title { font-size: var(--step-2); margin-bottom: 0.35rem; }
+
+.panel-note {
+  font-size: 0.875rem;
+  color: var(--ink-3);
+  margin-bottom: 1.5rem;
+}
+
+.field-group { border-top: 1px solid var(--rule); padding-top: 1.1rem; margin-top: 1.1rem; }
+.field-group:first-of-type { border-top: 0; padding-top: 0; margin-top: 0; }
+
+.group-label {
+  font-family: var(--mono);
+  font-size: 0.6875rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+  margin-bottom: 0.9rem;
+}
+
+.field { margin-bottom: 1rem; }
+.field:last-child { margin-bottom: 0; }
+
+.field-row { display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; }
+
+.field label,
+.timing legend {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--ink-2);
+  margin-bottom: 0.35rem;
+  padding: 0;
+}
+
+.control {
+  display: flex;
+  align-items: center;
+  background: var(--surface);
+  border: 1px solid var(--rule-strong);
+  border-radius: var(--radius);
+  transition: border-color 120ms ease, box-shadow 120ms ease;
+}
+.control:focus-within {
+  border-color: var(--focus);
+  box-shadow: 0 0 0 3px rgba(54, 73, 89, 0.16);
+}
+
+.control input {
+  flex: 1;
+  min-width: 0;
+  border: 0;
+  background: transparent;
+  font-family: var(--sans);
+  font-size: var(--step-1);
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+  color: var(--ink);
+  padding: 0.6rem 0.7rem;
+  width: 100%;
+}
+.control input:focus { outline: none; }
+
+.control-currency input { padding-left: 0.2rem; }
+.control-percent input { padding-right: 0.2rem; }
+
+.adorn {
+  font-family: var(--sans);
+  font-size: var(--step-1);
+  font-weight: 500;
+  color: var(--ink-3);
+  padding: 0 0.55rem;
+}
+.control-currency .adorn { padding-right: 0.15rem; }
+.control-percent .adorn { padding-left: 0.15rem; }
+
+.timing { border: 0; padding: 0; margin: 1rem 0 0; }
+
+.segmented {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border: 1px solid var(--rule-strong);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+.segmented input { position: absolute; opacity: 0; pointer-events: none; }
+.segmented label {
+  margin: 0;
+  text-align: center;
+  padding: 0.6rem 0.5rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--ink-2);
+  background: var(--surface);
+  cursor: pointer;
+  transition: background-color 120ms ease, color 120ms ease;
+}
+.segmented label + input + label { border-left: 1px solid var(--rule-strong); }
+.segmented input:checked + label { background: var(--blue-grey); color: #fff; }
+.segmented input:focus-visible + label { outline: 2px solid var(--focus); outline-offset: -2px; }
+
+.hint { font-size: 0.8125rem; color: var(--ink-3); margin-top: 0.5rem; line-height: 1.45; }
+
+.combined-readout {
+  font-family: var(--mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.04em;
+  color: var(--ink-3);
+  margin-top: 0.75rem;
+  display: flex;
+  justify-content: space-between;
+}
+.combined-readout strong { color: var(--ink); font-weight: 600; }
+
+.notice {
+  margin-top: 0.6rem;
+  font-size: 0.8125rem;
+  color: var(--rose-deep);
+  background: var(--tax-soft);
+  border-left: 2px solid var(--rose);
+  padding: 0.5rem 0.7rem;
+}
+
+/* ------------------------------- Results -------------------------------- */
+
+.results { display: grid; gap: var(--gap); }
+
+.headline {
+  background: var(--surface);
+  border: 1px solid var(--rule);
+  border-radius: var(--radius);
+  padding: 2rem 2rem 1.75rem;
+}
+
+.headline-label {
+  font-family: var(--mono);
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+  margin-bottom: 0.5rem;
+}
+
+.headline-value {
+  font-size: var(--step-hero);
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -0.03em;
+  font-variant-numeric: tabular-nums;
+}
+
+/* Signature element: the ownership split bar */
+
+.split-block {
+  margin: 0;
+  background: var(--surface);
+  border: 1px solid var(--rule);
+  border-radius: var(--radius);
+  padding: 1.5rem 2rem 1.75rem;
+}
+
+.split-caption {
+  font-family: var(--mono);
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+  margin-bottom: 1rem;
+}
+
+.split {
+  display: flex;
+  width: 100%;
+  height: 74px;
+  border-radius: 3px;
+  overflow: hidden;
+  background: var(--rule);
+}
+
+.split-seg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 0;
+  transition: width 320ms cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+.split-you { background: var(--you); }
+.split-tax { background: var(--tax); }
+
+.split-pct {
+  font-size: var(--step-2);
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: -0.01em;
+  white-space: nowrap;
+  padding: 0 0.5rem;
+}
+.split-seg.is-narrow .split-pct { display: none; }
+
+.split-legend {
+  display: flex;
+  justify-content: space-between;
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+.legend-tax { text-align: right; }
+
+.legend-label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  color: var(--ink-2);
+  margin-bottom: 0.3rem;
+}
+.legend-tax .legend-label { justify-content: flex-end; }
+
+.swatch { width: 10px; height: 10px; border-radius: 2px; flex: none; }
+.swatch-you { background: var(--you); }
+.swatch-tax { background: var(--tax); }
+
+.legend-value {
+  font-size: var(--step-3);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  font-variant-numeric: tabular-nums;
+}
+.legend-you .legend-value { color: var(--you); }
+.legend-tax .legend-value { color: var(--tax); }
+
+/* Secondary figures */
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--gap);
+}
+@media (max-width: 700px) {
+  .stats { grid-template-columns: 1fr; }
+}
+
+.stat {
+  background: var(--surface);
+  border: 1px solid var(--rule);
+  border-radius: var(--radius);
+  padding: 1.25rem 1.35rem;
+}
+
+.stat-label {
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: var(--ink-2);
+  margin-bottom: 0.4rem;
+}
+
+.stat-value {
+  font-size: var(--step-2);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  font-variant-numeric: tabular-nums;
+}
+
+.stat-note {
+  font-size: 0.75rem;
+  color: var(--ink-3);
+  line-height: 1.4;
+  margin-top: 0.5rem;
+}
+
+.disclosure {
+  font-size: 0.8125rem;
+  color: var(--ink-3);
+  line-height: 1.5;
+  border-left: 2px solid var(--rule-strong);
+  padding-left: 0.9rem;
+}
+
+/* ---------------------------- Documentation ----------------------------- */
+
+.docs {
+  max-width: var(--shell);
+  margin: 0 auto;
+  padding: var(--gap) 1.5rem 0;
+}
+
+.docs-panel {
+  margin-top: var(--gap);
+  background: var(--surface);
+  border: 1px solid var(--rule);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+}
+
+.docs-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+}
+
+.docs-summary { font-family: var(--mono); font-size: 0.8125rem; color: var(--ink-2); }
+
+.docs-actions { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+
+.table-scroll {
+  overflow-x: auto;
+  border: 1px solid var(--rule);
+  border-radius: var(--radius);
+  -webkit-overflow-scrolling: touch;
+}
+
+.ledger {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: var(--mono);
+  font-size: 0.8125rem;
+  white-space: nowrap;
+}
+
+.ledger th,
+.ledger td {
+  padding: 0.55rem 0.85rem;
+  text-align: right;
+  border-bottom: 1px solid var(--rule);
+}
+
+.ledger thead th {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background: var(--paper);
+  font-family: var(--sans);
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--ink-2);
+  text-align: right;
+  white-space: normal;
+  vertical-align: bottom;
+  border-bottom: 1px solid var(--rule-strong);
+}
+
+.ledger .col-year,
+.ledger tbody td:first-child,
+.ledger tfoot td:first-child { text-align: left; }
+
+.ledger tbody tr:nth-child(even) td { background: #F7F9FA; }
+.ledger tbody tr:hover td { background: var(--you-soft); }
+.ledger tbody tr:last-child td { border-bottom: 0; }
+
+.ledger .cell-tax { color: var(--tax); }
+.ledger .cell-you { color: var(--you); }
+
+.ledger tfoot td {
+  background: var(--paper);
+  font-weight: 600;
+  color: var(--ink);
+  border-top: 2px solid var(--rule-strong);
+  border-bottom: 0;
+}
+
+.reconcile {
+  font-family: var(--mono);
+  font-size: 0.75rem;
+  color: var(--ink-3);
+  margin-top: 0.9rem;
+  line-height: 1.6;
+}
+
+/* ----------------------------- Methodology ------------------------------ */
+
+.methodology {
+  max-width: var(--shell);
+  margin: 0 auto;
+  padding: 3rem 1.5rem 4rem;
+}
+
+.method-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 3rem;
+  border-top: 1px solid var(--rule);
+  padding-top: 2rem;
+}
+@media (max-width: 900px) {
+  .method-grid { grid-template-columns: 1fr; gap: 2rem; }
+}
+
+.method-title { font-size: var(--step-1); margin-bottom: 1rem; }
+
+.method-list { margin: 0; }
+.method-list dt {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--ink);
+  margin-top: 0.9rem;
+}
+.method-list dt:first-child { margin-top: 0; }
+.method-list dd {
+  margin: 0.2rem 0 0;
+  font-size: 0.875rem;
+  color: var(--ink-2);
+  line-height: 1.55;
+}
+
+.method-exclusions {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  columns: 2;
+  column-gap: 1.5rem;
+}
+@media (max-width: 520px) {
+  .method-exclusions { columns: 1; }
+}
+.method-exclusions li {
+  font-size: 0.875rem;
+  color: var(--ink-2);
+  padding: 0.3rem 0 0.3rem 0.9rem;
+  border-left: 1px solid var(--rule);
+  break-inside: avoid;
+  margin-bottom: 0.2rem;
+}
+
+.method-note {
+  font-size: 0.8125rem;
+  color: var(--ink-3);
+  line-height: 1.55;
+  margin-top: 1.25rem;
+}
+
+/* ============================ WEBINAR MODE ==============================
+   Larger figures, larger controls, instructional copy and methodology
+   hidden. The documentation button stays visible.
+   ====================================================================== */
+
+body.webinar-mode { background: #FFFFFF; }
+
+body.webinar-mode .instruction { display: none; }
+body.webinar-mode .methodology { display: none; }
+body.webinar-mode .topbar { padding-bottom: 1rem; }
+body.webinar-mode .topbar h1 { font-size: 2.25rem; }
+
+body.webinar-mode .layout { grid-template-columns: minmax(360px, 430px) 1fr; }
+@media (max-width: 900px) {
+  body.webinar-mode .layout { grid-template-columns: 1fr; }
+}
+
+body.webinar-mode .panel-title { font-size: 1.625rem; }
+body.webinar-mode .group-label { font-size: 0.8125rem; }
+body.webinar-mode .field label,
+body.webinar-mode .timing legend { font-size: 1.0625rem; }
+body.webinar-mode .control input,
+body.webinar-mode .adorn { font-size: 1.5rem; }
+body.webinar-mode .control input { padding-top: 0.5rem; padding-bottom: 0.5rem; }
+body.webinar-mode .segmented label { font-size: 1.0625rem; padding: 0.75rem 0.5rem; }
+body.webinar-mode .combined-readout { font-size: 0.9375rem; }
+
+body.webinar-mode .headline { padding: 2.5rem 2.5rem 2.25rem; }
+body.webinar-mode .headline-label { font-size: 0.9375rem; }
+body.webinar-mode .headline-value { font-size: clamp(3.5rem, 8vw, 6rem); }
+
+body.webinar-mode .split { height: 108px; }
+body.webinar-mode .split-caption { font-size: 0.9375rem; }
+body.webinar-mode .split-pct { font-size: 2.5rem; }
+body.webinar-mode .legend-label { font-size: 1.0625rem; }
+body.webinar-mode .legend-value { font-size: 2.5rem; }
+
+body.webinar-mode .stat { padding: 1.5rem 1.6rem; }
+body.webinar-mode .stat-label { font-size: 1rem; }
+body.webinar-mode .stat-value { font-size: 2rem; }
+
+body.webinar-mode .disclosure { font-size: 0.9375rem; }
+body.webinar-mode .btn { font-size: 1.0625rem; padding: 0.8rem 1.25rem; }
+body.webinar-mode .btn-primary { font-size: 1.375rem; padding: 1.25rem 2rem; }
+body.webinar-mode .ledger { font-size: 0.9375rem; }
+body.webinar-mode .ledger thead th { font-size: 0.875rem; }
+
+/* ============================== PRINTING ================================ */
+
+@media print {
+  :root { --paper: #FFFFFF; }
+
+  body { background: #fff; font-size: 10.5pt; }
+
+  .topbar-actions,
+  .skip-link,
+  #show-docs,
+  .docs-actions,
+  .stat-note,
+  .hint,
+  .panel-note { display: none !important; }
+
+  .topbar { padding: 0 0 0.5rem; border-bottom: 1pt solid #B9C0C6; }
+  .topbar h1 { font-size: 18pt; }
+
+  .layout,
+  .docs,
+  .methodology { max-width: none; padding: 0.75rem 0 0; }
+
+  .layout { grid-template-columns: 1fr 1.6fr; gap: 0.75rem; }
+
+  .panel,
+  .headline,
+  .split-block,
+  .stat,
+  .docs-panel,
+  .table-scroll { border: 1pt solid #B9C0C6; break-inside: avoid; }
+
+  .headline-value { font-size: 26pt; }
+  .legend-value { font-size: 15pt; }
+  .stat-value { font-size: 13pt; }
+  .split { height: 40px; }
+  .split-pct { font-size: 13pt; }
+  .split-seg { transition: none; }
+
+  .docs-panel { padding: 0.5rem; }
+  .table-scroll { overflow: visible; }
+
+  .ledger { font-size: 8pt; }
+  .ledger th, .ledger td { padding: 3pt 5pt; }
+  .ledger thead { display: table-header-group; }
+  .ledger tr { break-inside: avoid; }
+  .ledger thead th { position: static; background: #EBEEF0; }
+  .ledger tbody tr:nth-child(even) td { background: #F7F9FA; }
+
+  .methodology { break-before: page; }
+  .method-grid { border-top: 0; }
+
+  /* Colour must survive the print pipeline for the split bar to read. */
+  .split-you, .split-tax, .ledger thead th, .ledger tbody tr:nth-child(even) td,
+  .swatch-you, .swatch-tax, .ledger tfoot td {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+}
+
+/* =========================== REDUCED MOTION ============================= */
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* --------------------------- structural utilities ----------------------- */
+
+.topbar-title,
+.method-col,
+.legend-item { min-width: 0; }
+
+.btn-quiet { color: var(--ink-2); }
+.btn-quiet:hover { color: var(--ink); }
+
+
+/* nav */
+nav{border-bottom:1px solid var(--rule);background:var(--paper);position:sticky;top:0;z-index:10;
+  margin:0 0 4px}
+nav .navwrap{max-width:940px;margin:0 auto;padding:0 20px;display:flex;align-items:center;
+  justify-content:space-between;height:58px;gap:20px}
+nav .brand{font-family:var(--u);font-weight:700;font-size:15px;color:var(--ink);
+  text-decoration:none;letter-spacing:-.01em}
+nav .brand:hover{color:var(--brass)}
+nav ul{list-style:none;display:flex;gap:22px;font-family:var(--u);font-size:13.5px;font-weight:600;
+  margin:0;padding:0}
+nav a{text-decoration:none;color:var(--ink2)}
+nav a:hover{color:var(--brass)}
+@media(max-width:620px){nav .hide-sm{display:none} nav ul{gap:16px}}
+@media print{nav{display:none}}
+.layout > *, .layout > * > *, .stats > *{min-width:0}
+@media (max-width:480px){.layout{padding-left:1rem;padding-right:1rem}}
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap">
+<link rel="stylesheet" href="../assets/alston.css">
+</head>
+<body>
+<!--AW:HEADER-->
+
+
+<a class="skip-link" href="#results">Skip to results</a>
+
+<header class="topbar">
+  <div class="topbar-title">
+    <p class="eyebrow">Educational illustration</p>
+    <h1>Tax-Deferred Account Calculator</h1>
+  </div>
+  <div class="topbar-actions">
+    <button type="button" id="webinar-toggle" class="btn btn-quiet" aria-pressed="false">Webinar mode</button>
+    <button type="button" id="reset-btn" class="btn btn-quiet">Reset calculator</button>
+  </div>
+</header>
+
+<main class="layout">
+
+  <!-- ============================= INPUTS ============================= -->
+  <section class="panel" aria-labelledby="assumptions-heading">
+    <h2 class="panel-title" id="assumptions-heading">Assumptions</h2>
+    <p class="panel-note instruction">Every figure below is editable. Results update as you type.</p>
+
+    <div class="field-group">
+      <p class="group-label">The account</p>
+
+      <div class="field">
+        <label for="balance">Current tax-deferred balance</label>
+        <div class="control control-currency">
+          <span class="adorn" aria-hidden="true">$</span>
+          <input type="number" id="balance" name="balance" value="500000" min="0" max="100000000" step="1000" inputmode="decimal">
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="contribution">Annual pre-tax contribution</label>
+        <div class="control control-currency">
+          <span class="adorn" aria-hidden="true">$</span>
+          <input type="number" id="contribution" name="contribution" value="20000" min="0" max="1000000" step="500" inputmode="decimal">
+        </div>
+      </div>
+
+      <div class="field-row">
+        <div class="field">
+          <label for="years">Years invested</label>
+          <div class="control">
+            <input type="number" id="years" name="years" value="20" min="1" max="60" step="1" inputmode="numeric">
+          </div>
+        </div>
+        <div class="field">
+          <label for="rate">Annual return</label>
+          <div class="control control-percent">
+            <input type="number" id="rate" name="rate" value="6" min="-20" max="30" step="0.1" inputmode="decimal">
+            <span class="adorn" aria-hidden="true">%</span>
+          </div>
+        </div>
+      </div>
+
+      <fieldset class="field timing">
+        <legend>Contributions are made</legend>
+        <div class="segmented">
+          <input type="radio" id="timing-end" name="timing" value="end" checked>
+          <label for="timing-end">End of year</label>
+          <input type="radio" id="timing-begin" name="timing" value="begin">
+          <label for="timing-begin">Beginning of year</label>
+        </div>
+        <p class="hint instruction">Beginning-of-year contributions earn a full year of growth in the year they are made.</p>
+      </fieldset>
+    </div>
+
+    <div class="field-group">
+      <p class="group-label">Tax rates today</p>
+      <div class="field-row">
+        <div class="field">
+          <label for="current-federal">Federal</label>
+          <div class="control control-percent">
+            <input type="number" id="current-federal" name="current-federal" value="24" min="0" max="100" step="0.1" inputmode="decimal">
+            <span class="adorn" aria-hidden="true">%</span>
+          </div>
+        </div>
+        <div class="field">
+          <label for="current-state">State</label>
+          <div class="control control-percent">
+            <input type="number" id="current-state" name="current-state" value="0" min="0" max="100" step="0.1" inputmode="decimal">
+            <span class="adorn" aria-hidden="true">%</span>
+          </div>
+        </div>
+      </div>
+      <p class="combined-readout">Combined today <strong id="combined-current">24.0%</strong></p>
+    </div>
+
+    <div class="field-group">
+      <p class="group-label">Tax rates at withdrawal</p>
+      <div class="field-row">
+        <div class="field">
+          <label for="future-federal">Federal</label>
+          <div class="control control-percent">
+            <input type="number" id="future-federal" name="future-federal" value="28" min="0" max="100" step="0.1" inputmode="decimal">
+            <span class="adorn" aria-hidden="true">%</span>
+          </div>
+        </div>
+        <div class="field">
+          <label for="future-state">State</label>
+          <div class="control control-percent">
+            <input type="number" id="future-state" name="future-state" value="0" min="0" max="100" step="0.1" inputmode="decimal">
+            <span class="adorn" aria-hidden="true">%</span>
+          </div>
+        </div>
+      </div>
+      <p class="combined-readout">Combined later <strong id="combined-future">28.0%</strong></p>
+      <p class="notice" id="cap-notice" hidden>A combined rate above 100% is capped at 100% for this illustration.</p>
+    </div>
+  </section>
+
+  <!-- ============================ RESULTS ============================= -->
+  <section class="results" id="results" aria-labelledby="results-heading" aria-live="polite">
+    <h2 class="sr-only" id="results-heading">Projected results</h2>
+
+    <div class="headline">
+      <p class="headline-label">Projected account value in <span id="headline-years">20</span> years</p>
+      <p class="headline-value" id="future-value">$2,339,280</p>
+    </div>
+
+    <!-- Signature element: the ownership split -->
+    <figure class="split-block">
+      <figcaption class="split-caption">Who owns the projected balance</figcaption>
+      <div class="split" id="split-bar" role="img" aria-label="Ownership breakdown">
+        <div class="split-seg split-you" id="seg-you" style="width:72%"><span class="split-pct" id="pct-you">72%</span></div>
+        <div class="split-seg split-tax" id="seg-tax" style="width:28%"><span class="split-pct" id="pct-tax">28%</span></div>
+      </div>
+      <div class="split-legend">
+        <div class="legend-item legend-you">
+          <p class="legend-label"><span class="swatch swatch-you" aria-hidden="true"></span>Estimated client after-tax portion</p>
+          <p class="legend-value" id="client-portion">$1,684,281</p>
+        </div>
+        <div class="legend-item legend-tax">
+          <p class="legend-label"><span class="swatch swatch-tax" aria-hidden="true"></span>Estimated future tax liability</p>
+          <p class="legend-value" id="government-portion">$654,998</p>
+        </div>
+      </div>
+    </figure>
+
+    <div class="stats">
+      <div class="stat">
+        <p class="stat-label">Total contributions</p>
+        <p class="stat-value" id="total-contributions">$400,000</p>
+        <p class="stat-note instruction">Sum of annual pre-tax contributions. Excludes the starting balance.</p>
+      </div>
+      <div class="stat">
+        <p class="stat-label">Total investment growth</p>
+        <p class="stat-value" id="total-growth">$1,439,280</p>
+        <p class="stat-note instruction">Projected value less the starting balance and all contributions.</p>
+      </div>
+      <div class="stat">
+        <p class="stat-label">Estimated taxes deferred</p>
+        <p class="stat-value" id="taxes-deferred">$96,000</p>
+        <p class="stat-note instruction">Contributions multiplied by the combined tax rate today.</p>
+      </div>
+    </div>
+
+    <p class="disclosure">This is an educational illustration, not an individualized tax calculation, tax advice, or a projection of any specific account.</p>
+  </section>
+</main>
+
+<!-- ========================== DOCUMENTATION ========================== -->
+<section class="docs" aria-labelledby="docs-heading">
+  <h2 class="sr-only" id="docs-heading">Year-by-year documentation</h2>
+
+  <button type="button" id="show-docs" class="btn btn-primary btn-wide" aria-expanded="false" aria-controls="docs-panel">
+    Show documentation
+  </button>
+
+  <div id="docs-panel" class="docs-panel" hidden>
+    <div class="docs-header">
+      <div>
+        <p class="eyebrow">Year-by-year detail</p>
+        <p class="docs-summary" id="docs-summary">20 years &middot; 6.0% annual return &middot; contributions at end of year &middot; 24.0% combined today, 28.0% at withdrawal</p>
+      </div>
+      <div class="docs-actions">
+        <button type="button" id="download-csv" class="btn btn-quiet">Download CSV</button>
+        <button type="button" id="print-docs" class="btn btn-quiet">Print or save as PDF</button>
+        <button type="button" id="hide-docs" class="btn btn-quiet">Hide documentation</button>
+      </div>
+    </div>
+
+    <div class="table-scroll">
+      <table class="ledger" id="ledger">
+        <caption class="sr-only">Year-by-year projection of account balance, contributions, growth, and estimated taxes</caption>
+        <thead>
+          <tr>
+            <th scope="col" class="col-year">Year</th>
+            <th scope="col">Beginning balance</th>
+            <th scope="col">Contribution</th>
+            <th scope="col">Investment growth</th>
+            <th scope="col">Ending balance</th>
+            <th scope="col">Cumulative contributions</th>
+            <th scope="col">Taxes deferred to date</th>
+            <th scope="col">Est. future tax liability</th>
+            <th scope="col">Est. client after-tax value</th>
+          </tr>
+        </thead>
+        <tbody id="ledger-body"></tbody>
+        <tfoot id="ledger-foot"></tfoot>
+      </table>
+    </div>
+
+    <p class="reconcile" id="reconcile-line"></p>
+  </div>
+</section>
+
+<!-- ========================== METHODOLOGY =========================== -->
+<footer class="methodology">
+  <div class="method-grid">
+    <div class="method-col">
+      <h2 class="method-title">How each figure is calculated</h2>
+      <dl class="method-list">
+        <dt>Projected account value</dt>
+        <dd>The balance is compounded annually. With end-of-year contributions, the year's growth equals the beginning balance times the annual return, and the contribution is added after growth is applied. With beginning-of-year contributions, the contribution is added first and the full amount grows for the year.</dd>
+
+        <dt>Total contributions</dt>
+        <dd>The annual contribution multiplied by the number of years. The starting balance is not counted as a contribution.</dd>
+
+        <dt>Total investment growth</dt>
+        <dd>The projected account value less the starting balance and less total contributions. It also equals the sum of the growth column in the table.</dd>
+
+        <dt>Estimated taxes deferred</dt>
+        <dd>Cumulative pre-tax contributions multiplied by the combined federal and state tax rate entered for today.</dd>
+
+        <dt>Estimated future tax liability</dt>
+        <dd>The projected account balance multiplied by the combined federal and state tax rate entered for withdrawal.</dd>
+
+        <dt>Estimated client after-tax value</dt>
+        <dd>The projected account balance less the estimated future tax liability.</dd>
+
+        <dt>Ownership percentages</dt>
+        <dd>The client percentage is the after-tax value divided by the projected balance. The tax percentage is the future tax liability divided by the projected balance, which equals the combined future tax rate.</dd>
+      </dl>
+    </div>
+
+    <div class="method-col">
+      <h2 class="method-title">What this calculator does not account for</h2>
+      <ul class="method-exclusions">
+        <li>Graduated tax brackets</li>
+        <li>Deductions or credits</li>
+        <li>Required minimum distributions</li>
+        <li>Withdrawal timing</li>
+        <li>Social Security taxation</li>
+        <li>Medicare IRMAA</li>
+        <li>Changes in tax law</li>
+        <li>State tax deductibility</li>
+        <li>Tax-free basis</li>
+        <li>Employer matching contributions, unless entered as part of the annual contribution</li>
+      </ul>
+      <p class="method-note">A single flat rate is applied to the entire balance rather than to distributions as they occur. Actual results depend on future tax law, the timing and size of withdrawals, and each individual's full tax picture.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+/*
+ * calc.js — projection engine for the Tax-Deferred Account Calculator.
+ *
+ * Pure functions only: no DOM access, no side effects. This file loads in the
+ * browser as a plain <script> and also exports for Node so the math can be
+ * unit-tested from the command line (see test-calc.js).
+ */
+
+(function (root) {
+  'use strict';
+
+  /** Clamp a number into [min, max]; non-numeric input falls back to min. */
+  function clamp(value, min, max) {
+    var n = Number(value);
+    if (!isFinite(n)) return min;
+    if (n < min) return min;
+    if (n > max) return max;
+    return n;
+  }
+
+  /**
+   * Build the full year-by-year projection.
+   *
+   * @param {Object} input
+   * @param {number} input.balance        Current tax-deferred balance (dollars)
+   * @param {number} input.contribution   Annual pre-tax contribution (dollars)
+   * @param {number} input.years          Number of years invested
+   * @param {number} input.rate           Expected annual return (percent, e.g. 6)
+   * @param {number} input.currentFederal Current federal tax rate (percent)
+   * @param {number} input.currentState   Current state tax rate (percent)
+   * @param {number} input.futureFederal  Expected future federal tax rate (percent)
+   * @param {number} input.futureState    Expected future state tax rate (percent)
+   * @param {string} input.timing         'begin' or 'end'
+   * @returns {Object} projection
+   */
+  function buildProjection(input) {
+    var balance = clamp(input.balance, 0, 1e11);
+    var contribution = clamp(input.contribution, 0, 1e9);
+    var years = Math.round(clamp(input.years, 0, 60));
+    var rate = clamp(input.rate, -20, 30) / 100;
+    var timing = input.timing === 'begin' ? 'begin' : 'end';
+
+    // Combined rates are capped at 100% so the illustration can never show a
+    // negative after-tax value.
+    var currentRaw = clamp(input.currentFederal, 0, 100) + clamp(input.currentState, 0, 100);
+    var futureRaw = clamp(input.futureFederal, 0, 100) + clamp(input.futureState, 0, 100);
+    var currentCombined = Math.min(currentRaw, 100) / 100;
+    var futureCombined = Math.min(futureRaw, 100) / 100;
+
+    var rows = [];
+    var beginning = balance;
+    var cumulativeContributions = 0;
+    var totalGrowth = 0;
+
+    for (var year = 1; year <= years; year++) {
+      var growth;
+      var ending;
+
+      if (timing === 'begin') {
+        // Contribution is added before the year's growth is calculated.
+        growth = (beginning + contribution) * rate;
+        ending = beginning + contribution + growth;
+      } else {
+        // Growth is calculated on the beginning balance; contribution added after.
+        growth = beginning * rate;
+        ending = beginning + growth + contribution;
+      }
+
+      cumulativeContributions += contribution;
+      totalGrowth += growth;
+
+      var futureTax = ending * futureCombined;
+
+      rows.push({
+        year: year,
+        beginning: beginning,
+        contribution: contribution,
+        growth: growth,
+        ending: ending,
+        cumulativeContributions: cumulativeContributions,
+        taxesDeferredToDate: cumulativeContributions * currentCombined,
+        futureTaxLiability: futureTax,
+        clientAfterTax: ending - futureTax
+      });
+
+      beginning = ending;
+    }
+
+    var futureValue = years > 0 ? rows[rows.length - 1].ending : balance;
+    var governmentPortion = futureValue * futureCombined;
+    var clientPortion = futureValue - governmentPortion;
+
+    return {
+      rows: rows,
+      years: years,
+      timing: timing,
+      startingBalance: balance,
+      currentCombined: currentCombined,
+      futureCombined: futureCombined,
+      combinedWasCapped: currentRaw > 100 || futureRaw > 100,
+      futureValue: futureValue,
+      totalContributions: cumulativeContributions,
+      totalGrowth: totalGrowth,
+      taxesDeferred: cumulativeContributions * currentCombined,
+      governmentPortion: governmentPortion,
+      clientPortion: clientPortion,
+      clientPercent: futureValue > 0 ? (clientPortion / futureValue) * 100 : 0,
+      governmentPercent: futureValue > 0 ? (governmentPortion / futureValue) * 100 : 0
+    };
+  }
+
+  var api = { buildProjection: buildProjection, clamp: clamp };
+
+  if (typeof module !== 'undefined' && module.exports) {
+    module.exports = api;
+  }
+  root.TDCalc = api;
+})(typeof window !== 'undefined' ? window : globalThis);
+
+</script>
+<script>
+/*
+ * app.js — UI layer for the Tax-Deferred Account Calculator.
+ * All arithmetic lives in calc.js; this file reads inputs, renders output,
+ * and handles the documentation table, CSV export, printing, reset, and
+ * webinar mode.
+ */
+
+(function () {
+  'use strict';
+
+  var DEFAULTS = {
+    balance: 500000,
+    contribution: 20000,
+    years: 20,
+    rate: 6,
+    'current-federal': 24,
+    'current-state': 0,
+    'future-federal': 28,
+    'future-state': 0,
+    timing: 'end'
+  };
+
+  var NUMERIC_IDS = [
+    'balance', 'contribution', 'years', 'rate',
+    'current-federal', 'current-state', 'future-federal', 'future-state'
+  ];
+
+  // ---------------------------------------------------------------- helpers
+
+  function $(id) { return document.getElementById(id); }
+
+  var usd0 = new Intl.NumberFormat('en-US', {
+    style: 'currency', currency: 'USD',
+    minimumFractionDigits: 0, maximumFractionDigits: 0
+  });
+
+  var usd2 = new Intl.NumberFormat('en-US', {
+    style: 'currency', currency: 'USD',
+    minimumFractionDigits: 2, maximumFractionDigits: 2
+  });
+
+  function pct(n, digits) {
+    return n.toFixed(digits === undefined ? 1 : digits) + '%';
+  }
+
+  /**
+   * Percentage for the split bar: rounded to one decimal, with the decimal
+   * dropped when it is a whole number. Rounding first prevents floating-point
+   * noise (27.999999999999996) from printing as "28.0%" on one side of the bar
+   * while the other side prints "72%".
+   */
+  function pctSmart(n) {
+    var rounded = Math.round(n * 10) / 10;
+    var whole = Math.round(rounded);
+    return (Math.abs(rounded - whole) < 1e-9 ? String(whole) : rounded.toFixed(1)) + '%';
+  }
+
+  /** Read a numeric input, falling back to its default if left blank. */
+  function readNumber(id) {
+    var el = $(id);
+    var raw = el.value.trim();
+    if (raw === '') return DEFAULTS[id];
+    var n = Number(raw);
+    return isFinite(n) ? n : DEFAULTS[id];
+  }
+
+  function readTiming() {
+    return document.querySelector('input[name="timing"]:checked').value;
+  }
+
+  function readInputs() {
+    return {
+      balance: readNumber('balance'),
+      contribution: readNumber('contribution'),
+      years: readNumber('years'),
+      rate: readNumber('rate'),
+      currentFederal: readNumber('current-federal'),
+      currentState: readNumber('current-state'),
+      futureFederal: readNumber('future-federal'),
+      futureState: readNumber('future-state'),
+      timing: readTiming()
+    };
+  }
+
+  // ---------------------------------------------------------------- render
+
+  var current = null; // most recent projection, reused by CSV export
+
+  function render() {
+    var input = readInputs();
+    var p = window.TDCalc.buildProjection(input);
+    current = { input: input, projection: p };
+
+    // Combined-rate readouts
+    $('combined-current').textContent = pct(p.currentCombined * 100);
+    $('combined-future').textContent = pct(p.futureCombined * 100);
+    $('cap-notice').hidden = !p.combinedWasCapped;
+
+    // Headline
+    $('headline-years').textContent = String(p.years);
+    $('future-value').textContent = usd0.format(p.futureValue);
+
+    // Ownership split
+    var youPct = p.clientPercent;
+    var taxPct = p.governmentPercent;
+    var segYou = $('seg-you');
+    var segTax = $('seg-tax');
+
+    segYou.style.width = youPct + '%';
+    segTax.style.width = taxPct + '%';
+    segYou.classList.toggle('is-narrow', youPct < 12);
+    segTax.classList.toggle('is-narrow', taxPct < 12);
+
+    $('pct-you').textContent = pctSmart(youPct);
+    $('pct-tax').textContent = pctSmart(taxPct);
+    $('client-portion').textContent = usd0.format(p.clientPortion);
+    $('government-portion').textContent = usd0.format(p.governmentPortion);
+
+    $('split-bar').setAttribute(
+      'aria-label',
+      'Estimated client after-tax portion ' + usd0.format(p.clientPortion) +
+      ', or ' + pct(youPct) + ' of the projected balance. Estimated future tax liability ' +
+      usd0.format(p.governmentPortion) + ', or ' + pct(taxPct) + '.'
+    );
+
+    // Secondary figures
+    $('total-contributions').textContent = usd0.format(p.totalContributions);
+    $('total-growth').textContent = usd0.format(p.totalGrowth);
+    $('taxes-deferred').textContent = usd0.format(p.taxesDeferred);
+
+    renderTable(p);
+  }
+
+  function cell(value, className) {
+    return '<td' + (className ? ' class="' + className + '"' : '') + '>' +
+      usd0.format(value) + '</td>';
+  }
+
+  function renderTable(p) {
+    var html = '';
+    for (var i = 0; i < p.rows.length; i++) {
+      var r = p.rows[i];
+      html += '<tr>' +
+        '<th scope="row" class="col-year">' + r.year + '</th>' +
+        cell(r.beginning) +
+        cell(r.contribution) +
+        cell(r.growth) +
+        cell(r.ending) +
+        cell(r.cumulativeContributions) +
+        cell(r.taxesDeferredToDate) +
+        cell(r.futureTaxLiability, 'cell-tax') +
+        cell(r.clientAfterTax, 'cell-you') +
+        '</tr>';
+    }
+    $('ledger-body').innerHTML = html;
+
+    var last = p.rows.length ? p.rows[p.rows.length - 1] : null;
+    $('ledger-foot').innerHTML = last
+      ? '<tr>' +
+          '<td class="col-year">Totals</td>' +
+          cell(p.startingBalance) +
+          cell(p.totalContributions) +
+          cell(p.totalGrowth) +
+          cell(p.futureValue) +
+          cell(p.totalContributions) +
+          cell(p.taxesDeferred) +
+          cell(p.governmentPortion, 'cell-tax') +
+          cell(p.clientPortion, 'cell-you') +
+        '</tr>'
+      : '';
+
+    $('docs-summary').textContent =
+      p.years + (p.years === 1 ? ' year' : ' years') + ' \u00B7 ' +
+      pct(readNumber('rate')) + ' annual return \u00B7 contributions at ' +
+      (p.timing === 'begin' ? 'beginning' : 'end') + ' of year \u00B7 ' +
+      pct(p.currentCombined * 100) + ' combined today, ' +
+      pct(p.futureCombined * 100) + ' at withdrawal';
+
+    $('reconcile-line').innerHTML =
+      'Reconciliation: starting balance ' + usd0.format(p.startingBalance) +
+      ' + total contributions ' + usd0.format(p.totalContributions) +
+      ' + total growth ' + usd0.format(p.totalGrowth) +
+      ' = ' + usd0.format(p.futureValue) + ', which equals the ending balance of year ' +
+      p.years + ' and the projected account value above.';
+  }
+
+  // ------------------------------------------------------------------- CSV
+
+  function csvEscape(value) {
+    var s = String(value);
+    return /[",\n]/.test(s) ? '"' + s.replace(/"/g, '""') + '"' : s;
+  }
+
+  function toCSV() {
+    var p = current.projection;
+    var i = current.input;
+    var lines = [];
+
+    lines.push(['Tax-Deferred Account Calculator - educational illustration']);
+    lines.push(['Generated', new Date().toLocaleString('en-US')]);
+    lines.push([]);
+    lines.push(['Assumptions']);
+    lines.push(['Current tax-deferred balance', p.startingBalance.toFixed(2)]);
+    lines.push(['Annual pre-tax contribution', i.contribution.toFixed(2)]);
+    lines.push(['Years invested', p.years]);
+    lines.push(['Expected annual return (%)', i.rate]);
+    lines.push(['Current federal tax rate (%)', i.currentFederal]);
+    lines.push(['Current state tax rate (%)', i.currentState]);
+    lines.push(['Future federal tax rate (%)', i.futureFederal]);
+    lines.push(['Future state tax rate (%)', i.futureState]);
+    lines.push(['Combined tax rate today (%)', (p.currentCombined * 100).toFixed(2)]);
+    lines.push(['Combined tax rate at withdrawal (%)', (p.futureCombined * 100).toFixed(2)]);
+    lines.push(['Contribution timing', p.timing === 'begin' ? 'Beginning of year' : 'End of year']);
+    lines.push([]);
+    lines.push(['Summary']);
+    lines.push(['Projected future account value', p.futureValue.toFixed(2)]);
+    lines.push(['Total contributions', p.totalContributions.toFixed(2)]);
+    lines.push(['Total projected investment growth', p.totalGrowth.toFixed(2)]);
+    lines.push(['Estimated taxes deferred', p.taxesDeferred.toFixed(2)]);
+    lines.push(['Estimated future tax liability', p.governmentPortion.toFixed(2)]);
+    lines.push(['Estimated client after-tax portion', p.clientPortion.toFixed(2)]);
+    lines.push(['Client ownership (%)', p.clientPercent.toFixed(2)]);
+    lines.push(['Estimated government portion (%)', p.governmentPercent.toFixed(2)]);
+    lines.push([]);
+    lines.push([
+      'Year', 'Beginning balance', 'Annual contribution', 'Investment growth',
+      'Ending balance', 'Cumulative contributions', 'Estimated taxes deferred to date',
+      'Estimated future tax liability', 'Estimated client after-tax value'
+    ]);
+
+    p.rows.forEach(function (r) {
+      lines.push([
+        r.year,
+        r.beginning.toFixed(2),
+        r.contribution.toFixed(2),
+        r.growth.toFixed(2),
+        r.ending.toFixed(2),
+        r.cumulativeContributions.toFixed(2),
+        r.taxesDeferredToDate.toFixed(2),
+        r.futureTaxLiability.toFixed(2),
+        r.clientAfterTax.toFixed(2)
+      ]);
+    });
+
+    lines.push([
+      'Totals',
+      p.startingBalance.toFixed(2),
+      p.totalContributions.toFixed(2),
+      p.totalGrowth.toFixed(2),
+      p.futureValue.toFixed(2),
+      p.totalContributions.toFixed(2),
+      p.taxesDeferred.toFixed(2),
+      p.governmentPortion.toFixed(2),
+      p.clientPortion.toFixed(2)
+    ]);
+
+    lines.push([]);
+    lines.push(['This is an educational illustration, not an individualized tax calculation.']);
+    lines.push(['It does not account for graduated tax brackets, deductions or credits, required minimum distributions, withdrawal timing, Social Security taxation, Medicare IRMAA, changes in tax law, state tax deductibility, tax-free basis, or employer matching contributions unless entered as contributions.']);
+
+    return lines.map(function (row) {
+      return row.map(csvEscape).join(',');
+    }).join('\r\n');
+  }
+
+  function downloadCSV() {
+    var blob = new Blob(['\uFEFF' + toCSV()], { type: 'text/csv;charset=utf-8;' });
+    var url = URL.createObjectURL(blob);
+    var a = document.createElement('a');
+    var stamp = new Date().toISOString().slice(0, 10);
+    a.href = url;
+    a.download = 'tax-deferred-illustration-' + stamp + '.csv';
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    setTimeout(function () { URL.revokeObjectURL(url); }, 1000);
+  }
+
+  // --------------------------------------------------------- documentation
+
+  function setDocs(open) {
+    $('docs-panel').hidden = !open;
+    // The panel carries its own "Hide documentation" control, so the large
+    // open button steps out of the way rather than sitting there inert.
+    $('show-docs').hidden = open;
+    $('show-docs').setAttribute('aria-expanded', String(open));
+  }
+
+  // ------------------------------------------------------------ webinar UI
+
+  function setWebinar(on) {
+    document.body.classList.toggle('webinar-mode', on);
+    var btn = $('webinar-toggle');
+    btn.setAttribute('aria-pressed', String(on));
+    btn.textContent = on ? 'Exit webinar mode' : 'Webinar mode';
+  }
+
+  // ----------------------------------------------------------------- reset
+
+  function reset() {
+    NUMERIC_IDS.forEach(function (id) { $(id).value = DEFAULTS[id]; });
+    $('timing-end').checked = true;
+    render();
+    $('balance').focus();
+  }
+
+  // ------------------------------------------------------------------ wire
+
+  function init() {
+    NUMERIC_IDS.forEach(function (id) {
+      $(id).addEventListener('input', render);
+      // Snap out-of-range entries back into bounds when the field is left.
+      $(id).addEventListener('blur', function () {
+        var el = this;
+        if (el.value.trim() === '') { el.value = DEFAULTS[el.id]; }
+        var n = Number(el.value);
+        var min = Number(el.min);
+        var max = Number(el.max);
+        if (isFinite(min) && n < min) el.value = min;
+        if (isFinite(max) && n > max) el.value = max;
+        render();
+      });
+    });
+
+    Array.prototype.forEach.call(
+      document.querySelectorAll('input[name="timing"]'),
+      function (el) { el.addEventListener('change', render); }
+    );
+
+    $('show-docs').addEventListener('click', function () {
+      setDocs(true);
+      $('docs-panel').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+
+    $('hide-docs').addEventListener('click', function () {
+      setDocs(false);
+      $('show-docs').focus();
+    });
+
+    $('download-csv').addEventListener('click', downloadCSV);
+
+    $('print-docs').addEventListener('click', function () {
+      setDocs(true);
+      setTimeout(function () { window.print(); }, 60);
+    });
+
+    $('reset-btn').addEventListener('click', reset);
+
+    $('webinar-toggle').addEventListener('click', function () {
+      setWebinar(!document.body.classList.contains('webinar-mode'));
+    });
+
+    // Escape leaves webinar mode.
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && document.body.classList.contains('webinar-mode')) {
+        setWebinar(false);
+        $('webinar-toggle').focus();
+      }
+    });
+
+    render();
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init);
+  } else {
+    init();
+  }
+})();
+
+</script>
+<style>body.webinar-mode .aw-ft{display:none}</style>
+<!--AW:FOOTER-->
+</body>
+</html>

@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Should I Pay Off the Mortgage? — Alston Wealth</title>
+<meta name="description" content="The most-asked question in retirement, worked properly — including the part about withdrawals and taxes that most comparisons leave out.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Alston Wealth">
+<meta property="og:title" content="Should I Pay Off the Mortgage? — Alston Wealth">
+<meta property="og:description" content="The most-asked question in retirement, worked properly — including the part about withdrawals and taxes that most comparisons leave out.">
+<meta property="og:image" content="{{SITE_URL}}/og-image.png">
+<meta property="og:url" content="{{SITE_URL}}/tools/mortgage-payoff.html">
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-YJFKJ8MCV3"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}
+gtag('js',new Date());gtag('config','G-YJFKJ8MCV3');</script>
+<meta name="twitter:card" content="summary_large_image">
+<style>
+:root{
+  --ink:#16233A; --ink2:#46505F; --ink3:#5E6878;
+  --paper:#FBFAF7; --card:#FFFFFF; --rule:#E6E2D9; --rule2:#EDEAE3;
+  --brass:#8A5F24; --brass-tint:#F5EEE1;
+  --good:#2F6B4F; --good-tint:#E9F2ED;
+  --warn:#9A4A22; --warn-tint:#FBEDE5;
+  --u:"Archivo","Helvetica Neue",Helvetica,sans-serif;
+  --s:"Source Serif 4",Charter,"Bitstream Charter",Georgia,serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--paper);color:var(--ink);font-family:var(--s);
+  font-size:16px;line-height:1.5;-webkit-font-smoothing:antialiased;padding:0 0 80px}
+.wrap{max-width:940px;margin:0 auto;padding:0 20px}
+header{border-bottom:2px solid var(--ink);padding:34px 0 14px;margin-bottom:26px}
+.eyebrow{font-family:var(--u);font-weight:700;font-size:10px;letter-spacing:.19em;
+  text-transform:uppercase;color:var(--brass);margin-bottom:7px}
+h1{font-family:var(--u);font-weight:700;font-size:31px;letter-spacing:-.02em;line-height:1.05}
+.sub{color:var(--ink2);margin-top:9px;max-width:64ch;font-size:15.5px}
+.hdr-row{display:flex;justify-content:space-between;align-items:flex-end;gap:20px;flex-wrap:wrap}
+.firm{font-family:var(--u);font-weight:700;font-size:11px;letter-spacing:.15em;
+  text-transform:uppercase;color:var(--ink2);white-space:nowrap}
+.firm a{color:inherit;text-decoration:none}
+
+section{background:var(--card);border:1px solid var(--rule);margin-bottom:20px}
+.shead{display:flex;align-items:baseline;gap:12px;padding:15px 20px;
+  border-bottom:1px solid var(--rule2);background:#FCFBF8;flex-wrap:wrap}
+.snum{font-family:var(--u);font-weight:700;font-size:10px;letter-spacing:.14em;color:var(--brass);
+  border:1px solid var(--brass);padding:3px 7px;flex:none}
+.stitle{font-family:var(--u);font-weight:700;font-size:16px;letter-spacing:-.01em}
+.shint{font-size:14px;color:var(--ink3);margin-left:auto;font-family:var(--u);font-weight:500}
+.sbody{padding:20px}
+.lede{color:var(--ink2);font-size:15px;margin-bottom:16px;max-width:68ch}
+
+.grid{display:grid;gap:12px}
+.g2{grid-template-columns:repeat(2,1fr)}
+.g3{grid-template-columns:repeat(3,1fr)}
+label.f{display:block}
+label.f span{display:block;font-family:var(--u);font-weight:600;font-size:11.5px;
+  letter-spacing:.05em;text-transform:uppercase;color:var(--ink2);margin-bottom:5px}
+label.f em{font-style:normal;color:var(--ink3);text-transform:none;letter-spacing:0;
+  font-weight:500;font-size:11px;display:block;margin-top:2px}
+input[type=text],select{width:100%;padding:10px 11px;border:1px solid var(--rule);
+  background:#fff;font-family:var(--u);font-size:15.5px;color:var(--ink);border-radius:0}
+input[type=text]:focus,select:focus{outline:2px solid var(--brass);outline-offset:-1px}
+
+.verdict{border:1px solid var(--rule);background:#fff;padding:24px}
+.v-l{font-family:var(--u);font-weight:600;font-size:10.5px;letter-spacing:.13em;
+  text-transform:uppercase;color:var(--ink3);margin-bottom:9px}
+.v-n{font-family:var(--u);font-weight:700;font-size:34px;letter-spacing:-.03em;line-height:1.05}
+.v-p{font-size:15px;color:var(--ink2);margin-top:13px;line-height:1.5;max-width:70ch}
+.v-p b{color:var(--ink)}
+.verdict.pay{background:var(--good-tint);border-color:var(--good)} .verdict.pay .v-n{color:var(--good)}
+.verdict.keep{background:var(--brass-tint);border-color:var(--brass)} .verdict.keep .v-n{color:var(--brass)}
+
+.vs{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--rule);
+  border:1px solid var(--rule);margin-top:1px}
+.vs>div{background:#fff;padding:18px}
+.vs h4{font-family:var(--u);font-weight:700;font-size:15px;margin-bottom:2px}
+.vs .tag{font-family:var(--u);font-weight:600;font-size:10px;letter-spacing:.12em;
+  text-transform:uppercase;color:var(--ink3);margin-bottom:12px}
+.vs .n{font-family:var(--u);font-weight:700;font-size:26px;letter-spacing:-.02em;line-height:1}
+.vs .u{font-family:var(--u);font-weight:600;font-size:10px;letter-spacing:.11em;
+  text-transform:uppercase;color:var(--ink3);margin-top:5px}
+.vs p{font-size:13.5px;color:var(--ink2);margin-top:13px;line-height:1.45;
+  padding-top:11px;border-top:1px solid var(--rule2)}
+
+.flags{margin-top:18px}
+.flag{border-left:3px solid;padding:12px 15px;margin-bottom:9px;font-size:14.5px;line-height:1.45}
+.flag b{font-family:var(--u);font-weight:700;font-size:12px;letter-spacing:.06em;
+  text-transform:uppercase;display:block;margin-bottom:4px}
+.flag.w{border-color:var(--warn);background:var(--warn-tint)} .flag.w b{color:var(--warn)}
+.flag.g{border-color:var(--good);background:var(--good-tint)} .flag.g b{color:var(--good)}
+.flag.n{border-color:var(--brass);background:var(--brass-tint)} .flag.n b{color:var(--brass)}
+
+.bar{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px}
+button.act{font-family:var(--u);font-weight:600;font-size:13.5px;letter-spacing:.03em;
+  padding:11px 18px;border:1px solid var(--ink);background:#fff;color:var(--ink);cursor:pointer;border-radius:0}
+button.act:hover{background:var(--ink);color:#fff}
+button.act.p{background:var(--ink);color:#fff}
+button.act.p:hover{background:var(--brass);border-color:var(--brass)}
+.foot{margin-top:26px;padding-top:16px;border-top:1px solid var(--rule);
+  font-size:13.5px;color:var(--ink3);line-height:1.5}
+
+@media (max-width:720px){
+  .g2,.g3,.vs{grid-template-columns:1fr}
+  h1{font-size:25px} .shint{margin-left:0;flex-basis:100%} .v-n{font-size:26px}
+}
+@media print{
+  body{background:#fff;padding:0;font-size:11pt}
+  .bar,.shint{display:none}
+  section{break-inside:avoid;border-color:#bbb}
+  .verdict{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+}
+
+/* nav */
+nav{border-bottom:1px solid var(--rule);background:var(--paper);position:sticky;top:0;z-index:10;
+  margin:0 0 4px}
+nav .navwrap{max-width:940px;margin:0 auto;padding:0 20px;display:flex;align-items:center;
+  justify-content:space-between;height:58px;gap:20px}
+nav .brand{font-family:var(--u);font-weight:700;font-size:15px;color:var(--ink);
+  text-decoration:none;letter-spacing:-.01em}
+nav .brand:hover{color:var(--brass)}
+nav ul{list-style:none;display:flex;gap:22px;font-family:var(--u);font-size:13.5px;font-weight:600;
+  margin:0;padding:0}
+nav a{text-decoration:none;color:var(--ink2)}
+nav a:hover{color:var(--brass)}
+@media(max-width:620px){nav .hide-sm{display:none} nav ul{gap:16px}}
+@media print{nav{display:none}}
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap">
+<link rel="stylesheet" href="../assets/alston.css">
+</head>
+<body>
+<!--AW:HEADER-->
+
+<div class="wrap">
+
+<header>
+  <div class="hdr-row">
+    <div>
+      <div class="eyebrow">The Toolbox</div>
+      <h1>Should I Pay Off the Mortgage?</h1>
+    </div>
+    <div class="firm"><a href="../index.html">Alex&nbsp;Alston</a></div>
+  </div>
+  <p class="sub">The most-asked question in retirement. Most comparisons stop at "your rate
+  versus your return," which misses the part that actually decides it for most households.</p>
+</header>
+
+<!-- 1 -->
+<section>
+  <div class="shead"><span class="snum">01</span><span class="stitle">The mortgage</span></div>
+  <div class="sbody">
+    <div class="grid g3">
+      <label class="f"><span>Balance remaining</span>
+        <input type="text" id="bal" inputmode="decimal" value="180,000"></label>
+      <label class="f"><span>Interest rate</span>
+        <input type="text" id="rate" inputmode="decimal" value="4.25"></label>
+      <label class="f"><span>Years left</span>
+        <input type="text" id="yrs" inputmode="numeric" value="14"></label>
+    </div>
+    <div class="grid g3" style="margin-top:12px">
+      <label class="f"><span>Monthly payment</span><em>Principal and interest only</em>
+        <input type="text" id="pmt" inputmode="decimal" value="1,510"></label>
+      <label class="f"><span>Do you itemize deductions?</span><em>Most retirees no longer do</em>
+        <select id="item"><option value="no" selected>No — standard deduction</option>
+        <option value="yes">Yes — I itemize</option></select></label>
+      <label class="f"><span>If yes, your marginal rate</span>
+        <select id="mrate"><option value="0.10">10%</option><option value="0.12" selected>12%</option>
+        <option value="0.22">22%</option><option value="0.24">24%</option></select></label>
+    </div>
+  </div>
+</section>
+
+<!-- 2 -->
+<section>
+  <div class="shead"><span class="snum">02</span><span class="stitle">Where the money would come from</span>
+    <span class="shint">This is the part that decides it</span></div>
+  <div class="sbody">
+    <div class="grid g3">
+      <label class="f"><span>Which account?</span>
+        <select id="src">
+          <option value="taxable" selected>Taxable or cash — already taxed</option>
+          <option value="ira">Traditional IRA or 401(k)</option>
+          <option value="roth">Roth</option>
+          <option value="mixed">A bit of everything</option>
+        </select></label>
+      <label class="f"><span>Investable assets</span><em>All of them, before paying anything off</em>
+        <input type="text" id="assets" inputmode="decimal" value="740,000"></label>
+      <label class="f"><span>What would the money earn if invested?</span>
+        <select id="ret"><option value="4">4%</option><option value="5">5%</option>
+        <option value="6" selected>6%</option><option value="7">7%</option></select></label>
+    </div>
+  </div>
+</section>
+
+<!-- 3 -->
+<section>
+  <div class="shead"><span class="snum">03</span><span class="stitle">The answer</span></div>
+  <div class="sbody">
+    <div id="verdict"></div>
+    <div id="compare"></div>
+  </div>
+</section>
+
+<!-- 4 -->
+<section>
+  <div class="shead"><span class="snum">04</span><span class="stitle">The things the arithmetic misses</span></div>
+  <div class="sbody"><div class="flags" id="flags"></div></div>
+</section>
+
+<div class="bar">
+  <button class="act p" onclick="window.print()">Print / Save as PDF</button>
+  <button class="act" onclick="resetAll()">Reset</button>
+  <button class="act" onclick="location.href='../index.html'">Back to the calendar</button>
+</div>
+
+<p class="foot">
+  This compares an interest rate against an expected return, then adjusts for how the money comes
+  out of your accounts. Expected returns are not guaranteed and paying down a mortgage is. That
+  asymmetry matters more than a percentage point either way.
+</p>
+
+
+
+</div>
+
+<script>
+const $=id=>document.getElementById(id);
+const money=n=>(n<0?'-$':'$')+Math.abs(Math.round(n)).toLocaleString('en-US');
+const num=id=>{const el=$(id);if(!el)return 0;const v=(el.value||'').replace(/[^0-9.\-]/g,'');const n=parseFloat(v);return isFinite(n)?n:0;};
+
+function render(){
+  const bal=num('bal'), rate=num('rate')/100, yrs=num('yrs'), pmt=num('pmt')*12;
+  const itemizes=$('item').value==='yes', mrate=parseFloat($('mrate').value);
+  const src=$('src').value, assets=num('assets'), ret=parseFloat($('ret').value)/100;
+
+  /* effective mortgage cost — the deduction only helps if you itemize */
+  const effRate = itemizes ? rate*(1-mrate) : rate;
+
+  /* what it actually costs to raise the payoff amount */
+  let grossNeeded=bal, taxCost=0, note='';
+  if(src==='ira'){
+    taxCost = bal*mrate/(1-mrate);
+    grossNeeded = bal + taxCost;
+    note = `Pulling ${money(bal)} out of a traditional IRA means withdrawing about ${money(grossNeeded)} to net it after tax — roughly ${money(taxCost)} of tax to pay off ${money(bal)}.`;
+  } else if(src==='mixed'){
+    taxCost = bal*0.4*mrate/(1-mrate);
+    grossNeeded = bal + taxCost;
+    note = `Part of this comes from pretax money, so raising ${money(bal)} costs about ${money(grossNeeded)} — including roughly ${money(taxCost)} of tax.`;
+  } else if(src==='roth'){
+    note = `Roth money comes out with no tax — but it is the best asset you own. Spending it on a ${(rate*100).toFixed(2)}% mortgage means giving up decades of tax-free growth.`;
+  } else {
+    note = `Taxable or cash money comes out cleanly, with tax only on any gain realized in the sale.`;
+  }
+
+  const interestLeft = Math.max(0, pmt*yrs - bal);
+  const spread = ret - effRate;
+  const investEnds = grossNeeded*Math.pow(1+ret,yrs);
+  const payoffEnds = pmt*(Math.pow(1+ret,yrs)-1)/ret;   /* payment redirected and invested */
+  const edge = investEnds - payoffEnds;
+  const payWins = edge < 0;
+  const liquidityAfter = assets>0 ? (assets-grossNeeded)/assets : 0;
+
+  $('verdict').innerHTML=`
+    <div class="verdict ${payWins?'pay':'keep'}">
+      <div class="v-l">On the arithmetic alone, over ${yrs} years</div>
+      <div class="v-n">${payWins?'Paying it off comes out ahead':'Keeping the mortgage comes out ahead'} — by ${money(Math.abs(edge))}</div>
+      <div class="v-p">
+        Your effective mortgage rate is <b>${(effRate*100).toFixed(2)}%</b>${itemizes?` after the deduction`:` — and because you take the standard deduction, <b>you get no tax benefit from the interest</b>, so you pay the full rate`}.
+        Against an expected <b>${(ret*100).toFixed(0)}%</b>, the spread is ${spread>=0?'':'−'}${Math.abs(spread*100).toFixed(2)} points ${spread>=0?'in favour of investing':'in favour of paying it off'}.
+        ${note}
+        <br><br>
+        <b>But read the four points below before you act on this number.</b> A ${Math.abs(spread*100).toFixed(1)}-point spread is not the same as a ${Math.abs(spread*100).toFixed(1)}-point certainty — the mortgage rate is guaranteed and the return is not.
+      </div>
+    </div>`;
+
+  $('compare').innerHTML=`
+    <div class="vs">
+      <div>
+        <h4>Pay it off</h4><div class="tag">Costs ${money(grossNeeded)} today</div>
+        <div class="n">${money(pmt)}</div><div class="u">a year freed up, guaranteed</div>
+        <p>A guaranteed ${(effRate*100).toFixed(2)}% return, which is what avoiding interest actually is. You stop needing ${money(pmt)} a year from the portfolio — which means smaller withdrawals, lower taxable income, and less exposure to a bad market early on. Saves ${money(interestLeft)} of remaining interest.</p>
+      </div>
+      <div>
+        <h4>Keep it and invest</h4><div class="tag">Keeps ${money(grossNeeded)} working</div>
+        <div class="n">${money(investEnds)}</div><div class="u">projected in ${yrs} years</div>
+        <p>Assumes ${(ret*100).toFixed(0)}% every year with no bad sequence, and that you keep paying ${money(pmt)} a year out of the portfolio the whole time. You keep full liquidity. ${liquidityAfter<0.7&&grossNeeded>0?`Paying off would leave only ${(liquidityAfter*100).toFixed(0)}% of your assets liquid.`:''}</p>
+      </div>
+    </div>`;
+
+  const F=[];
+  if(!itemizes){
+    F.push({t:'n',h:'You get no deduction, so the real rate is the full rate',
+      b:`Most retirees stopped itemizing when the standard deduction roughly doubled. If you take the standard deduction, mortgage interest saves you nothing — your cost is the full ${(rate*100).toFixed(2)}%, not an after-tax version of it. People compare against an after-tax rate they are not actually getting.`});
+  }
+  if(src==='ira'){
+    F.push({t:'w',h:`Raising the payoff from an IRA costs about ${money(taxCost)} in tax`,
+      b:`And that is before the second-order effect: a withdrawal that large in one year can push more of your Social Security into the tax base and, at higher incomes, cross a Medicare threshold that sets your premium two years later. If you are going to do this from pretax money, spread it across two or three tax years.`});
+  }
+  if(src==='roth'){
+    F.push({t:'w',h:'Roth money is the wrong money for this',
+      b:'It is the only account that never gets taxed again, has no required distributions, and passes to your children without a tax bill. Spending it to retire a low-rate mortgage trades your most valuable asset for your cheapest liability. If you are set on paying off, fund it from taxable money first.'});
+  }
+  if(liquidityAfter>0 && liquidityAfter<0.7){
+    F.push({t:'w',h:`It would leave you ${(liquidityAfter*100).toFixed(0)}% liquid`,
+      b:`${money(grossNeeded)} of ${money(assets)} is a large share to convert into home equity you cannot spend. Home equity produces no income and cannot be accessed without moving or borrowing. A paid-off house and a thin portfolio is a genuinely uncomfortable position, and it is not obviously safer than the reverse.`});
+  }
+  F.push({t:'n',h:'The guarantee is worth more than the spread suggests',
+    b:`Paying off a ${(effRate*100).toFixed(2)}% mortgage is a certain ${(effRate*100).toFixed(2)}% return. The ${(ret*100).toFixed(0)}% is an average that includes years of −20%. In accumulation that difference matters less. In retirement, when you are selling into declines to make the payment, a guaranteed return has real value the arithmetic here does not capture.`});
+  F.push({t:'n',h:'It lowers the number the portfolio has to produce',
+    b:`Retiring the mortgage cuts your essential expenses by ${money(pmt)} a year permanently. That raises your coverage ratio, lowers your withdrawal rate, and reduces how much you have to pull in a bad year — which is the whole subject of February and March. That effect is often worth more than the interest arithmetic.`});
+  F.push({t:'g',h:'And there is the part no calculator measures',
+    b:'Plenty of people sleep better with no mortgage, and that is a legitimate reason. If owning the house outright means you would actually spend more freely on the things you retired for, that is worth something real — even if the spreadsheet says otherwise.'});
+  $('flags').innerHTML=F.map(f=>`<div class="flag ${f.t}"><b>${f.h}</b>${f.b}</div>`).join('');
+}
+
+function resetAll(){
+  $('bal').value='180,000'; $('rate').value='4.25'; $('yrs').value='14'; $('pmt').value='1,510';
+  $('item').value='no'; $('mrate').value='0.12'; $('src').value='taxable';
+  $('assets').value='740,000'; $('ret').value='6'; render();
+}
+document.addEventListener('input',render);
+document.addEventListener('change',render);
+render();
+</script>
+<!--AW:FOOTER-->
+</body>
+</html>

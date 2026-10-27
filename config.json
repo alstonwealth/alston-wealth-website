@@ -1,0 +1,12 @@
+{
+  "_read_me": "Every firm fact on the site lives here. Anything still in [brackets] shows on the page in brackets, and the build lists it. Change a value, rebuild, redeploy.",
+  "SITE_URL": "https://alstonwealth.com",
+  "BOOK_LINK": "https://calendly.com/alston-alex/retirement-audit-discovery-call",
+  "CALL_LINK": "https://us06web.zoom.us/meeting/register/eqb0z92dTTCZ6lEg1WKiFQ",
+  "EMAIL": "[email address]",
+  "PHONE": "[phone]",
+  "ADDRESS": "[Office address]",
+  "ADV_URL": "https://adviserinfo.sec.gov/",
+  "CRS_PDF": "[link to the relationship summary once filed]",
+  "DISCLOSURE": "Alston Wealth LLC is not currently a registered investment adviser and does not provide individualized investment advice through this website. The briefings, tools and monthly call are general education only and are not investment, tax or legal advice for your situation. Insurance products are offered through individually licensed insurance agents."
+}

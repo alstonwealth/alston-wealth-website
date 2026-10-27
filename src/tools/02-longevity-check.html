@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Longevity Check — Alston Wealth</title>
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Alston Wealth">
+<meta property="og:title" content="The Longevity Check — Alston Wealth">
+<meta property="og:description" content="Twelve retirement decisions, twelve months. Free tools, briefings, and a live monthly call.">
+<meta property="og:image" content="{{SITE_URL}}/og-image.png">
+<meta property="og:url" content="{{SITE_URL}}/tools/02-longevity-check.html">
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-YJFKJ8MCV3"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}
+gtag('js',new Date());gtag('config','G-YJFKJ8MCV3');</script>
+<meta name="twitter:card" content="summary_large_image">
+
+<style>
+:root{
+  --ink:#16233A; --ink2:#46505F; --ink3:#5E6878;
+  --paper:#FBFAF7; --card:#FFFFFF; --rule:#E6E2D9; --rule2:#EDEAE3;
+  --brass:#8A5F24; --brass-tint:#F5EEE1;
+  --good:#2F6B4F; --good-tint:#E9F2ED;
+  --warn:#9A4A22; --warn-tint:#FBEDE5;
+  --u:"Archivo","Helvetica Neue",Helvetica,sans-serif;
+  --s:"Source Serif 4",Charter,"Bitstream Charter",Georgia,serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--paper);color:var(--ink);font-family:var(--s);
+  font-size:16px;line-height:1.5;-webkit-font-smoothing:antialiased;padding:0 0 80px}
+.wrap{max-width:940px;margin:0 auto;padding:0 20px}
+header{border-bottom:2px solid var(--ink);padding:34px 0 14px;margin-bottom:26px}
+.eyebrow{font-family:var(--u);font-weight:700;font-size:10px;letter-spacing:.19em;
+  text-transform:uppercase;color:var(--brass);margin-bottom:7px}
+h1{font-family:var(--u);font-weight:700;font-size:31px;letter-spacing:-.02em;line-height:1.05}
+.sub{color:var(--ink2);margin-top:9px;max-width:64ch;font-size:15.5px}
+.hdr-row{display:flex;justify-content:space-between;align-items:flex-end;gap:20px;flex-wrap:wrap}
+.firm{font-family:var(--u);font-weight:700;font-size:11px;letter-spacing:.15em;
+  text-transform:uppercase;color:var(--ink2);white-space:nowrap}
+
+section{background:var(--card);border:1px solid var(--rule);margin-bottom:20px}
+.shead{display:flex;align-items:baseline;gap:12px;padding:15px 20px;
+  border-bottom:1px solid var(--rule2);background:#FCFBF8;flex-wrap:wrap}
+.snum{font-family:var(--u);font-weight:700;font-size:10px;letter-spacing:.14em;color:var(--brass);
+  border:1px solid var(--brass);padding:3px 7px;flex:none}
+.stitle{font-family:var(--u);font-weight:700;font-size:16px;letter-spacing:-.01em}
+.shint{font-size:14px;color:var(--ink3);margin-left:auto;font-family:var(--u);font-weight:500}
+.sbody{padding:20px}
+.lede{color:var(--ink2);font-size:15px;margin-bottom:16px;max-width:68ch}
+
+.grid{display:grid;gap:12px}
+.g2{grid-template-columns:repeat(2,1fr)}
+.g3{grid-template-columns:repeat(3,1fr)}
+.g4{grid-template-columns:repeat(4,1fr)}
+label.f{display:block}
+label.f span{display:block;font-family:var(--u);font-weight:600;font-size:11.5px;
+  letter-spacing:.05em;text-transform:uppercase;color:var(--ink2);margin-bottom:5px}
+label.f em{font-style:normal;color:var(--ink3);text-transform:none;letter-spacing:0;
+  font-weight:500;font-size:11px;display:block;margin-top:2px}
+input[type=text],select{width:100%;padding:10px 11px;border:1px solid var(--rule);
+  background:#fff;font-family:var(--u);font-size:15.5px;color:var(--ink);border-radius:0}
+input[type=text]:focus,select:focus{outline:2px solid var(--brass);outline-offset:-1px}
+
+.flexbox{border:1px solid var(--rule);background:#F7F5F0;padding:15px 17px;margin-top:18px}
+.flexbox .ttl{font-family:var(--u);font-weight:700;font-size:13.5px;margin-bottom:5px}
+.flexbox p{font-size:14px;color:var(--ink2);line-height:1.42;margin-bottom:12px}
+.switch{display:flex;align-items:center;gap:10px;font-family:var(--u);font-size:14px;font-weight:600}
+.switch input{width:18px;height:18px;accent-color:var(--brass)}
+
+/* scenario cards */
+.scn{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--rule);
+  border:1px solid var(--rule)}
+.sc{background:#fff;padding:16px 17px}
+.sc-t{font-family:var(--u);font-weight:700;font-size:13.5px;margin-bottom:2px}
+.sc-s{font-size:12.5px;color:var(--ink3);margin-bottom:11px}
+.sc-v{font-family:var(--u);font-weight:700;font-size:29px;letter-spacing:-.02em;line-height:1}
+.sc-u{font-family:var(--u);font-weight:600;font-size:10.5px;letter-spacing:.11em;
+  text-transform:uppercase;color:var(--ink3);margin-top:5px}
+.sc-n{font-size:13px;color:var(--ink2);margin-top:10px;line-height:1.4;
+  padding-top:9px;border-top:1px solid var(--rule2)}
+.sc.rough{background:var(--warn-tint)} .sc.rough .sc-v{color:var(--warn)}
+.sc.strong{background:var(--good-tint)} .sc.strong .sc-v{color:var(--good)}
+
+.chart{border:1px solid var(--rule);background:#fff;padding:20px;margin-top:1px}
+.chart-h{font-family:var(--u);font-weight:600;font-size:10.5px;letter-spacing:.13em;
+  text-transform:uppercase;color:var(--ink3);margin-bottom:14px}
+.key{display:flex;gap:18px;flex-wrap:wrap;margin-top:12px;
+  font-family:var(--u);font-size:11.5px;font-weight:600;color:var(--ink2)}
+.key i{display:inline-block;width:16px;height:3px;margin-right:6px;vertical-align:middle;font-style:normal}
+svg{display:block;width:100%;height:auto}
+
+.verdict{border:1px solid var(--rule);background:var(--brass-tint);padding:20px;margin-top:1px}
+.verdict .vl{font-family:var(--u);font-weight:600;font-size:10.5px;letter-spacing:.13em;
+  text-transform:uppercase;color:var(--ink3);margin-bottom:8px}
+.verdict .vn{font-family:var(--u);font-weight:700;font-size:38px;line-height:.95;
+  letter-spacing:-.03em;color:var(--brass)}
+.verdict p{font-size:14.5px;color:var(--ink2);margin-top:12px;line-height:1.45;max-width:70ch}
+
+.flags{margin-top:18px}
+.flag{border-left:3px solid;padding:12px 15px;margin-bottom:9px;font-size:14.5px;line-height:1.45}
+.flag b{font-family:var(--u);font-weight:700;font-size:12px;letter-spacing:.06em;
+  text-transform:uppercase;display:block;margin-bottom:4px}
+.flag.w{border-color:var(--warn);background:var(--warn-tint)} .flag.w b{color:var(--warn)}
+.flag.g{border-color:var(--good);background:var(--good-tint)} .flag.g b{color:var(--good)}
+.flag.n{border-color:var(--brass);background:var(--brass-tint)} .flag.n b{color:var(--brass)}
+
+.carry{background:var(--ink);color:#fff;padding:20px}
+.carry h3{font-family:var(--u);font-weight:700;font-size:13px;letter-spacing:.13em;
+  text-transform:uppercase;color:#C9A26B;margin-bottom:12px}
+.carry table{width:100%;border-collapse:collapse;font-size:14.5px}
+.carry td{padding:7px 0;border-bottom:1px solid rgba(255,255,255,.13)}
+.carry td:last-child{text-align:right;font-family:var(--u);font-weight:700}
+.carry tr:last-child td{border-bottom:none}
+.carry p{font-size:13.5px;color:#B9C2D0;margin-top:13px;line-height:1.5}
+
+.bar{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px}
+button.act{font-family:var(--u);font-weight:600;font-size:13.5px;letter-spacing:.03em;
+  padding:11px 18px;border:1px solid var(--ink);background:#fff;color:var(--ink);cursor:pointer;border-radius:0}
+button.act:hover{background:var(--ink);color:#fff}
+button.act.p{background:var(--ink);color:#fff}
+button.act.p:hover{background:var(--brass);border-color:var(--brass)}
+.foot{margin-top:26px;padding-top:16px;border-top:1px solid var(--rule);
+  font-size:13.5px;color:var(--ink3);line-height:1.5}
+.empty{color:var(--ink3);font-style:italic;font-size:15px}
+
+@media (max-width:720px){
+  .g2,.g3,.g4,.scn{grid-template-columns:1fr}
+  h1{font-size:25px} .shint{margin-left:0;flex-basis:100%}
+  .verdict .vn{font-size:30px}
+}
+@media print{
+  body{background:#fff;padding:0;font-size:11pt}
+  .bar,.shint{display:none}
+  section{break-inside:avoid;border-color:#bbb}
+  .carry{background:#fff;color:#000;border:2px solid #000}
+  .carry h3{color:#000} .carry p{color:#444} .carry td{border-bottom:1px solid #ccc}
+  .sc.rough,.sc.strong,.verdict{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+}
+
+/* nav */
+nav{border-bottom:1px solid var(--rule);background:var(--paper);position:sticky;top:0;z-index:10;
+  margin:0 0 4px}
+nav .navwrap{max-width:940px;margin:0 auto;padding:0 20px;display:flex;align-items:center;
+  justify-content:space-between;height:58px;gap:20px}
+nav .brand{font-family:var(--u);font-weight:700;font-size:15px;color:var(--ink);
+  text-decoration:none;letter-spacing:-.01em}
+nav .brand:hover{color:var(--brass)}
+nav ul{list-style:none;display:flex;gap:22px;font-family:var(--u);font-size:13.5px;font-weight:600;
+  margin:0;padding:0}
+nav a{text-decoration:none;color:var(--ink2)}
+nav a:hover{color:var(--brass)}
+@media(max-width:620px){nav .hide-sm{display:none} nav ul{gap:16px}}
+@media print{nav{display:none}}
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap">
+<link rel="stylesheet" href="../assets/alston.css">
+</head>
+<body>
+<!--AW:HEADER-->
+
+<div class="wrap">
+
+<header>
+  <div class="hdr-row">
+    <div>
+      <div class="eyebrow">February · The Decision Calendar</div>
+      <h1>The Longevity Check</h1>
+    </div>
+    <div class="firm">Alex&nbsp;Alston</div>
+  </div>
+  <p class="sub">The same thirty years of returns, run in three different orders. Identical
+  averages — very different outcomes. This shows how much has to go wrong before your plan
+  stops working, and how much of that risk you can take back.</p>
+</header>
+
+<!-- 1 -->
+<section>
+  <div class="shead"><span class="snum">01</span><span class="stitle">Your numbers</span>
+    <span class="shint">From January's baseline</span></div>
+  <div class="sbody">
+    <div class="grid g3">
+      <label class="f"><span>Investable assets</span><em>Not counting home equity</em>
+        <input type="text" id="pv" inputmode="decimal" placeholder="$" value="880,000"></label>
+      <label class="f"><span>Annual withdrawal needed</span><em>Your gap on total spending</em>
+        <input type="text" id="wd" inputmode="decimal" placeholder="$" value="50,000"></label>
+      <label class="f"><span>Of that, essential</span><em>The part you can't cut</em>
+        <input type="text" id="wdEss" inputmode="decimal" placeholder="$" value="30,000"></label>
+    </div>
+    <div class="grid g4" style="margin-top:12px">
+      <label class="f"><span>Years to plan for</span>
+        <select id="yrs"></select></label>
+      <label class="f"><span>Long-run average return</span>
+        <select id="ret"><option value="4">4%</option><option value="5">5%</option>
+        <option value="6" selected>6%</option><option value="7">7%</option><option value="8">8%</option></select></label>
+      <label class="f"><span>Inflation</span>
+        <select id="inf"><option value="2">2%</option><option value="2.5">2.5%</option>
+        <option value="3" selected>3%</option><option value="3.5">3.5%</option></select></label>
+      <label class="f"><span>How bumpy is the ride?</span><em>Size of the swings</em>
+        <select id="vol"><option value="0.6">Calm</option><option value="1" selected>Normal</option>
+        <option value="1.4">Volatile</option></select></label>
+    </div>
+
+    <div class="flexbox">
+      <div class="ttl">Would you actually adjust spending if the portfolio fell?</div>
+      <p>This applies guardrails: if your withdrawal drifts well above where it started, spending
+      steps down about 10% and stays down until the portfolio recovers. If it drifts well below,
+      spending steps up. It never falls below your essentials — and it only counts if you'd really do it.</p>
+      <label class="switch"><input type="checkbox" id="flexOn">
+        <span>Yes — let spending respond to what the portfolio actually does</span></label>
+    </div>
+  </div>
+</section>
+
+<!-- 2 -->
+<section>
+  <div class="shead"><span class="snum">02</span><span class="stitle">Three orders, one set of returns</span>
+    <span class="shint" id="avgNote"></span></div>
+  <div class="sbody">
+    <p class="lede">Every scenario below uses the <b>exact same thirty return figures</b> — the
+    only thing that changes is the order they arrive in. The averages are identical by
+    construction.</p>
+    <div class="scn" id="scn"></div>
+    <div class="chart">
+      <div class="chart-h">Portfolio balance over time</div>
+      <div id="chart"></div>
+      <div class="key">
+        <span><i style="background:#46505F"></i>Steady — no swings</span>
+        <span><i style="background:#9A4A22"></i>Rough start</span>
+        <span><i style="background:#2F6B4F"></i>Strong start</span>
+      </div>
+    </div>
+    <div class="verdict" id="verdict"></div>
+  </div>
+</section>
+
+<!-- 3 -->
+<section>
+  <div class="shead"><span class="snum">03</span><span class="stitle">What this tells you</span></div>
+  <div class="sbody"><div class="flags" id="flags"></div></div>
+</section>
+
+<section style="border:none;background:none">
+  <div class="carry">
+    <h3>Carry forward</h3>
+    <div id="carrybody"></div>
+  </div>
+</section>
+
+<div class="bar">
+  <button class="act p" onclick="window.print()">Print / Save as PDF</button>
+  <button class="act" onclick="dlCSV()">Download CSV</button>
+  <button class="act" onclick="resetAll()">Reset</button>
+</div>
+
+<div id="assistant-slot"></div>
+<script src="../assistant.js" data-mode="month" data-month="02" data-title="February — The Longevity Check"></script>
+
+<p class="foot">
+  This is arithmetic on the assumptions you enter, not a forecast. Nobody knows what returns
+  will be or in what order. The purpose is not to predict an outcome — it is to show how much
+  the <em>order</em> matters, and how much of that exposure you can remove. Bring it to the
+  February call.
+</p>
+
+
+
+</div>
+
+<script>
+const $=id=>document.getElementById(id);
+const money=n=>(n<0?'-$':'$')+Math.abs(Math.round(n)).toLocaleString('en-US');
+const num=id=>{const v=($(id).value||'').replace(/[^0-9.\-]/g,'');const n=parseFloat(v);return isFinite(n)?n:0;};
+
+$('yrs').innerHTML=[20,25,30,35,40].map(y=>`<option value="${y}" ${y===30?'selected':''}>${y} years</option>`).join('');
+
+/* Deviation pattern — front-loaded negative, normalized to sum exactly zero.
+   Reversing it gives an identical set of returns in the opposite order. */
+const RAW=[-24,-13,4,-16,7,-6,11,2,14,-3,9,5,-2,12,6,3,15,-4,8,1,10,-7,13,4,-1,7,2,-9,5,-4];
+
+function devs(n,vol){
+  const base=RAW.slice(0,n);
+  const mean=base.reduce((a,b)=>a+b,0)/n;
+  return base.map(d=>(d-mean)*vol);
+}
+
+/* Run one path. Withdrawal at start of year, then growth.
+   Guardrails: if this year's withdrawal rate drifts 20% above where it started,
+   cut the withdrawal 10% (never below essentials). If it drifts 20% below, raise it 5%.
+   The cut carries forward rather than resetting — that is what makes it work. */
+function run(pv,wd,wdEss,rets,inf,guard){
+  const bal=[pv]; let p=pv, w=wd, depleted=null, cuts=0;
+  const r0 = wd/pv;
+  for(let i=0;i<rets.length;i++){
+    if(guard && p>0){
+      const cur = w/p;
+      if(cur > r0*1.2){ const floor=wdEss*Math.pow(1+inf,i); const nw=Math.max(floor, w*0.90); if(nw<w) cuts++; w=nw; }
+      else if(cur < r0*0.8){ w = w*1.05; }
+    }
+    p = p - w;
+    if(p<=0){ depleted=i+1; bal.push(0); for(let k=i+1;k<rets.length;k++) bal.push(0); break; }
+    p = p*(1+rets[i]);
+    bal.push(p);
+    w = w*(1+inf);
+  }
+  return {bal, depleted, end:Math.max(0,p), cuts};
+}
+
+function render(){
+  const pv=num('pv'), wd=num('wd'), wdEss=Math.min(num('wdEss'),num('wd'));
+  const n=parseInt($('yrs').value,10);
+  const r=parseFloat($('ret').value)/100;
+  const inf=parseFloat($('inf').value)/100;
+  const vol=parseFloat($('vol').value);
+  const flex=$('flexOn').checked;
+
+  if(pv<=0||wd<=0){
+    $('scn').innerHTML='<div class="sc" style="grid-column:1/-1"><p class="empty">Enter your assets and withdrawal above.</p></div>';
+    $('chart').innerHTML=''; $('verdict').innerHTML=''; $('flags').innerHTML=''; $('carrybody').innerHTML='';
+    return;
+  }
+
+  const d=devs(n,vol);
+  const steady=Array(n).fill(r);
+  const rough=d.map(x=>r+x/100);
+  const strong=[...d].reverse().map(x=>r+x/100);
+
+  const avg=a=>a.reduce((s,x)=>s+x,0)/a.length;
+  $('avgNote').textContent='All three average '+(avg(rough)*100).toFixed(1)+'% a year';
+
+  const A=run(pv,wd,wdEss,steady,inf,flex);
+  const B=run(pv,wd,wdEss,rough,inf,flex);
+  const C=run(pv,wd,wdEss,strong,inf,flex);
+
+  const lbl=x=>x.depleted?('Year '+x.depleted):(n+'+');
+  const unit=x=>x.depleted?'money runs out':'still funded';
+  const cards=[
+    {c:'',t:'Steady',s:'No swings at all',v:lbl(A),u:unit(A),
+     n:A.depleted?`On a perfectly smooth ${(r*100).toFixed(0)}% every year, the money still runs short. The withdrawal itself is the issue, not the sequence.`
+       :`Ends with about ${money(A.end)}. This is the version nobody actually gets — markets do not move in straight lines.`},
+    {c:'rough',t:'Rough start',s:'Bad years arrive first',v:lbl(B),u:unit(B),
+     n:B.depleted?`The bad years land while the balance is highest and you are selling into every one of them.`
+       :`Ends with about ${money(B.end)} — survives, but the early damage never fully recovers.`},
+    {c:'strong',t:'Strong start',s:'Good years arrive first',v:lbl(C),u:unit(C),
+     n:C.depleted?`Even a good start does not save it. That points at the withdrawal rate rather than the sequence.`
+       :`Ends with about ${money(C.end)}. Same returns as the rough start — just in the opposite order.`}
+  ];
+  $('scn').innerHTML=cards.map(c=>
+    `<div class="sc ${c.c}"><div class="sc-t">${c.t}</div><div class="sc-s">${c.s}</div>
+     <div class="sc-v">${c.v}</div><div class="sc-u">${c.u}</div><div class="sc-n">${c.n}</div></div>`).join('');
+
+  /* ---- chart ---- */
+  const W=880,H=260,PL=62,PR=14,PT=12,PB=28;
+  const maxV=Math.max(...A.bal,...B.bal,...C.bal,1);
+  const x=i=>PL+(i/(n))*(W-PL-PR);
+  const y=v=>PT+(1-v/maxV)*(H-PT-PB);
+  const path=a=>a.map((v,i)=>(i?'L':'M')+x(i).toFixed(1)+' '+y(v).toFixed(1)).join(' ');
+  const ticks=[0,.25,.5,.75,1].map(f=>{
+    const v=maxV*f;
+    return `<line x1="${PL}" y1="${y(v)}" x2="${W-PR}" y2="${y(v)}" stroke="#EDEAE3"/>
+      <text x="${PL-8}" y="${y(v)+4}" text-anchor="end" font-family="Archivo,Helvetica,sans-serif" font-size="10.5" fill="#5E6878">${v>=1000?'$'+Math.round(v/1000)+'k':'$0'}</text>`;
+  }).join('');
+  const xlabs=[0,Math.round(n/3),Math.round(2*n/3),n].map(i=>
+    `<text x="${x(i)}" y="${H-8}" text-anchor="middle" font-family="Archivo,Helvetica,sans-serif" font-size="10.5" fill="#5E6878">${i===0?'Now':'Yr '+i}</text>`).join('');
+  $('chart').innerHTML=`<svg viewBox="0 0 ${W} ${H}" xmlns="http://www.w3.org/2000/svg">
+    ${ticks}${xlabs}
+    <path d="${path(A.bal)}" fill="none" stroke="#46505F" stroke-width="1.6" stroke-dasharray="4 3"/>
+    <path d="${path(C.bal)}" fill="none" stroke="#2F6B4F" stroke-width="2.2"/>
+    <path d="${path(B.bal)}" fill="none" stroke="#9A4A22" stroke-width="2.6"/>
+  </svg>`;
+
+  /* ---- verdict ---- */
+  const endB=B.depleted||n, endC=C.depleted||n;
+  const spread=endC-endB;
+  $('verdict').innerHTML=`
+    <div class="vl">Your sequence risk, measured in years</div>
+    <div class="vn">${spread===0?'None':spread+(spread===1?' year':' years')}</div>
+    <p>${spread===0
+      ? `Both orders produce the same result over ${n} years. Either the withdrawal is comfortably sustainable, or it fails regardless of sequence — the other numbers above tell you which.`
+      : `That is the difference between getting the bad years first and getting them last — <b>with the exact same returns</b>. You cannot control which one you get. What you can control is how much it matters.`}</p>`;
+
+  /* ---- flags ---- */
+  const rate=wd/pv;
+  const F=[];
+  if(B.depleted && B.depleted<n){
+    F.push({t:'w',h:`With a rough start, the money runs short in year ${B.depleted}`,
+      b:`That is ${n-B.depleted} year${n-B.depleted===1?'':'s'} short of the horizon you are planning for. This is the scenario worth planning around — not because it is likely, but because it is the one you cannot recover from.`});
+  } else if(!B.depleted){
+    F.push({t:'g',h:'Survives even with the bad years first',
+      b:`The plan holds under the worst ordering of these returns, ending around ${money(B.end)}. That is the test that matters — a plan that only works in a good sequence is not a plan.`});
+  }
+  if(rate>.055){
+    F.push({t:'w',h:`You are drawing ${(rate*100).toFixed(1)}% a year`,
+      b:'Above the range most long-horizon planning treats as sustainable. Three levers move it: increase guaranteed income so the portfolio has less to produce, reduce spending, or shorten the horizon by working longer. March works on the first one.'});
+  } else if(rate<=.04){
+    F.push({t:'g',h:`You are drawing ${(rate*100).toFixed(1)}% a year`,
+      b:'Within the range most planning treats as sustainable over a long retirement. The sequence still matters — it changes how much is left, not usually whether it lasts.'});
+  }
+  if(!flex){
+    F.push({t:'n',h:'Turn on the guardrails and run it again',
+      b:'Spending that responds to what the portfolio actually does survives dramatically longer than spending that does not. Switch it on above and watch the rough-start column. Then ask yourself honestly whether you would follow through — because on paper it always works.'});
+  } else {
+    F.push({t:'g',h:`Guardrails changed the outcome${B.cuts?' — '+B.cuts+' step-down'+(B.cuts===1?'':'s')+' in the rough scenario':''}`,
+      b:'This is the cheapest defense you have. It costs nothing in a good market, and in a bad one it means selling far fewer shares at the bottom. The catch is that it only works if the reduced spending is genuinely something you would live with.'});
+  }
+  if(wdEss>0 && wdEss/wd>.8){
+    F.push({t:'n',h:'Most of your withdrawal is non-negotiable',
+      b:`${((wdEss/wd)*100).toFixed(0)}% of what you draw covers essentials, so there is little to flex. That points the work toward guaranteed income rather than spending discipline — you cannot cut what you have to pay.`});
+  }
+  F.push({t:'n',h:'This is arithmetic, not a forecast',
+    b:'Nobody knows future returns or their order. The value here is not the specific year a line hits zero — it is the gap between the two orderings, and the fact that you can shrink that gap without predicting anything.'});
+  $('flags').innerHTML=F.map(f=>`<div class="flag ${f.t}"><b>${f.h}</b>${f.b}</div>`).join('');
+
+  /* ---- carry ---- */
+  const rows=[
+    ['Withdrawal rate',(rate*100).toFixed(1)+'%'],
+    ['Planning horizon',n+' years'],
+    ['Steady path',A.depleted?'Runs short year '+A.depleted:'Lasts, ends '+money(A.end)],
+    ['Rough start',B.depleted?'Runs short year '+B.depleted:'Lasts, ends '+money(B.end)],
+    ['Strong start',C.depleted?'Runs short year '+C.depleted:'Lasts, ends '+money(C.end)],
+    ['Sequence risk',spread+' years'],
+    ['Flexibility applied',flex?'Yes':'No']
+  ];
+  $('carrybody').innerHTML='<table>'+rows.map(r=>`<tr><td>${r[0]}</td><td>${r[1]}</td></tr>`).join('')+'</table>'
+    +'<p>March works on the largest lever here — how much of your essential spending is covered by income that arrives regardless of markets. Every dollar moved into that column is a dollar you never have to sell anything to produce.</p>';
+}
+
+function dlCSV(){
+  const rows=[['Field','Value']];
+  document.querySelectorAll('#carrybody tr').forEach(tr=>rows.push([tr.cells[0].textContent,tr.cells[1].textContent]));
+  document.querySelectorAll('.flag b').forEach(b=>rows.push(['Note',b.textContent]));
+  const csv=rows.map(r=>r.map(c=>'"'+String(c).replace(/"/g,'""')+'"').join(',')).join('\n');
+  const a=document.createElement('a');
+  a.href=URL.createObjectURL(new Blob([csv],{type:'text/csv'}));
+  a.download='longevity-check.csv'; a.click();
+}
+function resetAll(){
+  $('pv').value='880,000'; $('wd').value='50,000'; $('wdEss').value='30,000';
+  $('yrs').value='30'; $('ret').value='6'; $('inf').value='3'; $('vol').value='1';
+  $('flexOn').checked=false; render();
+}
+document.addEventListener('input',render);
+document.addEventListener('change',render);
+render();
+</script>
+<!--AW:FOOTER-->
+</body>
+</html>
