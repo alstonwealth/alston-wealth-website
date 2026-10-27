@@ -2,3 +2,10 @@ dist/
 dist-preview/
 __pycache__/
 .DS_Store
+
+# Internal files: kept locally and in the private repo alston-wealth-site, never pushed to this public repo
+PROJECT-HANDOVER-site.md
+preview-photos/
+worker/
+scripts/convert.py
+scripts/migrate_shell.py
