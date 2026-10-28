@@ -77,7 +77,7 @@ if POSTS:
             schema = json.dumps([json.loads(schema), {"@context": "https://schema.org", "@type": "VideoObject",
                 "name": m["title"], "description": m["description"],
                 "thumbnailUrl": "{{SITE_URL}}/" + m.get("video_thumb", m.get("image", "og-image.png")),
-                "uploadDate": m.get("video_upload", m["date"]), "duration": m.get("video_duration", ""),
+                "uploadDate": (lambda d: d if "T" in d else d + "T08:00:00-05:00")(m.get("video_upload", m["date"])), "duration": m.get("video_duration", ""),
                 "embedUrl": f"https://www.youtube.com/embed/{vid}", "contentUrl": f"https://www.youtube.com/watch?v={vid}"}])
         page = (TPL.replace("%TITLE%", esc(m["title"])).replace("%DESC%", esc(m["description"]))
                    .replace("%SLUG%", m["slug"]).replace("%TOPIC%", esc(m.get("topic", "Insights")))
