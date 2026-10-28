@@ -23,6 +23,7 @@ Status: `published` · `queued` (written, future date) · `next` · blank (not s
 | 15 | Why your tax bill can go up after your spouse dies | Taxes | survivor check | |
 | 16 | How much does long-term care cost, and how do you plan for it? | Care | the care gap | |
 | 17 | Bond ladder, annuity or delaying Social Security: three ways to build a retirement paycheck | Distribution planning | paycheck builder | |
+| 17b | Bonds or annuities in retirement? What 2022 taught us (from the YouTube video) | Distribution planning | paycheck builder, longevity check | published 2026-10-27 |
 | 18 | How taxes on Social Security actually work | Taxes | the projection | |
 | 19 | What to do with your old employer retirement plan when you retire | Distribution planning | the baseline | |
 | 20 | Leaving money to your kids: tax-smart ways to pass it on | Estate and legacy | the window | |
