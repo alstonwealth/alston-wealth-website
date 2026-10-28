@@ -61,11 +61,29 @@ if POSTS:
             "author": {"@id": "{{SITE_URL}}/about.html#alex"}, "publisher": {"@id": "{{SITE_URL}}/#org"},
             "mainEntityOfPage": "{{SITE_URL}}/insights/" + m["slug"] + ".html",
             "image": "{{SITE_URL}}/" + m.get("image", "og-image.png")})
+        body = m["body"]
+        if m.get("youtube"):
+            # The video sits at the top of the article as a still image; YouTube's player only
+            # loads when someone presses play, so the page stays fast for people who just read.
+            vid, thumb = m["youtube"], "../" + m.get("video_thumb", m.get("image", "og-image.png"))
+            body = (f'<figure class="aw-video"><button type="button" class="aw-video-btn" data-yt="{vid}" '
+                    f'aria-label="Play the video: {esc(m["title"])}"><img src="{thumb}" alt="" width="1280" height="720" loading="eager">'
+                    f'<span class="aw-video-play" aria-hidden="true">Watch{(" · " + m["video_minutes"]) if m.get("video_minutes") else ""}</span></button>'
+                    f'<figcaption>Prefer to watch? This article is also a short video. Or read on below.</figcaption></figure>\n'
+                    '<script>document.addEventListener("click",function(e){var b=e.target.closest(".aw-video-btn");if(!b)return;'
+                    'var f=document.createElement("iframe");f.src="https://www.youtube-nocookie.com/embed/"+b.dataset.yt+"?autoplay=1&rel=0";'
+                    'f.title=b.getAttribute("aria-label");f.allow="autoplay; encrypted-media; picture-in-picture; fullscreen";f.allowFullscreen=true;'
+                    'b.replaceWith(f);});</script>\n' + body)
+            schema = json.dumps([json.loads(schema), {"@context": "https://schema.org", "@type": "VideoObject",
+                "name": m["title"], "description": m["description"],
+                "thumbnailUrl": "{{SITE_URL}}/" + m.get("video_thumb", m.get("image", "og-image.png")),
+                "uploadDate": m.get("video_upload", m["date"]), "duration": m.get("video_duration", ""),
+                "embedUrl": f"https://www.youtube.com/embed/{vid}", "contentUrl": f"https://www.youtube.com/watch?v={vid}"}])
         page = (TPL.replace("%TITLE%", esc(m["title"])).replace("%DESC%", esc(m["description"]))
                    .replace("%SLUG%", m["slug"]).replace("%TOPIC%", esc(m.get("topic", "Insights")))
                    .replace("%DATE%", m["date"]).replace("%NICEDATE%", nice(m["date"]))
                    .replace("%AUTHOR%", esc(m.get("author", "Alex Alston"))).replace("%TOOLS%", tools)
-                   .replace("%SCHEMA%", schema).replace("%IMAGE%", "{{SITE_URL}}/" + m.get("image", "og-image.png")).replace("%BODY%", m["body"]))
+                   .replace("%SCHEMA%", schema).replace("%IMAGE%", "{{SITE_URL}}/" + m.get("image", "og-image.png")).replace("%BODY%", body))
         (DIST / "insights" / f'{m["slug"]}.html').write_text(page)
     cards = "".join(
         f'<a class="aw-card" href="{m["slug"]}.html"><p class="aw-post-meta">{esc(m.get("topic","Insights"))} · {nice(m["date"])}</p>'
