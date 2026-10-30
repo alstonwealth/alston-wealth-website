@@ -55,7 +55,7 @@
 /* Lead events: one clean event per booking or monthly-call click, on every page, for marking as key events in Analytics. */
 document.addEventListener('click',function(ev){
   var a=ev.target.closest('a[href]'); if(!a||typeof gtag!=='function')return;
-  var h=a.href, name=h.indexOf('calendly.com')>-1?'book_call_click':(h.indexOf('zoom.us/meeting/register')>-1?'monthly_call_click':null);
+  var h=a.href, name=h.indexOf('calendly.com')>-1?'book_call_click':((h.indexOf('zoom.us/meeting/register')>-1||h.indexOf('zoom.us/webinar/register/WN_RVD0')>-1)?'monthly_call_click':null);
   if(!name)return;
   var st={};try{st=JSON.parse(sessionStorage.getItem('aw_utm')||'{}');}catch(e){}
   gtag('event',name,{link_location:a.getAttribute('data-track')||'',page_path:location.pathname,campaign:st.utm_campaign||'none',transport_type:'beacon'});
