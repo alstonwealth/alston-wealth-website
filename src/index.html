@@ -29,8 +29,9 @@
 .close-adv .aw-h2,.close-adv .aw-lede{margin-left:0;margin-right:0}
 .close-adv .aw-acts{justify-content:flex-start}
 .close-photo{margin:0}
-.close-photo img{display:block;width:100%;max-width:470px;height:auto;margin-left:auto}
-@media (max-width:860px){.close-adv .close-grid{grid-template-columns:1fr;text-align:center}.close-adv .close-copy{padding-bottom:8px}.close-adv .aw-h2,.close-adv .aw-lede{margin-left:auto;margin-right:auto}.close-adv .aw-acts{justify-content:center}.close-photo img{max-width:340px;margin:0 auto}}
+.close-photo img{display:block;width:100%;max-width:470px;height:auto;margin-left:auto;-webkit-mask-image:linear-gradient(to bottom,#000 72%,transparent 100%);mask-image:linear-gradient(to bottom,#000 72%,transparent 100%)}
+main:has(.close-adv) ~ .aw-ft{border-top:1px solid var(--aw-line-dk)}
+@media (max-width:860px){.close-adv .close-grid{grid-template-columns:1fr;text-align:center}.close-adv .close-copy{padding-bottom:0}.close-adv .aw-h2,.close-adv .aw-lede{margin-left:auto;margin-right:auto}.close-adv .aw-acts{justify-content:center}.close-photo img{max-width:340px;margin:0 auto}}
 </style>
 </head>
 <body class="aw">
