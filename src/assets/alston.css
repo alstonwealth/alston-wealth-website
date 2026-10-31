@@ -287,3 +287,7 @@ a.aw-card:hover{border-color:var(--aw-brass)}
 .aw-video-btn:hover .aw-video-play,.aw-video-btn:focus-visible .aw-video-play{background:#C9A26B;color:#16233A}
 .aw-video-btn:hover .aw-video-play:before,.aw-video-btn:focus-visible .aw-video-play:before{border-left-color:#16233A}
 .aw-video figcaption{font-family:var(--aw-sans);font-size:14px;color:var(--aw-ink3);margin-top:10px}
+
+.aw-ft-google{margin-top:-4px}
+.aw-google-line{margin:28px 0 0;font-size:15px;color:var(--aw-ink2)}
+.aw-google-line a{color:inherit;text-underline-offset:3px}
