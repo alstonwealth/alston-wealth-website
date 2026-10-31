@@ -1,7 +1,11 @@
-alex.jpg — your headshot, already in place on the About page.
+Team photos (Oct 2026 shoot, Captured Expressions by Stacy).
 
-To swap it later, save the new one over alex.jpg at the same name and it picks
-up automatically. Portrait crop (4:5) works best; roughly 900x1125 is plenty.
+headshot-alex.jpg    Alex (kept from before; white background)
+headshot-andrew.jpg  Andrew, background swapped to white to match
+headshot-michael.jpg Michael, background swapped to white to match
+headshot-aaron.jpg   Aaron, background swapped to white to match
+team-group.jpg       All four, cropped 4:3 (About page top)
 
-Later, when the team is in place, this is also where the photo of your brother,
-your father, and the scan of the original incorporation document go.
+Headshots are 900x1125 (4:5). Save a replacement over the same name to swap.
+Still to come: michael-document.jpg, incorporation-document.jpg,
+working-review.jpg, working-zoom.jpg.
