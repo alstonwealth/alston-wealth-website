@@ -27,7 +27,7 @@ Status: `published` · `queued` (written, future date) · `next` · blank (not s
 | 18 | How taxes on Social Security actually work | Taxes | the projection | |
 | 19 | What to do with your old employer retirement plan when you retire | Distribution planning | the baseline | |
 | 20 | Leaving money to your kids: tax-smart ways to pass it on | Estate and legacy | the window | |
-| 21 | The year-end retirement checklist: what has to happen by December 31 | Taxes | execution sheet | |
+| 21 | Do these 5 things in November or pay for it all of next year (year-end checklist, from the YouTube video) | Taxes | execution sheet, the window | published 2026-11-02 |
 | 22 | How to know if you're on track to retire | Planning | the baseline | |
 | 23 | Medicare open enrollment: why your plan needs a check-up every year | Health coverage | the plan review | |
 | 24 | What a retirement plan review should actually cover | Planning | year in review | |
