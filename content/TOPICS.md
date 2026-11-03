@@ -11,7 +11,7 @@ Status: `published` · `queued` (written, future date) · `next` · blank (not s
 | 3 | What happens when you inherit a retirement account? The 10-year rule in plain English | Estate and legacy | the projection, the window | |
 | 4 | How much can you safely spend in retirement? | Distribution planning | longevity check | |
 | 5 | Required minimum distributions: when they start and how to keep them from raising your taxes | Taxes | execution sheet | |
-| 6 | Is a Roth conversion worth it after you retire? | Taxes | the window | |
+| 6 | Is a Roth conversion worth it after you retire? (published as "I ran a Roth conversion on $1.2 million three ways", from the YouTube video) | Taxes | the window | published 2026-11-03 |
 | 7 | What happens to your Social Security when your spouse dies? | Social Security | survivor check | |
 | 8 | Lump sum or monthly pension: how to decide | Distribution planning | pension election | |
 | 9 | Should you pay off your mortgage before you retire? | Distribution planning | mortgage payoff | |
