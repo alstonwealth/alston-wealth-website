@@ -7,7 +7,7 @@ Status: `published` · `queued` (written, future date) · `next` · blank (not s
 | # | Question (the title) | Topic | Points to | Status |
 |---|---|---|---|---|
 | 1 | When should you take Social Security if your spouse is younger? | Social Security | claiming decision, survivor check | published 2026-10-26 |
-| 2 | Which account should you take money from first in retirement? | Distribution planning | paycheck builder | next |
+| 2 | Which account should you take money from first in retirement? (from the YouTube video) | Distribution planning | the window | queued 2026-11-09 |
 | 3 | What happens when you inherit a retirement account? The 10-year rule in plain English | Estate and legacy | the projection, the window | |
 | 4 | How much can you safely spend in retirement? | Distribution planning | longevity check | |
 | 5 | Required minimum distributions: when they start and how to keep them from raising your taxes | Taxes | execution sheet | |
@@ -31,6 +31,7 @@ Status: `published` · `queued` (written, future date) · `next` · blank (not s
 | 22 | How to know if you're on track to retire | Planning | the baseline | |
 | 23 | Medicare open enrollment: why your plan needs a check-up every year | Health coverage | the plan review | |
 | 24 | What a retirement plan review should actually cover | Planning | year in review | |
+| 25 | Is $1 million enough to retire? (from the YouTube video) | Distribution planning | the window | queued 2026-11-12 |
 
 ## Timely slots
 - Nov–Dec: #21 (year-end checklist), #13 (charitable giving before Dec 31), #23 (open enrollment ends Dec 7)
