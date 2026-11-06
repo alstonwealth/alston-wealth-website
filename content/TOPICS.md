@@ -32,6 +32,8 @@ Status: `published` · `queued` (written, future date) · `next` · blank (not s
 | 23 | Medicare open enrollment: why your plan needs a check-up every year | Health coverage | the plan review | |
 | 24 | What a retirement plan review should actually cover | Planning | year in review | |
 | 25 | Is $1 million enough to retire? (from the YouTube video) | Distribution planning | the window | queued 2026-11-12 |
+| 26 | Social Security at 62 vs 70: the math for married couples (from the YouTube video) | Social Security | survivor check, claiming decision | queued 2026-11-16 |
+| 27 | 7 retirement mistakes I see over and over (from the YouTube video) | Distribution planning | plan review, coverage bridge | queued 2026-11-19 |
 
 ## Timely slots
 - Nov–Dec: #21 (year-end checklist), #13 (charitable giving before Dec 31), #23 (open enrollment ends Dec 7)
