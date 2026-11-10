@@ -3,3 +3,6 @@
 
 /images/brand/*
   Access-Control-Allow-Origin: *
+
+/images/social/*
+  Access-Control-Allow-Origin: *
