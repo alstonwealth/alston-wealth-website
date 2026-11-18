@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script>
+/* Read the optional pre-fill values, then take them out of the address bar before analytics
+   loads, so names and emails are never sent to Google Analytics with the page address. */
+(function(){
+  try{
+    var q=new URLSearchParams(location.search),p={};
+    ['name','email','advisor'].forEach(function(k){if(q.get(k))p[k]=q.get(k);});
+    window.AW_PREFILL=p;
+    if(location.search){history.replaceState(null,'',location.pathname+location.hash);}
+  }catch(e){window.AW_PREFILL={};}
+})();
+</script>
+<title>Send us your documents securely — Alston Wealth</title>
+<meta name="description" content="Upload statements, tax returns and other paperwork to Alston Wealth securely, without email or an account.">
+<meta name="robots" content="noindex">
+<!--AW:HEAD-->
+<style>
+.su-wrap{max-width:760px}
+.su-trust{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px;margin-top:40px}
+.su-trust div{display:flex;gap:14px;align-items:flex-start}
+.su-trust svg{flex:0 0 28px;width:28px;height:28px;color:var(--aw-brass);margin-top:2px}
+.su-trust b{display:block;font-family:var(--aw-sans);font-size:16px;color:var(--aw-ink);margin-bottom:4px}
+.su-trust p{font-size:15px;line-height:1.5;color:var(--aw-ink2);margin:0}
+.su-form{background:#fff;border:1px solid var(--aw-rule);padding:36px 34px}
+.su-row{margin-bottom:22px}
+.su-row label,.su-label{display:block;font-family:var(--aw-sans);font-weight:600;font-size:15px;color:var(--aw-ink);margin-bottom:8px}
+.su-opt{font-weight:400;color:var(--aw-ink3)}
+.su-form input[type=text],.su-form input[type=email],.su-form input[type=tel],.su-form select,.su-form textarea{width:100%;box-sizing:border-box;font:inherit;font-size:17px;padding:12px 14px;border:1.5px solid #C9C3B6;background:#fff;color:var(--aw-ink);border-radius:0}
+.su-form textarea{min-height:96px;resize:vertical}
+.su-form input:focus,.su-form select:focus,.su-form textarea:focus{outline:none;border-color:var(--aw-ink);box-shadow:0 0 0 3px rgba(201,162,107,.35)}
+.su-help{font-size:14px;color:var(--aw-ink3);margin:6px 0 0}
+.su-err{font-size:14px;color:#A3261B;margin:6px 0 0;font-weight:600}
+.su-form .is-bad{border-color:#A3261B !important}
+.su-drop{border:2px dashed #C9C3B6;background:var(--aw-tint);padding:30px 20px;text-align:center;cursor:pointer;transition:border-color .15s,background .15s}
+.su-drop:hover,.su-drop.is-over{border-color:var(--aw-ink);background:#F3EEE4}
+.su-drop svg{width:34px;height:34px;color:var(--aw-brass);display:block;margin:0 auto 10px}
+.su-drop p{margin:0;font-size:16px;color:var(--aw-ink)}
+.su-drop .su-help{margin-top:8px}
+.su-files{list-style:none;margin:14px 0 0;padding:0}
+.su-files li{display:flex;align-items:center;gap:12px;border:1px solid var(--aw-rule);padding:10px 12px;margin-top:8px;font-size:15px}
+.su-files .n{flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:var(--aw-ink)}
+.su-files .s{color:var(--aw-ink3);font-size:14px;white-space:nowrap}
+.su-files .x{border:0;background:none;font-size:22px;line-height:1;color:var(--aw-ink3);cursor:pointer;padding:2px 6px}
+.su-files .x:hover{color:#A3261B}
+.su-files .st{width:22px;text-align:center;color:#2E7D4F;font-weight:700}
+.su-hp{position:absolute !important;left:-10000px !important;top:auto;width:1px;height:1px;overflow:hidden}
+.su-send{width:100%;margin-top:6px;font-size:17px;cursor:pointer}
+.su-send[disabled]{opacity:.7;cursor:wait}
+.su-keep{font-size:15px;color:var(--aw-ink2);margin:12px 0 0;text-align:center}
+.su-alert{border-left:4px solid #A3261B;background:#FBEDEB;padding:14px 16px;margin:0 0 22px;font-size:15px;color:var(--aw-ink)}
+.su-done{background:#fff;border:1px solid var(--aw-rule);padding:40px 34px}
+.su-done h2{font-size:30px;margin-bottom:14px !important}
+.su-done p{font-size:17px;line-height:1.6;color:var(--aw-ink2)}
+.su-more{margin-top:28px;border-top:1px solid var(--aw-rule);padding-top:18px}
+.su-more summary{cursor:pointer;font-family:var(--aw-sans);font-weight:600;font-size:16px;color:var(--aw-ink)}
+.su-more ul{margin:12px 0 0;padding-left:20px;color:var(--aw-ink2);font-size:16px;line-height:1.7}
+.su-call{margin-top:22px;font-size:16px;color:var(--aw-ink2)}
+@media (max-width:760px){.su-trust{grid-template-columns:1fr}.su-form,.su-done{padding:26px 20px}}
+</style>
+</head>
+<body class="aw">
+<!--AW:HEADER-->
+<main>
+<section class="aw-pagehead">
+  <div class="aw-in">
+    <div class="aw-eyebrow">Secure upload</div>
+    <h1 class="aw-h1">Send us your documents securely</h1>
+    <p class="aw-lede">Upload statements, tax returns, and other paperwork here instead of email. It takes about a minute.</p>
+    <div class="su-trust">
+      <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="10.5" width="16" height="10" rx="1.5"/><path d="M8 10.5V7a4 4 0 0 1 8 0v3.5"/></svg><span><b>Protected the whole way.</b><p>Your files travel over an encrypted connection and are stored encrypted.</p></span></div>
+      <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7.5a1.5 1.5 0 0 1 1.5-1.5H9l2 2h8.5A1.5 1.5 0 0 1 21 9.5v8a1.5 1.5 0 0 1-1.5 1.5h-15A1.5 1.5 0 0 1 3 17.5z"/><path d="M9.5 13.5l2 2 3.5-3.5"/></svg><span><b>Only our team can see them.</b><p>Files go to a private folder. No one else who visits this page can see what you send.</p></span></div>
+      <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="3.5"/><path d="M5 20c.8-3.6 3.6-5.5 7-5.5s6.2 1.9 7 5.5"/></svg><span><b>No account needed.</b><p>No password to create or remember.</p></span></div>
+    </div>
+  </div>
+</section>
+
+<section class="aw-sec">
+  <div class="aw-in su-wrap">
+    <div id="su-done" class="su-done" hidden>
+      <h2 class="aw-h2">Got it. Thank you.</h2>
+      <p>We received your <span id="su-n"></span> to a private folder only our team can open. We also sent a receipt to <b id="su-em"></b>. If you need to send more, <a href="#" id="su-again">upload more files</a>.</p>
+    </div>
+
+    <form id="su-form" class="su-form" novalidate>
+      <div id="su-alert" class="su-alert" role="alert" hidden></div>
+
+      <div class="su-row">
+        <label for="su-name">Your full name</label>
+        <input type="text" id="su-name" name="name" autocomplete="name" required>
+        <p class="su-err" hidden></p>
+      </div>
+      <div class="su-row">
+        <label for="su-email">Email</label>
+        <input type="email" id="su-email" name="email" autocomplete="email" inputmode="email" required>
+        <p class="su-help">We'll send you a receipt when your files arrive.</p>
+        <p class="su-err" hidden></p>
+      </div>
+      <div class="su-row">
+        <label for="su-phone">Phone <span class="su-opt">(optional)</span></label>
+        <input type="tel" id="su-phone" name="phone" autocomplete="tel">
+      </div>
+      <div class="su-row">
+        <label for="su-advisor">Who is your advisor?</label>
+        <select id="su-advisor" name="advisor">
+          <option>Alex Alston</option>
+          <option>Andrew Alston</option>
+          <option selected>Not sure yet</option>
+        </select>
+      </div>
+      <div class="su-row">
+        <label for="su-note">Anything we should know? <span class="su-opt">(optional)</span></label>
+        <textarea id="su-note" name="note"></textarea>
+      </div>
+      <div class="su-row">
+        <span class="su-label" id="su-files-label">Your files</span>
+        <div class="su-drop" id="su-drop" role="button" tabindex="0" aria-labelledby="su-files-label">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 15V4"/><path d="M7.5 8.5 12 4l4.5 4.5"/><path d="M4 15v3.5A1.5 1.5 0 0 0 5.5 20h13a1.5 1.5 0 0 0 1.5-1.5V15"/></svg>
+          <p>Drag files here or tap to choose. You can take a photo with your phone, too.</p>
+          <p class="su-help">PDFs, photos, Word, and Excel files. Up to 25 MB each, 20 files at a time.</p>
+        </div>
+        <input type="file" id="su-input" multiple hidden accept=".pdf,.jpg,.jpeg,.png,.heic,.heif,.gif,.tif,.tiff,.webp,.doc,.docx,.xls,.xlsx,.csv,.txt,.rtf,image/*">
+        <ul class="su-files" id="su-list"></ul>
+        <p class="su-err" id="su-files-err" hidden></p>
+      </div>
+      <div class="su-hp" aria-hidden="true">
+        <label for="su-website">Website</label>
+        <input type="text" id="su-website" name="website" tabindex="-1" autocomplete="off">
+      </div>
+      <button type="submit" class="aw-btn aw-btn-ink su-send" id="su-send">Send securely</button>
+      <p class="su-keep" id="su-keep" hidden>Please keep this page open until it finishes.</p>
+
+      <details class="su-more">
+        <summary>Not sure what to send?</summary>
+        <ul>
+          <li>Recent statements for any retirement, investment, or bank accounts</li>
+          <li>Your Social Security statement (from ssa.gov)</li>
+          <li>Last year's tax return</li>
+          <li>Annuity or life insurance statements</li>
+          <li>Will or trust documents, if you have them</li>
+        </ul>
+      </details>
+    </form>
+    <p class="su-call">Prefer to talk it through? Call us at <a href="tel:{{PHONE_TEL}}">{{PHONE}}</a>.</p>
+  </div>
+</section>
+</main>
+<!--AW:FOOTER-->
+<script>
+(function(){
+  var ENDPOINT = "{{UPLOAD_ENDPOINT}}";
+  var PHONE = "{{PHONE}}";
+  var MAX_FILES = 20, MAX_BYTES = 25 * 1024 * 1024;
+  var EXT = ["pdf","jpg","jpeg","png","heic","heif","gif","tif","tiff","webp","doc","docx","xls","xlsx","csv","txt","rtf"];
+
+  var form = document.getElementById("su-form"), drop = document.getElementById("su-drop"),
+      input = document.getElementById("su-input"), list = document.getElementById("su-list"),
+      send = document.getElementById("su-send"), keep = document.getElementById("su-keep"),
+      alertBox = document.getElementById("su-alert"), filesErr = document.getElementById("su-files-err"),
+      f = { name: document.getElementById("su-name"), email: document.getElementById("su-email"),
+            phone: document.getElementById("su-phone"), advisor: document.getElementById("su-advisor"),
+            note: document.getElementById("su-note"), website: document.getElementById("su-website") };
+  var files = [], busy = false;
+
+  // Pre-fill from the link (read and removed from the address bar in the page head).
+  var pf = window.AW_PREFILL || {};
+  if (pf.name) f.name.value = pf.name;
+  if (pf.email) f.email.value = pf.email;
+  if (pf.advisor) { var a = pf.advisor.toLowerCase(); f.advisor.value = a.indexOf("andrew") > -1 ? "Andrew Alston" : a.indexOf("alex") > -1 ? "Alex Alston" : "Not sure yet"; }
+
+  [f.name, f.email].forEach(function (el) { el.addEventListener("input", function () { fieldErr(el, ""); }); });
+
+  function size(n) { return n < 1024 * 1024 ? Math.max(1, Math.round(n / 1024)) + " KB" : (n / 1048576).toFixed(1) + " MB"; }
+  function ext(n) { var i = n.lastIndexOf("."); return i < 0 ? "" : n.slice(i + 1).toLowerCase(); }
+  function fieldErr(el, msg) {
+    var p = el.parentNode.querySelector(".su-err");
+    el.classList.toggle("is-bad", !!msg);
+    if (p) { p.textContent = msg || ""; p.hidden = !msg; }
+  }
+  function render() {
+    list.innerHTML = "";
+    files.forEach(function (file, i) {
+      var li = document.createElement("li");
+      li.innerHTML = '<span class="st" aria-hidden="true"></span><span class="n"></span><span class="s"></span>' +
+        '<button type="button" class="x" aria-label="Remove">&times;</button>';
+      li.querySelector(".n").textContent = file.name;
+      li.querySelector(".s").textContent = size(file.size);
+      li.querySelector(".x").onclick = function () { if (busy) return; files.splice(i, 1); render(); };
+      list.appendChild(li);
+    });
+  }
+  function add(fl) {
+    var msgs = [];
+    Array.prototype.forEach.call(fl, function (file) {
+      if (EXT.indexOf(ext(file.name)) < 0) { msgs.push('"' + file.name + '" is not a file type we accept.'); return; }
+      if (file.size > MAX_BYTES) { msgs.push('"' + file.name + '" is over 25 MB.'); return; }
+      if (file.size === 0) { msgs.push('"' + file.name + '" is empty.'); return; }
+      if (files.length >= MAX_FILES) { msgs.push("You can send up to 20 files at a time."); return; }
+      if (files.some(function (x) { return x.name === file.name && x.size === file.size; })) return;
+      files.push(file);
+    });
+    filesErr.textContent = msgs.join(" "); filesErr.hidden = !msgs.length;
+    render();
+  }
+
+  drop.addEventListener("click", function () { if (!busy) input.click(); });
+  drop.addEventListener("keydown", function (e) { if ((e.key === "Enter" || e.key === " ") && !busy) { e.preventDefault(); input.click(); } });
+  input.addEventListener("change", function () { add(input.files); input.value = ""; });
+  ["dragenter", "dragover"].forEach(function (t) { drop.addEventListener(t, function (e) { e.preventDefault(); drop.classList.add("is-over"); }); });
+  ["dragleave", "drop"].forEach(function (t) { drop.addEventListener(t, function (e) { e.preventDefault(); drop.classList.remove("is-over"); }); });
+  drop.addEventListener("drop", function (e) { if (!busy && e.dataTransfer) add(e.dataTransfer.files); });
+
+  function toBase64(file) {
+    return new Promise(function (resolve, reject) {
+      var r = new FileReader();
+      r.onload = function () { resolve(String(r.result).split(",")[1] || ""); };
+      r.onerror = function () { reject(new Error("Could not read " + file.name)); };
+      r.readAsDataURL(file);
+    });
+  }
+  async function post(payload) {
+    var res = await fetch(ENDPOINT, { method: "POST", headers: { "Content-Type": "text/plain;charset=utf-8" }, body: JSON.stringify(payload) });
+    var data = await res.json();
+    if (!data.ok) throw new Error(data.error || "Upload failed. Please try again.");
+    return data;
+  }
+  async function sendAll(client, onProgress) {
+    var submissionId = crypto.randomUUID();
+    for (var i = 0; i < files.length; i++) {
+      var file = files[i];
+      onProgress(i, "uploading");
+      var data = await toBase64(file);
+      var payload = Object.assign({ action: "upload", submissionId: submissionId }, client,
+        { file: { name: file.name, type: file.type || "application/octet-stream", data: data } });
+      try { await post(payload); }
+      catch (e) { await new Promise(function (r) { setTimeout(r, 1500); }); await post(payload); }
+      onProgress(i, "done");
+    }
+    return post(Object.assign({ action: "complete", submissionId: submissionId }, client));
+  }
+
+  function lock(on) {
+    busy = on;
+    Array.prototype.forEach.call(form.querySelectorAll("input,select,textarea,button"), function (el) { el.disabled = on; });
+    drop.setAttribute("aria-disabled", on ? "true" : "false");
+    keep.hidden = !on;
+    if (!on) send.textContent = "Send securely";
+  }
+
+  form.addEventListener("submit", async function (e) {
+    e.preventDefault();
+    if (busy) return;
+    alertBox.hidden = true;
+    var ok = true;
+    var name = f.name.value.trim(), email = f.email.value.trim();
+    fieldErr(f.name, name ? "" : "Please enter your full name."); if (!name) ok = false;
+    var goodEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+    fieldErr(f.email, goodEmail ? "" : "Please enter a valid email address."); if (!goodEmail) ok = false;
+    if (!files.length) { filesErr.textContent = "Please choose at least one file."; filesErr.hidden = false; ok = false; }
+    if (!ok) { var bad = form.querySelector(".is-bad") || drop; bad.focus(); return; }
+
+    var client = { name: name, email: email, phone: f.phone.value.trim(), advisor: f.advisor.value,
+                   note: f.note.value.trim(), website: f.website.value };
+    var total = files.length, rows = list.children;
+    lock(true);
+    try {
+      var result = await sendAll(client, function (i, state) {
+        if (state === "uploading") send.textContent = "Sending… (" + (i + 1) + " of " + total + ")";
+        if (state === "done" && rows[i]) { var st = rows[i].querySelector(".st"); st.textContent = "✓"; st.setAttribute("aria-label", "Sent"); }
+      });
+      var n = (result && result.count) || total;
+      document.getElementById("su-n").textContent = n === 1 ? "document and saved it" : n + " documents and saved them";
+      document.getElementById("su-em").textContent = email;
+      form.hidden = true;
+      document.getElementById("su-done").hidden = false;
+      window.scrollTo({ top: document.querySelector(".aw-sec").offsetTop - 20, behavior: "smooth" });
+    } catch (err) {
+      lock(false);
+      alertBox.textContent = (err && err.message ? err.message : "Upload failed. Please try again.") + " If this keeps happening, call us at " + PHONE + ".";
+      alertBox.hidden = false;
+      alertBox.scrollIntoView({ behavior: "smooth", block: "center" });
+    }
+  });
+
+  document.getElementById("su-again").addEventListener("click", function (e) {
+    e.preventDefault();
+    files = []; render(); f.phone.value = ""; f.note.value = ""; filesErr.hidden = true;
+    lock(false);
+    document.getElementById("su-done").hidden = true; form.hidden = false;
+    Array.prototype.forEach.call(list.querySelectorAll(".st"), function (s) { s.textContent = ""; });
+    drop.focus();
+  });
+})();
+</script>
+</body>
+</html>

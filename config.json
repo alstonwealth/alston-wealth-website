@@ -8,5 +8,6 @@
   "ADDRESS": "East Texas",
   "ADV_URL": "https://adviserinfo.sec.gov/",
   "CRS_PDF": "[link to the relationship summary once filed]",
-  "DISCLOSURE": "Advisory services offered through Sowell Management, a Registered Investment Advisor. Alex Alston and Andrew Alston are Investment Advisor Representatives of Sowell Management and provide advisory services as Alston Financial Group. Insurance products are offered through Alston Wealth LLC, a separate company not affiliated with Sowell Management. Content on this site is general education, not individualized advice."
+  "DISCLOSURE": "Advisory services offered through Sowell Management, a Registered Investment Advisor. Alex Alston and Andrew Alston are Investment Advisor Representatives of Sowell Management and provide advisory services as Alston Financial Group. Insurance products are offered through Alston Wealth LLC, a separate company not affiliated with Sowell Management. Content on this site is general education, not individualized advice.",
+  "UPLOAD_ENDPOINT": "https://script.google.com/macros/s/AKfycbyHyTf5GksyModYXMfPlxiCtnRaZE4dJ0vpMr2DQDbixSNOicu0w3E1X_A61-cAAB1mVA/exec"
 }

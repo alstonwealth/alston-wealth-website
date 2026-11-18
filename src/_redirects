@@ -10,3 +10,6 @@
 /search/*  https://blog.alstonwealth.com/search/:splat  301
 /search    https://blog.alstonwealth.com/search  301
 /feeds/*   https://blog.alstonwealth.com/feeds/:splat  301
+
+# Secure document upload: short address for links sent to clients.
+/upload  /secure-upload  301
