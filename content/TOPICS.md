@@ -34,6 +34,9 @@ Status: `published` · `queued` (written, future date) · `next` · blank (not s
 | 25 | Is $1 million enough to retire? (from the YouTube video) | Distribution planning | the window | queued 2026-11-12 |
 | 26 | Social Security at 62 vs 70: the math for married couples (from the YouTube video) | Social Security | survivor check, claiming decision | queued 2026-11-16 |
 | 27 | 7 retirement mistakes I see over and over (from the YouTube video) | Distribution planning | plan review, coverage bridge | queued 2026-11-19 |
+| 28 | The same savings ran out at 83: why the order of bad years matters (from the YouTube video) | Distribution planning | paycheck builder, longevity check | queued 2026-11-23 |
+| 29 | Should you pay off your mortgage before you retire? (from the YouTube video) | Taxes | mortgage payoff, the window | queued 2026-11-25 |
+| 30 | Is $4 million enough to retire? Why great savers still can't spend it (from the YouTube video) | Distribution planning | paycheck builder, longevity check | queued 2026-11-30 |
 
 ## Timely slots
 - Nov–Dec: #21 (year-end checklist), #13 (charitable giving before Dec 31), #23 (open enrollment ends Dec 7)
