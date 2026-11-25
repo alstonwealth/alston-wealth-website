@@ -4,3 +4,4 @@ Publish-day rebuilds (a change here makes Netlify rebuild so dated posts go live
 2026-11-16 social-security-62-vs-70-married-couples
 2026-11-19 publish: retirement-mistakes-to-avoid
 2026-11-23 publish: same-savings-ran-out-at-83
+2026-11-25 publish: pay-off-mortgage-before-retirement
